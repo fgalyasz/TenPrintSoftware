@@ -32,7 +32,7 @@ export type Product = {
   model: "free" | "freemium";
   tiers: PricingTier[];
   screenshots: ProductScreenshot[];
-  mock?: "sessionguard-menu";
+  mock?: "sessionguard-menu" | "walkaway-menu";
 };
 
 export const PRODUCTS: Product[] = [
@@ -117,6 +117,39 @@ export const PRODUCTS: Product[] = [
     ],
     screenshots: [],
     mock: "sessionguard-menu",
+  },
+  {
+    slug: "walkaway",
+    name: "WalkAway",
+    order: 3,
+    status: "beta",
+    accent: "#ea580c",
+    accentSoft: "#fb923c",
+    iconUrl: "/assets/products/walkaway.svg",
+    websiteUrl: "https://tenprintsoftware.com/en/products/walkaway",
+    repositoryUrl: "https://github.com/fgalyasz/WalkAway",
+    supportEmail: "support@tenprintsoftware.com",
+    version: "0.1.0",
+    downloadUrl: "https://github.com/fgalyasz/WalkAway/releases/download/v0.1.0/WalkAway-0.1.0.dmg",
+    downloadFallbackUrl: "https://tenprintsoftware.com/en/products/walkaway",
+    packageFormat: "DMG",
+    requirements: "macOS 13 Ventura+",
+    categoryKey: "category.session",
+    model: "free",
+    tiers: [
+      {
+        kind: "free",
+        price: "€0",
+        perks: [
+          "pricing.walkaway.free.1",
+          "pricing.walkaway.free.2",
+          "pricing.walkaway.free.3",
+          "pricing.walkaway.free.4",
+        ],
+      },
+    ],
+    screenshots: [],
+    mock: "walkaway-menu",
   },
 ];
 

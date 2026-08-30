@@ -6,6 +6,7 @@ const SIBLING_ROOT = new URL("../../", import.meta.url).pathname;
 const SOURCES = [
   { slug: "snappyzones", repo: "SnappyZones", dmg: "SnappyZones" },
   { slug: "sessionguard", repo: "SessionGuard", dmg: "SessionGuard" },
+  { slug: "walkaway", repo: "WalkAway", dmg: "WalkAway" },
 ];
 
 function readLocalVersion(repo) {

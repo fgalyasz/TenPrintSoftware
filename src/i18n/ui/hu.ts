@@ -139,6 +139,10 @@ export const hu: UiDictionary = {
   "pricing.sessionguard.free.2": "Időzített munkamenetek 15 perctől 8 óráig",
   "pricing.sessionguard.free.3": "Állítható tétlenségi küszöb és mozgatási időköz",
   "pricing.sessionguard.free.4": "Ingyenes személyes és üzleti használatra is",
+  "pricing.walkaway.free.1": "Képernyőzárolás, ha elsétálsz — a feladatok mennek tovább",
+  "pricing.walkaway.free.2": "Egy megbízható Apple Watch vagy iPhone Bluetoothon",
+  "pricing.walkaway.free.3": "Állítható távolléti késleltetés és RSSI-küszöb",
+  "pricing.walkaway.free.4": "Ingyenes személyes és üzleti használatra is",
 
   "pricing.meta.title": "Árak — TenPrint Software",
   "pricing.meta.description":

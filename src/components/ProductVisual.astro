@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import SessionGuardMock from "./SessionGuardMock.astro";
+import WalkAwayMock from "./WalkAwayMock.astro";
 import type { Product } from "~/data/products";
 
 import heroDark from "~/assets/products/snappyzones/hero_screenshot_dark.png";
@@ -35,6 +36,10 @@ const { product, alt, mockRows = [], mockMuted = [] } = Astro.props;
         quality={72}
       />
     </figure>
+  ) : product.slug === "walkaway" ? (
+    <div class="visual visual-mock">
+      <WalkAwayMock rows={mockRows} muted={mockMuted} />
+    </div>
   ) : (
     <div class="visual visual-mock">
       <SessionGuardMock rows={mockRows} muted={mockMuted} />

@@ -139,6 +139,10 @@ export const sk: UiDictionary = {
   "pricing.sessionguard.free.2": "Časované sedenia od 15 minút do 8 hodín",
   "pricing.sessionguard.free.3": "Nastaviteľný limit nečinnosti a interval pohybu",
   "pricing.sessionguard.free.4": "Zadarmo na osobné aj komerčné použitie",
+  "pricing.walkaway.free.1": "Zámok obrazovky pri odchode — úlohy bežia ďalej",
+  "pricing.walkaway.free.2": "Jedny dôveryhodné Apple Watch alebo iPhone cez Bluetooth",
+  "pricing.walkaway.free.3": "Oneskorenie neprítomnosti a prah RSSI, ktoré ovládate",
+  "pricing.walkaway.free.4": "Zadarmo na osobné aj komerčné použitie",
 
   "pricing.meta.title": "Cenník — TenPrint Software",
   "pricing.meta.description":

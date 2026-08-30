@@ -135,6 +135,15 @@ const images = [
     accentSoft: "#5eead4",
     seed: 3003,
   },
+  {
+    file: "walkaway.png",
+    eyebrow: "Session control",
+    title: "WalkAway",
+    subtitle: "Lock when you leave. Jobs keep running.",
+    accent: "#ea580c",
+    accentSoft: "#fb923c",
+    seed: 4004,
+  },
 ];
 
 mkdirSync(outputDir, { recursive: true });

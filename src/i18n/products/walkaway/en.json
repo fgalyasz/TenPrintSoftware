@@ -1,0 +1,116 @@
+{
+  "tagline": "Lock when you leave",
+  "headline": "Walk away. The screen locks. Your jobs keep running.",
+  "summary": "A discreet menu bar utility that watches one trusted Apple Watch or iPhone. When you walk away past a short delay, WalkAway locks the screen. It does not sleep the Mac.",
+  "differentiator": "macOS can unlock with Apple Watch. It does not lock when you leave. WalkAway fills that gap — without killing encodes, downloads, or renders.",
+  "badges": [
+    "macOS 13+",
+    "Menu bar",
+    "Apple Watch",
+    "Free"
+  ],
+  "featuresTitle": "Armed, local, honest",
+  "featuresSubtitle": "One toggle. One trusted device. Lock the screen, never the machine.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Lock, do not sleep",
+      "text": "The lock screen comes up. CPU and processes stay up. WalkAway never calls sleep."
+    },
+    {
+      "tier": "free",
+      "title": "One trusted BLE device",
+      "text": "Pick your Apple Watch or iPhone. WalkAway measures RSSI against a threshold you set."
+    },
+    {
+      "tier": "free",
+      "title": "Away delay, lock once",
+      "text": "Away must last the delay (default 8 seconds) before lock. One lock per absence. Coming back clears the latch."
+    },
+    {
+      "tier": "free",
+      "title": "Arm and Disarm",
+      "text": "Armed evaluates presence. Disarmed never locks from walking away. Lock Now works either way."
+    },
+    {
+      "tier": "free",
+      "title": "No auto-unlock",
+      "text": "WalkAway does not type your password. Return uses system Unlock with Apple Watch, Touch ID, or password."
+    },
+    {
+      "tier": "free",
+      "title": "Privacy-friendly",
+      "text": "No accounts, no tracking, no password stored. Bluetooth is used only to measure your device."
+    }
+  ],
+  "howTitle": "How it works",
+  "howSubtitle": "Presence in, lock screen out. Jobs never stop.",
+  "how": [
+    {
+      "title": "Pick a device",
+      "text": "Open Preferences and choose your Apple Watch. Armed turns on automatically."
+    },
+    {
+      "title": "Walk away",
+      "text": "When the signal stays weaker than the threshold past the delay, WalkAway locks once."
+    },
+    {
+      "title": "Come back",
+      "text": "Unlock with Watch or Touch ID — that is macOS, not WalkAway. The next leave can lock again."
+    }
+  ],
+  "quickStartTitle": "Quick Start",
+  "quickStartSubtitle": "From install to an armed lock in a few minutes.",
+  "quickStart": [
+    {
+      "title": "Install",
+      "text": "Download the DMG, drag WalkAway to Applications, and open it."
+    },
+    {
+      "title": "Allow Bluetooth",
+      "text": "macOS will ask to use Bluetooth. Allow it so WalkAway can see your Watch."
+    },
+    {
+      "title": "Pick your Watch",
+      "text": "Open Preferences, select the device, set the delay if you want. Armed is on."
+    },
+    {
+      "title": "Walk away once",
+      "text": "Leave the desk. After the delay the lock screen should be up. ffmpeg should still be running."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does WalkAway sleep the Mac?",
+      "answer": "No. It locks the screen. Builds, downloads, and renders keep running."
+    },
+    {
+      "question": "Does it unlock when I come back?",
+      "answer": "No. Unlock is the system: Apple Watch, Touch ID, or password. WalkAway never stores your password."
+    },
+    {
+      "question": "Why Apple Watch instead of iPhone?",
+      "answer": "iPhone BLE addresses can change. Apple Watch is the reliable pick. AirPods can appear in the list too."
+    },
+    {
+      "question": "Why does the first lock ask for System Events?",
+      "answer": "WalkAway locks through System Events. macOS asks once. WalkAway does not write TCC.db or flip Privacy switches for you."
+    },
+    {
+      "question": "Is my data collected?",
+      "answer": "No. No accounts, no tracking. Settings live in a local JSON file."
+    },
+    {
+      "question": "How is this different from SessionGuard?",
+      "answer": "SessionGuard keeps a session awake. WalkAway locks when you leave. Same catalog, opposite job."
+    }
+  ],
+  "installTitle": "Install",
+  "install": [
+    "Download the DMG",
+    "Drag WalkAway to Applications",
+    "Open WalkAway",
+    "Allow Bluetooth, pick your Watch in Preferences"
+  ],
+  "downloadNotice": "Free to use — including for businesses."
+}

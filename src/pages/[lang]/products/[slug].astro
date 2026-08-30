@@ -34,8 +34,10 @@ const roadmapLabels = (copy.roadmap ?? []).map((_, index) =>
     : (copy.roadmapPlanned ?? t("product.roadmap.planned")),
 );
 
-const mockRows = ["Until Turned Off", "Timed Session", "Stop"];
-const mockMuted = ["Idle Threshold", "Jiggle Interval"];
+const mockRows =
+  product.slug === "walkaway" ? ["Armed", "Disarm", "Lock Now"] : ["Until Turned Off", "Timed Session", "Stop"];
+const mockMuted =
+  product.slug === "walkaway" ? ["Preferences…", "About WalkAway"] : ["Idle Threshold", "Jiggle Interval"];
 
 const schema = {
   "@context": "https://schema.org",

@@ -139,6 +139,10 @@ export const pl: UiDictionary = {
   "pricing.sessionguard.free.2": "Sesje z licznikiem od 15 minut do 8 godzin",
   "pricing.sessionguard.free.3": "Regulowany próg bezczynności i odstęp między ruchami",
   "pricing.sessionguard.free.4": "Bezpłatne do użytku osobistego i komercyjnego",
+  "pricing.walkaway.free.1": "Blokada ekranu po odejściu — zadania działają dalej",
+  "pricing.walkaway.free.2": "Jeden zaufany Apple Watch lub iPhone przez Bluetooth",
+  "pricing.walkaway.free.3": "Opóźnienie nieobecności i próg RSSI, które ustawiasz",
+  "pricing.walkaway.free.4": "Bezpłatne do użytku osobistego i komercyjnego",
 
   "pricing.meta.title": "Cennik — TenPrint Software",
   "pricing.meta.description":
