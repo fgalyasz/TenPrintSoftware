@@ -10,3 +10,6 @@ dist/
 *.log
 npm-debug.log*
 .vscode/
+
+public/downloads/walkaway/*.zip
+public/downloads/walkaway/*.dmg

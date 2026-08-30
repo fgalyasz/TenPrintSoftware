@@ -103,6 +103,10 @@
     {
       "question": "How is this different from SessionGuard?",
       "answer": "SessionGuard keeps a session awake. WalkAway locks when you leave. Same catalog, opposite job."
+    },
+    {
+      "question": "How do I update?",
+      "answer": "Use Check for Updates… in the WalkAway menu. The first install is still this site’s DMG."
     }
   ],
   "installTitle": "Install",

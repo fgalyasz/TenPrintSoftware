@@ -18,5 +18,14 @@
 /sitemap.xml
   Cache-Control: public, max-age=3600
 
+/downloads/walkaway/appcast.xml
+  Cache-Control: public, max-age=300
+
+/downloads/walkaway/*.zip
+  Cache-Control: public, max-age=86400
+
+/downloads/walkaway/*.dmg
+  Cache-Control: public, max-age=86400
+
 /api/*
   Cache-Control: no-store

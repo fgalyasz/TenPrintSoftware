@@ -35,7 +35,8 @@
     {"question": "De ce Apple Watch, nu iPhone?", "answer": "Adresele BLE ale iPhone-ului se pot schimba. Apple Watch e alegerea de încredere. AirPods pot apărea și ele în listă."},
     {"question": "De ce prima blocare cere System Events?", "answer": "WalkAway blochează prin System Events. macOS întreabă o dată. WalkAway nu scrie în TCC.db și nu comută pentru tine comutatoarele Confidențialitate."},
     {"question": "Se colectează date?", "answer": "Nu. Fără conturi, fără urmărire. Setările stau într-un JSON local."},
-    {"question": "Cu ce e diferit de SessionGuard?", "answer": "SessionGuard ține o sesiune trează. WalkAway blochează când pleci. Același catalog, treabă opusă."}
+    {"question": "Cu ce e diferit de SessionGuard?", "answer": "SessionGuard ține o sesiune trează. WalkAway blochează când pleci. Același catalog, treabă opusă."},
+    {"question": "Cum actualizez?", "answer": "Folosește Check for Updates… din meniul WalkAway. Prima instalare rămâne DMG-ul de pe acest site."}
   ],
   "installTitle": "Instalare",
   "install": ["Descarcă DMG-ul", "Trage WalkAway în Applications", "Deschide WalkAway", "Permite Bluetooth, alege Watch-ul în Preferences"],

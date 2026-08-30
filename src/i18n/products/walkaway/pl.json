@@ -35,7 +35,8 @@
     {"question": "Dlaczego Apple Watch zamiast iPhone’a?", "answer": "Adresy BLE iPhone’a mogą się zmieniać. Apple Watch to pewny wybór. Na liście mogą pojawić się też AirPods."},
     {"question": "Dlaczego pierwsza blokada prosi o System Events?", "answer": "WalkAway blokuje przez System Events. macOS pyta raz. WalkAway nie zapisuje TCC.db i nie przełącza za Ciebie przełączników Prywatności."},
     {"question": "Czy zbieracie dane?", "answer": "Nie. Bez kont, bez śledzenia. Ustawienia są w lokalnym pliku JSON."},
-    {"question": "Czym różni się od SessionGuard?", "answer": "SessionGuard utrzymuje sesję przy życiu. WalkAway blokuje, gdy odchodzisz. Ten sam katalog, przeciwna praca."}
+    {"question": "Czym różni się od SessionGuard?", "answer": "SessionGuard utrzymuje sesję przy życiu. WalkAway blokuje, gdy odchodzisz. Ten sam katalog, przeciwna praca."},
+    {"question": "Jak zaktualizować?", "answer": "Użyj Check for Updates… w menu WalkAway. Pierwsza instalacja to nadal DMG z tej strony."}
   ],
   "installTitle": "Instalacja",
   "install": ["Pobierz DMG", "Przeciągnij WalkAway do Applications", "Otwórz WalkAway", "Zezwól na Bluetooth, wybierz Watch w Preferences"],

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>WalkAway</title>
+    <item>
+      <title>Version 0.1.1</title>
+      <pubDate>Sun, 30 Aug 2026 23:18:13 +0000</pubDate>
+      <description><![CDATA[WalkAway 0.1.1]]></description>
+      <enclosure url="https://tenprintsoftware.com/downloads/walkaway/WalkAway-0.1.1.zip" sparkle:version="4" sparkle:shortVersionString="0.1.1" length="1843767" type="application/octet-stream" sparkle:edSignature="xURMZClky3MXW8r/y6YOnIpKnQR2iKWvGoRGXhlzTfaMwKjbwG3lCAZrH6p8HRiyzQciTmeqbs5X5XMZjgaGCA==" />
+    </item>
+  </channel>
+</rss>

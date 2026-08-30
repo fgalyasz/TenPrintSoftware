@@ -35,7 +35,8 @@
     {"question": "Prečo Apple Watch namiesto iPhonu?", "answer": "BLE adresy iPhonu sa môžu meniť. Apple Watch je spoľahlivá voľba. V zozname sa môžu objaviť aj AirPods."},
     {"question": "Prečo prvý zámok žiada System Events?", "answer": "WalkAway zamyká cez System Events. macOS sa spýta raz. WalkAway nezapisuje do TCC.db a neprepína za vás prepínače Súkromie."},
     {"question": "Zbierate údaje?", "answer": "Nie. Žiadne účty, žiadne sledovanie. Nastavenia sú v miestnom JSON súbore."},
-    {"question": "Čím sa líši od SessionGuard?", "answer": "SessionGuard drží reláciu hore. WalkAway zamkne, keď odídete. Rovnaký katalóg, opačná práca."}
+    {"question": "Čím sa líši od SessionGuard?", "answer": "SessionGuard drží reláciu hore. WalkAway zamkne, keď odídete. Rovnaký katalóg, opačná práca."},
+    {"question": "Ako aktualizujem?", "answer": "Použite Check for Updates… v ponuke WalkAway. Prvá inštalácia ostáva DMG z tejto stránky."}
   ],
   "installTitle": "Inštalácia",
   "install": ["Stiahnuť DMG", "Pretiahnuť WalkAway do Applications", "Otvoriť WalkAway", "Povoliť Bluetooth, vybrať Watch v Preferences"],

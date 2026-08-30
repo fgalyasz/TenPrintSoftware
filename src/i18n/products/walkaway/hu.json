@@ -35,7 +35,8 @@
     {"question": "Miért Watch, nem iPhone?", "answer": "Az iPhone BLE-címe változhat. Az Apple Watch a megbízható választás. AirPods is megjelenhet a listában."},
     {"question": "Miért kér System Events engedélyt az első zárolás?", "answer": "A WalkAway a System Events-en keresztül zárol. A macOS egyszer kérdez. A WalkAway nem ír a TCC.db-be, és nem kapcsolja be helyetted a Privacy kapcsolókat."},
     {"question": "Gyűjtötök adatot?", "answer": "Nem. Nincs fiók, nincs követés. A beállítások helyi JSON-fájlban vannak."},
-    {"question": "Miben más, mint a SessionGuard?", "answer": "A SessionGuard ébren tartja a munkamenetet. A WalkAway zárol, ha elmész. Ugyanaz a katalógus, ellentétes feladat."}
+    {"question": "Miben más, mint a SessionGuard?", "answer": "A SessionGuard ébren tartja a munkamenetet. A WalkAway zárol, ha elmész. Ugyanaz a katalógus, ellentétes feladat."},
+    {"question": "Hogyan frissítsek?", "answer": "A WalkAway menü Check for Updates… pontja telepíti az új kiadást. Az első telepítés továbbra is ennek az oldalnak a DMG-je."}
   ],
   "installTitle": "Telepítés",
   "install": [

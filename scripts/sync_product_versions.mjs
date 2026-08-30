@@ -27,13 +27,14 @@ function currentVersion(block) {
   return block.match(/version: "([^"]+)"/)?.[1] ?? null;
 }
 
-function rewriteBlock(block, version, dmg) {
-  return block
-    .replace(/version: "[^"]+"/, `version: "${version}"`)
-    .replace(
-      new RegExp(`downloads/${dmg}-[^"]+\\.dmg`),
-      `downloads/${dmg}-${version}.dmg`,
-    );
+function rewriteBlock(block, version, dmg, slug) {
+  const nested = new RegExp(`downloads/${slug}/${dmg}-[^"]+\\.dmg`);
+  const flat = new RegExp(`downloads/${dmg}-[^"]+\\.dmg`);
+  let next = block.replace(/version: "[^"]+"/, `version: "${version}"`);
+  if (nested.test(next)) {
+    return next.replace(nested, `downloads/${slug}/${dmg}-${version}.dmg`);
+  }
+  return next.replace(flat, `downloads/${dmg}-${version}.dmg`);
 }
 
 function syncProduct(source, entry) {
@@ -50,7 +51,7 @@ function syncProduct(source, entry) {
     return source;
   }
   console.log(`${entry.slug.padEnd(14)} ${previous} -> ${version}`);
-  return source.slice(0, start) + rewriteBlock(block, version, entry.dmg) + source.slice(end);
+  return source.slice(0, start) + rewriteBlock(block, version, entry.dmg, entry.slug) + source.slice(end);
 }
 
 const original = readFileSync(PRODUCTS_FILE, "utf8");
