@@ -1,0 +1,94 @@
+---
+type Item = { question: string; answer: string };
+type Props = { items: Item[] };
+
+const { items } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+---
+
+<div class="faq">
+  {
+    items.map((item) => (
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span>{item.question}</span>
+          <svg class="faq-icon" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+            <path
+              d="M7 2.5v9M2.5 7h9"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+          </svg>
+        </summary>
+        <p class="faq-answer">{item.answer}</p>
+      </details>
+    ))
+  }
+</div>
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline />
+
+<style>
+  .faq {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    transition: border-color 0.2s var(--ease);
+  }
+
+  .faq-item[open] {
+    border-color: var(--border-strong);
+    background: var(--surface-strong);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    cursor: pointer;
+    font-weight: 560;
+    font-size: 0.9875rem;
+    list-style: none;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-icon {
+    flex: none;
+    color: var(--text-faint);
+    transition: transform 0.2s var(--ease);
+  }
+
+  .faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+    color: var(--accent-2);
+  }
+
+  .faq-answer {
+    padding: 0 var(--space-5) var(--space-5);
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    max-width: 76ch;
+  }
+</style>

@@ -1,0 +1,116 @@
+{
+  "tagline": "Ébren tartás macOS-re",
+  "headline": "Tartsd ébren a Mac-munkamenetet.",
+  "summary": "Diszkrét menüsori segéd: tétlenségnél apró egérmozgást szimulál, hogy a képernyőmegosztás, a hosszú meeting vagy a várakozó feladat ne zárja le a bejelentkezést.",
+  "differentiator": "Indításkor a Guard mindig Inaktív. Te kapcsolod be erre a munkamenetre — amíg le nem állítod, vagy amíg a időzített session le nem jár.",
+  "badges": [
+    "macOS 13+",
+    "Menüsor",
+    "Időzített session",
+    "Adatvédelem"
+  ],
+  "featuresTitle": "Egy pillantásra, hangolhatóan, őszintén",
+  "featuresSubtitle": "Annyi, amennyi a bejelentkezés életben tartásához kell — nem egy nehézkes ébren-tartó csomag.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Menüsor-állapot",
+      "text": "Üres pajzs Inaktívnál, teli Aktívnál, hátralévő idő időzített sessionnél, áthúzott pajzs, ha hiányzik az Accessibility."
+    },
+    {
+      "tier": "free",
+      "title": "Valódi felhasználói aktivitás",
+      "text": "Az egérmozgás és a billentyűleütés nullázza a tétlenséget. A mikromozgás nem számít aktivitásnak, így gépelés közben a mutató nem rándul a kamerán."
+    },
+    {
+      "tier": "free",
+      "title": "Időzített session",
+      "text": "Amíg ki nem kapcsolom, vagy 15m / 30m / 1h / 2h / 4h / 8h. Nullánál a Guard Inaktív lesz."
+    },
+    {
+      "tier": "free",
+      "title": "Tétlenség és mozgás beállítás",
+      "text": "Tétlenségi küszöb (15s–2p) és mozgás-intervallum. A beállítások megmaradnak. A Guard indítás után nem kapcsol magától be."
+    },
+    {
+      "tier": "free",
+      "title": "Accessibility bemutatás",
+      "text": "Az első Session elmondja, miért kell az Accessibility, és megnyitja a Rendszerbeállításokat. Nincs csendes első rándulás."
+    },
+    {
+      "tier": "free",
+      "title": "Adatvédelem",
+      "text": "Nincs fiók, nincs követés. Az app helyben fut. Ez az oldal statikus."
+    }
+  ],
+  "howTitle": "Működés",
+  "howSubtitle": "Tétlenség, majd 1 pixeles oda-vissza. Ennyi kell a macOS-nek, hogy jelenlétnek vegye.",
+  "how": [
+    {
+      "title": "Session indítása",
+      "text": "Nyisd a menüsori ikont. Válassz Amíg ki nem kapcsolom vagy időtartamot."
+    },
+    {
+      "title": "Tétlen maradsz — vagy dolgozol",
+      "text": "Gépelés vagy egérmozgás nullázza a tétlenséget. A küszöb után, ha nincs felhasználói aktivitás, mikromozgás futhat."
+    },
+    {
+      "title": "Mikromozgás",
+      "text": "A mutató 1 pixelt mozdul és vissza. A SessionGuard kivárja a mozgás-intervallumot, majd újra ellenőriz."
+    }
+  ],
+  "quickStartTitle": "Gyors start",
+  "quickStartSubtitle": "Telepítéstől Aktív Sessionig pár perc.",
+  "quickStart": [
+    {
+      "title": "Telepítés",
+      "text": "Töltsd le a DMG-t, húzd a SessionGuardot az Applicationsbe, és nyisd meg."
+    },
+    {
+      "title": "Accessibility engedély",
+      "text": "Indíts egy Sessiont. Kérésre kapcsold be az Accessibilityt a Rendszerbeállításokban, majd indítsd újra a Sessiont."
+    },
+    {
+      "title": "Időtartam",
+      "text": "Amíg ki nem kapcsolom nyitott sessionhöz, vagy időzített preset egy meetinghez."
+    },
+    {
+      "title": "Pajzs egy pillantásra",
+      "text": "Teli pajzs: Aktív. Hátralévő idő időzített sessionnél. Üres pajzs: Inaktív."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Miért kér Accessibility engedélyt a SessionGuard?",
+      "answer": "A macOS Accessibilityt kér a mutatóesemények szintéziséhez és a billentyűzet megfigyeléséhez billentyűrögzítés nélkül. Enélkül a Guard nem tud mikromozogni."
+    },
+    {
+      "question": "Gyűjt vagy küld adatot valahova?",
+      "answer": "Nem. Az oldal statikus. Az appnak nincs fiókja, és nem küld aktivitási adatot."
+    },
+    {
+      "question": "Ébren tartja a Macet csukott tetővel is?",
+      "answer": "Nem. A SessionGuard nyitott tető mellett tartja életben a bejelentkezést. Nem csukott-tetős szerveres ébren-tartó."
+    },
+    {
+      "question": "A Guard magától bekapcsol bejelentkezés után?",
+      "answer": "Nem. Indításkor mindig Inaktív, akkor is, ha az Indítás bejelentkezéskor be van kapcsolva. Sessiont akkor indítasz, ha kell."
+    },
+    {
+      "question": "Gépelés kivált mikromozgást?",
+      "answer": "Nem. A billentyűleütés felhasználói aktivitás, és nullázza a tétlenséget. Maga a mikromozgás nem számít, hogy ne indítsa újra magát."
+    },
+    {
+      "question": "Hogyan frissítek?",
+      "answer": "Töltsd le a legújabb DMG-t erről az oldalról, és cseréld a SessionGuardot az Applicationsben."
+    }
+  ],
+  "installTitle": "Telepítés",
+  "install": [
+    "DMG letöltése",
+    "SessionGuard húzása az Applicationsbe",
+    "SessionGuard megnyitása",
+    "Accessibility engedély kérésre, majd Session indítása"
+  ],
+  "downloadNotice": "Ingyenes — vállalkozásoknak is."
+}

@@ -1,0 +1,116 @@
+{
+  "tagline": "Udržení bdělosti pro macOS",
+  "headline": "Udržte sezení na Macu bdělé.",
+  "summary": "Nenápadný nástroj v horní liště, který při nečinnosti simuluje drobné mikropohyby myši — aby sdílená obrazovka, dlouhá schůzka nebo čekající úloha neztratily přihlášené sezení kvůli uspání nebo zamknutí.",
+  "differentiator": "Guard se při každém spuštění zapne jako Neaktivní. Zapnete ho pro dané sezení — dokud ho nezastavíte nebo dokud neskončí časované sezení.",
+  "badges": [
+    "macOS 13+",
+    "Horní lišta",
+    "Časovaná sezení",
+    "Přátelské k soukromí"
+  ],
+  "featuresTitle": "Přehledné, nastavitelné, poctivé",
+  "featuresSubtitle": "Vše, co potřebujete k udržení přihlášeného sezení — bez toho, aby z toho byl těžkopádný balík nástrojů.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Stav v horní liště",
+      "text": "Obrysový štít při Neaktivní, plný při Aktivní, zbývající čas během časovaného sezení, přeškrtnutý štít, pokud chybí oprávnění Zpřístupnění."
+    },
+    {
+      "tier": "free",
+      "title": "Skutečná aktivita uživatele",
+      "text": "Pohyb myši a stisk klávesy vynulují nečinnost. Mikropohyby se za aktivitu nepočítají, takže ukazatel při psaní na kameře necuká."
+    },
+    {
+      "tier": "free",
+      "title": "Časovaná sezení",
+      "text": "Spusťte „Dokud nevypnete“, nebo 15 min / 30 min / 1 h / 2 h / 4 h / 8 h. Když čas dojde na nulu, Guard se přepne na Neaktivní."
+    },
+    {
+      "tier": "free",
+      "title": "Nastavení nečinnosti a pohybu",
+      "text": "Zvolte limit nečinnosti (15 s až 2 min) a interval mezi pohyby. Nastavení zůstává zachováno. Guard se sám po spuštění znovu nezapne."
+    },
+    {
+      "tier": "free",
+      "title": "Úvod do Zpřístupnění",
+      "text": "První sezení vysvětlí, proč je oprávnění Zpřístupnění potřeba, a otevře Nastavení systému. Žádné tiché první cuknutí."
+    },
+    {
+      "tier": "free",
+      "title": "Přátelské k soukromí",
+      "text": "Bez účtů, bez sledování. Aplikace pracuje lokálně. Tento web je statický."
+    }
+  ],
+  "howTitle": "Jak to funguje",
+  "howSubtitle": "Nečinnost, potom posun o 1 pixel a zpět. To macOS stačí, aby vás považoval za přítomného.",
+  "how": [
+    {
+      "title": "Spusťte sezení",
+      "text": "Otevřete ikonu v horní liště. Vyberte „Dokud nevypnete“ nebo časovanou délku."
+    },
+    {
+      "title": "Zůstaňte nečinní — nebo pracujte dál",
+      "text": "Psaní nebo pohyb myší vynuluje nečinnost. Po dosažení limitu nečinnosti bez aktivity uživatele se může provést mikropohyb."
+    },
+    {
+      "title": "Mikropohyb",
+      "text": "Ukazatel se posune o 1 pixel a vrátí se. Poté SessionGuard vyčká nastavený interval a znovu zkontroluje nečinnost."
+    }
+  ],
+  "quickStartTitle": "Rychlý start",
+  "quickStartSubtitle": "Od instalace k aktivnímu sezení za několik minut.",
+  "quickStart": [
+    {
+      "title": "Instalace",
+      "text": "Stáhněte obraz disku, přetáhněte SessionGuard do složky Aplikace a otevřete ho."
+    },
+    {
+      "title": "Povolte Zpřístupnění",
+      "text": "Spusťte sezení. Až budete vyzváni, zapněte Zpřístupnění v Nastavení systému a spusťte sezení znovu."
+    },
+    {
+      "title": "Vyberte délku",
+      "text": "„Dokud nevypnete“ pro sezení bez omezení, nebo časovanou předvolbu pro jednu schůzku."
+    },
+    {
+      "title": "Sledujte ikonu",
+      "text": "Plný štít znamená aktivní. Během časovaného sezení se zobrazuje zbývající čas. Obrys znamená neaktivní."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Proč SessionGuard žádá o Zpřístupnění?",
+      "answer": "macOS vyžaduje Zpřístupnění k vytváření událostí ukazatele a ke sledování aktivity klávesnice bez zaznamenávání kláves. Bez něj Guard nemůže provést mikropohyb."
+    },
+    {
+      "question": "Sbíráte moje data nebo je někam posíláte?",
+      "answer": "Ne. Tento web je statický. Aplikace nemá účty a neposílá žádná data o aktivitě."
+    },
+    {
+      "question": "Udrží Mac bdělý se zavřeným displejem?",
+      "answer": "Ne. SessionGuard udržuje přihlášené sezení, dokud Mac používáte s otevřeným displejem. Není to nástroj pro udržení serveru bdělého se zavřeným displejem."
+    },
+    {
+      "question": "Zapne se Guard po přihlášení sám?",
+      "answer": "Ne. Spuštění vždy začíná jako neaktivní, i když je zapnuté „Spustit při přihlášení“. Sezení spustíte, až ho budete potřebovat."
+    },
+    {
+      "question": "Vyvolá psaní mikropohyb?",
+      "answer": "Ne. Stisk klávesy je aktivita uživatele a vynuluje nečinnost. Samotné mikropohyby se ignorují, aby nečinnost nespouštěly znovu."
+    },
+    {
+      "question": "Jak provedu aktualizaci?",
+      "answer": "Stáhněte z tohoto webu nejnovější obraz disku a nahraďte SessionGuard ve složce Aplikace."
+    }
+  ],
+  "installTitle": "Instalace",
+  "install": [
+    "Stáhněte obraz disku",
+    "Přetáhněte SessionGuard do složky Aplikace",
+    "Otevřete SessionGuard",
+    "Po vyzvání povolte Zpřístupnění a spusťte sezení"
+  ],
+  "downloadNotice": "K bezplatnému užívání — i ve firmě."
+}

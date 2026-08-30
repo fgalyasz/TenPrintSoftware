@@ -1,0 +1,116 @@
+{
+  "tagline": "Stay-awake for macOS",
+  "headline": "Keep your Mac session awake.",
+  "summary": "A discreet menu bar utility that simulates tiny mouse micro-movements when you are idle — so a screen share, a long meeting, or a waiting job does not lose the login session to sleep or lock.",
+  "differentiator": "Guard starts Inactive at every launch. You turn it on for this session — until you stop it, or until a timed session ends.",
+  "badges": [
+    "macOS 13+",
+    "Menu bar",
+    "Timed sessions",
+    "Privacy-friendly"
+  ],
+  "featuresTitle": "Glanceable, tunable, honest",
+  "featuresSubtitle": "Everything you need to keep a login session alive — without becoming a bulky stay-awake suite.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Menu bar status",
+      "text": "Outline shield when Inactive, filled when Active, remaining time during a Timed Session, slashed shield if Accessibility is missing."
+    },
+    {
+      "tier": "free",
+      "title": "True user activity",
+      "text": "Mouse movement and keyboard key-down reset idle. Micro-movements do not count as activity, so the pointer does not twitch on camera while you type."
+    },
+    {
+      "tier": "free",
+      "title": "Timed sessions",
+      "text": "Start Until Turned Off, or 15m / 30m / 1h / 2h / 4h / 8h. When time hits zero, Guard becomes Inactive."
+    },
+    {
+      "tier": "free",
+      "title": "Idle and jiggle settings",
+      "text": "Choose Idle Threshold (15s–2m) and Jiggle Interval. Settings persist. Guard itself does not turn back on after launch."
+    },
+    {
+      "tier": "free",
+      "title": "Accessibility onboarding",
+      "text": "The first Session explains why Accessibility is required and opens System Settings. No silent first twitch."
+    },
+    {
+      "tier": "free",
+      "title": "Privacy-friendly",
+      "text": "No accounts, no tracking. The app works locally. This site is static."
+    }
+  ],
+  "howTitle": "How it works",
+  "howSubtitle": "Idle, then a 1-pixel move and return. That is enough for macOS to treat you as present.",
+  "how": [
+    {
+      "title": "Start a Session",
+      "text": "Open the menu bar extra. Choose Until Turned Off or a timed duration."
+    },
+    {
+      "title": "Stay idle — or keep working",
+      "text": "Typing or moving the mouse resets idle. After the Idle Threshold with no User Activity, a Micro-movement may run."
+    },
+    {
+      "title": "Micro-movement",
+      "text": "The pointer moves 1 pixel and returns. Then SessionGuard waits the Jiggle Interval and checks idle again."
+    }
+  ],
+  "quickStartTitle": "Quick Start",
+  "quickStartSubtitle": "From install to an Active Session in a few minutes.",
+  "quickStart": [
+    {
+      "title": "Install",
+      "text": "Download the DMG, drag SessionGuard to Applications, and open it."
+    },
+    {
+      "title": "Grant Accessibility",
+      "text": "Start a Session. When asked, enable Accessibility in System Settings, then start the Session again."
+    },
+    {
+      "title": "Choose duration",
+      "text": "Until Turned Off for an open-ended session, or a timed preset for one meeting."
+    },
+    {
+      "title": "Glance the icon",
+      "text": "Filled shield means Active. Remaining time shows during a Timed Session. Outline means Inactive."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why does SessionGuard request Accessibility?",
+      "answer": "macOS requires Accessibility to synthesize pointer events and to observe keyboard activity without recording keys. Without it, Guard cannot Micro-move."
+    },
+    {
+      "question": "Is my data collected or sent anywhere?",
+      "answer": "No. This site is static. The app has no accounts and does not send activity data."
+    },
+    {
+      "question": "Does it keep a Mac awake with the lid closed?",
+      "answer": "No. SessionGuard keeps a login session alive while the Mac is in use with the lid open. It is not a closed-lid server stay-awake tool."
+    },
+    {
+      "question": "Does Guard turn itself back on after login?",
+      "answer": "No. Launch always starts Inactive, even if Start at Login is on. You start a Session when you need it."
+    },
+    {
+      "question": "Will typing trigger a Micro-movement?",
+      "answer": "No. Keyboard key-down is User Activity and resets idle. Micro-movements themselves are ignored so they do not retrigger idle."
+    },
+    {
+      "question": "How do I update?",
+      "answer": "Download the latest DMG from this site and replace SessionGuard in Applications."
+    }
+  ],
+  "installTitle": "Install",
+  "install": [
+    "Download the DMG",
+    "Drag SessionGuard to Applications",
+    "Open SessionGuard",
+    "Grant Accessibility when asked, then start a Session"
+  ],
+  "downloadNotice": "Free to use — including for businesses."
+}

@@ -1,0 +1,198 @@
+{
+  "tagline": "Ablak igazítás macOS-hez",
+  "headline": "Egyedi elrendezések. Ablakok zónákba igazítása.",
+  "summary": "Gyors, könnyű macOS segédprogram testreszabható zónákkal. Készíts elrendezéseket, igazítsd az ablakokat egy mozdulattal, és maradj fókuszban.",
+  "differentiator": "Bár a modern operációs rendszerek — így a macOS frissebb verziói is — támogatják az ablakok igazítását a képernyő széleihez húzva, a SnappyZones-szal tetszőleges elrendezést tervezhetsz, és bármely alkalmazás ablakát ehhez igazíthatod.",
+  "badges": [
+    "macOS 13+",
+    "Gyors igazítás",
+    "Egyedi zónák",
+    "Adatbarát"
+  ],
+  "featuresTitle": "Gyorsaságra és átláthatóságra tervezve",
+  "featuresSubtitle": "Minden, amire szükséged van a rendezett asztalhoz — fölösleges sallang nélkül.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Egyedi zóna elrendezések",
+      "text": "Hozz létre zónákat a munkastílusodhoz: kód, böngésző, csevegés, doksik — mind a helyén."
+    },
+    {
+      "tier": "free",
+      "title": "Azonnali igazítás",
+      "text": "Mozgasd és igazítsd az ablakokat gyorsan és kiszámíthatóan."
+    },
+    {
+      "tier": "free",
+      "title": "Több monitor támogatás",
+      "text": "Külön zónák kijelzőnként, stabil elrendezések munkakörnyezetek között."
+    },
+    {
+      "tier": "free",
+      "title": "Könnyű és gyors",
+      "text": "Kis segédprogram, ami igyekszik reszponzív és észrevétlen maradni."
+    },
+    {
+      "tier": "free",
+      "title": "Adatbarát",
+      "text": "Nincs fiók, nincs követés. Az elrendezéseid csak a gépeden tárolódnak."
+    },
+    {
+      "tier": "free",
+      "title": "Billentyűzet-központú",
+      "text": "Gyorsbillentyűk és gyors akciók a fókusz megőrzéséhez."
+    },
+    {
+      "tier": "pro",
+      "title": "Elnevezett elrendezések",
+      "text": "Ments több elnevezett elrendezést ugyanarra a kijelzőre, és válts, ha a munkád változik."
+    },
+    {
+      "tier": "pro",
+      "title": "Elrendezés-választó",
+      "text": "Nyisd meg a Layout váltás… menüpontot vagy gyorsbillentyűt. A nyilak mozgatják a fókuszt; az Enter a fókuszált elrendezést alkalmazza, mint a kattintás."
+    },
+    {
+      "tier": "pro",
+      "title": "Mentés és visszaállítás",
+      "text": "Exportáld az elrendezéseket és beállításokat JSON-fájlba ezen a Macen. A Restore Settings… a csere előtt zónavázlatot mutat minden elrendezésről."
+    },
+    {
+      "tier": "pro",
+      "title": "Áthelyezés a következő kijelzőre",
+      "text": "A menüből vagy opcionális gyorsbillentyűvel átteszi az elöl lévő ablakot a következő monitorra. A relatív méret és hely megmarad."
+    },
+    {
+      "tier": "pro",
+      "title": "Elrendezés törlése",
+      "text": "A Zónaszerkesztőben törölhetsz egy elnevezett elrendezést. Előbb megerősítés. Az utolsót egy kijelzőn nem lehet törölni."
+    },
+    {
+      "tier": "pro",
+      "title": "Elrendezések léptetése",
+      "text": "A Következő elrendezés és az Előző elrendezés a mutató alatti monitor Active Layoutját lépteti. Rövid overlay mutatja az új nevet, majd eltűnik."
+    },
+    {
+      "tier": "free",
+      "title": "Rács-sablonok",
+      "text": "A Zónaszerkesztőben: két oszlop, két sor, 2×2, bal harmad vagy három oszlop. Ha tetszik, mentsd."
+    },
+    {
+      "tier": "free",
+      "title": "Automatikus frissítés",
+      "text": "A Frissítések keresése… az alkalmazáson belül telepíti az újabb kiadást. Az első telepítés továbbra is erről az oldalról történik."
+    }
+  ],
+  "howTitle": "Hogyan működik",
+  "howSubtitle": "Egyszerű kör: zónák tervezése, ablakok igazítása, produktivitás.",
+  "how": [
+    {
+      "title": "Készíts elrendezést",
+      "text": "Nyisd meg a szerkesztőt, és definiáld a zónákat a munkastílusod szerint."
+    },
+    {
+      "title": "Válassz ablakot",
+      "text": "Fogd meg az ablakot, és használd az egyzónás vagy többzónás igazításhoz beállított gyorsbillentyűket az igazítás elkezdéséhez."
+    },
+    {
+      "title": "Igazítsd zónába",
+      "text": "Húzd a zónára, majd engedd el — pontosan úgy igazítva, ahogy megtervezted."
+    }
+  ],
+  "quickStartTitle": "Gyors útmutató",
+  "quickStartSubtitle": "Telepítéstől az igazításig néhány perc alatt.",
+  "quickStart": [
+    {
+      "title": "Telepítés",
+      "text": "Töltsd le a DMG-t, húzd a SnappyZones-t az Alkalmazásokba, és nyisd meg."
+    },
+    {
+      "title": "Jogosultságok",
+      "text": "Kapcsold be ezt a SnappyZones-t a Kisegítő lehetőségeknél, majd a Bemenetfigyelésnél. Frissítés után a régi sor eltűnik; ez a példány Ki, amíg be nem kapcsolod."
+    },
+    {
+      "title": "Elrendezés",
+      "text": "Nyisd meg a Zónaszerkesztőt a menüből. Válassz sablont… vagy rajzolj osztásokat, nevezd el, majd Mentés."
+    },
+    {
+      "title": "Igazítás",
+      "text": "Tartsd a ⌘-t, és húzz egy ablakot egy zónára. Több zónához ⌘⇧. Opcionális: Elrendezés váltása, Következő elrendezés, Áthelyezés a következő kijelzőre, Mentés."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Miért kér a SnappyZones Accessibility jogosultságot?",
+      "answer": "A SnappyZones-nek Kisegítő lehetőségek (Accessibility) hozzáférés kell az ablakok megbízható mozgatásához és átméretezéséhez. Ez standard elvárás macOS ablakkezelő appoknál."
+    },
+    {
+      "question": "Gyűjt vagy elküld bárhová adatot?",
+      "answer": "Nem. A marketing oldal statikus, az app pedig fiókok nélkül, lokálisan működik."
+    },
+    {
+      "question": "Hogyan frissítsek új verzióra?",
+      "answer": "A SnappyZones menü Frissítések keresése… pontja telepíti az új kiadást. Az első telepítés továbbra is az oldal DMG-je."
+    },
+    {
+      "question": "Hogyan kezdjek neki?",
+      "answer": "Nyisd meg a Gyors útmutatót… a SnappyZones menüből, vagy kövesd a Gyors útmutatót ezen az oldalon: telepítés, jogosultságok, elrendezés, igazítás."
+    },
+    {
+      "question": "Hogyan váltok elrendezést a választó nélkül?",
+      "answer": "Használd a Következő elrendezés vagy Előző elrendezés menüpontot, vagy vedd fel a gyorsbillentyűt a Beállításokban. A mutató alatti monitoron körbeérnek, egy elrendezésnél nem csinálnak semmit."
+    },
+    {
+      "question": "Hogyan törlök egy elrendezést?",
+      "answer": "Nyisd meg a Zónaszerkesztőt, válaszd ki az elrendezést, kattints Törlésre, és erősítsd meg. Az utolsó elrendezést egy kijelzőn nem lehet törölni."
+    },
+    {
+      "question": "Frissítés után törölnöm kell a SnappyZones-t az Adatvédelem beállításokból?",
+      "answer": "Nem. A SnappyZones eltávolítja a régi sort, és ezt a példányt Ki állapotban listázza. Kapcsold be azt a sort. Nem kell törölni és újra felvenni."
+    },
+    {
+      "question": "Hogyan oldom fel a Pro-t?",
+      "answer": "Vedd meg a Pro-t ezen az oldalon (vagy illeszd be a kulcsot a Licenc… mezőbe). Az elrendezések a Macen maradnak. A licencellenőrzés a frissítés mellett az egyetlen extra hálózati hívás."
+    }
+  ],
+  "installTitle": "Telepítés",
+  "install": [
+    "DMG letöltése",
+    "Húzd a SnappyZones-t az Alkalmazások mappába",
+    "Nyisd meg a SnappyZones-t",
+    "Add meg a Kisegítő lehetőségeket és a Bemenetfigyelést, ha kéri"
+  ],
+  "downloadNotice": "Ingyenesen használható — vállalkozások számára is.",
+  "roadmapTitle": "Hamarosan érkezik",
+  "roadmapSubtitle": "Egy funkció fejlesztés alatt van. További öt a tervben.",
+  "roadmapInProgress": "Fejlesztés alatt",
+  "roadmapPlanned": "Tervezett",
+  "roadmap": [
+    {
+      "title": "Ablak a kiválasztott kijelzőre",
+      "text": "A státuszmenü almenüje név szerint listázza a csatlakoztatott monitorokat, és az elöl lévő ablakot a választott kijelzőre helyezi. A Move to Next Display a balról jobbra léptetéshez megmarad."
+    },
+    {
+      "title": "Ablak zónába…",
+      "text": "Az elöl lévő ablakot húzás nélkül az aktív layout egy zónájába teszi, menüből vagy opcionális gyorsbillentyűvel. Kattintás vagy Return illeszt. Escape nem mozdít."
+    },
+    {
+      "title": "Utolsó snap visszavonása",
+      "text": "Az utoljára beillesztett ablakot a snap előtti méretre és helyre állítja. Egy lépés. Ha az ablak már nincs, a parancs inaktív."
+    },
+    {
+      "title": "Snap szüneteltetése",
+      "text": "Húzáskor nincs zóna-overlay, kilépés nélkül. A layoutváltás és a következő kijelzőre mozgatás marad. Kapcsold ki, ha újra snapelni akarsz."
+    },
+    {
+      "title": "Appok kizárása",
+      "text": "A Beállításokban olyan appokat jelölhetsz, amelyek soha nem mutatnak zónát és nem snapelnek. A többi app a megszokott."
+    },
+    {
+      "title": "Layout másolása másik kijelzőre",
+      "text": "A Zone Editorban a látható rácsot új layoutként másolod egy másik csatlakoztatott monitorra. A forrás kijelző nem változik."
+    }
+  ],
+  "editionFree": "Ingyenes",
+  "editionPro": "Pro",
+  "proTitle": "SnappyZones Pro",
+  "proBlurb": "Nincs SnappyZones-fiók — vásárlás után licenckulcs. Két Mac. 14 napos próba az appban."
+}

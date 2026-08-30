@@ -1,0 +1,114 @@
+---
+import "~/styles/global.css";
+import Header from "~/components/Header.astro";
+import Footer from "~/components/Footer.astro";
+import { LANGUAGES, LANGUAGE_CODES, DEFAULT_LANGUAGE, type Language } from "~/i18n/config";
+import { localePath, useTranslations } from "~/i18n";
+import { SITE } from "~/data/site";
+
+type Props = {
+  language: Language;
+  title: string;
+  description: string;
+  path?: string;
+  ogImage?: string;
+  accent?: string;
+  accentSoft?: string;
+  wide?: boolean;
+};
+
+const {
+  language,
+  title,
+  description,
+  path = "",
+  ogImage = "/assets/og/default.png",
+  accent,
+  accentSoft,
+} = Astro.props;
+
+const t = useTranslations(language);
+const canonical = new URL(localePath(language, path), Astro.site).toString();
+const ogImageUrl = new URL(ogImage, Astro.site).toString();
+const accentStyle = accent
+  ? [
+      `--product-accent:${accent}`,
+      `--product-accent-2:${accentSoft ?? accent}`,
+      `--accent:${accent}`,
+      `--accent-2:${accentSoft ?? accent}`,
+    ].join(";")
+  : undefined;
+
+const organisation = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE.name,
+  url: SITE.url,
+  email: SITE.email,
+  logo: new URL("/assets/og/logo.png", Astro.site).toString(),
+  description: t("home.meta.description"),
+  sameAs: SITE.products.map((product) => product.url),
+};
+---
+
+<!doctype html>
+<html lang={LANGUAGES[language].htmlLang} data-language={language} style={accentStyle}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/og/logo.png" />
+    <link rel="sitemap" href="/sitemap.xml" />
+
+    {
+      LANGUAGE_CODES.map((code) => (
+        <link
+          rel="alternate"
+          hreflang={LANGUAGES[code].htmlLang}
+          href={new URL(localePath(code, path), Astro.site).toString()}
+        />
+      ))
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(localePath(DEFAULT_LANGUAGE, path), Astro.site).toString()}
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content={LANGUAGES[language].htmlLang} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem("tp-theme");
+        const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", stored || (dark ? "dark" : "light"));
+      })();
+    </script>
+
+    <script type="application/ld+json" set:html={JSON.stringify(organisation)} is:inline />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">{t("skip")}</a>
+    <Header language={language} path={path} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer language={language} />
+  </body>
+</html>

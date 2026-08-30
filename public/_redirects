@@ -1,0 +1,7 @@
+/products/*  /en/products/:splat  302
+/pricing     /en/pricing/         302
+/downloads   /en/downloads/       302
+/support     /en/support/         302
+/feedback    /en/feedback/        302
+/about       /en/about/           302
+/legal/*     /en/legal/:splat     302

@@ -1,0 +1,382 @@
+---
+import Logo from "./Logo.astro";
+import LanguagePicker from "./LanguagePicker.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+import { localePath, useTranslations } from "~/i18n";
+import type { Language } from "~/i18n/config";
+import { productStyle, sortedProducts } from "~/data/products";
+import { productCopy } from "~/i18n/products";
+
+type Props = { language: Language; path: string };
+
+const { language, path } = Astro.props;
+const t = useTranslations(language);
+const products = sortedProducts();
+
+const links = [
+  { key: "nav.products", href: localePath(language, "products"), match: "products" },
+  { key: "nav.pricing", href: localePath(language, "pricing"), match: "pricing" },
+  { key: "nav.downloads", href: localePath(language, "downloads"), match: "downloads" },
+  { key: "nav.support", href: localePath(language, "support"), match: "support" },
+  { key: "nav.about", href: localePath(language, "about"), match: "about" },
+] as const;
+
+function isActive(match: string): boolean {
+  return path === match || path.startsWith(`${match}/`);
+}
+---
+
+<header class="header" data-header>
+  <div class="container header-inner">
+    <a class="header-brand" href={localePath(language)} aria-label={t("brand.name")}>
+      <Logo withWordmark />
+    </a>
+
+    <nav class="header-nav" aria-label={t("nav.aria")}>
+      <div class="nav-item nav-item-menu">
+        <a
+          class:list={["nav-link", isActive("products") && "nav-link-active"]}
+          href={localePath(language, "products")}
+          aria-haspopup="true"
+        >
+          {t("nav.products")}
+          <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" class="nav-caret">
+            <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <div class="nav-panel" role="group">
+          <div class="nav-panel-inner">
+            {
+              products.map((product) => {
+                const copy = productCopy(product.slug, language);
+                return (
+                  <a
+                    class="nav-product"
+                    href={localePath(language, `products/${product.slug}`)}
+                    style={productStyle(product)}
+                  >
+                    <img src={product.iconUrl} alt="" width="34" height="34" loading="lazy" />
+                    <span class="nav-product-body">
+                      <span class="nav-product-name">{product.name}</span>
+                      <span class="nav-product-text">{copy.tagline}</span>
+                    </span>
+                  </a>
+                );
+              })
+            }
+            <a class="nav-product nav-product-all" href={localePath(language, "products")}>
+              <span class="nav-product-body">
+                <span class="nav-product-name">{t("nav.allProducts")}</span>
+                <span class="nav-product-text">{t("products.count", { count: products.length })}</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {
+        links.slice(1).map((link) => (
+          <a
+            class:list={["nav-link", isActive(link.match) && "nav-link-active"]}
+            href={link.href}
+          >
+            {t(link.key)}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="header-actions">
+      <LanguagePicker language={language} path={path} />
+      <ThemeToggle label={t("theme.toggle")} />
+      <a class="header-cta" href={localePath(language, "downloads")}>{t("cta.download")}</a>
+      <button class="header-burger" type="button" data-nav-toggle aria-expanded="false">
+        <span class="visually-hidden">{t("nav.menu")}</span>
+        <span class="burger-bar"></span>
+        <span class="burger-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" data-mobile-nav hidden>
+    <div class="container mobile-nav-inner">
+      {
+        products.map((product) => (
+          <a class="mobile-product" href={localePath(language, `products/${product.slug}`)}>
+            <img src={product.iconUrl} alt="" width="28" height="28" loading="lazy" />
+            {product.name}
+          </a>
+        ))
+      }
+      <hr class="divider" />
+      {
+        links.map((link) => (
+          <a class="mobile-link" href={link.href}>
+            {t(link.key)}
+          </a>
+        ))
+      }
+      <a class="mobile-link" href={localePath(language, "feedback")}>{t("nav.feedback")}</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s var(--ease);
+  }
+
+  .header[data-scrolled] {
+    border-bottom-color: var(--border);
+  }
+
+  .header-inner {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+  }
+
+  .header-brand {
+    flex: none;
+    border-radius: var(--radius-sm);
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    margin-inline-start: var(--space-4);
+    flex: 1;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 11px;
+    border-radius: var(--radius-xs);
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    transition:
+      color 0.15s var(--ease),
+      background 0.15s var(--ease);
+  }
+
+  .nav-link:hover {
+    color: var(--text);
+    background: var(--surface);
+  }
+
+  .nav-link-active {
+    color: var(--text);
+  }
+
+  .nav-caret {
+    opacity: 0.6;
+    transition: transform 0.2s var(--ease);
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: -8px;
+    min-width: 320px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition:
+      opacity 0.18s var(--ease),
+      transform 0.18s var(--ease),
+      visibility 0.18s;
+  }
+
+  .nav-item-menu:hover .nav-panel,
+  .nav-item-menu:focus-within .nav-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-item-menu:hover .nav-caret {
+    transform: rotate(180deg);
+  }
+
+  .nav-panel-inner {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-2);
+    display: grid;
+    gap: 2px;
+  }
+
+  .nav-product {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    transition: background 0.15s var(--ease);
+  }
+
+  .nav-product:hover {
+    background: var(--surface-strong);
+  }
+
+  .nav-product img {
+    border-radius: 8px;
+    flex: none;
+  }
+
+  .nav-product-body {
+    display: grid;
+    gap: 1px;
+    min-width: 0;
+  }
+
+  .nav-product-name {
+    font-size: 0.9375rem;
+    font-weight: 580;
+    color: var(--text);
+  }
+
+  .nav-product-text {
+    font-size: 0.8125rem;
+    color: var(--text-faint);
+    line-height: 1.4;
+  }
+
+  .nav-product-all {
+    border-top: 1px solid var(--border);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    margin-top: var(--space-1);
+    padding-top: var(--space-3);
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex: none;
+  }
+
+  .header-cta {
+    padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.9375rem;
+    font-weight: 560;
+    transition: opacity 0.15s var(--ease);
+  }
+
+  .header-cta:hover {
+    opacity: 0.85;
+  }
+
+  .header-burger {
+    display: none;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    padding: 0;
+    place-items: center;
+    gap: 5px;
+  }
+
+  .burger-bar {
+    display: block;
+    width: 16px;
+    height: 1.5px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.2s var(--ease);
+  }
+
+  .mobile-nav {
+    border-top: 1px solid var(--border);
+    background: var(--bg-raised);
+    padding-block: var(--space-4);
+  }
+
+  .mobile-nav-inner {
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  .mobile-product,
+  .mobile-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 11px 8px;
+    border-radius: var(--radius-xs);
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+  }
+
+  .mobile-product {
+    color: var(--text);
+    font-weight: 560;
+  }
+
+  .mobile-product img {
+    border-radius: 7px;
+  }
+
+  @media (max-width: 940px) {
+    .header-nav,
+    .header-cta {
+      display: none;
+    }
+
+    .header-burger {
+      display: grid;
+    }
+  }
+
+  @media (min-width: 941px) {
+    .mobile-nav {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const header = document.querySelector<HTMLElement>("[data-header]");
+  const toggle = document.querySelector<HTMLButtonElement>("[data-nav-toggle]");
+  const panel = document.querySelector<HTMLElement>("[data-mobile-nav]");
+
+  if (toggle && panel) {
+    toggle.addEventListener("click", () => {
+      const open = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!open));
+      panel.hidden = open;
+    });
+  }
+
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 8) header.setAttribute("data-scrolled", "");
+      else header.removeAttribute("data-scrolled");
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+</script>

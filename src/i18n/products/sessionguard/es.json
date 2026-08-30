@@ -1,0 +1,116 @@
+{
+  "tagline": "Mantener despierto macOS",
+  "headline": "Mantén despierta la sesión de tu Mac.",
+  "summary": "Una utilidad discreta en la barra de menús que simula micromovimientos del ratón cuando estás inactivo — para que una pantalla compartida, una reunión larga o un trabajo en espera no pierdan la sesión por suspensión o bloqueo.",
+  "differentiator": "Guard arranca Inactivo cada vez que se abre. Tú lo activas para esta sesión — hasta que lo detengas o hasta que termine una sesión temporizada.",
+  "badges": [
+    "macOS 13+",
+    "Barra de menús",
+    "Sesiones temporizadas",
+    "Respetuoso con la privacidad"
+  ],
+  "featuresTitle": "Legible de un vistazo, ajustable, honesto",
+  "featuresSubtitle": "Todo lo necesario para mantener viva una sesión — sin convertirse en una suite pesada de mantener despierto.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Estado en la barra de menús",
+      "text": "Escudo con contorno cuando está inactivo, relleno cuando está activo, tiempo restante durante una sesión temporizada y escudo tachado si falta el permiso de accesibilidad."
+    },
+    {
+      "tier": "free",
+      "title": "Actividad real del usuario",
+      "text": "El movimiento del ratón y la pulsación de teclas reinician la inactividad. Los micromovimientos no cuentan como actividad, así que el puntero no tiembla en cámara mientras escribes."
+    },
+    {
+      "tier": "free",
+      "title": "Sesiones temporizadas",
+      "text": "Inicia «Hasta que se desactive» o 15 min / 30 min / 1 h / 2 h / 4 h / 8 h. Cuando el tiempo llega a cero, Guard pasa a inactivo."
+    },
+    {
+      "tier": "free",
+      "title": "Ajustes de inactividad y movimiento",
+      "text": "Elige el umbral de inactividad (de 15 s a 2 min) y el intervalo entre movimientos. Los ajustes se conservan. Guard no se vuelve a activar solo al abrirse."
+    },
+    {
+      "tier": "free",
+      "title": "Introducción a la accesibilidad",
+      "text": "La primera sesión explica por qué se necesita la accesibilidad y abre Ajustes del Sistema. Ningún primer movimiento silencioso."
+    },
+    {
+      "tier": "free",
+      "title": "Respetuoso con la privacidad",
+      "text": "Sin cuentas, sin seguimiento. La aplicación funciona en local. Esta web es estática."
+    }
+  ],
+  "howTitle": "Cómo funciona",
+  "howSubtitle": "Inactividad y, después, un movimiento de un píxel y vuelta. Con eso macOS ya te considera presente.",
+  "how": [
+    {
+      "title": "Inicia una sesión",
+      "text": "Abre el icono de la barra de menús. Elige «Hasta que se desactive» o una duración temporizada."
+    },
+    {
+      "title": "Quédate inactivo — o sigue trabajando",
+      "text": "Escribir o mover el ratón reinicia la inactividad. Pasado el umbral de inactividad sin actividad del usuario, puede ejecutarse un micromovimiento."
+    },
+    {
+      "title": "Micromovimiento",
+      "text": "El puntero se mueve un píxel y vuelve. Después SessionGuard espera el intervalo configurado y comprueba de nuevo la inactividad."
+    }
+  ],
+  "quickStartTitle": "Primeros pasos",
+  "quickStartSubtitle": "De la instalación a una sesión activa en pocos minutos.",
+  "quickStart": [
+    {
+      "title": "Instalar",
+      "text": "Descarga la imagen de disco, arrastra SessionGuard a Aplicaciones y ábrelo."
+    },
+    {
+      "title": "Conceder accesibilidad",
+      "text": "Inicia una sesión. Cuando te lo pida, activa la accesibilidad en Ajustes del Sistema y vuelve a iniciar la sesión."
+    },
+    {
+      "title": "Elegir duración",
+      "text": "«Hasta que se desactive» para una sesión sin límite, o una duración predefinida para una única reunión."
+    },
+    {
+      "title": "Mira el icono",
+      "text": "Escudo relleno significa activo. Durante una sesión temporizada se muestra el tiempo restante. El contorno significa inactivo."
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Por qué SessionGuard pide accesibilidad?",
+      "answer": "macOS exige accesibilidad para generar eventos del puntero y detectar actividad del teclado sin registrar las teclas. Sin ella, Guard no puede hacer micromovimientos."
+    },
+    {
+      "question": "¿Se recopilan mis datos o se envían a algún sitio?",
+      "answer": "No. Esta web es estática. La aplicación no tiene cuentas y no envía datos de actividad."
+    },
+    {
+      "question": "¿Mantiene despierto un Mac con la tapa cerrada?",
+      "answer": "No. SessionGuard mantiene viva una sesión mientras el Mac se usa con la tapa abierta. No es una herramienta para mantener despierto un servidor con la tapa cerrada."
+    },
+    {
+      "question": "¿Guard se vuelve a activar después de iniciar sesión?",
+      "answer": "No. El arranque siempre empieza inactivo, incluso con «Abrir al iniciar sesión» activado. Tú inicias una sesión cuando la necesitas."
+    },
+    {
+      "question": "¿Escribir provoca un micromovimiento?",
+      "answer": "No. Pulsar una tecla es actividad del usuario y reinicia la inactividad. Los micromovimientos en sí se ignoran para que no reinicien el contador."
+    },
+    {
+      "question": "¿Cómo actualizo?",
+      "answer": "Descarga la última imagen de disco desde esta web y sustituye SessionGuard en Aplicaciones."
+    }
+  ],
+  "installTitle": "Instalación",
+  "install": [
+    "Descarga la imagen de disco",
+    "Arrastra SessionGuard a Aplicaciones",
+    "Abre SessionGuard",
+    "Concede la accesibilidad cuando se te pida y luego inicia una sesión"
+  ],
+  "downloadNotice": "Uso gratuito — también para empresas."
+}

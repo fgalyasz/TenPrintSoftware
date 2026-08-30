@@ -1,0 +1,109 @@
+---
+type Props = {
+  href?: string;
+  variant?: "primary" | "secondary" | "ghost";
+  size?: "md" | "lg";
+  external?: boolean;
+  download?: boolean;
+  type?: "button" | "submit";
+  class?: string;
+  id?: string;
+  disabled?: boolean;
+};
+
+const {
+  href,
+  variant = "primary",
+  size = "md",
+  external = false,
+  download = false,
+  type = "button",
+  class: className = "",
+  id,
+  disabled = false,
+} = Astro.props;
+
+const classes = ["btn", `btn-${variant}`, `btn-${size}`, className];
+const externalAttributes = external ? { target: "_blank", rel: "noopener noreferrer" } : {};
+---
+
+{
+  href ? (
+    <a class:list={classes} href={href} id={id} download={download} {...externalAttributes}>
+      <slot />
+    </a>
+  ) : (
+    <button class:list={classes} type={type} id={id} disabled={disabled}>
+      <slot />
+    </button>
+  )
+}
+
+<style>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: var(--radius-pill);
+    border: 1px solid transparent;
+    font-weight: 560;
+    letter-spacing: -0.005em;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+      transform 0.12s var(--ease),
+      background 0.15s var(--ease),
+      border-color 0.15s var(--ease),
+      opacity 0.15s var(--ease);
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
+
+  .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  .btn-md {
+    padding: 10px 20px;
+    font-size: 0.9375rem;
+  }
+
+  .btn-lg {
+    padding: 13px 26px;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    color: #08090f;
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 28%, transparent);
+  }
+
+  .btn-primary:hover {
+    filter: brightness(1.07);
+  }
+
+  .btn-secondary {
+    background: var(--surface-strong);
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+
+  .btn-secondary:hover {
+    background: var(--surface-hover);
+  }
+
+  .btn-ghost {
+    color: var(--text-muted);
+    padding-inline: 12px;
+  }
+
+  .btn-ghost:hover {
+    color: var(--text);
+    background: var(--surface);
+  }
+</style>

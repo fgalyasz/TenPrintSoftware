@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import SessionGuardMock from "./SessionGuardMock.astro";
+import type { Product } from "~/data/products";
+
+import heroDark from "~/assets/products/snappyzones/hero_screenshot_dark.png";
+import heroLight from "~/assets/products/snappyzones/hero_screenshot_light.png";
+
+type Props = { product: Product; alt: string; mockRows?: string[]; mockMuted?: string[] };
+
+const { product, alt, mockRows = [], mockMuted = [] } = Astro.props;
+---
+
+{
+  product.slug === "snappyzones" ? (
+    <figure class="visual">
+      <Image
+        class="visual-shot visual-dark"
+        src={heroDark}
+        alt={alt}
+        widths={[640, 960, 1280, 1600]}
+        sizes="(max-width: 900px) 92vw, 620px"
+        loading="eager"
+        format="webp"
+        quality={72}
+      />
+      <Image
+        class="visual-shot visual-light"
+        src={heroLight}
+        alt={alt}
+        widths={[640, 960, 1280, 1600]}
+        sizes="(max-width: 900px) 92vw, 620px"
+        loading="lazy"
+        format="webp"
+        quality={72}
+      />
+    </figure>
+  ) : (
+    <div class="visual visual-mock">
+      <SessionGuardMock rows={mockRows} muted={mockMuted} />
+    </div>
+  )
+}
+
+<style>
+  .visual {
+    margin: 0;
+    position: relative;
+  }
+
+  .visual-shot {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+  }
+
+  :global([data-theme="dark"]) .visual-light,
+  :global([data-theme="light"]) .visual-dark {
+    display: none;
+  }
+
+  .visual-mock {
+    display: flex;
+    justify-content: center;
+  }
+</style>

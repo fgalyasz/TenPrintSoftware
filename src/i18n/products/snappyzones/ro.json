@@ -1,0 +1,198 @@
+{
+  "tagline": "Fixarea ferestrelor pentru macOS",
+  "headline": "Creați layout-uri proprii. Fixați ferestrele în zone.",
+  "summary": "O utilitate rapidă și ușoară pentru macOS pentru organizarea spațiului de lucru cu zone personalizabile. Creează aranjamente, fixează ferestrele instant și rămâi concentrat.",
+  "differentiator": "Deși sistemele de operare moderne — inclusiv versiunile recente de macOS — pot alinia ferestrele prin tragerea lor către marginile ecranului, SnappyZones îți permite să creezi orice layout și să alinizezi după el ferestrele oricărei aplicații.",
+  "badges": [
+    "macOS 13+",
+    "Fixare rapidă",
+    "Zone personalizabile",
+    "Fără tracking"
+  ],
+  "featuresTitle": "Conceput pentru viteză și claritate",
+  "featuresSubtitle": "Tot ce ai nevoie pentru un desktop ordonat — fără să te încurce.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Aranjamente de zone personalizate",
+      "text": "Definește zone în funcție de modul în care lucrezi: cod, web, chat, documente — totul la locul lui."
+    },
+    {
+      "tier": "free",
+      "title": "Fixare instantă",
+      "text": "Mută și fixează ferestrele în zone rapid și previzibil."
+    },
+    {
+      "tier": "free",
+      "title": "Pregătit pentru mai multe monitoare",
+      "text": "Seturi de zone diferite pentru fiecare ecran și aranjamente stabile între spații de lucru."
+    },
+    {
+      "tier": "free",
+      "title": "Ușor și rapid",
+      "text": "O utilitate mică, concepută să rămână receptivă și discretă zi de zi."
+    },
+    {
+      "tier": "free",
+      "title": "Confidențialitate",
+      "text": "Fără conturi, fără tracking. Aranjamentele rămân local."
+    },
+    {
+      "tier": "free",
+      "title": "Orientat pe tastatură",
+      "text": "Scurtături și acțiuni rapide pentru a păstra concentrarea."
+    },
+    {
+      "tier": "pro",
+      "title": "Layout-uri denumite",
+      "text": "Salvează mai multe layout-uri denumite pe același ecran și comută când munca se schimbă."
+    },
+    {
+      "tier": "pro",
+      "title": "Selector de layout",
+      "text": "Deschide Schimbă layout… din meniu sau din scurtătură. Săgețile mută focusul; Return aplică layout-ul focalizat, ca un clic."
+    },
+    {
+      "tier": "pro",
+      "title": "Backup și restaurare",
+      "text": "Exportă layout-urile și preferințele într-un fișier JSON pe acest Mac. Restaurează setările… arată o schiță a fiecărui layout înainte de a înlocui configurația live."
+    },
+    {
+      "tier": "pro",
+      "title": "Mută pe următorul ecran",
+      "text": "Trimite fereastra din față pe următorul monitor din meniu sau cu o scurtătură opțională. Dimensiunea și poziția relative rămân aceleași."
+    },
+    {
+      "tier": "pro",
+      "title": "Șterge un layout",
+      "text": "Elimină un layout numit din Editorul de zone. Confirmă mai întâi. Ultimul layout de pe un ecran nu poate fi șters."
+    },
+    {
+      "tier": "pro",
+      "title": "Parcurge layout-urile",
+      "text": "Layout următor și Layout anterior avansează layout-ul activ pe monitorul de sub pointer. O suprapunere scurtă arată noul nume, apoi dispare."
+    },
+    {
+      "tier": "free",
+      "title": "Presetări de grilă",
+      "text": "Aplică Două coloane, Două rânduri, 2×2, Treimea stângă sau Trei coloane în Editorul de zone, apoi Salvează."
+    },
+    {
+      "tier": "free",
+      "title": "Actualizări automate",
+      "text": "Caută actualizări… instalează o versiune publicată mai nouă în aplicație. Prima instalare rămâne un descărcare de pe acest site."
+    }
+  ],
+  "howTitle": "Cum funcționează",
+  "howSubtitle": "Un ciclu simplu: proiectezi zone, fixezi ferestre, rămâi productiv.",
+  "how": [
+    {
+      "title": "Creează un aranjament",
+      "text": "Deschide editorul și definește zonele după modul tău de lucru."
+    },
+    {
+      "title": "Alege o fereastră",
+      "text": "Prinde o fereastră, apoi folosește scurtăturile configurate pentru fixarea single‑zone sau multi‑zone, ca să începi fixarea."
+    },
+    {
+      "title": "Fixează într-o zonă",
+      "text": "Plasează în zonă — aliniat și dimensionat exact cum ai planificat."
+    }
+  ],
+  "quickStartTitle": "Ghid rapid",
+  "quickStartSubtitle": "De la instalare la fixare în câteva minute.",
+  "quickStart": [
+    {
+      "title": "Instalare",
+      "text": "Descarcă DMG-ul, trage SnappyZones în Applications și deschide-l."
+    },
+    {
+      "title": "Permisiuni",
+      "text": "Pornește această copie SnappyZones la Accesibilitate, apoi la Monitorizarea inputului. După o actualizare rândul vechi dispare; această copie apare Oprit până o activezi."
+    },
+    {
+      "title": "Layout",
+      "text": "Deschide Editorul de zone din meniu. Alege un Preset… sau desenează split-uri, denumește layout-ul, apoi Salvează."
+    },
+    {
+      "title": "Fixare",
+      "text": "Ține ⌘ și trage o fereastră pe o zonă. Ține ⌘⇧ pentru mai multe zone. Opțional: Schimbă layout, Layout următor, Mută pe următorul ecran, Backup."
+    }
+  ],
+  "faq": [
+    {
+      "question": "De ce SnappyZones cere permisiunea Accessibility?",
+      "answer": "SnappyZones are nevoie de Accessibility pentru a muta și redimensiona ferestrele în mod fiabil. Este o cerință standard pentru aplicații de gestionare a ferestrelor pe macOS."
+    },
+    {
+      "question": "Se colectează sau se trimit date undeva?",
+      "answer": "Nu. Site-ul este static, iar aplicația funcționează local fără conturi."
+    },
+    {
+      "question": "Cum fac update la o versiune nouă?",
+      "answer": "Folosiți Caută actualizări… din meniul SnappyZones. Prima instalare rămâne DMG-ul de pe acest site."
+    },
+    {
+      "question": "Cum încep?",
+      "answer": "Deschide Ghid rapid… din meniul SnappyZones sau urmează Ghidul rapid de pe această pagină: instalare, permisiuni, layout, fixare."
+    },
+    {
+      "question": "Cum schimb layout-ul fără a deschide selectorul?",
+      "answer": "Folosește Layout următor sau Layout anterior din meniu, sau înregistrează scurtăturile în Preferințe. Ciclează pe monitorul de sub pointer și nu fac nimic dacă există un singur layout."
+    },
+    {
+      "question": "Cum șterg un layout?",
+      "answer": "Deschide Editorul de zone, alege layout-ul, apasă Șterge și confirmă. Ultimul layout de pe un ecran nu poate fi șters."
+    },
+    {
+      "question": "Trebuie să șterg SnappyZones din Confidențialitate după o actualizare?",
+      "answer": "Nu. SnappyZones elimină rândul vechi și listează această copie ca Oprit. Pornește acel rând. Nu trebuie să ștergi aplicația și să o adaugi din nou."
+    },
+    {
+      "question": "Cum deblochez Pro?",
+      "answer": "Cumpără Pro pe acest site (sau lipește cheia în Licență…). Layout-urile rămân pe Mac. Validarea licenței e singura rețea extra pe lângă actualizări."
+    }
+  ],
+  "installTitle": "Instalare",
+  "install": [
+    "Descarcă DMG-ul",
+    "Trage SnappyZones în Aplicații",
+    "Deschide SnappyZones",
+    "Acordă Accesibilitate și Monitorizarea inputului când vi se cere"
+  ],
+  "downloadNotice": "Gratuit — inclusiv pentru companii.",
+  "roadmapTitle": "În curând",
+  "roadmapSubtitle": "O funcție este în dezvoltare. Încă cinci sunt planificate.",
+  "roadmapInProgress": "În dezvoltare",
+  "roadmapPlanned": "Planificat",
+  "roadmap": [
+    {
+      "title": "Fereastră pe ecranul ales",
+      "text": "Un submeniu din bara de meniu listează monitoarele conectate după nume și trimite fereastra din față pe ecranul ales. Mută pe ecranul următor rămâne pentru ciclul stânga-dreapta."
+    },
+    {
+      "title": "Ancorează fereastra…",
+      "text": "Pune fereastra din față într-o zonă a layoutului activ din meniu sau o scurtătură opțională. Clic sau Return ancorează. Escape nu mută nimic."
+    },
+    {
+      "title": "Anulează ultima ancorare",
+      "text": "Readuce ultima fereastră ancorată la mărimea și locul de dinaintea snapului. Un pas. Dezactivat dacă fereastra a dispărut."
+    },
+    {
+      "title": "Pune ancorarea pe pauză",
+      "text": "Fără overlay de zone la tragere, fără a ieși. Schimbarea layoutului și Mută pe ecranul următor rămân active."
+    },
+    {
+      "title": "Ignoră aplicații",
+      "text": "În Preferințe alege aplicații care nu arată niciodată zone și nu se ancorează. Restul rămâne ca azi."
+    },
+    {
+      "title": "Copiază layoutul pe alt ecran",
+      "text": "În editorul de zone copiază grila vizibilă pe un alt monitor conectat ca layout nou. Ecranul sursă nu se schimbă."
+    }
+  ],
+  "editionFree": "Gratuit",
+  "editionPro": "Pro",
+  "proTitle": "SnappyZones Pro",
+  "proBlurb": "Fără cont SnappyZones — o cheie după plată. Două Mac-uri. Probă 14 zile în aplicație."
+}

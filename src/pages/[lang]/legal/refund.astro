@@ -1,0 +1,68 @@
+---
+import LegalPage from "~/components/LegalPage.astro";
+import { localeParams, useTranslations } from "~/i18n";
+import { toLanguage } from "~/i18n/config";
+import { SITE } from "~/data/site";
+
+export function getStaticPaths() {
+  return localeParams();
+}
+
+const language = toLanguage(Astro.params.lang);
+const t = useTranslations(language);
+---
+
+<LegalPage
+  language={language}
+  path="legal/refund"
+  title={t("legal.refund")}
+  metaTitle={t("legal.meta.refund")}
+  description="TenPrint Software's 30-day, no-questions-asked refund policy for paid licences."
+>
+  <p>
+    Every paid {SITE.name} licence can be refunded in full within <strong>30 days</strong> of purchase,
+    for any reason. You do not have to justify the request, and we will not try to talk you out of it.
+  </p>
+
+  <h2>Why the policy is this generous</h2>
+  <p>
+    Every application is free to download and offers a real trial before you pay anything, so you can
+    find out whether it fits your workflow without spending money. If you still decide after buying
+    that it is not for you, we would rather return the payment than keep it.
+  </p>
+
+  <h2>How to request a refund</h2>
+  <ul>
+    <li>
+      Email <a href={`mailto:${SITE.email}`}>{SITE.email}</a> from the address you used at checkout.
+    </li>
+    <li>Include the order number from your purchase confirmation, or the licence key.</li>
+    <li>You do not need to explain why, though we always appreciate knowing what went wrong.</li>
+  </ul>
+  <p>
+    We process refunds within three working days of receiving the request. The money is returned by
+    our merchant of record to the original payment method; how quickly it appears depends on your bank
+    or card issuer, typically five to ten working days.
+  </p>
+
+  <h2>After a refund</h2>
+  <p>
+    The associated licence key is deactivated when the refund is issued. The application itself keeps
+    working with its free feature set — nothing is uninstalled and none of your settings or data are
+    removed.
+  </p>
+
+  <h2>Beyond 30 days</h2>
+  <p>
+    We are not obliged to refund a purchase older than 30 days, but we look at genuine cases
+    individually. If an application stops working because of a defect we introduced and we cannot fix
+    it in a reasonable time, write to us regardless of how long ago you bought it.
+  </p>
+
+  <h2>Statutory rights</h2>
+  <p>
+    If you are a consumer in the European Union, this policy sits on top of your statutory 14-day right
+    of withdrawal for distance contracts and never replaces it. Where the two differ, whichever gives
+    you more applies.
+  </p>
+</LegalPage>

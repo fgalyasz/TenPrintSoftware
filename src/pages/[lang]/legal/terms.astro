@@ -1,0 +1,92 @@
+---
+import LegalPage from "~/components/LegalPage.astro";
+import { localeParams, useTranslations } from "~/i18n";
+import { toLanguage } from "~/i18n/config";
+import { SITE } from "~/data/site";
+
+export function getStaticPaths() {
+  return localeParams();
+}
+
+const language = toLanguage(Astro.params.lang);
+const t = useTranslations(language);
+---
+
+<LegalPage
+  language={language}
+  path="legal/terms"
+  title={t("legal.terms")}
+  metaTitle={t("legal.meta.terms")}
+  description="The terms that apply to using the TenPrint Software website and licensing its macOS applications."
+>
+  <p>
+    These terms apply to the <strong>{SITE.domain}</strong> website and to the licences we grant for
+    {SITE.name} applications. Using the site or installing an application means you accept them.
+  </p>
+
+  <h2>Licence grant</h2>
+  <p>
+    When you install one of our applications you receive a non-exclusive, non-transferable licence to
+    use it. A free application may be used without payment for personal and commercial purposes alike.
+    A paid licence covers use on up to two Macs that you personally operate, unless a volume licence
+    agreed in writing says otherwise.
+  </p>
+  <p>
+    The licence is perpetual for the major version you purchased, and every update released within
+    that major version is included at no extra cost.
+  </p>
+
+  <h2>What you may not do</h2>
+  <ul>
+    <li>Resell, sublicense, rent, or redistribute the software or a licence key.</li>
+    <li>Share a licence key publicly or with people outside your own two-Mac allowance.</li>
+    <li>Reverse engineer the software except to the extent that applicable law expressly permits.</li>
+    <li>Remove or alter copyright notices or licensing mechanisms.</li>
+  </ul>
+  <p>
+    We may deactivate a licence key that is being distributed publicly or used well beyond its seat
+    allowance. Where the misuse was not deliberate, we will contact you first.
+  </p>
+
+  <h2>Trials</h2>
+  <p>
+    Paid features may be evaluated for the trial period stated on the product page, with no feature
+    withheld during the trial. When the trial ends the application continues to work; only the paid
+    features stop until a licence key is entered. Your data, layouts, and settings are never deleted
+    because a trial expired.
+  </p>
+
+  <h2>Updates and availability</h2>
+  <p>
+    We release updates at our own discretion and do not guarantee any particular release schedule.
+    Downloads are served from each product's website; we aim to keep them available continuously but
+    do not guarantee uninterrupted access. If we ever discontinue an application, we will announce it
+    on its product page and will not disable copies you have already installed.
+  </p>
+
+  <h2>Warranty and liability</h2>
+  <p>
+    The software is provided as is. To the fullest extent permitted by law we disclaim implied
+    warranties of merchantability and fitness for a particular purpose. Our total liability arising
+    from the software or these terms is limited to the amount you actually paid for the licence in the
+    twelve months before the claim.
+  </p>
+  <p>
+    Nothing in these terms limits liability for death, personal injury, fraud, or anything else that
+    cannot lawfully be limited. If you are a consumer in the European Union, your statutory rights
+    remain unaffected.
+  </p>
+
+  <h2>Governing law</h2>
+  <p>
+    These terms are governed by the law of {SITE.country}. If you are a consumer, you keep the
+    protection of the mandatory rules of the country where you live, and you may also use the European
+    Commission's online dispute resolution platform.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about these terms go to <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. We answer
+    every message ourselves.
+  </p>
+</LegalPage>

@@ -1,0 +1,76 @@
+---
+import type { ProductStep } from "~/i18n/products";
+
+type Props = { steps: ProductStep[]; variant?: "numbered" | "roadmap"; labels?: string[] };
+
+const { steps, variant = "numbered", labels = [] } = Astro.props;
+---
+
+<ol class:list={["steps", `steps-${variant}`]}>
+  {
+    steps.map((step, index) => (
+      <li class="step">
+        <span class="step-marker">
+          {variant === "numbered" ? String(index + 1).padStart(2, "0") : labels[index]}
+        </span>
+        <div class="step-body">
+          <h3 class="title-sm">{step.title}</h3>
+          <p class="step-text">{step.text}</p>
+        </div>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .steps-numbered {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .steps-roadmap {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .step {
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .step-marker {
+    justify-self: start;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    color: var(--accent-2);
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
+    text-transform: uppercase;
+  }
+
+  .step-body {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .step-text {
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+</style>

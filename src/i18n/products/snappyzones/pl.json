@@ -1,0 +1,198 @@
+{
+  "tagline": "Przyciąganie okien dla macOS",
+  "headline": "Twórz własne układy. Przypinaj okna do stref.",
+  "summary": "Szybkie, lekkie narzędzie macOS do organizacji przestrzeni roboczej za pomocą konfigurowalnych stref. Twórz układy, przypinaj okna natychmiast i zachowaj skupienie.",
+  "differentiator": "Chociaż nowoczesne systemy operacyjne — w tym nowsze wersje macOS — potrafią wyrównywać okna po przeciągnięciu do krawędzi ekranu, SnappyZones pozwala zaprojektować dowolny układ i dopasować do niego okna dowolnej aplikacji.",
+  "badges": [
+    "macOS 13+",
+    "Szybkie przyciąganie",
+    "Własne strefy",
+    "Bez śledzenia"
+  ],
+  "featuresTitle": "Zaprojektowane dla szybkości i przejrzystości",
+  "featuresSubtitle": "Wszystko, czego potrzebujesz, by uporządkować pulpit — bez przeszkadzania.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Własne układy stref",
+      "text": "Zdefiniuj strefy dopasowane do pracy: kod, przeglądarka, czat, dokumenty — wszystko na miejscu."
+    },
+    {
+      "tier": "free",
+      "title": "Natychmiastowe przyciąganie",
+      "text": "Przenoś i przyciągaj okna do stref szybko i przewidywalnie."
+    },
+    {
+      "tier": "free",
+      "title": "Gotowe na wiele monitorów",
+      "text": "Różne zestawy stref na każdy ekran i spójne układy w przestrzeniach."
+    },
+    {
+      "tier": "free",
+      "title": "Lekkie",
+      "text": "Małe narzędzie, które ma być responsywne i dyskretne na co dzień."
+    },
+    {
+      "tier": "free",
+      "title": "Prywatność",
+      "text": "Bez kont, bez śledzenia. Układy zostają lokalnie."
+    },
+    {
+      "tier": "free",
+      "title": "Skupione na klawiaturze",
+      "text": "Skróty i szybkie akcje, by ograniczyć mysz i zachować produktywność."
+    },
+    {
+      "tier": "pro",
+      "title": "Nazwane układy",
+      "text": "Zapisz kilka nazwanych układów na tym samym ekranie i przełączaj je, gdy zmienia się praca."
+    },
+    {
+      "tier": "pro",
+      "title": "Selektor układu",
+      "text": "Otwórz Zmień układ… z menu lub skrótem. Strzałki przesuwają fokus; Return stosuje zaznaczony układ tak jak kliknięcie."
+    },
+    {
+      "tier": "pro",
+      "title": "Kopia zapasowa i przywracanie",
+      "text": "Eksportuj układy i preferencje do pliku JSON na tym Macu. Przywróć ustawienia… przed zastąpieniem bieżącej konfiguracji pokazuje schemat każdego układu."
+    },
+    {
+      "tier": "pro",
+      "title": "Przenieś na następny ekran",
+      "text": "Wyślij okno na wierzchu na następny monitor z menu lub opcjonalnym skrótem. Względny rozmiar i położenie zostają zachowane."
+    },
+    {
+      "tier": "pro",
+      "title": "Usuń układ",
+      "text": "Usuń nazwany układ w Edytorze stref. Najpierw potwierdź. Ostatniego układu na ekranie nie da się usunąć."
+    },
+    {
+      "tier": "pro",
+      "title": "Przełączaj układy",
+      "text": "Następny układ i Poprzedni układ przesuwają aktywny układ na monitorze pod wskaźnikiem. Krótka nakładka pokazuje nową nazwę i znika."
+    },
+    {
+      "tier": "free",
+      "title": "Presety siatki",
+      "text": "W Edytorze stref zastosuj Dwie kolumny, Dwa wiersze, 2×2, Lewa trzecia lub Trzy kolumny, potem zapisz."
+    },
+    {
+      "tier": "free",
+      "title": "Automatyczne aktualizacje",
+      "text": "Sprawdź aktualizacje… instaluje nowsze wydanie w aplikacji. Pierwsza instalacja to nadal pobranie z tej strony."
+    }
+  ],
+  "howTitle": "Jak to działa",
+  "howSubtitle": "Prosta pętla: zaprojektuj strefy, przypinaj okna, bądź produktywny.",
+  "how": [
+    {
+      "title": "Utwórz układ",
+      "text": "Otwórz edytor i zdefiniuj strefy zgodnie z Twoim sposobem pracy."
+    },
+    {
+      "title": "Wybierz okno",
+      "text": "Złap okno, a następnie użyj skrótów skonfigurowanych dla przyciągania single‑zone lub multi‑zone, aby rozpocząć przyciąganie."
+    },
+    {
+      "title": "Przyciągnij do strefy",
+      "text": "Upuść w strefie — wyrównane i o rozmiarze zgodnym z planem."
+    }
+  ],
+  "quickStartTitle": "Szybki start",
+  "quickStartSubtitle": "Od instalacji do przyciągania w kilka minut.",
+  "quickStart": [
+    {
+      "title": "Instalacja",
+      "text": "Pobierz DMG, przeciągnij SnappyZones do Applications i otwórz."
+    },
+    {
+      "title": "Uprawnienia",
+      "text": "Włącz tę kopię SnappyZones w Dostępności, a potem w Monitorowaniu wejścia. Po aktualizacji stary wiersz znika; ta kopia jest Wyłączona, dopóki jej nie włączysz."
+    },
+    {
+      "title": "Układ",
+      "text": "Otwórz Edytor stref z menu. Wybierz Preset… albo narysuj podziały, nazwij układ i zapisz."
+    },
+    {
+      "title": "Przyciąganie",
+      "text": "Przytrzymaj ⌘ i przeciągnij okno na strefę. Przytrzymaj ⌘⇧ dla kilku stref. Opcjonalnie: Zmień układ, Następny układ, Przenieś na następny ekran, Kopia zapasowa."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Dlaczego SnappyZones prosi o uprawnienie Dostępność (Accessibility)?",
+      "answer": "SnappyZones potrzebuje Dostępności, aby niezawodnie przesuwać i zmieniać rozmiar okien. To standard w aplikacjach do zarządzania oknami na macOS."
+    },
+    {
+      "question": "Czy dane są zbierane lub wysyłane gdziekolwiek?",
+      "answer": "Nie. Strona marketingowa jest statyczna i aplikacja działa lokalnie bez kont."
+    },
+    {
+      "question": "Jak zaktualizować do nowej wersji?",
+      "answer": "Użyj Sprawdź aktualizacje… w menu SnappyZones. Pierwsza instalacja to nadal DMG z tej strony."
+    },
+    {
+      "question": "Jak zacząć?",
+      "answer": "Otwórz Szybki start… w menu SnappyZones albo skorzystaj z Szybkiego startu na tej stronie: instalacja, uprawnienia, układ, przyciąganie."
+    },
+    {
+      "question": "Jak zmienić układ bez otwierania selektora?",
+      "answer": "Użyj Następny układ lub Poprzedni układ w menu albo nagraj te skróty w Ustawieniach. Zapętlają się na monitorze pod wskaźnikiem i nic nie robią, gdy jest tylko jeden układ."
+    },
+    {
+      "question": "Jak usunąć układ?",
+      "answer": "Otwórz Edytor stref, wybierz układ, kliknij Usuń i potwierdź. Ostatniego układu na ekranie nie da się usunąć."
+    },
+    {
+      "question": "Czy po aktualizacji muszę usunąć SnappyZones z Ustawień prywatności?",
+      "answer": "Nie. SnappyZones usuwa stary wiersz i pokazuje tę kopię jako Wyłączoną. Włącz ten wiersz. Nie musisz usuwać aplikacji i dodawać jej ponownie."
+    },
+    {
+      "question": "Jak odblokować Pro?",
+      "answer": "Kup Pro na tej stronie (lub wklej klucz w Licencja…). Układy zostają na Macu. Sprawdzenie licencji to jedyne extra połączenie oprócz aktualizacji."
+    }
+  ],
+  "installTitle": "Instalacja",
+  "install": [
+    "Pobierz DMG",
+    "Przeciągnij SnappyZones do Aplikacji",
+    "Otwórz SnappyZones",
+    "Przyznaj Dostępność i Monitorowanie wejścia, gdy zostaniesz poproszony"
+  ],
+  "downloadNotice": "Darmowe — także dla firm.",
+  "roadmapTitle": "Wkrótce",
+  "roadmapSubtitle": "Jedna funkcja jest w rozwoju. Pięć kolejnych jest zaplanowanych.",
+  "roadmapInProgress": "W rozwoju",
+  "roadmapPlanned": "Zaplanowane",
+  "roadmap": [
+    {
+      "title": "Okno na wybrany ekran",
+      "text": "Podmenu na pasku menu wypisuje podłączone monitory z nazwy i przenosi okno z wierzchu na wybrany ekran. Przenieś na następny ekran zostaje do cyklu od lewej do prawej."
+    },
+    {
+      "title": "Przypnij okno…",
+      "text": "Umieszcza okno z wierzchu w strefie aktywnego układu z menu lub opcjonalnego skrótu. Kliknięcie lub Return przypina. Escape nic nie przesuwa."
+    },
+    {
+      "title": "Cofnij ostatnie przypięcie",
+      "text": "Przywraca ostatnio przypięte okno do rozmiaru i miejsca sprzed snapa. Jeden krok. Nieaktywne, gdy okno zniknęło."
+    },
+    {
+      "title": "Wstrzymaj przypinanie",
+      "text": "Bez nakładki stref przy przeciąganiu, bez zamykania aplikacji. Przełączanie układów i przenoszenie na następny ekran działają dalej."
+    },
+    {
+      "title": "Ignoruj aplikacje",
+      "text": "W Preferencjach wybierz aplikacje, które nigdy nie pokazują stref i nie przypinają się. Reszta bez zmian."
+    },
+    {
+      "title": "Kopiuj układ na inny ekran",
+      "text": "W edytorze stref skopiuj widoczną siatkę na inny podłączony monitor jako nowy układ. Ekran źródłowy się nie zmienia."
+    }
+  ],
+  "editionFree": "Darmowe",
+  "editionPro": "Pro",
+  "proTitle": "SnappyZones Pro",
+  "proBlurb": "Bez konta SnappyZones — klucz po zakupie. Dwa Maki. 14-dniowy trial w aplikacji."
+}

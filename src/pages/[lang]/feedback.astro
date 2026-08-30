@@ -1,0 +1,158 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import ContactForm from "~/components/ContactForm.astro";
+import { localeParams, localePath, useTranslations } from "~/i18n";
+import { toLanguage } from "~/i18n/config";
+import { productStyle, sortedProducts } from "~/data/products";
+import { productCopy } from "~/i18n/products";
+
+export function getStaticPaths() {
+  return localeParams();
+}
+
+const language = toLanguage(Astro.params.lang);
+const t = useTranslations(language);
+const roadmapProduct = sortedProducts().find((product) => productCopy(product.slug, language).roadmap);
+const roadmap = roadmapProduct ? productCopy(roadmapProduct.slug, language).roadmap : undefined;
+---
+
+<BaseLayout
+  language={language}
+  path="feedback"
+  title={t("feedback.meta.title")}
+  description={t("feedback.meta.description")}
+>
+  <section class="page-hero">
+    <MazeBackdrop variant="panel" cell={32} />
+    <div class="container page-hero-inner">
+      <p class="eyebrow">{t("nav.feedback")}</p>
+      <h1 class="title-xl">{t("feedback.title")}</h1>
+      <p class="lead">{t("feedback.subtitle")}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container form-layout">
+      <div class="form-side">
+        <div class="promise surface-card">
+          <h2 class="title-sm">{t("feedback.promise.title")}</h2>
+          <p class="small body-muted">{t("feedback.promise.text")}</p>
+        </div>
+
+        {
+          roadmapProduct && roadmap && (
+            <div
+              class="roadmap surface-card"
+              style={productStyle(roadmapProduct)}
+            >
+              <h2 class="title-sm">
+                {roadmapProduct.name} · {t("product.roadmap.default")}
+              </h2>
+              <ul class="roadmap-list">
+                {roadmap.slice(0, 4).map((item, index) => (
+                  <li>
+                    <span class="roadmap-tag">
+                      {index === 0
+                        ? t("product.roadmap.inProgress")
+                        : t("product.roadmap.planned")}
+                    </span>
+                    {item.title}
+                  </li>
+                ))}
+              </ul>
+              <a class="roadmap-link small" href={`${localePath(language, `products/${roadmapProduct.slug}`)}#roadmap`}>
+                {t("cta.learnMore")}
+              </a>
+            </div>
+          )
+        }
+      </div>
+
+      <ContactForm language={language} kind="feedback" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
+    overflow: hidden;
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-4);
+    max-width: 720px;
+  }
+
+  .form-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: var(--space-7);
+    align-items: start;
+  }
+
+  .form-side {
+    display: grid;
+    gap: var(--space-4);
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+  }
+
+  .promise,
+  .roadmap {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .roadmap-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+  }
+
+  .roadmap-list li {
+    display: grid;
+    gap: 4px;
+  }
+
+  .roadmap-tag {
+    justify-self: start;
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: var(--radius-pill);
+    color: var(--product-accent-2);
+    background: color-mix(in srgb, var(--product-accent) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--product-accent) 32%, transparent);
+  }
+
+  .roadmap-link {
+    color: var(--product-accent-2);
+  }
+
+  .roadmap-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 940px) {
+    .form-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .form-side {
+      position: static;
+    }
+  }
+</style>

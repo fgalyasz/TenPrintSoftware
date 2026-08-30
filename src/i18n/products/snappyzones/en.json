@@ -1,0 +1,198 @@
+{
+  "tagline": "Window snapping for macOS",
+  "headline": "Create custom layouts. Snap windows into zones.",
+  "summary": "A fast, lightweight macOS utility to organize your workspace with customizable zones. Create layouts, snap windows instantly, and stay focused.",
+  "differentiator": "While modern operating systems — including recent versions of macOS — can snap windows by dragging them to screen edges, SnappyZones lets you design any layout and align any app window to it.",
+  "badges": [
+    "macOS 13+",
+    "Fast snapping",
+    "Custom zones",
+    "Privacy-friendly"
+  ],
+  "featuresTitle": "Designed for speed and clarity",
+  "featuresSubtitle": "Everything you need to keep your desktop organized — without getting in your way.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Custom zone layouts",
+      "text": "Define zones that match how you work: coding, browsing, chat, docs — all in place."
+    },
+    {
+      "tier": "free",
+      "title": "Instant snapping",
+      "text": "Move and snap windows into zones with a fast, predictable experience."
+    },
+    {
+      "tier": "free",
+      "title": "Multi-monitor ready",
+      "text": "Use different zone sets per display and keep layouts consistent across workspaces."
+    },
+    {
+      "tier": "free",
+      "title": "Lightweight",
+      "text": "A small utility that aims to stay responsive and unobtrusive during daily use."
+    },
+    {
+      "tier": "free",
+      "title": "Privacy-friendly",
+      "text": "No accounts, no tracking. Your workspace layouts live locally."
+    },
+    {
+      "tier": "free",
+      "title": "Keyboard-focused productivity",
+      "text": "Use shortcuts and quick actions to reduce mouse travel and stay productive."
+    },
+    {
+      "tier": "pro",
+      "title": "Named layouts",
+      "text": "Save several named layouts on the same display and switch when your work changes."
+    },
+    {
+      "tier": "pro",
+      "title": "Layout selector",
+      "text": "Open Switch Layout… from the menu or a shortcut. Arrow keys move focus; Return applies the focused layout, the same as a click."
+    },
+    {
+      "tier": "pro",
+      "title": "Backup and restore",
+      "text": "Export layouts and preferences to a JSON file on this Mac. Restore Settings… shows a schematic of each layout before replacing live config."
+    },
+    {
+      "tier": "pro",
+      "title": "Move to next display",
+      "text": "Send the front window to the next monitor from the menu or an optional shortcut. Relative size and placement stay the same."
+    },
+    {
+      "tier": "pro",
+      "title": "Delete a layout",
+      "text": "Remove a named layout from the Zone Editor. Confirm first. The last layout on a display cannot be deleted."
+    },
+    {
+      "tier": "pro",
+      "title": "Cycle layouts",
+      "text": "Next Layout and Previous Layout step the Active Layout on the monitor under the pointer. A brief overlay shows the new name, then dismisses."
+    },
+    {
+      "tier": "free",
+      "title": "Grid presets",
+      "text": "Apply Two columns, Two rows, 2×2, Left third, or Three columns in the Zone Editor, then Save when it looks right."
+    },
+    {
+      "tier": "free",
+      "title": "Automatic updates",
+      "text": "Check for Updates… installs a newer published build in the app. The first install remains a download from this site."
+    }
+  ],
+  "howTitle": "How it works",
+  "howSubtitle": "A simple loop: design zones, snap windows, stay productive.",
+  "how": [
+    {
+      "title": "Create a layout",
+      "text": "Open the editor and define zones that match how you work."
+    },
+    {
+      "title": "Pick a window",
+      "text": "Grab a window, then use the configured single-zone or multi-zone snapping shortcuts to start snapping."
+    },
+    {
+      "title": "Snap into a zone",
+      "text": "Drop into a zone — aligned and sized exactly as you planned."
+    }
+  ],
+  "quickStartTitle": "Quick Start",
+  "quickStartSubtitle": "From install to snapping in a few minutes.",
+  "quickStart": [
+    {
+      "title": "Install",
+      "text": "Download the DMG, drag SnappyZones to Applications, and open it."
+    },
+    {
+      "title": "Grant permissions",
+      "text": "Turn on this SnappyZones under Accessibility, then Input Monitoring. After an update the old row is removed; this copy appears Off until you enable it."
+    },
+    {
+      "title": "Create a layout",
+      "text": "Open Zone Editor from the menu. Pick a Preset… or draw splits, name the layout, then Save."
+    },
+    {
+      "title": "Snap",
+      "text": "Hold ⌘ and drag a window onto a zone. Hold ⌘⇧ for several zones. Optional: Switch Layout, Next Layout, Move to Next Display, Backup."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why does SnappyZones request Accessibility permission?",
+      "answer": "SnappyZones needs Accessibility access to move and resize windows reliably. This is a standard requirement for window management apps on macOS."
+    },
+    {
+      "question": "Is my data collected or sent anywhere?",
+      "answer": "No. The marketing site is static, and the app aims to work locally without accounts."
+    },
+    {
+      "question": "How do I update to a new version?",
+      "answer": "Use Check for Updates… in the SnappyZones menu. The first install is still this site’s DMG."
+    },
+    {
+      "question": "How do I get started?",
+      "answer": "Open Quick Start… from the SnappyZones menu, or follow Quick Start on this page: install, grant permissions, create a layout, then snap."
+    },
+    {
+      "question": "How do I switch layouts without opening the selector?",
+      "answer": "Use Next Layout or Previous Layout in the menu, or record those shortcuts in Preferences. They wrap on the monitor under the pointer and do nothing if only one layout exists."
+    },
+    {
+      "question": "How do I delete a layout?",
+      "answer": "Open the Zone Editor, choose the layout, click Delete, and confirm. The last layout on a display cannot be deleted."
+    },
+    {
+      "question": "After an update, should I delete SnappyZones from Privacy settings?",
+      "answer": "No. SnappyZones removes the old row and lists this copy as Off. Turn that row On. You do not delete the app and add it again."
+    },
+    {
+      "question": "How do I unlock Pro?",
+      "answer": "Buy Pro on this site (or paste a license key in License…). Layouts stay on this Mac. License checks are the only extra network besides updates."
+    }
+  ],
+  "installTitle": "Install",
+  "install": [
+    "Download the DMG",
+    "Drag SnappyZones to Applications",
+    "Open SnappyZones",
+    "Grant Accessibility and Input Monitoring when asked"
+  ],
+  "downloadNotice": "Free to use — including for businesses.",
+  "roadmapTitle": "Coming soon",
+  "roadmapSubtitle": "One feature is in development. Five more are planned.",
+  "roadmapInProgress": "In development",
+  "roadmapPlanned": "Planned",
+  "roadmap": [
+    {
+      "title": "Move to a chosen display",
+      "text": "A status-menu submenu lists connected monitors by name and sends the front window to the selected display. Move to Next Display remains for cycling left to right."
+    },
+    {
+      "title": "Snap Window…",
+      "text": "Place the front window into a zone of the Active Layout from the menu or an optional shortcut. Click a cell or press Return. Escape leaves the window where it is."
+    },
+    {
+      "title": "Undo Last Snap",
+      "text": "Restore the last successfully snapped window to the size and place it had before that snap. One step. Disabled if that window is gone."
+    },
+    {
+      "title": "Pause Snapping",
+      "text": "Stop the zone overlay while you drag, without quitting. Switch Layout and Move to Next Display still work. Turn it off when you want to snap again."
+    },
+    {
+      "title": "Ignore apps",
+      "text": "Pick apps in Preferences that never show zones and never snap. Everything else behaves as today."
+    },
+    {
+      "title": "Copy layout to another display",
+      "text": "In the Zone Editor, copy the grid you see onto another connected monitor as a new layout. The source display stays unchanged."
+    }
+  ],
+  "editionFree": "Free",
+  "editionPro": "Pro",
+  "proTitle": "SnappyZones Pro",
+  "proBlurb": "No SnappyZones account — a license key after checkout. Two Macs. 14-day trial in the app."
+}

@@ -1,0 +1,182 @@
+---
+import Logo from "./Logo.astro";
+import { localePath, useTranslations } from "~/i18n";
+import type { Language } from "~/i18n/config";
+import { sortedProducts } from "~/data/products";
+import { SITE } from "~/data/site";
+
+type Props = { language: Language };
+
+const { language } = Astro.props;
+const t = useTranslations(language);
+const products = sortedProducts();
+const year = new Date().getFullYear();
+
+const columns = [
+  {
+    heading: t("footer.company"),
+    links: [
+      { label: t("nav.about"), href: localePath(language, "about") },
+      { label: t("nav.pricing"), href: localePath(language, "pricing") },
+      { label: t("nav.downloads"), href: localePath(language, "downloads") },
+    ],
+  },
+  {
+    heading: t("footer.help"),
+    links: [
+      { label: t("nav.support"), href: localePath(language, "support") },
+      { label: t("nav.feedback"), href: localePath(language, "feedback") },
+      { label: t("footer.email"), href: `mailto:${SITE.email}` },
+    ],
+  },
+  {
+    heading: t("footer.legal"),
+    links: [
+      { label: t("legal.privacy"), href: localePath(language, "legal/privacy") },
+      { label: t("legal.terms"), href: localePath(language, "legal/terms") },
+      { label: t("legal.refund"), href: localePath(language, "legal/refund") },
+    ],
+  },
+];
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href={localePath(language)} aria-label={t("brand.name")}>
+        <Logo withWordmark />
+      </a>
+      <p class="footer-tagline">{t("brand.tagline")}</p>
+      <p class="mono footer-code">10 PRINT CHR$(205.5+RND(1)); : GOTO 10</p>
+    </div>
+
+    <nav class="footer-columns" aria-label={t("footer.company")}>
+      <div class="footer-column">
+        <h2 class="footer-heading">{t("footer.products")}</h2>
+        <ul class="footer-list">
+          {
+            products.map((product) => (
+              <li>
+                <a class="footer-link" href={localePath(language, `products/${product.slug}`)}>
+                  {product.name}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      {
+        columns.map((column) => (
+          <div class="footer-column">
+            <h2 class="footer-heading">{column.heading}</h2>
+            <ul class="footer-list">
+              {column.links.map((link) => (
+                <li>
+                  <a class="footer-link" href={link.href}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </nav>
+  </div>
+
+  <div class="container footer-bottom">
+    <p class="small body-muted">© {year} {SITE.name}. {t("footer.rights")}</p>
+    <p class="small body-muted">{t("footer.built")}</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border);
+    padding-block: var(--space-8) var(--space-5);
+    margin-top: var(--space-9);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) 2fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .footer-brand {
+    display: grid;
+    gap: var(--space-3);
+    justify-items: start;
+  }
+
+  .footer-tagline {
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    max-width: 34ch;
+  }
+
+  .footer-code {
+    font-size: 0.6875rem;
+    color: var(--text-faint);
+    letter-spacing: -0.01em;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xs);
+    background: var(--surface);
+  }
+
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .footer-heading {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: var(--space-3);
+  }
+
+  .footer-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .footer-link {
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    transition: color 0.15s var(--ease);
+  }
+
+  .footer-link:hover {
+    color: var(--text);
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-5);
+    justify-content: space-between;
+    margin-top: var(--space-7);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  @media (max-width: 860px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: var(--space-7);
+    }
+  }
+</style>

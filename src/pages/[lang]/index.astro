@@ -1,0 +1,311 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import ProductCard from "~/components/ProductCard.astro";
+import Button from "~/components/Button.astro";
+import { localeParams, localePath, useTranslations } from "~/i18n";
+import { toLanguage } from "~/i18n/config";
+import { sortedProducts } from "~/data/products";
+
+export function getStaticPaths() {
+  return localeParams();
+}
+
+const language = toLanguage(Astro.params.lang);
+const t = useTranslations(language);
+const products = sortedProducts();
+
+const badges = [
+  t("home.hero.badge.native"),
+  t("home.hero.badge.privacy"),
+  t("home.hero.badge.oneTime"),
+  t("home.hero.badge.notarised"),
+];
+
+const principles = [
+  { title: t("home.principles.one.title"), text: t("home.principles.one.text") },
+  { title: t("home.principles.two.title"), text: t("home.principles.two.text") },
+  { title: t("home.principles.three.title"), text: t("home.principles.three.text") },
+  { title: t("home.principles.four.title"), text: t("home.principles.four.text") },
+];
+---
+
+<BaseLayout
+  language={language}
+  title={t("home.meta.title")}
+  description={t("home.meta.description")}
+>
+  <section class="hero">
+    <MazeBackdrop variant="hero" cell={34} />
+    <div class="container hero-inner">
+      <p class="eyebrow">{t("home.hero.eyebrow")}</p>
+      <h1 class="title-xl hero-title">{t("home.hero.title")}</h1>
+      <p class="lead hero-lead">{t("home.hero.subtitle")}</p>
+
+      <div class="hero-actions">
+        <Button href={localePath(language, "products")} size="lg">{t("cta.explore")}</Button>
+        <Button href={localePath(language, "downloads")} variant="secondary" size="lg">
+          {t("cta.download")}
+        </Button>
+      </div>
+
+      <ul class="hero-badges">
+        {badges.map((badge) => <li class="hero-badge">{badge}</li>)}
+      </ul>
+
+      <p class="small hero-note">{t("home.hero.note")}</p>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">{t("nav.products")}</p>
+        <h2 class="title-lg">{t("home.products.title")}</h2>
+        <p class="lead">{t("home.products.subtitle")}</p>
+      </div>
+
+      <div class="product-grid">
+        {products.map((product) => <ProductCard product={product} language={language} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">{t("home.principles.eyebrow")}</p>
+        <h2 class="title-lg">{t("home.principles.title")}</h2>
+        <p class="lead">{t("home.principles.subtitle")}</p>
+      </div>
+
+      <div class="principles">
+        {
+          principles.map((principle, index) => (
+            <article class="principle">
+              <span class="principle-index mono">{String(index + 1).padStart(2, "0")}</span>
+              <h3 class="title-sm">{principle.title}</h3>
+              <p class="principle-text">{principle.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section origin">
+    <div class="container origin-grid">
+      <div class="origin-copy">
+        <p class="eyebrow">{t("home.origin.eyebrow")}</p>
+        <h2 class="title-lg origin-title mono">{t("home.origin.title")}</h2>
+        <p class="lead">{t("home.origin.text")}</p>
+        <p class="small body-muted">{t("home.origin.caption")}</p>
+      </div>
+
+      <div class="origin-panel">
+        <MazeBackdrop variant="band" cell={26} />
+        <pre class="origin-code mono"><code>10 PRINT CHR$(205.5+RND(1));
+20 GOTO 10</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <div class="container cta-inner">
+      <MazeBackdrop variant="band" cell={30} class="cta-maze" />
+      <div class="cta-copy">
+        <h2 class="title-lg">{t("home.cta.title")}</h2>
+        <p class="lead">{t("home.cta.subtitle")}</p>
+      </div>
+      <div class="cta-actions">
+        <Button href={localePath(language, "downloads")} size="lg">{t("cta.download")}</Button>
+        <Button href={localePath(language, "support")} variant="secondary" size="lg">
+          {t("cta.getSupport")}
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    padding-block: clamp(72px, 9vw, 132px) clamp(56px, 7vw, 96px);
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: -30% -10% 40% 20%;
+    background: radial-gradient(
+      closest-side,
+      color-mix(in srgb, var(--brand) 20%, transparent),
+      transparent
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    display: grid;
+    gap: var(--space-5);
+    justify-items: start;
+  }
+
+  .hero-title {
+    max-width: 16ch;
+  }
+
+  .hero-lead {
+    max-width: 58ch;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+  }
+
+  .hero-badges {
+    list-style: none;
+    margin: var(--space-3) 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .hero-badge {
+    font-size: 0.8125rem;
+    padding: 6px 13px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+  }
+
+  .hero-note {
+    color: var(--text-faint);
+    max-width: 62ch;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-5);
+  }
+
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .principle {
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .principle-index {
+    font-size: 0.75rem;
+    color: var(--brand-2);
+    letter-spacing: 0.08em;
+  }
+
+  .principle-text {
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .origin-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: var(--space-8);
+    align-items: center;
+  }
+
+  .origin-copy {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .origin-title {
+    letter-spacing: 0.02em;
+  }
+
+  .origin-panel {
+    position: relative;
+    min-height: 300px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--bg-raised);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    padding: var(--space-6);
+  }
+
+  .origin-code {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: var(--space-4) var(--space-5);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-strong);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(6px);
+    font-size: 0.8125rem;
+    line-height: 1.8;
+    color: var(--brand-2);
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  .cta-inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .cta-copy {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-3);
+    max-width: 46ch;
+  }
+
+  .cta-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  @media (max-width: 880px) {
+    .origin-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+  }
+</style>

@@ -1,0 +1,83 @@
+---
+import { LANGUAGES, LANGUAGE_CODES, type Language } from "~/i18n/config";
+import { localePath, useTranslations } from "~/i18n";
+
+type Props = { language: Language; path: string };
+
+const { language, path } = Astro.props;
+const t = useTranslations(language);
+---
+
+<div class="language">
+  <label class="visually-hidden" for="language-picker">{t("language.select")}</label>
+  <select id="language-picker" class="language-select" data-language-picker>
+    {
+      LANGUAGE_CODES.map((code) => (
+        <option value={localePath(code, path)} selected={code === language}>
+          {LANGUAGES[code].name}
+        </option>
+      ))
+    }
+  </select>
+  <svg class="language-caret" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true">
+    <path
+      d="M1 1l4 4 4-4"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"></path>
+  </svg>
+</div>
+
+<style>
+  .language {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .language-select {
+    appearance: none;
+    height: 38px;
+    padding: 0 26px 0 11px;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition:
+      color 0.15s var(--ease),
+      background 0.15s var(--ease);
+  }
+
+  .language-select:hover {
+    color: var(--text);
+    background: var(--surface-hover);
+  }
+
+  .language-caret {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    color: var(--text-faint);
+  }
+
+  @media (max-width: 560px) {
+    .language-select {
+      max-width: 108px;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLSelectElement>("[data-language-picker]").forEach((select) => {
+    select.addEventListener("change", () => {
+      const target = select.value;
+      const language = target.split("/").filter(Boolean)[0];
+      if (language) localStorage.setItem("tp-language", language);
+      window.location.href = target;
+    });
+  });
+</script>

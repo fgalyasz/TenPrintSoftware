@@ -1,0 +1,63 @@
+---
+type Props = { label: string };
+const { label } = Astro.props;
+---
+
+<button class="theme-toggle" type="button" data-theme-toggle aria-label={label} title={label}>
+  <svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true">
+    <path
+      class="theme-sun"
+      d="M10 3.2v1.6M10 15.2v1.6M3.2 10h1.6M15.2 10h1.6M5.2 5.2l1.1 1.1M13.7 13.7l1.1 1.1M14.8 5.2l-1.1 1.1M6.3 13.7l-1.1 1.1"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      fill="none"></path>
+    <circle class="theme-sun" cx="10" cy="10" r="3.1" stroke="currentColor" stroke-width="1.5" fill="none"
+    ></circle>
+    <path
+      class="theme-moon"
+      d="M15.4 12.3A6 6 0 0 1 7.7 4.6a6 6 0 1 0 7.7 7.7z"
+      fill="currentColor"></path>
+  </svg>
+</button>
+
+<style>
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition:
+      color 0.15s var(--ease),
+      background 0.15s var(--ease);
+  }
+
+  .theme-toggle:hover {
+    color: var(--text);
+    background: var(--surface-hover);
+  }
+
+  :global([data-theme="dark"]) .theme-sun {
+    display: none;
+  }
+
+  :global([data-theme="light"]) .theme-moon {
+    display: none;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-theme-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("tp-theme", next);
+    });
+  });
+</script>

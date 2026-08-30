@@ -1,0 +1,190 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import ContactForm from "~/components/ContactForm.astro";
+import { localeParams, localePath, useTranslations } from "~/i18n";
+import { toLanguage } from "~/i18n/config";
+import { productStyle, sortedProducts } from "~/data/products";
+
+export function getStaticPaths() {
+  return localeParams();
+}
+
+const language = toLanguage(Astro.params.lang);
+const t = useTranslations(language);
+const products = sortedProducts();
+
+const channels = [
+  { title: t("support.channels.faq.title"), text: t("support.channels.faq.text") },
+  { title: t("support.channels.update.title"), text: t("support.channels.update.text") },
+  { title: t("support.channels.details.title"), text: t("support.channels.details.text") },
+];
+---
+
+<BaseLayout
+  language={language}
+  path="support"
+  title={t("support.meta.title")}
+  description={t("support.meta.description")}
+>
+  <section class="page-hero">
+    <MazeBackdrop variant="panel" cell={32} />
+    <div class="container page-hero-inner">
+      <p class="eyebrow">{t("nav.support")}</p>
+      <h1 class="title-xl">{t("support.title")}</h1>
+      <p class="lead">{t("support.subtitle")}</p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="title-md">{t("support.channels.title")}</h2>
+      </div>
+      <div class="channels">
+        {
+          channels.map((channel, index) => (
+            <article class="channel">
+              <span class="channel-index mono">{String(index + 1).padStart(2, "0")}</span>
+              <h3 class="title-sm">{channel.title}</h3>
+              <p class="channel-text">{channel.text}</p>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="quick-links">
+        {
+          products.map((product) => (
+            <a
+              class="quick-link"
+              href={`${localePath(language, `products/${product.slug}`)}#faq`}
+              style={productStyle(product)}
+            >
+              <img src={product.iconUrl} alt="" width="30" height="30" />
+              <span>{product.name} · {t("product.faq")}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container form-layout">
+      <div class="form-side">
+        <h2 class="title-lg">{t("cta.getSupport")}</h2>
+        <div class="response surface-card">
+          <h3 class="title-sm">{t("support.response.title")}</h3>
+          <p class="small body-muted">{t("support.response.text")}</p>
+        </div>
+        <p class="small body-muted">{t("form.emailHint")}</p>
+      </div>
+      <ContactForm language={language} kind="support" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
+    overflow: hidden;
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-4);
+    max-width: 720px;
+  }
+
+  .channels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .channel {
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .channel-index {
+    font-size: 0.75rem;
+    color: var(--accent-2);
+    letter-spacing: 0.08em;
+  }
+
+  .channel-text {
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+
+  .quick-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 9px 15px 9px 9px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    transition:
+      border-color 0.15s var(--ease),
+      color 0.15s var(--ease);
+  }
+
+  .quick-link:hover {
+    border-color: color-mix(in srgb, var(--product-accent) 45%, transparent);
+    color: var(--text);
+  }
+
+  .quick-link img {
+    border-radius: 8px;
+  }
+
+  .form-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: var(--space-7);
+    align-items: start;
+  }
+
+  .form-side {
+    display: grid;
+    gap: var(--space-4);
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+  }
+
+  .response {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  @media (max-width: 940px) {
+    .form-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .form-side {
+      position: static;
+    }
+  }
+</style>

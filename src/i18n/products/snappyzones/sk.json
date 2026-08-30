@@ -1,0 +1,198 @@
+{
+  "tagline": "Prichytávanie okien pre macOS",
+  "headline": "Vytvorte si vlastné rozloženie. Prichyťte okná do zón.",
+  "summary": "Rýchly a ľahký nástroj pre macOS na organizáciu pracovného priestoru pomocou prispôsobiteľných zón. Vytvárajte rozloženia, prichytávajte okná okamžite a zostávajte sústredení.",
+  "differentiator": "Hoci moderné operačné systémy — vrátane novších verzií macOS — dokážu okná zarovnať potiahnutím k okrajom obrazovky, SnappyZones vám umožňuje navrhnúť ľubovoľné rozloženie a prispôsobiť mu okná ľubovoľnej aplikácie.",
+  "badges": [
+    "macOS 13+",
+    "Rýchle prichytenie",
+    "Vlastné zóny",
+    "Bez sledovania"
+  ],
+  "featuresTitle": "Navrhnuté pre rýchlosť a prehľadnosť",
+  "featuresSubtitle": "Všetko, čo potrebujete na usporiadaný desktop — bez rušenia.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Vlastné rozloženia zón",
+      "text": "Definujte zóny podľa toho, ako pracujete: kód, web, chat, dokumenty — všetko na svojom mieste."
+    },
+    {
+      "tier": "free",
+      "title": "Okamžité prichytenie",
+      "text": "Presúvajte a prichytávajte okná do zón rýchlo a predvídateľne."
+    },
+    {
+      "tier": "free",
+      "title": "Pripravené na viac monitorov",
+      "text": "Rôzne zóny pre každý displej a konzistentné rozloženia naprieč pracovnými plochami."
+    },
+    {
+      "tier": "free",
+      "title": "Ľahké a svižné",
+      "text": "Malý nástroj, ktorý sa snaží byť rýchly a nenápadný pri každodennom používaní."
+    },
+    {
+      "tier": "free",
+      "title": "Súkromie",
+      "text": "Žiadne účty, žiadne sledovanie. Vaše rozloženia zostávajú lokálne."
+    },
+    {
+      "tier": "free",
+      "title": "Zamerané na klávesnicu",
+      "text": "Skratky a rýchle akcie pre menej práce s myšou a vyššiu produktivitu."
+    },
+    {
+      "tier": "pro",
+      "title": "Pomenované rozloženia",
+      "text": "Uložte si niekoľko pomenovaných rozložení na tom istom displeji a prepínajte ich, keď sa práca zmení."
+    },
+    {
+      "tier": "pro",
+      "title": "Výber rozloženia",
+      "text": "Otvorte Prepnúť rozloženie… z menu alebo skratkou. Šípky posúvajú fokus; Return použije zaostrené rozloženie rovnako ako klik."
+    },
+    {
+      "tier": "pro",
+      "title": "Záloha a obnovenie",
+      "text": "Exportujte rozloženia a nastavenia do JSON súboru na tomto Macu. Obnoviť nastavenia… pred nahradením živej konfigurácie ukáže schému každého rozloženia."
+    },
+    {
+      "tier": "pro",
+      "title": "Presun na ďalší displej",
+      "text": "Pošlite predné okno na ďalší monitor z menu alebo voliteľnou skratkou. Relatívna veľkosť a umiestnenie ostanú rovnaké."
+    },
+    {
+      "tier": "pro",
+      "title": "Odstrániť rozloženie",
+      "text": "Odstráňte pomenované rozloženie v Editore zón. Najprv potvrďte. Posledné rozloženie na displeji sa nedá odstrániť."
+    },
+    {
+      "tier": "pro",
+      "title": "Prechádzať rozloženia",
+      "text": "Ďalšie rozloženie a Predchádzajúce rozloženie posúvajú aktívne rozloženie na monitore pod ukazovateľom. Krátka vrstva ukáže nový názov a zmizne."
+    },
+    {
+      "tier": "free",
+      "title": "Predvoľby mriežky",
+      "text": "V Editore zón použite Dva stĺpce, Dva riadky, 2×2, Ľavá tretina alebo Tri stĺpce a uložte, keď to sedí."
+    },
+    {
+      "tier": "free",
+      "title": "Automatické aktualizácie",
+      "text": "Skontrolovať aktualizácie… nainštaluje novšie vydanie v aplikácii. Prvá inštalácia ostáva stiahnutím z tohto webu."
+    }
+  ],
+  "howTitle": "Ako to funguje",
+  "howSubtitle": "Jednoduchý cyklus: navrhnite zóny, prichyťte okná, buďte produktívni.",
+  "how": [
+    {
+      "title": "Vytvorte rozloženie",
+      "text": "Otvorte editor a definujte zóny podľa vášho spôsobu práce."
+    },
+    {
+      "title": "Vyberte okno",
+      "text": "Chyťte okno a potom použite skratky nastavené pre single‑zone alebo multi‑zone prichytenie a začnite prichytávať."
+    },
+    {
+      "title": "Prichyťte do zóny",
+      "text": "Pustite do zóny — zarovnané a veľké presne podľa plánu."
+    }
+  ],
+  "quickStartTitle": "Rýchly štart",
+  "quickStartSubtitle": "Od inštalácie k prichytávaniu za pár minút.",
+  "quickStart": [
+    {
+      "title": "Inštalácia",
+      "text": "Stiahnite DMG, presuňte SnappyZones do Applications a otvorte ho."
+    },
+    {
+      "title": "Povolenia",
+      "text": "Zapnite túto kópiu SnappyZones v Accessibility a potom v Input Monitoring. Po aktualizácii sa starý riadok odstráni; táto kópia je Vypnuté, kým ju nezapnete."
+    },
+    {
+      "title": "Rozloženie",
+      "text": "Otvorte Editor zón z menu. Vyberte Predvoľbu… alebo nakreslite delenia, pomenujte rozloženie a uložte."
+    },
+    {
+      "title": "Prichytávanie",
+      "text": "Držte ⌘ a presuňte okno na zónu. Pre viac zón ⌘⇧. Voliteľne: Prepnúť rozloženie, Ďalšie rozloženie, Presun na ďalší displej, Záloha."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Prečo SnappyZones vyžaduje povolenie Accessibility?",
+      "answer": "SnappyZones potrebuje Accessibility na spoľahlivé presúvanie a zmenu veľkosti okien. Je to štandardná požiadavka pre správu okien na macOS."
+    },
+    {
+      "question": "Zbierajú sa alebo odosielajú nejaké dáta?",
+      "answer": "Nie. Marketingová stránka je statická a aplikácia funguje lokálne bez účtov."
+    },
+    {
+      "question": "Ako aktualizujem na novú verziu?",
+      "answer": "Použite Skontrolovať aktualizácie… v ponuke SnappyZones. Prvá inštalácia ostáva DMG z tohto webu."
+    },
+    {
+      "question": "Ako začať?",
+      "answer": "Otvorte Rýchly štart… v menu SnappyZones, alebo postupujte podľa Rýchleho štartu na tejto stránke: inštalácia, povolenia, rozloženie, prichytávanie."
+    },
+    {
+      "question": "Ako prepnem rozloženie bez otvorenia výberu?",
+      "answer": "Použite Ďalšie rozloženie alebo Predchádzajúce rozloženie v menu, alebo nahrajte skratky v Nastaveniach. Otáčajú sa na monitore pod ukazovateľom a pri jednom rozložení nič neurobia."
+    },
+    {
+      "question": "Ako odstránim rozloženie?",
+      "answer": "Otvorte Editor zón, vyberte rozloženie, kliknite na Odstrániť a potvrďte. Posledné rozloženie na displeji sa nedá odstrániť."
+    },
+    {
+      "question": "Mám po aktualizácii SnappyZones v nastaveniach Súkromie odstrániť?",
+      "answer": "Nie. SnappyZones odstráni starý riadok a túto kópiu vypíše ako Vypnuté. Tento riadok zapnite. Aplikáciu nemusíte mazať a znova pridávať."
+    },
+    {
+      "question": "Ako odomknem Pro?",
+      "answer": "Kúpte Pro na tejto stránke (alebo vložte kľúč v Licencia…). Rozloženia ostanú na Macu. Overenie licencie je popri aktualizáciách jediné extra sieťové volanie."
+    }
+  ],
+  "installTitle": "Inštalácia",
+  "install": [
+    "Stiahnite DMG",
+    "Pretiahnite SnappyZones do Aplikácií",
+    "Otvorte SnappyZones",
+    "Udeľte Accessibility a Input Monitoring, keď je vyžiadané"
+  ],
+  "downloadNotice": "Zadarmo — vrátane pre firmy.",
+  "roadmapTitle": "Už čoskoro",
+  "roadmapSubtitle": "Jedna funkcia je vo vývoji. Ďalších päť je v pláne.",
+  "roadmapInProgress": "Vo vývoji",
+  "roadmapPlanned": "Naplánované",
+  "roadmap": [
+    {
+      "title": "Okno na zvolený displej",
+      "text": "Podponuka v stavovom riadku vypíše pripojené monitory podľa mena a presunie predné okno na vybraný displej. Presun na ďalší displej ostáva pre cyklus zľava doprava."
+    },
+    {
+      "title": "Prichytiť okno…",
+      "text": "Umiestni predné okno do zóny aktívneho rozloženia z menu alebo voliteľnej skratky. Klik alebo Return prichytí. Escape nič neposunie."
+    },
+    {
+      "title": "Vrátiť posledné prichytenie",
+      "text": "Vráti naposledy prichytené okno na veľkosť a miesto pred snapom. Jeden krok. Neaktívne, ak okno zmizlo."
+    },
+    {
+      "title": "Pozastaviť prichytenie",
+      "text": "Pri ťahaní bez overlay zón, bez ukončenia. Prepínanie rozložení a presun na ďalší displej ostávajú."
+    },
+    {
+      "title": "Ignorovať aplikácie",
+      "text": "V Predvoľbách vyberte aplikácie, ktoré nikdy neukážu zóny a neprichytia sa. Ostatné ostávajú ako doteraz."
+    },
+    {
+      "title": "Kopírovať rozloženie na iný displej",
+      "text": "V editore zón skopírujte viditeľnú mriežku na iný pripojený monitor ako nové rozloženie. Zdrojový displej sa nemení."
+    }
+  ],
+  "editionFree": "Zadarmo",
+  "editionPro": "Pro",
+  "proTitle": "SnappyZones Pro",
+  "proBlurb": "Bez účtu SnappyZones — po nákupe licenčný kľúč. Dva Macy. 14-dňová skúška v apke."
+}

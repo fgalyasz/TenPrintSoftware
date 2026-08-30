@@ -1,0 +1,92 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import ProductCard from "~/components/ProductCard.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import Button from "~/components/Button.astro";
+import { localeParams, localePath, useTranslations } from "~/i18n";
+import { toLanguage } from "~/i18n/config";
+import { sortedProducts } from "~/data/products";
+
+export function getStaticPaths() {
+  return localeParams();
+}
+
+const language = toLanguage(Astro.params.lang);
+const t = useTranslations(language);
+const products = sortedProducts();
+---
+
+<BaseLayout
+  language={language}
+  path="products"
+  title={t("products.meta.title")}
+  description={t("products.meta.description")}
+>
+  <section class="page-hero">
+    <MazeBackdrop variant="panel" cell={32} />
+    <div class="container page-hero-inner">
+      <p class="eyebrow">{t("products.count", { count: products.length })}</p>
+      <h1 class="title-xl">{t("products.title")}</h1>
+      <p class="lead">{t("products.subtitle")}</p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="product-grid">
+        {products.map((product) => <ProductCard product={product} language={language} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="more surface-card">
+        <div class="more-copy">
+          <h2 class="title-md">{t("products.more.title")}</h2>
+          <p class="body-muted">{t("products.more.text")}</p>
+        </div>
+        <Button href={localePath(language, "feedback")} variant="secondary">
+          {t("cta.sendFeedback")}
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
+    overflow: hidden;
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-4);
+    max-width: 720px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-5);
+  }
+
+  .more {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    padding: var(--space-6);
+  }
+
+  .more-copy {
+    display: grid;
+    gap: var(--space-2);
+    max-width: 52ch;
+  }
+</style>

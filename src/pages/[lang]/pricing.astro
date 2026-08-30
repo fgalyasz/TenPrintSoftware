@@ -1,0 +1,299 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import Button from "~/components/Button.astro";
+import Faq from "~/components/Faq.astro";
+import { localeParams, localePath, useTranslations } from "~/i18n";
+import { toLanguage } from "~/i18n/config";
+import { productStyle, sortedProducts } from "~/data/products";
+import { productCopy } from "~/i18n/products";
+
+export function getStaticPaths() {
+  return localeParams();
+}
+
+const language = toLanguage(Astro.params.lang);
+const t = useTranslations(language);
+const products = sortedProducts();
+
+const faq = [1, 2, 3, 4, 5, 6].map((index) => ({
+  question: t(`pricing.faq.q${index}` as "pricing.faq.q1"),
+  answer: t(`pricing.faq.a${index}` as "pricing.faq.a1"),
+}));
+---
+
+<BaseLayout
+  language={language}
+  path="pricing"
+  title={t("pricing.meta.title")}
+  description={t("pricing.meta.description")}
+>
+  <section class="page-hero">
+    <MazeBackdrop variant="panel" cell={32} />
+    <div class="container page-hero-inner">
+      <p class="eyebrow">{t("nav.pricing")}</p>
+      <h1 class="title-xl">{t("pricing.title")}</h1>
+      <p class="lead">{t("pricing.subtitle")}</p>
+    </div>
+  </section>
+
+  {
+    products.map((product) => {
+      const copy = productCopy(product.slug, language);
+      return (
+        <section
+          class="section section-tight"
+          style={productStyle(product)}
+        >
+          <div class="container">
+            <div class="plan-head">
+              <img src={product.iconUrl} alt="" width="44" height="44" />
+              <div>
+                <h2 class="title-md">{product.name}</h2>
+                <p class="small body-muted">{copy.tagline}</p>
+              </div>
+              <a class="plan-link" href={localePath(language, `products/${product.slug}`)}>
+                {t("cta.viewProduct")}
+              </a>
+            </div>
+
+            <div class="plans">
+              {product.tiers.map((tier) => (
+                <article class:list={["plan", tier.kind === "pro" && "plan-pro"]}>
+                  <header class="plan-top">
+                    <span class="plan-name">
+                      {tier.kind === "pro"
+                        ? (copy.editionPro ?? t("product.badge.pro"))
+                        : t("pricing.free.title")}
+                    </span>
+                    <span class="plan-price">
+                      {tier.price}
+                      {tier.kind === "pro" && (
+                        <span class="plan-period">{t("pricing.perLifetime")}</span>
+                      )}
+                    </span>
+                    <p class="small body-muted">
+                      {tier.kind === "pro"
+                        ? t("pricing.pro.subtitle")
+                        : t("pricing.free.subtitle")}
+                    </p>
+                  </header>
+
+                  <ul class="plan-perks">
+                    {tier.perks.map((perk) => (
+                      <li>{t(perk)}</li>
+                    ))}
+                  </ul>
+
+                  <footer class="plan-foot">
+                    {tier.kind === "pro" && tier.checkoutUrl ? (
+                      <Button href={tier.checkoutUrl} external>
+                        {t("cta.buy")}
+                      </Button>
+                    ) : (
+                      <Button href={product.downloadUrl} variant="secondary" external download>
+                        {t("cta.downloadFree")}
+                      </Button>
+                    )}
+                    <p class="small body-muted plan-note">
+                      {tier.kind === "pro"
+                        ? t("product.pricing.pro.note")
+                        : t("product.pricing.free.note")}
+                    </p>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    })
+  }
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="notices">
+        <p class="small body-muted">{t("pricing.notice.vat")}</p>
+        <p class="small body-muted">{t("pricing.notice.mor")}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="section-head section-head-center">
+        <h2 class="title-lg">{t("pricing.faq.title")}</h2>
+      </div>
+      <Faq items={faq} />
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="contact surface-card">
+        <div class="contact-copy">
+          <h2 class="title-md">{t("about.contact.title")}</h2>
+          <p class="body-muted">{t("about.contact.text")}</p>
+        </div>
+        <Button href={localePath(language, "support")} variant="secondary">
+          {t("cta.contactUs")}
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
+    overflow: hidden;
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-4);
+    max-width: 720px;
+  }
+
+  .plan-head {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+
+  .plan-head img {
+    border-radius: 11px;
+    flex: none;
+  }
+
+  .plan-link {
+    margin-inline-start: auto;
+    font-size: 0.875rem;
+    color: var(--accent-2);
+  }
+
+  .plan-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .plan {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: var(--space-5);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .plan-pro {
+    border-color: color-mix(in srgb, var(--product-accent) 42%, transparent);
+    background: linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--product-accent) 10%, var(--surface)),
+      var(--surface)
+    );
+  }
+
+  .plan-top {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .plan-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--product-accent-2);
+  }
+
+  .plan-price {
+    font-size: 2.5rem;
+    font-weight: 650;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+  }
+
+  .plan-period {
+    font-size: 0.875rem;
+    font-weight: 450;
+    color: var(--text-faint);
+    letter-spacing: 0;
+  }
+
+  .plan-perks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+  }
+
+  .plan-perks li {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: var(--space-2);
+    line-height: 1.55;
+  }
+
+  .plan-perks li::before {
+    content: "✓";
+    color: var(--product-accent-2);
+    font-size: 0.875rem;
+  }
+
+  .plan-foot {
+    display: grid;
+    gap: var(--space-3);
+    justify-items: start;
+  }
+
+  .plan-note {
+    margin: 0;
+  }
+
+  .notices {
+    display: grid;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border-strong);
+  }
+
+  .notices p {
+    margin: 0;
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    padding: var(--space-6);
+  }
+
+  .contact-copy {
+    display: grid;
+    gap: var(--space-2);
+    max-width: 54ch;
+  }
+</style>

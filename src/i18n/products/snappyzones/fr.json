@@ -1,0 +1,198 @@
+{
+  "tagline": "Ancrage de fenêtres pour macOS",
+  "headline": "Créer des dispositions personnalisées. Ancrez les fenêtres dans des zones.",
+  "summary": "Un utilitaire macOS rapide et léger pour organiser votre espace de travail avec des zones personnalisables. Créez des dispositions, ancrez instantanément et restez concentré.",
+  "differentiator": "Même si les systèmes d’exploitation modernes — y compris les versions récentes de macOS — savent aligner les fenêtres en les faisant glisser vers les bords de l’écran, SnappyZones vous permet de concevoir n’importe quel layout et d’y aligner les fenêtres de vos applications.",
+  "badges": [
+    "macOS 13+",
+    "Ancrage rapide",
+    "Zones personnalisées",
+    "Respectueux de la vie privée"
+  ],
+  "featuresTitle": "Conçu pour la vitesse et la clarté",
+  "featuresSubtitle": "Tout ce qu’il faut pour garder votre bureau organisé — sans vous gêner.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Dispositions de zones personnalisées",
+      "text": "Définissez des zones qui correspondent à votre façon de travailler : code, web, chat, docs — tout à sa place."
+    },
+    {
+      "tier": "free",
+      "title": "Ancrage instantané",
+      "text": "Déplacez et ancrez les fenêtres dans des zones avec un flux rapide et prévisible."
+    },
+    {
+      "tier": "free",
+      "title": "Prêt pour le multi‑écran",
+      "text": "Utilisez des ensembles de zones différents par écran et gardez des dispositions cohérentes."
+    },
+    {
+      "tier": "free",
+      "title": "Léger",
+      "text": "Un petit utilitaire conçu pour rester réactif et discret au quotidien."
+    },
+    {
+      "tier": "free",
+      "title": "Respectueux de la vie privée",
+      "text": "Pas de comptes, pas de tracking. Vos dispositions restent locales."
+    },
+    {
+      "tier": "free",
+      "title": "Axé clavier",
+      "text": "Raccourcis et actions rapides pour réduire l’usage de la souris et rester efficace."
+    },
+    {
+      "tier": "pro",
+      "title": "Layouts nommés",
+      "text": "Enregistrez plusieurs layouts nommés sur le même écran et changez-en selon votre travail."
+    },
+    {
+      "tier": "pro",
+      "title": "Sélecteur de layout",
+      "text": "Ouvrez Changer de layout… depuis le menu ou un raccourci. Les flèches déplacent le focus ; Entrée applique le layout ciblé, comme un clic."
+    },
+    {
+      "tier": "pro",
+      "title": "Sauvegarde et restauration",
+      "text": "Exportez layouts et préférences dans un fichier JSON sur ce Mac. Restaurer les réglages… montre un schéma de chaque layout avant de remplacer la configuration live."
+    },
+    {
+      "tier": "pro",
+      "title": "Déplacer vers l’écran suivant",
+      "text": "Envoyez la fenêtre au premier plan vers le moniteur suivant depuis le menu ou un raccourci optionnel. Taille et position relatives restent les mêmes."
+    },
+    {
+      "tier": "pro",
+      "title": "Supprimer un layout",
+      "text": "Retirez un layout nommé dans l’Éditeur de zones. Confirmez d’abord. Le dernier layout d’un écran ne peut pas être supprimé."
+    },
+    {
+      "tier": "pro",
+      "title": "Faire défiler les layouts",
+      "text": "Layout suivant et Layout précédent avancent le layout actif sur le moniteur sous le pointeur. Une courte superposition affiche le nouveau nom, puis disparaît."
+    },
+    {
+      "tier": "free",
+      "title": "Préréglages de grille",
+      "text": "Appliquez Deux colonnes, Deux lignes, 2×2, Tiers gauche ou Trois colonnes dans l’Éditeur de zones, puis Enregistrer."
+    },
+    {
+      "tier": "free",
+      "title": "Mises à jour automatiques",
+      "text": "Rechercher des mises à jour… installe une version publiée plus récente dans l’app. La première installation reste un téléchargement depuis ce site."
+    }
+  ],
+  "howTitle": "Comment ça marche",
+  "howSubtitle": "Une boucle simple : concevoir des zones, ancrer des fenêtres, rester productif.",
+  "how": [
+    {
+      "title": "Créer une disposition",
+      "text": "Ouvrez l’éditeur et définissez des zones qui reflètent votre flux de travail."
+    },
+    {
+      "title": "Choisir une fenêtre",
+      "text": "Saisissez une fenêtre, puis utilisez les raccourcis configurés pour l’ancrage mono‑zone ou multi‑zone afin de démarrer l’ancrage."
+    },
+    {
+      "title": "Ancrer dans une zone",
+      "text": "Déposez dans une zone — aligné et dimensionné comme prévu."
+    }
+  ],
+  "quickStartTitle": "Démarrage rapide",
+  "quickStartSubtitle": "De l’installation à l’ancrage en quelques minutes.",
+  "quickStart": [
+    {
+      "title": "Installer",
+      "text": "Téléchargez le DMG, glissez SnappyZones vers Applications, puis ouvrez-le."
+    },
+    {
+      "title": "Autorisations",
+      "text": "Activez cette copie de SnappyZones sous Accessibilité, puis Surveillance des entrées. Après une mise à jour, l’ancienne ligne est retirée ; cette copie apparaît Désactivé jusqu’à ce que vous l’activiez."
+    },
+    {
+      "title": "Créer un layout",
+      "text": "Ouvrez l’Éditeur de zones depuis le menu. Choisissez un Préréglage… ou tracez des splits, nommez le layout, puis Enregistrer."
+    },
+    {
+      "title": "Ancrer",
+      "text": "Maintenez ⌘ et glissez une fenêtre sur une zone. Maintenez ⌘⇧ pour plusieurs zones. Optionnel : Changer de layout, Layout suivant, Déplacer vers l’écran suivant, Sauvegarde."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Pourquoi SnappyZones demande-t-il l’autorisation Accessibilité ?",
+      "answer": "SnappyZones a besoin de l’accès Accessibilité pour déplacer et redimensionner les fenêtres de façon fiable. C’est une exigence standard pour les apps de gestion de fenêtres sur macOS."
+    },
+    {
+      "question": "Mes données sont-elles collectées ou envoyées quelque part ?",
+      "answer": "Non. Le site marketing est statique et l’app fonctionne localement sans comptes."
+    },
+    {
+      "question": "Comment mettre à jour vers une nouvelle version ?",
+      "answer": "Utilisez Rechercher des mises à jour… dans le menu SnappyZones. La première installation reste le DMG de ce site."
+    },
+    {
+      "question": "Par où commencer ?",
+      "answer": "Ouvrez Démarrage rapide… dans le menu SnappyZones, ou suivez le Démarrage rapide sur cette page : installer, autorisations, layout, ancrer."
+    },
+    {
+      "question": "Comment changer de layout sans ouvrir le sélecteur ?",
+      "answer": "Utilisez Layout suivant ou Layout précédent dans le menu, ou enregistrez ces raccourcis dans Préférences. Ils bouclent sur le moniteur sous le pointeur et ne font rien s’il n’y a qu’un layout."
+    },
+    {
+      "question": "Comment supprimer un layout ?",
+      "answer": "Ouvrez l’Éditeur de zones, choisissez le layout, cliquez sur Supprimer et confirmez. Le dernier layout d’un écran ne peut pas être supprimé."
+    },
+    {
+      "question": "Dois-je supprimer SnappyZones des réglages Confidentialité après une mise à jour ?",
+      "answer": "Non. SnappyZones retire l’ancienne ligne et liste cette copie comme Désactivé. Activez cette ligne. Vous n’avez pas à supprimer l’app et la rajouter."
+    },
+    {
+      "question": "Comment activer Pro ?",
+      "answer": "Achetez Pro sur ce site (ou collez une clé dans Licence…). Les layouts restent locaux. La validation de licence est le seul réseau en plus des mises à jour."
+    }
+  ],
+  "installTitle": "Installer",
+  "install": [
+    "Télécharger le DMG",
+    "Glisser SnappyZones dans Applications",
+    "Ouvrir SnappyZones",
+    "Accorder Accessibilité et Surveillance des entrées si demandé"
+  ],
+  "downloadNotice": "Gratuit — y compris pour les entreprises.",
+  "roadmapTitle": "Bientôt disponible",
+  "roadmapSubtitle": "Une fonction est en développement. Cinq autres sont prévues.",
+  "roadmapInProgress": "En développement",
+  "roadmapPlanned": "Prévu",
+  "roadmap": [
+    {
+      "title": "Fenêtre vers un écran choisi",
+      "text": "Un sous-menu de la barre de menus liste les moniteurs connectés par nom et envoie la fenêtre de premier plan vers l’écran choisi. Déplacer vers l’écran suivant reste pour le cycle gauche-droite."
+    },
+    {
+      "title": "Ancrer la fenêtre…",
+      "text": "Place la fenêtre de premier plan dans une zone de la disposition active, depuis le menu ou un raccourci. Clic ou Retour ancre. Échap ne déplace rien."
+    },
+    {
+      "title": "Annuler le dernier ancrage",
+      "text": "Rétablit la dernière fenêtre ancrée à la taille et à la place d’avant l’ancrage. Une étape. Désactivé si cette fenêtre a disparu."
+    },
+    {
+      "title": "Mettre l’ancrage en pause",
+      "text": "Pas de superposition de zones pendant le glisser, sans quitter. Changer de disposition et Déplacer vers l’écran suivant restent disponibles."
+    },
+    {
+      "title": "Ignorer des apps",
+      "text": "Dans Préférences, choisissez des apps qui n’affichent jamais de zones et ne s’ancrent jamais. Les autres restent inchangées."
+    },
+    {
+      "title": "Copier la disposition vers un autre écran",
+      "text": "Dans l’éditeur de zones, copiez la grille visible vers un autre moniteur connecté, comme nouvelle disposition. L’écran source ne change pas."
+    }
+  ],
+  "editionFree": "Gratuit",
+  "editionPro": "Pro",
+  "proTitle": "SnappyZones Pro",
+  "proBlurb": "Pas de compte SnappyZones — une clé après l’achat. Deux Macs. Essai 14 jours dans l’app."
+}

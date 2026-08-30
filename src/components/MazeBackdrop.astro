@@ -1,0 +1,178 @@
+---
+type Props = {
+  cell?: number;
+  variant?: "hero" | "panel" | "band";
+  animate?: boolean;
+  class?: string;
+};
+
+const { cell = 30, variant = "panel", animate = true, class: className = "" } = Astro.props;
+---
+
+<div
+  class:list={["maze", `maze-${variant}`, className]}
+  data-maze
+  data-cell={cell}
+  data-animate={animate ? "true" : "false"}
+  aria-hidden="true"
+>
+  <canvas data-maze-canvas></canvas>
+</div>
+
+<style>
+  .maze {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .maze canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .maze-hero canvas {
+    mask-image: radial-gradient(120% 90% at 78% 22%, #000 0%, #000 38%, transparent 74%);
+    -webkit-mask-image: radial-gradient(
+      120% 90% at 78% 22%,
+      #000 0%,
+      #000 38%,
+      transparent 74%
+    );
+  }
+
+  .maze-panel canvas {
+    mask-image: linear-gradient(180deg, transparent, #000 22%, #000 78%, transparent);
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 22%, #000 78%, transparent);
+    opacity: 0.7;
+  }
+
+  .maze-band canvas {
+    mask-image: radial-gradient(80% 140% at 50% 50%, #000 0%, transparent 78%);
+    -webkit-mask-image: radial-gradient(80% 140% at 50% 50%, #000 0%, transparent 78%);
+  }
+</style>
+
+<script>
+  type MazeState = {
+    root: HTMLElement;
+    canvas: HTMLCanvasElement;
+    context: CanvasRenderingContext2D;
+    cell: number;
+    animate: boolean;
+    frame: number;
+  };
+
+  const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const states: MazeState[] = [];
+
+  function strokeColour(): string {
+    const styles = getComputedStyle(document.documentElement);
+    return styles.getPropertyValue("--maze-stroke").trim() || "rgba(255,255,255,0.15)";
+  }
+
+  function drawCell(state: MazeState, column: number, row: number, colour: string): void {
+    const { context, cell } = state;
+    const left = column * cell;
+    const top = row * cell;
+    const forward = Math.random() < 0.5;
+    context.strokeStyle = colour;
+    context.beginPath();
+    if (forward) {
+      context.moveTo(left + 1, top + cell - 1);
+      context.lineTo(left + cell - 1, top + 1);
+    } else {
+      context.moveTo(left + 1, top + 1);
+      context.lineTo(left + cell - 1, top + cell - 1);
+    }
+    context.stroke();
+  }
+
+  function paint(state: MazeState): void {
+    const { canvas, context, cell } = state;
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    if (width === 0 || height === 0) return;
+
+    canvas.width = Math.round(width * ratio);
+    canvas.height = Math.round(height * ratio);
+    context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    context.clearRect(0, 0, width, height);
+    context.lineWidth = 1.35;
+    context.lineCap = "round";
+
+    const columns = Math.ceil(width / cell);
+    const rows = Math.ceil(height / cell);
+    const colour = strokeColour();
+    const total = columns * rows;
+
+    window.cancelAnimationFrame(state.frame);
+
+    if (!state.animate || REDUCED.matches) {
+      for (let index = 0; index < total; index += 1) {
+        drawCell(state, index % columns, Math.floor(index / columns), colour);
+      }
+      return;
+    }
+
+    const perFrame = Math.max(6, Math.ceil(total / 90));
+    let drawn = 0;
+    const step = () => {
+      const limit = Math.min(drawn + perFrame, total);
+      for (; drawn < limit; drawn += 1) {
+        drawCell(state, drawn % columns, Math.floor(drawn / columns), colour);
+      }
+      if (drawn < total) state.frame = window.requestAnimationFrame(step);
+    };
+    state.frame = window.requestAnimationFrame(step);
+  }
+
+  function register(root: HTMLElement): void {
+    const canvas = root.querySelector<HTMLCanvasElement>("[data-maze-canvas]");
+    const context = canvas?.getContext("2d");
+    if (!canvas || !context) return;
+
+    const state: MazeState = {
+      root,
+      canvas,
+      context,
+      cell: Number(root.dataset.cell) || 30,
+      animate: root.dataset.animate === "true",
+      frame: 0,
+    };
+    states.push(state);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          paint(state);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+    observer.observe(root);
+  }
+
+  function repaintAll(): void {
+    for (const state of states) paint({ ...state, animate: false });
+  }
+
+  document.querySelectorAll<HTMLElement>("[data-maze]").forEach(register);
+
+  let resizeTimer = 0;
+  window.addEventListener("resize", () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(repaintAll, 180);
+  });
+
+  new MutationObserver(repaintAll).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["data-theme"],
+  });
+</script>

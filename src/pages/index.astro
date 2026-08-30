@@ -1,0 +1,43 @@
+---
+import { LANGUAGE_CODES, DEFAULT_LANGUAGE } from "~/i18n/config";
+import { localePath } from "~/i18n";
+import { SITE } from "~/data/site";
+
+const fallback = localePath(DEFAULT_LANGUAGE);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{SITE.name}</title>
+    <meta name="description" content="Small, sharp software for macOS." />
+    <link rel="canonical" href={new URL(fallback, Astro.site).toString()} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {
+      LANGUAGE_CODES.map((code) => (
+        <link
+          rel="alternate"
+          hreflang={code}
+          href={new URL(localePath(code), Astro.site).toString()}
+        />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={new URL(fallback, Astro.site).toString()} />
+    <meta http-equiv="refresh" content={`0; url=${fallback}`} />
+    <script is:inline define:vars={{ supported: LANGUAGE_CODES, fallback }}>
+      (() => {
+        const stored = localStorage.getItem("tp-language");
+        const preferred = (navigator.languages || [navigator.language || "en"])
+          .map((tag) => String(tag).toLowerCase().split("-")[0])
+          .find((tag) => supported.includes(tag));
+        const target = supported.includes(stored) ? stored : preferred;
+        window.location.replace(target ? `/${target}/` : fallback);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href={fallback}>{SITE.name}</a>…</p>
+  </body>
+</html>

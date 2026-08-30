@@ -1,0 +1,198 @@
+{
+  "tagline": "Přichytávání oken pro macOS",
+  "headline": "Vytvořte si vlastní rozvržení. Přichyťte okna do zón.",
+  "summary": "Rychlý a lehký nástroj pro macOS pro organizaci pracovní plochy pomocí přizpůsobitelných zón. Vytvářejte rozvržení, přichytávajte okna okamžitě a zůstaňte soustředěni.",
+  "differentiator": "Ačkoli moderní operační systémy — včetně novějších verzí macOS — umí okna zarovnat přetažením k okrajům obrazovky, SnappyZones vám umožňuje navrhnout libovolné rozvržení a zarovnat k němu okna libovolné aplikace.",
+  "badges": [
+    "macOS 13+",
+    "Rychlé přichytení",
+    "Vlastní zóny",
+    "Bez sledování"
+  ],
+  "featuresTitle": "Navrženo pro rychlost a přehled",
+  "featuresSubtitle": "Vše, co potřebujete pro pořádek na ploše — bez rušivých prvků.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Vlastní rozvržení zón",
+      "text": "Definujte zóny podle svého stylu práce: kód, web, chat, dokumenty — vše na svém místě."
+    },
+    {
+      "tier": "free",
+      "title": "Okamžité přichytení",
+      "text": "Přesouvejte a přichytávajte okna do zón rychle a předvídatelně."
+    },
+    {
+      "tier": "free",
+      "title": "Pro více monitorů",
+      "text": "Jiná sada zón pro každý displej a konzistentní rozvržení napříč workspacemi."
+    },
+    {
+      "tier": "free",
+      "title": "Lehký nástroj",
+      "text": "Malá utilita, která se snaží být rychlá a nenápadná při každodenním použití."
+    },
+    {
+      "tier": "free",
+      "title": "Soukromí",
+      "text": "Žádné účty, žádná sledování. Vaše rozvržení zůstávají lokálně."
+    },
+    {
+      "tier": "free",
+      "title": "Zaměřeno na klávesnici",
+      "text": "Skratky a rychlé akce pro méně práce s myší a vyšší produktivitu."
+    },
+    {
+      "tier": "pro",
+      "title": "Pojmenovaná rozvržení",
+      "text": "Uložte si několik pojmenovaných rozvržení na stejném displeji a přepínejte je, když se práce změní."
+    },
+    {
+      "tier": "pro",
+      "title": "Výběr rozvržení",
+      "text": "Otevřete Přepnout rozvržení… z menu nebo zkratkou. Šipky posouvají fokus; Return použije zaostřené rozvržení stejně jako kliknutí."
+    },
+    {
+      "tier": "pro",
+      "title": "Záloha a obnova",
+      "text": "Exportujte rozvržení a nastavení do JSON souboru na tomto Macu. Obnovit nastavení… před nahrazením živé konfigurace ukáže schéma každého rozvržení."
+    },
+    {
+      "tier": "pro",
+      "title": "Přesun na další displej",
+      "text": "Pošlete přední okno na další monitor z menu nebo volitelnou zkratkou. Relativní velikost a umístění zůstanou stejné."
+    },
+    {
+      "tier": "pro",
+      "title": "Smazat rozvržení",
+      "text": "Odstraňte pojmenované rozvržení v Editoru zón. Nejprve potvrďte. Poslední rozvržení na displeji nelze smazat."
+    },
+    {
+      "tier": "pro",
+      "title": "Procházet rozvržení",
+      "text": "Další rozvržení a Předchozí rozvržení posouvají aktivní rozvržení na monitoru pod ukazatelem. Krátká vrstva ukáže nový název a zmizí."
+    },
+    {
+      "tier": "free",
+      "title": "Přednastavení mřížky",
+      "text": "V Editoru zón použijte Dva sloupce, Dva řádky, 2×2, Levá třetina nebo Tři sloupce a uložte, až to sedí."
+    },
+    {
+      "tier": "free",
+      "title": "Automatické aktualizace",
+      "text": "Zkontrolovat aktualizace… nainstaluje novější vydanou verzi v aplikaci. První instalace zůstává stažením z tohoto webu."
+    }
+  ],
+  "howTitle": "Jak to funguje",
+  "howSubtitle": "Jednoduchý cyklus: navrhněte zóny, přichyťte okna, zůstaňte produktivní.",
+  "how": [
+    {
+      "title": "Vytvořte rozvržení",
+      "text": "Otevřete editor a definujte zóny podle svého způsobu práce."
+    },
+    {
+      "title": "Vyberte okno",
+      "text": "Chyťte okno a pak použijte skratky nastavené pro single‑zone nebo multi‑zone přichytení a začněte přichytávat."
+    },
+    {
+      "title": "Přichyťte do zóny",
+      "text": "Pustite do zóny — zarovnané a velké přesně podle plánu."
+    }
+  ],
+  "quickStartTitle": "Rychlý start",
+  "quickStartSubtitle": "Od instalace k přichycení během pár minut.",
+  "quickStart": [
+    {
+      "title": "Instalace",
+      "text": "Stáhněte DMG, přetáhněte SnappyZones do Applications a otevřete ho."
+    },
+    {
+      "title": "Oprávnění",
+      "text": "Zapněte tuto kopii SnappyZones ve Zpřístupnění a poté v Input Monitoring. Po aktualizaci se starý řádek odstraní; tato kopie je Vypnuto, dokud ji nezapnete."
+    },
+    {
+      "title": "Rozvržení",
+      "text": "Otevřete Editor zón z menu. Vyberte Přednastavení… nebo nakreslete dělení, pojmenujte rozvržení a uložte."
+    },
+    {
+      "title": "Přichycení",
+      "text": "Držte ⌘ a přetáhněte okno na zónu. Pro více zón ⌘⇧. Volitelně: Přepnout rozvržení, Další rozvržení, Přesun na další displej, Záloha."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Proč SnappyZones vyžaduje oprávnění Zpřístupnění (Accessibility)?",
+      "answer": "SnappyZones potřebuje Accessibility pro spolehlivý přesun a změnu velikosti oken. Je to standardní požadavek pro správce oken na macOS."
+    },
+    {
+      "question": "Sbírá se nebo odesílá nějaká data?",
+      "answer": "Ne. Marketingová stránka je statická a aplikace funguje lokálně bez účtů."
+    },
+    {
+      "question": "Jak aktualizuji na novou verzi?",
+      "answer": "Použijte Zkontrolovat aktualizace… v nabídce SnappyZones. První instalace zůstává DMG z tohoto webu."
+    },
+    {
+      "question": "Jak začít?",
+      "answer": "Otevřete Rychlý start… v menu SnappyZones, nebo postupujte podle Rychlého startu na této stránce: instalace, oprávnění, rozvržení, přichycení."
+    },
+    {
+      "question": "Jak přepnu rozvržení bez otevření výběru?",
+      "answer": "Použijte Další rozvržení nebo Předchozí rozvržení v menu, nebo nahrajte zkratky v Nastavení. Otáčejí se na monitoru pod ukazatelem a u jednoho rozvržení nic neudělají."
+    },
+    {
+      "question": "Jak smažu rozvržení?",
+      "answer": "Otevřete Editor zón, vyberte rozvržení, klikněte na Smazat a potvrďte. Poslední rozvržení na displeji nelze smazat."
+    },
+    {
+      "question": "Mám po aktualizaci SnappyZones v nastavení Soukromí smazat?",
+      "answer": "Ne. SnappyZones odstraní starý řádek a tuto kopii vypíše jako Vypnuto. Tento řádek zapněte. Aplikaci nemusíte mazat a znovu přidávat."
+    },
+    {
+      "question": "Jak odemknu Pro?",
+      "answer": "Kupte Pro na tomto webu (nebo vložte klíč v Licence…). Rozvržení zůstanou na Macu. Kontrola licence je vedle aktualizací jediné extra síťové volání."
+    }
+  ],
+  "installTitle": "Instalace",
+  "install": [
+    "Stáhněte DMG",
+    "Pretáhněte SnappyZones do Aplikací",
+    "Otevřete SnappyZones",
+    "Povolte Zpřístupnění a Input Monitoring, pokud je vyžádáno"
+  ],
+  "downloadNotice": "Zdarma k použití — včetně pro firmy.",
+  "roadmapTitle": "Již brzy",
+  "roadmapSubtitle": "Jedna funkce je ve vývoji. Pět dalších je v plánu.",
+  "roadmapInProgress": "Ve vývoji",
+  "roadmapPlanned": "Naplánováno",
+  "roadmap": [
+    {
+      "title": "Okno na zvolený displej",
+      "text": "Podnabídka ve stavové liště vypíše připojené monitory podle jména a přesune přední okno na vybraný displej. Přesun na další displej zůstává pro cyklus zleva doprava."
+    },
+    {
+      "title": "Přichytit okno…",
+      "text": "Umístí přední okno do zóny aktivního rozvržení z menu nebo volitelné zkratky. Kliknutí nebo Return přichytí. Escape nic neposune."
+    },
+    {
+      "title": "Vrátit poslední přichycení",
+      "text": "Vrátí naposledy přichycené okno na velikost a místo před snapem. Jeden krok. Neaktivní, když okno zmizelo."
+    },
+    {
+      "title": "Pozastavit přichycení",
+      "text": "Při tažení bez overlay zón, bez ukončení. Přepínání rozvržení a přesun na další displej fungují dál."
+    },
+    {
+      "title": "Ignorovat aplikace",
+      "text": "V Předvolbách vyberte aplikace, které nikdy neukážou zóny a nepřichytí se. Ostatní zůstanou stejné."
+    },
+    {
+      "title": "Kopírovat rozvržení na jiný displej",
+      "text": "V editoru zón zkopírujte viditelnou mřížku na jiný připojený monitor jako nové rozvržení. Zdrojový displej se nemění."
+    }
+  ],
+  "editionFree": "Zdarma",
+  "editionPro": "Pro",
+  "proTitle": "SnappyZones Pro",
+  "proBlurb": "Bez účtu SnappyZones — po nákupu licenční klíč. Dva Macy. 14denní zkušební doba v aplikaci."
+}

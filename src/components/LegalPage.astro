@@ -1,0 +1,139 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import { localePath, useTranslations } from "~/i18n";
+import type { Language } from "~/i18n/config";
+import { LEGAL_UPDATED } from "~/data/site";
+
+type Props = {
+  language: Language;
+  path: string;
+  title: string;
+  metaTitle: string;
+  description: string;
+};
+
+const { language, path, title, metaTitle, description } = Astro.props;
+const t = useTranslations(language);
+
+const documents = [
+  { label: t("legal.privacy"), href: localePath(language, "legal/privacy"), key: "legal/privacy" },
+  { label: t("legal.terms"), href: localePath(language, "legal/terms"), key: "legal/terms" },
+  { label: t("legal.refund"), href: localePath(language, "legal/refund"), key: "legal/refund" },
+];
+---
+
+<BaseLayout language={language} path={path} title={metaTitle} description={description}>
+  <section class="page-hero">
+    <MazeBackdrop variant="panel" cell={34} />
+    <div class="container page-hero-inner">
+      <p class="eyebrow">{t("footer.legal")}</p>
+      <h1 class="title-xl">{title}</h1>
+      <p class="small body-muted">{t("legal.updated", { date: LEGAL_UPDATED })}</p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container legal-grid">
+      <nav class="legal-nav" aria-label={t("footer.legal")}>
+        {
+          documents.map((document) => (
+            <a
+              class:list={["legal-nav-link", document.key === path && "legal-nav-link-active"]}
+              href={document.href}
+            >
+              {document.label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <div class="legal-body">
+        {language !== "en" && <p class="legal-notice small">{t("legal.englishOnly")}</p>}
+        <div class="prose">
+          <slot />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-block: clamp(56px, 7vw, 88px) var(--space-5);
+    overflow: hidden;
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-3);
+    max-width: 720px;
+  }
+
+  .legal-grid {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .legal-nav {
+    display: grid;
+    gap: 2px;
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+  }
+
+  .legal-nav-link {
+    padding: 9px 12px;
+    border-radius: var(--radius-xs);
+    font-size: 0.9375rem;
+    color: var(--text-muted);
+    transition:
+      background 0.15s var(--ease),
+      color 0.15s var(--ease);
+  }
+
+  .legal-nav-link:hover {
+    background: var(--surface);
+    color: var(--text);
+  }
+
+  .legal-nav-link-active {
+    background: var(--surface-strong);
+    color: var(--text);
+    font-weight: 560;
+  }
+
+  .legal-body {
+    display: grid;
+    gap: var(--space-5);
+    max-width: 74ch;
+  }
+
+  .legal-notice {
+    margin: 0;
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
+    border: 1px dashed var(--border-strong);
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 860px) {
+    .legal-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+
+    .legal-nav {
+      position: static;
+      grid-auto-flow: column;
+      justify-content: start;
+      gap: var(--space-2);
+      overflow-x: auto;
+    }
+  }
+</style>

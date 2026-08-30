@@ -1,0 +1,116 @@
+{
+  "tagline": "Wachbleiben für macOS",
+  "headline": "Halten Sie Ihre Mac-Sitzung wach.",
+  "summary": "Ein unauffälliges Menüleisten-Werkzeug, das bei Untätigkeit winzige Mausbewegungen simuliert — damit eine Bildschirmfreigabe, ein langes Meeting oder ein wartender Auftrag die Anmeldesitzung nicht an Ruhezustand oder Sperre verliert.",
+  "differentiator": "Guard startet bei jedem Programmstart als Inaktiv. Sie schalten es für diese Sitzung ein — bis Sie es beenden oder bis eine zeitlich begrenzte Sitzung abläuft.",
+  "badges": [
+    "macOS 13+",
+    "Menüleiste",
+    "Sitzungen mit Zeitlimit",
+    "Datenschutzfreundlich"
+  ],
+  "featuresTitle": "Auf einen Blick, einstellbar, ehrlich",
+  "featuresSubtitle": "Alles, was Sie brauchen, um eine Anmeldesitzung wach zu halten — ohne zu einer schwergewichtigen Wachbleib-Suite zu werden.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Status in der Menüleiste",
+      "text": "Umrissener Schild bei Inaktiv, gefüllt bei Aktiv, Restzeit während einer Sitzung mit Zeitlimit, durchgestrichener Schild, wenn die Bedienungshilfen-Berechtigung fehlt."
+    },
+    {
+      "tier": "free",
+      "title": "Echte Benutzeraktivität",
+      "text": "Mausbewegungen und Tastendrücke setzen die Untätigkeit zurück. Mikrobewegungen zählen nicht als Aktivität, damit der Zeiger beim Tippen nicht vor der Kamera zuckt."
+    },
+    {
+      "tier": "free",
+      "title": "Sitzungen mit Zeitlimit",
+      "text": "Starten Sie „Bis zum Ausschalten“ oder 15 Min. / 30 Min. / 1 Std. / 2 Std. / 4 Std. / 8 Std. Läuft die Zeit ab, wird Guard inaktiv."
+    },
+    {
+      "tier": "free",
+      "title": "Einstellungen für Untätigkeit und Bewegung",
+      "text": "Wählen Sie die Untätigkeitsschwelle (15 Sek. bis 2 Min.) und das Bewegungsintervall. Einstellungen bleiben erhalten. Guard selbst schaltet sich nach dem Start nicht wieder ein."
+    },
+    {
+      "tier": "free",
+      "title": "Einführung in die Bedienungshilfen",
+      "text": "Die erste Sitzung erklärt, warum die Bedienungshilfen-Berechtigung nötig ist, und öffnet die Systemeinstellungen. Kein stilles erstes Zucken."
+    },
+    {
+      "tier": "free",
+      "title": "Datenschutzfreundlich",
+      "text": "Keine Konten, kein Tracking. Die App arbeitet lokal. Diese Website ist statisch."
+    }
+  ],
+  "howTitle": "So funktioniert es",
+  "howSubtitle": "Untätigkeit, dann eine Bewegung um 1 Pixel und zurück. Das genügt macOS, um Sie als anwesend zu behandeln.",
+  "how": [
+    {
+      "title": "Sitzung starten",
+      "text": "Öffnen Sie das Menüleisten-Symbol. Wählen Sie „Bis zum Ausschalten“ oder eine begrenzte Dauer."
+    },
+    {
+      "title": "Untätig bleiben — oder weiterarbeiten",
+      "text": "Tippen oder Mausbewegungen setzen die Untätigkeit zurück. Nach Ablauf der Untätigkeitsschwelle ohne Benutzeraktivität kann eine Mikrobewegung ausgelöst werden."
+    },
+    {
+      "title": "Mikrobewegung",
+      "text": "Der Zeiger bewegt sich 1 Pixel und kehrt zurück. Danach wartet SessionGuard das Bewegungsintervall ab und prüft die Untätigkeit erneut."
+    }
+  ],
+  "quickStartTitle": "Schnellstart",
+  "quickStartSubtitle": "Von der Installation zu einer aktiven Sitzung in wenigen Minuten.",
+  "quickStart": [
+    {
+      "title": "Installieren",
+      "text": "Laden Sie das DMG herunter, ziehen Sie SessionGuard in den Programme-Ordner und öffnen Sie es."
+    },
+    {
+      "title": "Bedienungshilfen erlauben",
+      "text": "Starten Sie eine Sitzung. Aktivieren Sie auf Nachfrage die Bedienungshilfen in den Systemeinstellungen und starten Sie die Sitzung erneut."
+    },
+    {
+      "title": "Dauer wählen",
+      "text": "„Bis zum Ausschalten“ für eine offene Sitzung oder eine Zeitvorgabe für ein einzelnes Meeting."
+    },
+    {
+      "title": "Blick auf das Symbol",
+      "text": "Gefüllter Schild bedeutet aktiv. Während einer Sitzung mit Zeitlimit wird die Restzeit angezeigt. Umriss bedeutet inaktiv."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Warum fragt SessionGuard nach den Bedienungshilfen?",
+      "answer": "macOS verlangt die Bedienungshilfen-Berechtigung, um Zeigerereignisse zu erzeugen und Tastaturaktivität zu erkennen, ohne Tasten mitzuschreiben. Ohne sie kann Guard keine Mikrobewegung ausführen."
+    },
+    {
+      "question": "Werden meine Daten erfasst oder irgendwohin gesendet?",
+      "answer": "Nein. Diese Website ist statisch. Die App hat keine Konten und sendet keine Aktivitätsdaten."
+    },
+    {
+      "question": "Hält es einen Mac mit geschlossenem Deckel wach?",
+      "answer": "Nein. SessionGuard hält eine Anmeldesitzung wach, während der Mac mit offenem Deckel benutzt wird. Es ist kein Werkzeug, um einen Server mit geschlossenem Deckel wach zu halten."
+    },
+    {
+      "question": "Schaltet sich Guard nach der Anmeldung wieder ein?",
+      "answer": "Nein. Der Start beginnt immer inaktiv, auch wenn „Beim Anmelden starten“ aktiv ist. Sie starten eine Sitzung, wenn Sie sie brauchen."
+    },
+    {
+      "question": "Löst Tippen eine Mikrobewegung aus?",
+      "answer": "Nein. Ein Tastendruck ist Benutzeraktivität und setzt die Untätigkeit zurück. Mikrobewegungen selbst werden ignoriert, damit sie die Untätigkeit nicht erneut auslösen."
+    },
+    {
+      "question": "Wie aktualisiere ich?",
+      "answer": "Laden Sie das neueste DMG von dieser Website herunter und ersetzen Sie SessionGuard im Programme-Ordner."
+    }
+  ],
+  "installTitle": "Installation",
+  "install": [
+    "DMG herunterladen",
+    "SessionGuard in den Programme-Ordner ziehen",
+    "SessionGuard öffnen",
+    "Bedienungshilfen auf Nachfrage erlauben, dann eine Sitzung starten"
+  ],
+  "downloadNotice": "Kostenlos nutzbar — auch für Unternehmen."
+}

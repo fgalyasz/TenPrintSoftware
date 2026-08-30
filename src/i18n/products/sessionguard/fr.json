@@ -1,0 +1,116 @@
+{
+  "tagline": "Rester éveillé, sur macOS",
+  "headline": "Gardez votre session Mac éveillée.",
+  "summary": "Un utilitaire discret dans la barre des menus qui simule de minuscules mouvements de souris quand vous êtes inactif — pour qu'un partage d'écran, une longue réunion ou une tâche en attente ne perde pas la session ouverte à cause de la veille ou du verrouillage.",
+  "differentiator": "Guard démarre toujours à l'état Inactif. Vous l'activez pour cette session — jusqu'à ce que vous l'arrêtiez, ou jusqu'à la fin d'une session minutée.",
+  "badges": [
+    "macOS 13+",
+    "Barre des menus",
+    "Sessions minutées",
+    "Respectueux de la vie privée"
+  ],
+  "featuresTitle": "Lisible d'un coup d'œil, réglable, honnête",
+  "featuresSubtitle": "Tout ce qu'il faut pour maintenir une session ouverte — sans devenir une lourde suite de veille.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "État dans la barre des menus",
+      "text": "Bouclier en contour quand c'est inactif, plein quand c'est actif, temps restant pendant une session minutée, bouclier barré si l'autorisation d'accessibilité manque."
+    },
+    {
+      "tier": "free",
+      "title": "Vraie activité de l'utilisateur",
+      "text": "Le mouvement de la souris et l'appui sur une touche réinitialisent l'inactivité. Les micro-mouvements ne comptent pas comme une activité, donc le pointeur ne tremble pas à l'écran pendant que vous tapez."
+    },
+    {
+      "tier": "free",
+      "title": "Sessions minutées",
+      "text": "Lancez « Jusqu'à l'arrêt », ou 15 min / 30 min / 1 h / 2 h / 4 h / 8 h. Quand le compteur atteint zéro, Guard redevient inactif."
+    },
+    {
+      "tier": "free",
+      "title": "Réglages d'inactivité et de mouvement",
+      "text": "Choisissez le seuil d'inactivité (15 s à 2 min) et l'intervalle entre les mouvements. Les réglages sont conservés. Guard ne se rallume pas de lui-même au démarrage."
+    },
+    {
+      "tier": "free",
+      "title": "Mise en route de l'accessibilité",
+      "text": "La première session explique pourquoi l'accessibilité est nécessaire et ouvre les Réglages Système. Aucun premier mouvement en silence."
+    },
+    {
+      "tier": "free",
+      "title": "Respectueux de la vie privée",
+      "text": "Sans compte, sans suivi. L'application fonctionne en local. Ce site est statique."
+    }
+  ],
+  "howTitle": "Comment ça marche",
+  "howSubtitle": "Inactivité, puis un déplacement d'un pixel et retour. Cela suffit pour que macOS vous considère présent.",
+  "how": [
+    {
+      "title": "Démarrer une session",
+      "text": "Ouvrez l'icône de la barre des menus. Choisissez « Jusqu'à l'arrêt » ou une durée minutée."
+    },
+    {
+      "title": "Restez inactif — ou continuez à travailler",
+      "text": "Taper ou bouger la souris réinitialise l'inactivité. Après le seuil d'inactivité sans activité de l'utilisateur, un micro-mouvement peut se déclencher."
+    },
+    {
+      "title": "Micro-mouvement",
+      "text": "Le pointeur se déplace d'un pixel puis revient. SessionGuard attend ensuite l'intervalle défini et vérifie l'inactivité à nouveau."
+    }
+  ],
+  "quickStartTitle": "Démarrage rapide",
+  "quickStartSubtitle": "De l'installation à une session active en quelques minutes.",
+  "quickStart": [
+    {
+      "title": "Installer",
+      "text": "Téléchargez l'image disque, faites glisser SessionGuard dans Applications, puis ouvrez-le."
+    },
+    {
+      "title": "Accorder l'accessibilité",
+      "text": "Démarrez une session. À la demande, activez l'accessibilité dans les Réglages Système, puis démarrez la session à nouveau."
+    },
+    {
+      "title": "Choisir la durée",
+      "text": "« Jusqu'à l'arrêt » pour une session sans limite, ou une durée prédéfinie pour une seule réunion."
+    },
+    {
+      "title": "Un coup d'œil à l'icône",
+      "text": "Bouclier plein : actif. Le temps restant s'affiche pendant une session minutée. Contour : inactif."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Pourquoi SessionGuard demande-t-il l'accessibilité ?",
+      "answer": "macOS exige l'accessibilité pour générer des événements de pointeur et détecter l'activité du clavier sans enregistrer les touches. Sans elle, Guard ne peut pas effectuer de micro-mouvement."
+    },
+    {
+      "question": "Mes données sont-elles collectées ou envoyées quelque part ?",
+      "answer": "Non. Ce site est statique. L'application n'a pas de compte et n'envoie aucune donnée d'activité."
+    },
+    {
+      "question": "Est-ce que cela garde un Mac éveillé avec l'écran rabattu ?",
+      "answer": "Non. SessionGuard maintient une session ouverte pendant que le Mac est utilisé écran ouvert. Ce n'est pas un outil de veille pour serveur à écran fermé."
+    },
+    {
+      "question": "Guard se réactive-t-il après la connexion ?",
+      "answer": "Non. Le lancement commence toujours à l'état inactif, même si « Ouvrir à la connexion » est activé. Vous démarrez une session quand vous en avez besoin."
+    },
+    {
+      "question": "Taper au clavier déclenche-t-il un micro-mouvement ?",
+      "answer": "Non. Un appui sur une touche est une activité de l'utilisateur et réinitialise l'inactivité. Les micro-mouvements eux-mêmes sont ignorés afin de ne pas relancer le compteur."
+    },
+    {
+      "question": "Comment mettre à jour ?",
+      "answer": "Téléchargez la dernière image disque depuis ce site et remplacez SessionGuard dans Applications."
+    }
+  ],
+  "installTitle": "Installation",
+  "install": [
+    "Télécharger l'image disque",
+    "Faire glisser SessionGuard dans Applications",
+    "Ouvrir SessionGuard",
+    "Accorder l'accessibilité à la demande, puis démarrer une session"
+  ],
+  "downloadNotice": "Utilisation gratuite — y compris en entreprise."
+}

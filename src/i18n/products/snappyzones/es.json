@@ -1,0 +1,198 @@
+{
+  "tagline": "Anclaje de ventanas para macOS",
+  "headline": "Crea diseños propios. Ancla ventanas en zonas.",
+  "summary": "Una utilidad rápida y ligera para macOS para organizar tu espacio con zonas personalizables. Crea diseños, ancla ventanas al instante y mantén el foco.",
+  "differentiator": "Aunque los sistemas operativos modernos — incluidas las versiones recientes de macOS — ya permiten alinear ventanas arrastrándolas a los bordes de la pantalla, SnappyZones te permite diseñar cualquier diseño y ajustar a él las ventanas de cualquier aplicación.",
+  "badges": [
+    "macOS 13+",
+    "Anclaje rápido",
+    "Zonas personalizadas",
+    "Respetuosa con la privacidad"
+  ],
+  "featuresTitle": "Diseñado para velocidad y claridad",
+  "featuresSubtitle": "Todo lo que necesitas para mantener tu escritorio organizado — sin estorbar.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Diseños de zonas personalizados",
+      "text": "Define zonas según tu forma de trabajar: código, web, chat, docs — todo en su sitio."
+    },
+    {
+      "tier": "free",
+      "title": "Anclaje instantáneo",
+      "text": "Mueve y ancla ventanas en zonas con un flujo rápido y predecible."
+    },
+    {
+      "tier": "free",
+      "title": "Listo para varios monitores",
+      "text": "Usa diferentes conjuntos de zonas por pantalla y mantén diseños consistentes."
+    },
+    {
+      "tier": "free",
+      "title": "Ligero",
+      "text": "Una utilidad pequeña pensada para ser rápida y discreta en el día a día."
+    },
+    {
+      "tier": "free",
+      "title": "Privacidad",
+      "text": "Sin cuentas, sin seguimiento. Tus diseños se guardan localmente."
+    },
+    {
+      "tier": "free",
+      "title": "Enfocado al teclado",
+      "text": "Atajos y acciones rápidas para reducir el uso del ratón y mantener la productividad."
+    },
+    {
+      "tier": "pro",
+      "title": "Diseños con nombre",
+      "text": "Guarda varios diseños con nombre en la misma pantalla y cambia cuando tu trabajo cambie."
+    },
+    {
+      "tier": "pro",
+      "title": "Selector de diseño",
+      "text": "Abre Cambiar diseño… desde el menú o un atajo. Las flechas mueven el foco; Return aplica el diseño enfocado, igual que un clic."
+    },
+    {
+      "tier": "pro",
+      "title": "Copia de seguridad y restauración",
+      "text": "Exporta diseños y preferencias a un archivo JSON en este Mac. Restaurar ajustes… muestra un esquema de cada layout antes de sustituir la configuración actual."
+    },
+    {
+      "tier": "pro",
+      "title": "Mover a la siguiente pantalla",
+      "text": "Envía la ventana delantera al siguiente monitor desde el menú o un atajo opcional. El tamaño y la posición relativos se mantienen."
+    },
+    {
+      "tier": "pro",
+      "title": "Eliminar un diseño",
+      "text": "Quita un diseño con nombre en el Editor de zonas. Confirma primero. El último diseño de una pantalla no se puede eliminar."
+    },
+    {
+      "tier": "pro",
+      "title": "Recorrer diseños",
+      "text": "Diseño siguiente y Diseño anterior avanzan el diseño activo en el monitor bajo el puntero. Una superposición breve muestra el nombre nuevo y se oculta."
+    },
+    {
+      "tier": "free",
+      "title": "Ajustes de cuadrícula",
+      "text": "Aplica Dos columnas, Dos filas, 2×2, Tercio izquierdo o Tres columnas en el Editor de zonas y guarda cuando encaje."
+    },
+    {
+      "tier": "free",
+      "title": "Actualizaciones automáticas",
+      "text": "Buscar actualizaciones… instala una versión publicada más reciente en la app. La primera instalación sigue siendo una descarga de este sitio."
+    }
+  ],
+  "howTitle": "Cómo funciona",
+  "howSubtitle": "Un ciclo simple: diseña zonas, ancla ventanas y sé productivo.",
+  "how": [
+    {
+      "title": "Crea un diseño",
+      "text": "Abre el editor y define zonas que reflejen tu flujo de trabajo."
+    },
+    {
+      "title": "Elige una ventana",
+      "text": "Toma una ventana y luego usa los atajos configurados para el anclaje de una zona o de varias zonas para empezar a anclar."
+    },
+    {
+      "title": "Ancla en una zona",
+      "text": "Suelta en una zona — alineado y dimensionado como lo planeaste."
+    }
+  ],
+  "quickStartTitle": "Inicio rápido",
+  "quickStartSubtitle": "De la instalación al anclado en pocos minutos.",
+  "quickStart": [
+    {
+      "title": "Instalar",
+      "text": "Descarga el DMG, arrastra SnappyZones a Aplicaciones y ábrelo."
+    },
+    {
+      "title": "Permisos",
+      "text": "Activa esta copia de SnappyZones en Accesibilidad y luego en Monitorización de entrada. Tras una actualización se quita la fila antigua; esta copia aparece Desactivado hasta que la actives."
+    },
+    {
+      "title": "Crear un diseño",
+      "text": "Abre el Editor de zonas desde el menú. Elige un Ajuste… o dibuja divisiones, nombra el diseño y guarda."
+    },
+    {
+      "title": "Anclar",
+      "text": "Mantén ⌘ y arrastra una ventana a una zona. Mantén ⌘⇧ para varias zonas. Opcional: Cambiar diseño, Diseño siguiente, Mover a la siguiente pantalla, Copia de seguridad."
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Por qué SnappyZones solicita permiso de Accesibilidad?",
+      "answer": "SnappyZones necesita Accesibilidad para mover y redimensionar ventanas de forma fiable. Es un requisito estándar para apps de gestión de ventanas en macOS."
+    },
+    {
+      "question": "¿Se recopilan o envían datos?",
+      "answer": "No. La página de marketing es estática y la app funciona localmente sin cuentas."
+    },
+    {
+      "question": "¿Cómo actualizo a una nueva versión?",
+      "answer": "Usa Buscar actualizaciones… en el menú de SnappyZones. La primera instalación sigue siendo el DMG de este sitio."
+    },
+    {
+      "question": "¿Cómo empiezo?",
+      "answer": "Abre Inicio rápido… en el menú de SnappyZones, o sigue Inicio rápido en esta página: instalar, permisos, diseño, anclar."
+    },
+    {
+      "question": "¿Cómo cambio de diseño sin abrir el selector?",
+      "answer": "Usa Diseño siguiente o Diseño anterior en el menú, o graba esos atajos en Preferencias. Ciclan en el monitor bajo el puntero y no hacen nada si solo hay un diseño."
+    },
+    {
+      "question": "¿Cómo elimino un diseño?",
+      "answer": "Abre el Editor de zonas, elige el diseño, pulsa Eliminar y confirma. El último diseño de una pantalla no se puede eliminar."
+    },
+    {
+      "question": "¿Debo eliminar SnappyZones de Privacidad después de una actualización?",
+      "answer": "No. SnappyZones quita la fila antigua y lista esta copia como Desactivado. Activa esa fila. No hace falta borrar la app y volver a añadirla."
+    },
+    {
+      "question": "¿Cómo activo Pro?",
+      "answer": "Compra Pro en este sitio (o pega la clave en Licencia…). Los layouts siguen en el Mac. La validación de licencia es la única red extra además de las actualizaciones."
+    }
+  ],
+  "installTitle": "Instalar",
+  "install": [
+    "Descargar el DMG",
+    "Arrastra SnappyZones a Aplicaciones",
+    "Abre SnappyZones",
+    "Concede Accesibilidad y Monitorización de entrada cuando se solicite"
+  ],
+  "downloadNotice": "Gratis — también para empresas.",
+  "roadmapTitle": "Próximamente",
+  "roadmapSubtitle": "Una función está en desarrollo. Hay cinco más planificadas.",
+  "roadmapInProgress": "En desarrollo",
+  "roadmapPlanned": "Planificado",
+  "roadmap": [
+    {
+      "title": "Ventana a una pantalla elegida",
+      "text": "Un submenú de la barra de menús lista los monitores conectados por nombre y envía la ventana frontal a la pantalla elegida. Mover a la siguiente pantalla se mantiene para el ciclo de izquierda a derecha."
+    },
+    {
+      "title": "Ajustar ventana…",
+      "text": "Coloca la ventana frontal en una zona del diseño activo desde el menú o un atajo. Clic o Retorno ajusta. Escape no mueve la ventana."
+    },
+    {
+      "title": "Deshacer el último ajuste",
+      "text": "Devuelve la última ventana ajustada al tamaño y lugar de antes del ajuste. Un paso. Desactivado si esa ventana ya no está."
+    },
+    {
+      "title": "Pausar el ajuste",
+      "text": "Sin superposición de zonas al arrastrar, sin salir. Cambiar diseño y Mover a la siguiente pantalla siguen funcionando."
+    },
+    {
+      "title": "Ignorar apps",
+      "text": "En Preferencias, elige apps que nunca muestren zonas ni se ajusten. El resto sigue igual."
+    },
+    {
+      "title": "Copiar el diseño a otra pantalla",
+      "text": "En el editor de zonas, copia la cuadrícula visible a otro monitor conectado como diseño nuevo. La pantalla de origen no cambia."
+    }
+  ],
+  "editionFree": "Gratis",
+  "editionPro": "Pro",
+  "proTitle": "SnappyZones Pro",
+  "proBlurb": "Sin cuenta SnappyZones — una clave tras el pago. Dos Macs. Prueba de 14 días en la app."
+}

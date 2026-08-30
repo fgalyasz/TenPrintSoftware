@@ -1,0 +1,316 @@
+---
+import Button from "./Button.astro";
+import { useTranslations } from "~/i18n";
+import type { Language } from "~/i18n/config";
+import { sortedProducts } from "~/data/products";
+import { SITE } from "~/data/site";
+
+type Props = { language: Language; kind: "support" | "feedback"; defaultTopic?: string };
+
+const { language, kind, defaultTopic = kind === "support" ? "support" : "feature" } = Astro.props;
+const t = useTranslations(language);
+const products = sortedProducts();
+
+const topics = [
+  { value: "support", label: t("form.topic.support") },
+  { value: "bug", label: t("form.topic.bug") },
+  { value: "feature", label: t("form.topic.feature") },
+  { value: "purchase", label: t("form.topic.purchase") },
+  { value: "other", label: t("form.topic.other") },
+];
+---
+
+<form class="contact-form" data-contact-form novalidate>
+  <input type="hidden" name="kind" value={kind} />
+  <input type="hidden" name="language" value={language} />
+  <div class="hp" aria-hidden="true">
+    <label for={`reference-${kind}`}>Reference</label>
+    <input
+      id={`reference-${kind}`}
+      name="reference"
+      type="text"
+      tabindex="-1"
+      autocomplete="off"
+    />
+  </div>
+
+  <div class="field-row">
+    <p class="field">
+      <label class="field-label" for={`name-${kind}`}>
+        {t("form.name")} <span class="field-hint">{t("form.optional")}</span>
+      </label>
+      <input id={`name-${kind}`} name="name" type="text" autocomplete="name" class="input" />
+    </p>
+
+    <p class="field">
+      <label class="field-label" for={`email-${kind}`}>
+        {t("form.email")} <span class="field-hint">{t("form.required")}</span>
+      </label>
+      <input
+        id={`email-${kind}`}
+        name="email"
+        type="email"
+        autocomplete="email"
+        inputmode="email"
+        required
+        class="input"
+      />
+    </p>
+  </div>
+
+  <div class="field-row">
+    <p class="field">
+      <label class="field-label" for={`product-${kind}`}>{t("form.product")}</label>
+      <select id={`product-${kind}`} name="product" class="input">
+        <option value="general">{t("form.product.general")}</option>
+        {products.map((product) => <option value={product.slug}>{product.name}</option>)}
+      </select>
+    </p>
+
+    <p class="field">
+      <label class="field-label" for={`topic-${kind}`}>{t("form.topic")}</label>
+      <select id={`topic-${kind}`} name="topic" class="input">
+        {
+          topics.map((topic) => (
+            <option value={topic.value} selected={topic.value === defaultTopic}>
+              {topic.label}
+            </option>
+          ))
+        }
+      </select>
+    </p>
+  </div>
+
+  {
+    kind === "support" && (
+      <p class="field">
+        <label class="field-label" for="system-support">
+          {t("form.system")} <span class="field-hint">{t("form.optional")}</span>
+        </label>
+        <input
+          id="system-support"
+          name="system"
+          type="text"
+          class="input"
+          placeholder={t("form.systemHint")}
+        />
+      </p>
+    )
+  }
+
+  <p class="field">
+    <label class="field-label" for={`message-${kind}`}>
+      {t("form.message")} <span class="field-hint">{t("form.required")}</span>
+    </label>
+    <textarea id={`message-${kind}`} name="message" rows="7" required class="input textarea"
+    ></textarea>
+  </p>
+
+  <div class="form-footer">
+    <Button type="submit" size="lg" class="submit">{t("form.send")}</Button>
+    <p class="small body-muted form-privacy">{t("form.privacy")}</p>
+  </div>
+
+  <p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
+
+  <p class="small body-muted form-fallback">
+    {t("form.orEmail")}
+    <a class="form-mail" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+  </p>
+
+  <template data-copy-sending>{t("form.sending")}</template>
+  <template data-copy-send>{t("form.send")}</template>
+  <template data-copy-success>{t("form.success.text")}</template>
+  <template data-copy-error>{t("form.error.text", { email: SITE.email })}</template>
+  <template data-copy-validation>{t("form.error.validation")}</template>
+</form>
+
+<style>
+  .contact-form {
+    display: grid;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .field-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .field {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+  }
+
+  .field-label {
+    font-size: 0.8125rem;
+    font-weight: 560;
+    color: var(--text-muted);
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .field-hint {
+    font-size: 0.6875rem;
+    font-weight: 450;
+    color: var(--text-faint);
+    text-transform: lowercase;
+  }
+
+  .input {
+    width: 100%;
+    padding: 11px 13px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--bg-raised);
+    color: var(--text);
+    font-size: 0.9375rem;
+    transition:
+      border-color 0.15s var(--ease),
+      background 0.15s var(--ease);
+  }
+
+  .input::placeholder {
+    color: var(--text-faint);
+  }
+
+  .input:hover {
+    border-color: var(--border-strong);
+  }
+
+  .input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+
+  .textarea {
+    resize: vertical;
+    min-height: 132px;
+    line-height: 1.6;
+  }
+
+  select.input {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 36px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a8fa3' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+  }
+
+  .form-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+    margin-top: var(--space-1);
+  }
+
+  .form-privacy {
+    flex: 1 1 260px;
+    margin: 0;
+    max-width: 46ch;
+  }
+
+  .form-status {
+    margin: 0;
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
+    font-size: 0.9375rem;
+    border: 1px solid var(--border);
+  }
+
+  .form-status[data-state="success"] {
+    border-color: color-mix(in srgb, #34d399 45%, transparent);
+    background: color-mix(in srgb, #34d399 12%, transparent);
+    color: #a7f3d0;
+  }
+
+  .form-status[data-state="error"] {
+    border-color: color-mix(in srgb, #f87171 45%, transparent);
+    background: color-mix(in srgb, #f87171 12%, transparent);
+    color: #fecaca;
+  }
+
+  :global([data-theme="light"]) .form-status[data-state="success"] {
+    color: #065f46;
+  }
+
+  :global([data-theme="light"]) .form-status[data-state="error"] {
+    color: #991b1b;
+  }
+
+  .form-fallback {
+    margin: 0;
+  }
+
+  .form-mail {
+    color: var(--accent-2);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>
+
+<script>
+  function readTemplate(form: HTMLFormElement, name: string): string {
+    return form.querySelector<HTMLTemplateElement>(`[data-copy-${name}]`)?.innerHTML.trim() ?? "";
+  }
+
+  document.querySelectorAll<HTMLFormElement>("[data-contact-form]").forEach((form) => {
+    const status = form.querySelector<HTMLElement>("[data-form-status]");
+    const submit = form.querySelector<HTMLButtonElement>("button[type='submit']");
+    if (!status || !submit) return;
+
+    const show = (state: "success" | "error", message: string) => {
+      status.hidden = false;
+      status.dataset.state = state;
+      status.textContent = message;
+    };
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const email = String(data.get("email") ?? "").trim();
+      const message = String(data.get("message") ?? "").trim();
+
+      if (!email.includes("@") || message.length < 5) {
+        show("error", readTemplate(form, "validation"));
+        return;
+      }
+
+      submit.disabled = true;
+      submit.textContent = readTemplate(form, "sending");
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(Object.fromEntries(data.entries())),
+        });
+        if (!response.ok) throw new Error(String(response.status));
+        form.reset();
+        show("success", readTemplate(form, "success"));
+      } catch {
+        show("error", readTemplate(form, "error"));
+      } finally {
+        submit.disabled = false;
+        submit.textContent = readTemplate(form, "send");
+      }
+    });
+  });
+</script>

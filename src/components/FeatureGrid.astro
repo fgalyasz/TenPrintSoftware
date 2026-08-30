@@ -1,0 +1,80 @@
+---
+import type { ProductFeature } from "~/i18n/products";
+
+type Props = {
+  features: ProductFeature[];
+  freeLabel?: string;
+  proLabel?: string;
+  showTiers?: boolean;
+};
+
+const { features, freeLabel = "Free", proLabel = "Pro", showTiers = false } = Astro.props;
+---
+
+<div class="feature-grid">
+  {
+    features.map((feature) => (
+      <article class="feature">
+        {showTiers && (
+          <span class:list={["feature-tier", feature.tier === "pro" && "feature-tier-pro"]}>
+            {feature.tier === "pro" ? proLabel : freeLabel}
+          </span>
+        )}
+        <h3 class="title-sm">{feature.title}</h3>
+        <p class="feature-text">{feature.text}</p>
+      </article>
+    ))
+  }
+</div>
+
+<style>
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .feature {
+    position: relative;
+    display: grid;
+    gap: var(--space-2);
+    align-content: start;
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition:
+      border-color 0.2s var(--ease),
+      background 0.2s var(--ease);
+  }
+
+  .feature:hover {
+    border-color: var(--border-strong);
+    background: var(--surface-strong);
+  }
+
+  .feature-text {
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .feature-tier {
+    justify-self: start;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border);
+    color: var(--text-faint);
+    margin-bottom: var(--space-1);
+  }
+
+  .feature-tier-pro {
+    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+    color: var(--accent-2);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+</style>

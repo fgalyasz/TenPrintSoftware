@@ -1,0 +1,198 @@
+{
+  "tagline": "Fensterschnappen für macOS",
+  "headline": "Eigene Layouts erstellen. Fenster in Zonen schnappen.",
+  "summary": "Ein schnelles, schlankes macOS-Tool, um deinen Arbeitsplatz mit anpassbaren Zonen zu organisieren. Layouts erstellen, Fenster sofort schnappen und fokussiert bleiben.",
+  "differentiator": "Moderne Betriebssysteme — einschließlich neuerer macOS-Versionen — können Fenster durch Ziehen an Bildschirmränder ausrichten. Mit SnappyZones gestaltest du jedoch beliebige Layouts und richtest jedes App-Fenster daran aus.",
+  "badges": [
+    "macOS 13+",
+    "Schnelles Snapping",
+    "Anpassbare Zonen",
+    "Datenschutzfreundlich"
+  ],
+  "featuresTitle": "Für Geschwindigkeit und Klarheit entwickelt",
+  "featuresSubtitle": "Alles, was du brauchst, um deinen Desktop zu organisieren — ohne dich zu stören.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Individuelle Zonenlayouts",
+      "text": "Definiere Zonen, die zu deiner Arbeit passen: Code, Browser, Chat, Docs — alles am Platz."
+    },
+    {
+      "tier": "free",
+      "title": "Sofortiges Snapping",
+      "text": "Fenster schnell und zuverlässig in Zonen verschieben und einrasten."
+    },
+    {
+      "tier": "free",
+      "title": "Für mehrere Monitore",
+      "text": "Unterschiedliche Zonen pro Display und konsistente Layouts über Workspaces hinweg."
+    },
+    {
+      "tier": "free",
+      "title": "Leichtgewichtig",
+      "text": "Ein kleines Tool, das im Alltag reaktionsschnell und unauffällig bleibt."
+    },
+    {
+      "tier": "free",
+      "title": "Datenschutzfreundlich",
+      "text": "Keine Accounts, kein Tracking. Deine Layouts bleiben lokal."
+    },
+    {
+      "tier": "free",
+      "title": "Tastaturfokussiert",
+      "text": "Shortcuts und Schnellaktionen, um weniger zur Maus zu greifen und produktiv zu bleiben."
+    },
+    {
+      "tier": "pro",
+      "title": "Benannte Layouts",
+      "text": "Speichere mehrere benannte Layouts auf demselben Display und wechsle, wenn sich deine Arbeit ändert."
+    },
+    {
+      "tier": "pro",
+      "title": "Layout-Auswahl",
+      "text": "Öffne „Layout wechseln…“ im Menü oder per Shortcut. Pfeiltasten bewegen den Fokus; Return übernimmt das fokussierte Layout, wie ein Klick."
+    },
+    {
+      "tier": "pro",
+      "title": "Backup und Wiederherstellung",
+      "text": "Exportiere Layouts und Einstellungen als JSON-Datei auf diesem Mac. Einstellungen wiederherstellen… zeigt vor dem Ersetzen eine Zonenskizze jedes Layouts."
+    },
+    {
+      "tier": "pro",
+      "title": "Fenster auf den nächsten Bildschirm",
+      "text": "Schicke das vordere Fenster per Menü oder optionalem Shortcut auf den nächsten Monitor. Relative Größe und Position bleiben erhalten."
+    },
+    {
+      "tier": "pro",
+      "title": "Layout löschen",
+      "text": "Entferne ein benanntes Layout im Zonen-Editor. Zuerst bestätigen. Das letzte Layout auf einem Display kann nicht gelöscht werden."
+    },
+    {
+      "tier": "pro",
+      "title": "Layouts durchschalten",
+      "text": "Nächstes Layout und Vorheriges Layout wechseln das aktive Layout auf dem Monitor unter dem Zeiger. Eine kurze Einblendung zeigt den neuen Namen, dann blendet sie aus."
+    },
+    {
+      "tier": "free",
+      "title": "Raster-Vorlagen",
+      "text": "Zwei Spalten, zwei Zeilen, 2×2, linkes Drittel oder drei Spalten im Zonen-Editor anwenden, dann speichern, wenn es passt."
+    },
+    {
+      "tier": "free",
+      "title": "Automatische Updates",
+      "text": "Nach Updates suchen… installiert eine neuere veröffentlichte Version in der App. Die Erstinstallation bleibt ein Download von dieser Seite."
+    }
+  ],
+  "howTitle": "So funktioniert es",
+  "howSubtitle": "Ein einfacher Ablauf: Zonen gestalten, Fenster schnappen, produktiv bleiben.",
+  "how": [
+    {
+      "title": "Layout erstellen",
+      "text": "Öffne den Editor und definiere Zonen, die zu deiner Arbeitsweise passen."
+    },
+    {
+      "title": "Fenster auswählen",
+      "text": "Greife ein Fenster und nutze dann die konfigurierten Single-Zone- oder Multi-Zone-Snapping-Shortcuts, um das Snapping zu starten."
+    },
+    {
+      "title": "In eine Zone schnappen",
+      "text": "In eine Zone loslassen — exakt so ausgerichtet, wie du es geplant hast."
+    }
+  ],
+  "quickStartTitle": "Schnellstart",
+  "quickStartSubtitle": "Von der Installation bis zum Snappen in wenigen Minuten.",
+  "quickStart": [
+    {
+      "title": "Installieren",
+      "text": "Lade das DMG, ziehe SnappyZones nach Programme und öffne es."
+    },
+    {
+      "title": "Berechtigungen",
+      "text": "Schalte dieses SnappyZones unter Bedienungshilfen ein, dann unter Eingabeüberwachung. Nach einem Update wird die alte Zeile entfernt; diese Kopie steht auf Aus, bis du sie einschaltest."
+    },
+    {
+      "title": "Layout anlegen",
+      "text": "Öffne den Zonen-Editor im Menü. Wähle eine Vorlage… oder ziehe Splits, benenne das Layout, dann Speichern."
+    },
+    {
+      "title": "Snappen",
+      "text": "Halte ⌘ und ziehe ein Fenster auf eine Zone. Für mehrere Zonen ⌘⇧. Optional: Layout wechseln, Nächstes Layout, Fenster auf den nächsten Bildschirm, Backup."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Warum benötigt SnappyZones Bedienungshilfen-Zugriff (Accessibility)?",
+      "answer": "SnappyZones benötigt Accessibility, um Fenster zuverlässig zu bewegen und zu skalieren. Das ist bei Fenster-Management-Apps unter macOS üblich."
+    },
+    {
+      "question": "Werden Daten gesammelt oder irgendwohin gesendet?",
+      "answer": "Nein. Die Marketingseite ist statisch, und die App soll lokal ohne Accounts funktionieren."
+    },
+    {
+      "question": "Wie aktualisiere ich auf eine neue Version?",
+      "answer": "Nutze „Nach Updates suchen…“ im SnappyZones-Menü. Die Erstinstallation bleibt das DMG von dieser Seite."
+    },
+    {
+      "question": "Wie starte ich?",
+      "answer": "Öffne Schnellstart… im SnappyZones-Menü oder folge dem Schnellstart auf dieser Seite: installieren, Berechtigungen, Layout, snappen."
+    },
+    {
+      "question": "Wie wechsle ich Layouts, ohne die Auswahl zu öffnen?",
+      "answer": "Nutze Nächstes Layout oder Vorheriges Layout im Menü, oder lege die Shortcuts in den Einstellungen fest. Sie rotieren auf dem Monitor unter dem Zeiger und tun nichts, wenn nur ein Layout existiert."
+    },
+    {
+      "question": "Wie lösche ich ein Layout?",
+      "answer": "Öffne den Zonen-Editor, wähle das Layout, klicke Löschen und bestätige. Das letzte Layout auf einem Display kann nicht gelöscht werden."
+    },
+    {
+      "question": "Muss ich SnappyZones nach einem Update unter Datenschutz löschen?",
+      "answer": "Nein. SnappyZones entfernt die alte Zeile und listet diese Kopie als Aus. Schalte diese Zeile ein. Du musst die App nicht löschen und neu hinzufügen."
+    },
+    {
+      "question": "Wie schalte ich Pro frei?",
+      "answer": "Pro auf dieser Seite kaufen (oder den Schlüssel unter Lizenz… einfügen). Layouts bleiben lokal. Lizenzprüfung ist neben Updates die einzige Extra-Netzwerkverbindung."
+    }
+  ],
+  "installTitle": "Installation",
+  "install": [
+    "DMG herunterladen",
+    "SnappyZones in den Programme-Ordner ziehen",
+    "SnappyZones öffnen",
+    "Bei Aufforderung Bedienungshilfen und Input Monitoring erlauben"
+  ],
+  "downloadNotice": "Kostenlos nutzbar — auch für Unternehmen.",
+  "roadmapTitle": "Demnächst verfügbar",
+  "roadmapSubtitle": "Eine Funktion in Entwicklung. Fünf weitere sind geplant.",
+  "roadmapInProgress": "In Entwicklung",
+  "roadmapPlanned": "Geplant",
+  "roadmap": [
+    {
+      "title": "Fenster auf ein gewähltes Display",
+      "text": "Ein Untermenü in der Menüleiste listet angeschlossene Monitore namentlich und legt das vordere Fenster auf das gewählte Display. Auf nächsten Bildschirm bleibt zum Durchschalten von links nach rechts."
+    },
+    {
+      "title": "Fenster einrasten…",
+      "text": "Lege das vordere Fenster ohne Ziehen in eine Zelle des aktiven Layouts, per Menü oder optionalem Shortcut. Klick oder Return rastet ein. Escape ändert nichts."
+    },
+    {
+      "title": "Letztes Einrasten rückgängig",
+      "text": "Setzt das zuletzt eingerastete Fenster auf Größe und Position vor dem Snap zurück. Ein Schritt. Deaktiviert, wenn das Fenster weg ist."
+    },
+    {
+      "title": "Einrasten pausieren",
+      "text": "Kein Zonen-Overlay beim Ziehen, ohne zu beenden. Layout wechseln und Fenster auf den nächsten Bildschirm bleiben aktiv. Wieder einschalten, wenn du snappen willst."
+    },
+    {
+      "title": "Apps ignorieren",
+      "text": "In den Einstellungen Apps wählen, die nie Zonen zeigen und nie einrasten. Alle anderen bleiben wie bisher."
+    },
+    {
+      "title": "Layout auf ein anderes Display kopieren",
+      "text": "Im Zonen-Editor das sichtbare Raster als neues Layout auf einen anderen angeschlossenen Monitor kopieren. Das Quell-Display bleibt unverändert."
+    }
+  ],
+  "editionFree": "Kostenlos",
+  "editionPro": "Pro",
+  "proTitle": "SnappyZones Pro",
+  "proBlurb": "Kein SnappyZones-Konto — nach dem Kauf ein Lizenzschlüssel. Zwei Macs. 14 Tage Test in der App."
+}

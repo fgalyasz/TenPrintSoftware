@@ -1,0 +1,53 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import Button from "~/components/Button.astro";
+import { localePath, useTranslations } from "~/i18n";
+import { DEFAULT_LANGUAGE } from "~/i18n/config";
+
+const language = DEFAULT_LANGUAGE;
+const t = useTranslations(language);
+---
+
+<BaseLayout
+  language={language}
+  title={`404 — ${t("brand.name")}`}
+  description={t("notFound.subtitle")}
+>
+  <section class="missing">
+    <MazeBackdrop variant="hero" cell={30} />
+    <div class="container missing-inner">
+      <p class="eyebrow mono">404</p>
+      <h1 class="title-xl">{t("notFound.title")}</h1>
+      <p class="lead">{t("notFound.subtitle")}</p>
+      <div class="missing-actions">
+        <Button href={localePath(language, "products")} size="lg">{t("notFound.cta")}</Button>
+        <Button href={localePath(language)} variant="secondary" size="lg">{t("nav.home")}</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .missing {
+    position: relative;
+    padding-block: clamp(80px, 12vw, 160px);
+    overflow: hidden;
+  }
+
+  .missing-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-4);
+    justify-items: start;
+    max-width: 620px;
+  }
+
+  .missing-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+  }
+</style>

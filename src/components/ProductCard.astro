@@ -1,0 +1,170 @@
+---
+import { localePath, useTranslations } from "~/i18n";
+import type { Language } from "~/i18n/config";
+import { productCopy } from "~/i18n/products";
+import { productStyle, type Product } from "~/data/products";
+
+type Props = { product: Product; language: Language; compact?: boolean };
+
+const { product, language, compact = false } = Astro.props;
+const t = useTranslations(language);
+const copy = productCopy(product.slug, language);
+const modelKey = product.model === "free" ? "product.badge.free" : "product.badge.freemium";
+---
+
+<a
+  class:list={["product-card", compact && "product-card-compact"]}
+  href={localePath(language, `products/${product.slug}`)}
+  style={productStyle(product)}
+>
+  <span class="product-glow" aria-hidden="true"></span>
+
+  <span class="product-head">
+    <img class="product-icon" src={product.iconUrl} alt="" width="52" height="52" loading="lazy" />
+    <span class="product-titles">
+      <span class="product-name">{product.name}</span>
+      <span class="product-tagline">{copy.tagline}</span>
+    </span>
+  </span>
+
+  {!compact && <span class="product-summary">{copy.summary}</span>}
+
+  <span class="product-meta">
+    <span class="product-chip product-chip-accent">{t(modelKey)}</span>
+    <span class="product-chip">{t(product.categoryKey)}</span>
+    <span class="product-chip mono">v{product.version}</span>
+  </span>
+
+  <span class="product-action">
+    {t("cta.viewProduct")}
+    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+      <path
+        d="M3 7h8M7.5 3.5L11 7l-3.5 3.5"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+  </span>
+</a>
+
+<style>
+  .product-card {
+    position: relative;
+    display: grid;
+    gap: var(--space-4);
+    align-content: start;
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    overflow: hidden;
+    isolation: isolate;
+    transition:
+      border-color 0.2s var(--ease),
+      transform 0.2s var(--ease),
+      background 0.2s var(--ease);
+  }
+
+  .product-card:hover {
+    border-color: color-mix(in srgb, var(--product-accent) 45%, var(--border));
+    background: var(--surface-strong);
+    transform: translateY(-3px);
+  }
+
+  .product-glow {
+    position: absolute;
+    inset: -40% 40% 60% -20%;
+    background: radial-gradient(
+      closest-side,
+      color-mix(in srgb, var(--product-accent) 30%, transparent),
+      transparent
+    );
+    opacity: 0.55;
+    z-index: -1;
+    transition: opacity 0.25s var(--ease);
+  }
+
+  .product-card:hover .product-glow {
+    opacity: 0.9;
+  }
+
+  .product-head {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .product-icon {
+    border-radius: 13px;
+    flex: none;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .product-titles {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .product-name {
+    font-size: 1.1875rem;
+    font-weight: 620;
+    letter-spacing: -0.02em;
+  }
+
+  .product-tagline {
+    font-size: 0.875rem;
+    color: var(--text-faint);
+  }
+
+  .product-summary {
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .product-chip {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: var(--bg-raised);
+  }
+
+  .product-chip-accent {
+    border-color: color-mix(in srgb, var(--product-accent) 40%, transparent);
+    color: var(--product-accent-2);
+    background: color-mix(in srgb, var(--product-accent) 12%, transparent);
+  }
+
+  .product-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9375rem;
+    font-weight: 560;
+    color: var(--product-accent-2);
+  }
+
+  .product-action svg {
+    transition: transform 0.2s var(--ease);
+  }
+
+  .product-card:hover .product-action svg {
+    transform: translateX(3px);
+  }
+
+  .product-card-compact {
+    padding: var(--space-5);
+    gap: var(--space-3);
+  }
+</style>

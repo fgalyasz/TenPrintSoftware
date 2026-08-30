@@ -1,0 +1,116 @@
+{
+  "tagline": "Czuwanie dla macOS",
+  "headline": "Utrzymaj sesję na Macu w stanie czuwania.",
+  "summary": "Dyskretne narzędzie na pasku menu, które w czasie bezczynności symuluje drobne mikroruchy myszy — żeby udostępniany ekran, długie spotkanie albo czekające zadanie nie straciły zalogowanej sesji z powodu uśpienia lub blokady.",
+  "differentiator": "Guard po każdym uruchomieniu startuje jako Nieaktywny. Włączasz go na tę sesję — dopóki go nie zatrzymasz albo dopóki nie skończy się sesja z licznikiem.",
+  "badges": [
+    "macOS 13+",
+    "Pasek menu",
+    "Sesje z licznikiem",
+    "Przyjazny prywatności"
+  ],
+  "featuresTitle": "Czytelne, regulowane, uczciwe",
+  "featuresSubtitle": "Wszystko, co potrzebne do utrzymania zalogowanej sesji — bez zamieniania się w ciężki pakiet do czuwania.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Status na pasku menu",
+      "text": "Zarys tarczy przy stanie Nieaktywny, wypełniona przy Aktywny, pozostały czas w trakcie sesji z licznikiem, przekreślona tarcza, gdy brakuje uprawnienia Dostępność."
+    },
+    {
+      "tier": "free",
+      "title": "Prawdziwa aktywność użytkownika",
+      "text": "Ruch myszy i naciśnięcie klawisza zerują bezczynność. Mikroruchy nie liczą się jako aktywność, więc wskaźnik nie drga na wizji, kiedy piszesz."
+    },
+    {
+      "tier": "free",
+      "title": "Sesje z licznikiem",
+      "text": "Uruchom „Do wyłączenia” albo 15 min / 30 min / 1 h / 2 h / 4 h / 8 h. Gdy czas dobiegnie zera, Guard przechodzi w stan Nieaktywny."
+    },
+    {
+      "tier": "free",
+      "title": "Ustawienia bezczynności i ruchu",
+      "text": "Wybierz próg bezczynności (od 15 s do 2 min) i odstęp między ruchami. Ustawienia są zachowywane. Sam Guard nie włącza się ponownie po uruchomieniu."
+    },
+    {
+      "tier": "free",
+      "title": "Wprowadzenie do Dostępności",
+      "text": "Pierwsza sesja wyjaśnia, dlaczego uprawnienie Dostępność jest potrzebne, i otwiera Ustawienia systemowe. Żadnego cichego pierwszego drgnięcia."
+    },
+    {
+      "tier": "free",
+      "title": "Przyjazny prywatności",
+      "text": "Bez kont, bez śledzenia. Aplikacja działa lokalnie. Ta strona jest statyczna."
+    }
+  ],
+  "howTitle": "Jak to działa",
+  "howSubtitle": "Bezczynność, a potem przesunięcie o 1 piksel i powrót. To wystarczy, by macOS uznał cię za obecnego.",
+  "how": [
+    {
+      "title": "Rozpocznij sesję",
+      "text": "Otwórz ikonę na pasku menu. Wybierz „Do wyłączenia” albo czas trwania z licznikiem."
+    },
+    {
+      "title": "Pozostań bezczynny — albo pracuj dalej",
+      "text": "Pisanie lub ruch myszą zeruje bezczynność. Po przekroczeniu progu bezczynności bez aktywności użytkownika może wykonać się mikroruch."
+    },
+    {
+      "title": "Mikroruch",
+      "text": "Wskaźnik przesuwa się o 1 piksel i wraca. Potem SessionGuard odczekuje ustawiony odstęp i znowu sprawdza bezczynność."
+    }
+  ],
+  "quickStartTitle": "Szybki start",
+  "quickStartSubtitle": "Od instalacji do aktywnej sesji w kilka minut.",
+  "quickStart": [
+    {
+      "title": "Instalacja",
+      "text": "Pobierz obraz dysku, przeciągnij SessionGuard do folderu Aplikacje i otwórz go."
+    },
+    {
+      "title": "Przyznaj Dostępność",
+      "text": "Rozpocznij sesję. Gdy pojawi się pytanie, włącz Dostępność w Ustawieniach systemowych i rozpocznij sesję ponownie."
+    },
+    {
+      "title": "Wybierz czas trwania",
+      "text": "„Do wyłączenia” dla sesji bez ograniczeń albo gotowy czas dla jednego spotkania."
+    },
+    {
+      "title": "Zerknij na ikonę",
+      "text": "Wypełniona tarcza znaczy aktywny. W trakcie sesji z licznikiem widać pozostały czas. Zarys znaczy nieaktywny."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Dlaczego SessionGuard prosi o Dostępność?",
+      "answer": "macOS wymaga Dostępności, żeby generować zdarzenia wskaźnika i wykrywać aktywność klawiatury bez zapisywania klawiszy. Bez tego Guard nie może wykonać mikroruchu."
+    },
+    {
+      "question": "Czy moje dane są zbierane albo gdzieś wysyłane?",
+      "answer": "Nie. Ta strona jest statyczna. Aplikacja nie ma kont i nie wysyła danych o aktywności."
+    },
+    {
+      "question": "Czy utrzyma Maca w czuwaniu z zamkniętą klapą?",
+      "answer": "Nie. SessionGuard utrzymuje zalogowaną sesję, gdy Mac jest używany z otwartą klapą. To nie narzędzie do utrzymywania serwera w czuwaniu z zamkniętą klapą."
+    },
+    {
+      "question": "Czy Guard włącza się sam po zalogowaniu?",
+      "answer": "Nie. Uruchomienie zawsze zaczyna się w stanie nieaktywnym, nawet gdy „Uruchom przy logowaniu” jest włączone. Sesję rozpoczynasz wtedy, kiedy jej potrzebujesz."
+    },
+    {
+      "question": "Czy pisanie wywoła mikroruch?",
+      "answer": "Nie. Naciśnięcie klawisza to aktywność użytkownika i zeruje bezczynność. Same mikroruchy są ignorowane, żeby nie uruchamiały licznika od nowa."
+    },
+    {
+      "question": "Jak wykonać aktualizację?",
+      "answer": "Pobierz z tej strony najnowszy obraz dysku i zastąp SessionGuard w folderze Aplikacje."
+    }
+  ],
+  "installTitle": "Instalacja",
+  "install": [
+    "Pobierz obraz dysku",
+    "Przeciągnij SessionGuard do folderu Aplikacje",
+    "Otwórz SessionGuard",
+    "Po pytaniu przyznaj Dostępność, a potem rozpocznij sesję"
+  ],
+  "downloadNotice": "Do bezpłatnego użytku — także dla firm."
+}

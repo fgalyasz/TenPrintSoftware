@@ -1,0 +1,257 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import Button from "~/components/Button.astro";
+import { localeParams, localePath, useTranslations } from "~/i18n";
+import { toLanguage } from "~/i18n/config";
+import { SITE } from "~/data/site";
+import { sortedProducts } from "~/data/products";
+
+export function getStaticPaths() {
+  return localeParams();
+}
+
+const language = toLanguage(Astro.params.lang);
+const t = useTranslations(language);
+const products = sortedProducts();
+
+const values = [
+  { title: t("about.values.one.title"), text: t("about.values.one.text") },
+  { title: t("about.values.two.title"), text: t("about.values.two.text") },
+  { title: t("about.values.three.title"), text: t("about.values.three.text") },
+  { title: t("about.values.four.title"), text: t("about.values.four.text") },
+];
+---
+
+<BaseLayout
+  language={language}
+  path="about"
+  title={t("about.meta.title")}
+  description={t("about.meta.description")}
+>
+  <section class="page-hero">
+    <MazeBackdrop variant="hero" cell={30} />
+    <div class="container page-hero-inner">
+      <p class="eyebrow">{t("nav.about")}</p>
+      <h1 class="title-xl">{t("about.title")}</h1>
+      <p class="lead">{t("about.subtitle")}</p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container story-grid">
+      <div class="story">
+        <h2 class="title-md">{t("about.story.title")}</h2>
+        <p>{t("about.story.p1")}</p>
+        <p>{t("about.story.p2")}</p>
+        <p>{t("about.story.p3")}</p>
+      </div>
+
+      <aside class="facts">
+        <dl class="fact-list">
+          <div class="fact">
+            <dt>{t("footer.products")}</dt>
+            <dd>{products.length}</dd>
+          </div>
+          <div class="fact">
+            <dt>{t("product.platform")}</dt>
+            <dd>macOS 13+</dd>
+          </div>
+          <div class="fact">
+            <dt>{t("language.label")}</dt>
+            <dd>10</dd>
+          </div>
+          <div class="fact">
+            <dt>{t("footer.email")}</dt>
+            <dd><a class="fact-link" href={`mailto:${SITE.email}`}>{SITE.email}</a></dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">{t("home.principles.eyebrow")}</p>
+        <h2 class="title-lg">{t("about.values.title")}</h2>
+      </div>
+      <div class="values">
+        {
+          values.map((value) => (
+            <article class="value">
+              <span class="value-mark" aria-hidden="true">
+                ✕
+              </span>
+              <h3 class="title-sm">{value.title}</h3>
+              <p class="value-text">{value.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="contact">
+        <MazeBackdrop variant="band" cell={28} />
+        <div class="contact-copy">
+          <h2 class="title-lg">{t("about.contact.title")}</h2>
+          <p class="lead">{t("about.contact.text")}</p>
+        </div>
+        <div class="contact-actions">
+          <Button href={localePath(language, "support")} size="lg">{t("cta.getSupport")}</Button>
+          <Button href={`mailto:${SITE.email}`} variant="secondary" size="lg">
+            {SITE.email}
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
+    overflow: hidden;
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-4);
+    max-width: 720px;
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.7fr);
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .story {
+    display: grid;
+    gap: var(--space-4);
+    color: var(--text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    max-width: 68ch;
+  }
+
+  .story h2 {
+    color: var(--text);
+  }
+
+  .facts {
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .fact-list {
+    margin: 0;
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .fact {
+    display: grid;
+    gap: 2px;
+  }
+
+  .fact dt {
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .fact dd {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text);
+  }
+
+  .fact-link {
+    color: var(--accent-2);
+    font-size: 0.9375rem;
+    word-break: break-all;
+  }
+
+  .values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .value {
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .value-mark {
+    justify-self: start;
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: var(--accent-2);
+    background: color-mix(in srgb, var(--accent) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+
+  .value-text {
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+
+  .contact {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .contact-copy {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-3);
+    max-width: 48ch;
+  }
+
+  .contact-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  @media (max-width: 900px) {
+    .story-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+  }
+</style>

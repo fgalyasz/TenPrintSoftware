@@ -1,0 +1,116 @@
+{
+  "tagline": "Menținere trează pentru macOS",
+  "headline": "Menține trează sesiunea de pe Mac.",
+  "summary": "Un utilitar discret din bara de meniu care simulează micromișcări ale mausului atunci când ești inactiv — pentru ca un ecran partajat, o ședință lungă sau o sarcină în așteptare să nu piardă sesiunea autentificată din cauza somnului sau a blocării.",
+  "differentiator": "Guard pornește ca Inactiv la fiecare lansare. Tu îl activezi pentru sesiunea curentă — până îl oprești sau până se încheie o sesiune cronometrată.",
+  "badges": [
+    "macOS 13+",
+    "Bara de meniu",
+    "Sesiuni cronometrate",
+    "Prietenos cu confidențialitatea"
+  ],
+  "featuresTitle": "Vizibil dintr-o privire, reglabil, onest",
+  "featuresSubtitle": "Tot ce îți trebuie pentru a ține o sesiune activă — fără să devină o suită greoaie de menținere trează.",
+  "features": [
+    {
+      "tier": "free",
+      "title": "Starea în bara de meniu",
+      "text": "Scut conturat când e Inactiv, plin când e Activ, timpul rămas în timpul unei sesiuni cronometrate și scut tăiat dacă lipsește permisiunea de Accesibilitate."
+    },
+    {
+      "tier": "free",
+      "title": "Activitate reală a utilizatorului",
+      "text": "Mișcarea mausului și apăsarea tastelor resetează inactivitatea. Micromișcările nu contează ca activitate, așa că indicatorul nu tresare pe cameră în timp ce scrii."
+    },
+    {
+      "tier": "free",
+      "title": "Sesiuni cronometrate",
+      "text": "Pornește „Până la oprire” sau 15 min / 30 min / 1 h / 2 h / 4 h / 8 h. Când timpul ajunge la zero, Guard devine Inactiv."
+    },
+    {
+      "tier": "free",
+      "title": "Setări de inactivitate și mișcare",
+      "text": "Alege pragul de inactivitate (de la 15 s la 2 min) și intervalul dintre mișcări. Setările se păstrează. Guard nu se reactivează singur după lansare."
+    },
+    {
+      "tier": "free",
+      "title": "Ghidare pentru Accesibilitate",
+      "text": "Prima sesiune explică de ce este necesară Accesibilitatea și deschide Configurări sistem. Fără o primă tresărire în surdină."
+    },
+    {
+      "tier": "free",
+      "title": "Prietenos cu confidențialitatea",
+      "text": "Fără conturi, fără urmărire. Aplicația lucrează local. Acest site este static."
+    }
+  ],
+  "howTitle": "Cum funcționează",
+  "howSubtitle": "Inactivitate, apoi o deplasare de 1 pixel și revenire. Atât îi ajunge macOS-ului ca să te considere prezent.",
+  "how": [
+    {
+      "title": "Pornește o sesiune",
+      "text": "Deschide pictograma din bara de meniu. Alege „Până la oprire” sau o durată cronometrată."
+    },
+    {
+      "title": "Rămâi inactiv — sau lucrează în continuare",
+      "text": "Tastarea sau mișcarea mausului resetează inactivitatea. După atingerea pragului de inactivitate, fără activitate a utilizatorului, se poate executa o micromișcare."
+    },
+    {
+      "title": "Micromișcare",
+      "text": "Indicatorul se deplasează cu 1 pixel și revine. Apoi SessionGuard așteaptă intervalul setat și verifică din nou inactivitatea."
+    }
+  ],
+  "quickStartTitle": "Start rapid",
+  "quickStartSubtitle": "De la instalare la o sesiune activă în câteva minute.",
+  "quickStart": [
+    {
+      "title": "Instalare",
+      "text": "Descarcă imaginea de disc, trage SessionGuard în folderul Aplicații și deschide-l."
+    },
+    {
+      "title": "Acordă Accesibilitatea",
+      "text": "Pornește o sesiune. Când ți se cere, activează Accesibilitatea în Configurări sistem, apoi pornește sesiunea din nou."
+    },
+    {
+      "title": "Alege durata",
+      "text": "„Până la oprire” pentru o sesiune fără limită sau o durată predefinită pentru o singură ședință."
+    },
+    {
+      "title": "Privește pictograma",
+      "text": "Scutul plin înseamnă activ. În timpul unei sesiuni cronometrate se afișează timpul rămas. Conturul înseamnă inactiv."
+    }
+  ],
+  "faq": [
+    {
+      "question": "De ce cere SessionGuard permisiunea de Accesibilitate?",
+      "answer": "macOS cere Accesibilitate pentru a genera evenimente de indicator și pentru a observa activitatea tastaturii fără a înregistra tastele. Fără ea, Guard nu poate face micromișcări."
+    },
+    {
+      "question": "Îmi sunt colectate datele sau trimise undeva?",
+      "answer": "Nu. Acest site este static. Aplicația nu are conturi și nu trimite date despre activitate."
+    },
+    {
+      "question": "Ține un Mac treaz cu capacul închis?",
+      "answer": "Nu. SessionGuard ține activă o sesiune autentificată în timp ce Mac-ul este folosit cu capacul deschis. Nu este o unealtă pentru a ține treaz un server cu capacul închis."
+    },
+    {
+      "question": "Se reactivează Guard după autentificare?",
+      "answer": "Nu. Lansarea începe întotdeauna în stare inactivă, chiar dacă „Pornire la autentificare” este activat. Tu pornești o sesiune atunci când ai nevoie de ea."
+    },
+    {
+      "question": "Tastarea declanșează o micromișcare?",
+      "answer": "Nu. Apăsarea unei taste este activitate a utilizatorului și resetează inactivitatea. Micromișcările în sine sunt ignorate, ca să nu repornească numărătoarea."
+    },
+    {
+      "question": "Cum fac actualizarea?",
+      "answer": "Descarcă de pe acest site cea mai nouă imagine de disc și înlocuiește SessionGuard în folderul Aplicații."
+    }
+  ],
+  "installTitle": "Instalare",
+  "install": [
+    "Descarcă imaginea de disc",
+    "Trage SessionGuard în folderul Aplicații",
+    "Deschide SessionGuard",
+    "Acordă Accesibilitatea când ți se cere, apoi pornește o sesiune"
+  ],
+  "downloadNotice": "Se poate folosi gratuit — inclusiv în companii."
+}

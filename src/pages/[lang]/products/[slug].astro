@@ -1,0 +1,527 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import ProductVisual from "~/components/ProductVisual.astro";
+import ProductCard from "~/components/ProductCard.astro";
+import FeatureGrid from "~/components/FeatureGrid.astro";
+import Steps from "~/components/Steps.astro";
+import Faq from "~/components/Faq.astro";
+import Button from "~/components/Button.astro";
+import { localePath, useTranslations } from "~/i18n";
+import { LANGUAGE_CODES, toLanguage } from "~/i18n/config";
+import { productCopy } from "~/i18n/products";
+import { PRODUCTS, findProduct, otherProducts } from "~/data/products";
+
+export function getStaticPaths() {
+  return LANGUAGE_CODES.flatMap((lang) =>
+    PRODUCTS.map((product) => ({ params: { lang, slug: product.slug } })),
+  );
+}
+
+const language = toLanguage(Astro.params.lang);
+const product = findProduct(String(Astro.params.slug));
+if (!product) throw new Error(`Unknown product: ${Astro.params.slug}`);
+
+const t = useTranslations(language);
+const copy = productCopy(product.slug, language);
+const related = otherProducts(product.slug);
+const proTier = product.tiers.find((tier) => tier.kind === "pro");
+const freeTier = product.tiers.find((tier) => tier.kind === "free");
+
+const roadmapLabels = (copy.roadmap ?? []).map((_, index) =>
+  index === 0
+    ? (copy.roadmapInProgress ?? t("product.roadmap.inProgress"))
+    : (copy.roadmapPlanned ?? t("product.roadmap.planned")),
+);
+
+const mockRows = ["Until Turned Off", "15m", "30m", "1h", "2h", "4h", "8h", "Stop"];
+const mockMuted = ["Idle Threshold", "Jiggle Interval"];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: product.name,
+  applicationCategory: "UtilitiesApplication",
+  operatingSystem: "macOS 13 or newer",
+  softwareVersion: product.version,
+  url: new URL(localePath(language, `products/${product.slug}`), Astro.site).toString(),
+  downloadUrl: product.downloadUrl,
+  description: copy.summary,
+  offers: product.tiers.map((tier) => ({
+    "@type": "Offer",
+    price: tier.price.replace(/[^\d.]/g, "") || "0",
+    priceCurrency: "EUR",
+    category: tier.kind === "pro" ? "Pro licence" : "Free",
+  })),
+};
+---
+
+<BaseLayout
+  language={language}
+  path={`products/${product.slug}`}
+  title={`${product.name} — ${copy.tagline} | TenPrint Software`}
+  description={copy.summary}
+  ogImage={`/assets/og/${product.slug}.png`}
+  accent={product.accent}
+  accentSoft={product.accentSoft}
+>
+  <section class="hero">
+    <MazeBackdrop variant="hero" cell={32} />
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href={localePath(language, "products")}>{t("nav.products")}</a>
+          <span aria-hidden="true">/</span>
+          <span>{product.name}</span>
+        </nav>
+
+        <div class="hero-identity">
+          <img src={product.iconUrl} alt="" width="62" height="62" />
+          <div>
+            <h1 class="title-lg hero-name">{product.name}</h1>
+            <p class="hero-tagline">{copy.tagline}</p>
+          </div>
+        </div>
+
+        <p class="title-md hero-headline">{copy.headline}</p>
+        <p class="lead">{copy.summary}</p>
+        <p class="body-muted hero-difference">{copy.differentiator}</p>
+
+        <div class="hero-actions">
+          <Button href={product.downloadUrl} size="lg" external download>
+            {t("cta.downloadFree")}
+          </Button>
+          {
+            proTier?.checkoutUrl && (
+              <Button href={proTier.checkoutUrl} variant="secondary" size="lg" external>
+                {t("cta.buy")} · {proTier.price}
+              </Button>
+            )
+          }
+          <Button href={product.websiteUrl} variant="ghost" size="lg" external>
+            {t("cta.productSite")}
+          </Button>
+        </div>
+
+        <ul class="hero-badges">
+          {copy.badges.map((badge) => <li class="hero-badge">{badge}</li>)}
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <ProductVisual
+          product={product}
+          alt={`${product.name} — ${copy.tagline}`}
+          mockRows={mockRows}
+          mockMuted={mockMuted}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="facts">
+    <div class="container facts-grid">
+      <div class="fact">
+        <span class="fact-label">{t("product.version")}</span>
+        <span class="fact-value mono">{product.version}</span>
+      </div>
+      <div class="fact">
+        <span class="fact-label">{t("product.platform")}</span>
+        <span class="fact-value">{product.requirements}</span>
+      </div>
+      <div class="fact">
+        <span class="fact-label">{t("product.category")}</span>
+        <span class="fact-value">{t(product.categoryKey)}</span>
+      </div>
+      <div class="fact">
+        <span class="fact-label">{t("product.licence")}</span>
+        <span class="fact-value">
+          {product.model === "free" ? t("product.badge.free") : t("product.badge.freemium")}
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">{t("product.features.default")}</p>
+        <h2 class="title-lg">{copy.featuresTitle}</h2>
+        <p class="lead">{copy.featuresSubtitle}</p>
+      </div>
+      <FeatureGrid
+        features={copy.features}
+        showTiers={product.model === "freemium"}
+        freeLabel={copy.editionFree ?? t("product.badge.free")}
+        proLabel={copy.editionPro ?? t("product.badge.pro")}
+      />
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">{t("product.how.default")}</p>
+        <h2 class="title-lg">{copy.howTitle}</h2>
+        <p class="lead">{copy.howSubtitle}</p>
+      </div>
+      <Steps steps={copy.how} />
+    </div>
+  </section>
+
+  {
+    copy.roadmap && copy.roadmap.length > 0 && (
+      <section class="section" id="roadmap">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">{t("product.roadmap.default")}</p>
+            <h2 class="title-lg">{copy.roadmapTitle}</h2>
+            <p class="lead">{copy.roadmapSubtitle}</p>
+          </div>
+          <Steps steps={copy.roadmap} variant="roadmap" labels={roadmapLabels} />
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section" id="quick-start">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">{t("product.quickStart.default")}</p>
+        <h2 class="title-lg">{copy.quickStartTitle}</h2>
+        <p class="lead">{copy.quickStartSubtitle}</p>
+      </div>
+      <Steps steps={copy.quickStart} />
+    </div>
+  </section>
+
+  <section class="section" id="download">
+    <div class="container">
+      <div class="download">
+        <MazeBackdrop variant="band" cell={28} />
+        <div class="download-copy">
+          <h2 class="title-lg">{t("product.download.title", { name: product.name })}</h2>
+          <p class="lead">{t("product.download.subtitle")}</p>
+          <div class="download-actions">
+            <Button href={product.downloadUrl} size="lg" external download>
+              {t("cta.downloadFree")}
+            </Button>
+            {
+              proTier?.checkoutUrl && (
+                <Button href={proTier.checkoutUrl} variant="secondary" size="lg" external>
+                  {`${t("cta.buy")} · ${proTier.price} ${t("pricing.perLifetime")}`}
+                </Button>
+              )
+            }
+          </div>
+          <p class="small download-note">{copy.downloadNotice}</p>
+          <p class="small body-muted">
+            {t("product.download.requirements", { requirements: product.requirements })} ·
+            <span class="mono"> v{product.version}</span>
+          </p>
+        </div>
+
+        <div class="download-panel">
+          <h3 class="title-sm">{copy.installTitle}</h3>
+          <ol class="install-list">
+            {copy.install.map((step) => <li>{step}</li>)}
+          </ol>
+          {
+            freeTier && (
+              <ul class="perk-list">
+                {freeTier.perks.slice(0, 3).map((perk) => (
+                  <li>{t(perk)}</li>
+                ))}
+              </ul>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container container-narrow">
+      <div class="section-head section-head-center">
+        <h2 class="title-lg">{t("product.faq")}</h2>
+      </div>
+      <Faq items={copy.faq} />
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="support surface-card">
+        <div class="support-copy">
+          <h2 class="title-md">{t("product.support.title")}</h2>
+          <p class="body-muted">{t("product.support.text")}</p>
+        </div>
+        <div class="support-actions">
+          <Button href={localePath(language, "support")}>{t("cta.getSupport")}</Button>
+          <Button href={localePath(language, "feedback")} variant="secondary">
+            {t("cta.sendFeedback")}
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {
+    related.length > 0 && (
+      <section class="section section-tight">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="title-md">{t("product.related.title")}</h2>
+          </div>
+          <div class="related-grid">
+            {related.map((item) => (
+              <ProductCard product={item} language={language} compact />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} is:inline />
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    padding-block: clamp(48px, 6vw, 84px) var(--space-7);
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: -40% 30% 50% -15%;
+    background: radial-gradient(
+      closest-side,
+      color-mix(in srgb, var(--accent) 24%, transparent),
+      transparent
+    );
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    gap: var(--space-8);
+    align-items: center;
+  }
+
+  .hero-copy {
+    display: grid;
+    gap: var(--space-4);
+    justify-items: start;
+  }
+
+  .crumbs {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.8125rem;
+    color: var(--text-faint);
+  }
+
+  .crumbs a:hover {
+    color: var(--text);
+  }
+
+  .hero-identity {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .hero-identity img {
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-name {
+    letter-spacing: -0.03em;
+  }
+
+  .hero-tagline {
+    color: var(--accent-2);
+    font-size: 0.9375rem;
+  }
+
+  .hero-headline {
+    max-width: 22ch;
+    color: var(--text);
+  }
+
+  .hero-difference {
+    font-size: 0.9375rem;
+    max-width: 60ch;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-1);
+  }
+
+  .hero-badges {
+    list-style: none;
+    margin: var(--space-2) 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .hero-badge {
+    font-size: 0.8125rem;
+    padding: 5px 12px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+  }
+
+  .facts {
+    border-block: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: var(--space-5);
+    padding-block: var(--space-5);
+  }
+
+  .fact {
+    display: grid;
+    gap: 3px;
+  }
+
+  .fact-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .fact-value {
+    font-size: 0.9375rem;
+    color: var(--text);
+  }
+
+  .download {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+    gap: var(--space-7);
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    overflow: hidden;
+  }
+
+  .download-copy {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-4);
+    justify-items: start;
+    align-content: start;
+  }
+
+  .download-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .download-note {
+    color: var(--accent-2);
+  }
+
+  .download-panel {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-4);
+    align-content: start;
+    padding: var(--space-5);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--bg-raised);
+  }
+
+  .install-list {
+    margin: 0;
+    padding-left: 1.15rem;
+    display: grid;
+    gap: var(--space-2);
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+  }
+
+  .perk-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-2);
+    border-top: 1px solid var(--border);
+    padding-top: var(--space-4);
+    font-size: 0.875rem;
+    color: var(--text-faint);
+  }
+
+  .perk-list li::before {
+    content: "✓";
+    color: var(--accent-2);
+    margin-right: 8px;
+  }
+
+  .support {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+    padding: var(--space-6);
+  }
+
+  .support-copy {
+    display: grid;
+    gap: var(--space-2);
+    max-width: 54ch;
+  }
+
+  .support-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 940px) {
+    .hero-grid,
+    .download {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    .download {
+      padding: var(--space-6);
+    }
+  }
+</style>

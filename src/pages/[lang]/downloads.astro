@@ -1,0 +1,247 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import MazeBackdrop from "~/components/MazeBackdrop.astro";
+import Button from "~/components/Button.astro";
+import { localeParams, localePath, useTranslations } from "~/i18n";
+import { toLanguage } from "~/i18n/config";
+import { productStyle, sortedProducts } from "~/data/products";
+import { productCopy } from "~/i18n/products";
+
+export function getStaticPaths() {
+  return localeParams();
+}
+
+const language = toLanguage(Astro.params.lang);
+const t = useTranslations(language);
+const products = sortedProducts();
+
+const steps = [
+  t("downloads.notice.step1"),
+  t("downloads.notice.step2"),
+  t("downloads.notice.step3"),
+];
+---
+
+<BaseLayout
+  language={language}
+  path="downloads"
+  title={t("downloads.meta.title")}
+  description={t("downloads.meta.description")}
+>
+  <section class="page-hero">
+    <MazeBackdrop variant="panel" cell={32} />
+    <div class="container page-hero-inner">
+      <p class="eyebrow">{t("nav.downloads")}</p>
+      <h1 class="title-xl">{t("downloads.title")}</h1>
+      <p class="lead">{t("downloads.subtitle")}</p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="download-list">
+        {
+          products.map((product) => {
+            const copy = productCopy(product.slug, language);
+            return (
+              <article
+                class="download-row"
+                style={productStyle(product)}
+              >
+                <img class="download-icon" src={product.iconUrl} alt="" width="56" height="56" />
+
+                <div class="download-body">
+                  <a
+                    class="download-name"
+                    href={localePath(language, `products/${product.slug}`)}
+                  >
+                    {product.name}
+                  </a>
+                  <p class="small body-muted">{copy.tagline}</p>
+                  <p class="download-meta small">
+                    <span class="mono">v{product.version}</span>
+                    <span aria-hidden="true">·</span>
+                    <span>{product.requirements}</span>
+                    <span aria-hidden="true">·</span>
+                    <span>{product.packageFormat}</span>
+                  </p>
+                </div>
+
+                <div class="download-actions">
+                  <Button href={product.downloadUrl} external download>
+                    {t("cta.download")}
+                  </Button>
+                  <a class="download-alt small" href={product.websiteUrl} target="_blank" rel="noopener noreferrer">
+                    {t("cta.productSite")}
+                  </a>
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="install surface-card">
+        <div class="install-copy">
+          <h2 class="title-md">{t("downloads.notice.title")}</h2>
+          <ol class="install-steps">
+            {steps.map((step) => <li>{step}</li>)}
+          </ol>
+        </div>
+        <p class="install-note small body-muted">{t("downloads.notice.gatekeeper")}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="help surface-card">
+        <div class="help-copy">
+          <h2 class="title-md">{t("product.support.title")}</h2>
+          <p class="body-muted">{t("product.support.text")}</p>
+        </div>
+        <Button href={localePath(language, "support")} variant="secondary">
+          {t("cta.getSupport")}
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
+    overflow: hidden;
+  }
+
+  .page-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-4);
+    max-width: 720px;
+  }
+
+  .download-list {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .download-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--space-5);
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color 0.2s var(--ease);
+  }
+
+  .download-row:hover {
+    border-color: color-mix(in srgb, var(--product-accent) 40%, var(--border));
+  }
+
+  .download-icon {
+    border-radius: 13px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .download-body {
+    display: grid;
+    gap: 3px;
+    min-width: 0;
+  }
+
+  .download-name {
+    font-size: 1.125rem;
+    font-weight: 620;
+    letter-spacing: -0.02em;
+  }
+
+  .download-name:hover {
+    color: var(--product-accent-2);
+  }
+
+  .download-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    color: var(--text-faint);
+    margin-top: 4px;
+  }
+
+  .download-actions {
+    display: grid;
+    justify-items: center;
+    gap: var(--space-2);
+  }
+
+  .download-alt {
+    color: var(--text-faint);
+  }
+
+  .download-alt:hover {
+    color: var(--text);
+  }
+
+  .install,
+  .help {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+    padding: var(--space-6);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .install-copy {
+    display: grid;
+    gap: var(--space-4);
+    flex: 1 1 360px;
+  }
+
+  .install-steps {
+    margin: 0;
+    padding-left: 1.15rem;
+    display: grid;
+    gap: var(--space-2);
+    color: var(--text-muted);
+    font-size: 0.9375rem;
+  }
+
+  .install-note {
+    flex: 1 1 300px;
+    max-width: 46ch;
+    margin: 0;
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
+    border: 1px dashed var(--border-strong);
+  }
+
+  .help-copy {
+    display: grid;
+    gap: var(--space-2);
+    max-width: 54ch;
+  }
+
+  @media (max-width: 720px) {
+    .download-row {
+      grid-template-columns: auto 1fr;
+    }
+
+    .download-actions {
+      grid-column: 1 / -1;
+      justify-items: start;
+      grid-auto-flow: column;
+      align-items: center;
+      gap: var(--space-4);
+    }
+  }
+</style>

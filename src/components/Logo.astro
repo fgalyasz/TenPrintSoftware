@@ -1,0 +1,94 @@
+---
+type Props = {
+  size?: number;
+  withWordmark?: boolean;
+  class?: string;
+};
+
+const { size = 34, withWordmark = false, class: className = "" } = Astro.props;
+
+const gradientId = `tp-logo-${Math.random().toString(36).slice(2, 9)}`;
+const lattice = [
+  "M9 9L19 19",
+  "M19 19L29 9",
+  "M29 9L39 19",
+  "M9 29L19 19",
+  "M19 19L29 29",
+  "M29 29L39 19",
+  "M9 29L19 39",
+  "M19 39L29 29",
+  "M29 29L39 39",
+].join("");
+---
+
+<span class:list={["logo", className]}>
+  <svg
+    class="logo-mark"
+    width={size}
+    height={size}
+    viewBox="0 0 48 48"
+    role="img"
+    aria-label="TenPrint Software"
+  >
+    <defs>
+      <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="var(--brand-2)"></stop>
+        <stop offset="100%" stop-color="var(--brand)"></stop>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="48" height="48" rx="12" fill={`url(#${gradientId})`}></rect>
+    <path
+      d={lattice}
+      fill="none"
+      stroke="#070810"
+      stroke-width="3.4"
+      stroke-linecap="round"
+      stroke-opacity="0.92"></path>
+  </svg>
+  {
+    withWordmark && (
+      <span class="logo-text">
+        <span class="logo-name">TenPrint</span>
+        <span class="logo-suffix">Software</span>
+      </span>
+    )
+  }
+</span>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-mark {
+    flex: none;
+    border-radius: 12px;
+  }
+
+  .logo-text {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 1.0625rem;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  .logo-name {
+    font-weight: 650;
+    color: var(--text);
+  }
+
+  .logo-suffix {
+    font-weight: 450;
+    color: var(--text-faint);
+  }
+
+  @media (max-width: 420px) {
+    .logo-suffix {
+      display: none;
+    }
+  }
+</style>
