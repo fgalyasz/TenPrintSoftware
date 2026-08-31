@@ -140,7 +140,7 @@ export const es: UiDictionary = {
   "pricing.sessionguard.free.3": "Umbral de inactividad e intervalo de movimiento ajustables",
   "pricing.sessionguard.free.4": "Gratis para uso personal y comercial",
   "pricing.walkaway.free.1": "Bloquea la pantalla al irte — las tareas siguen",
-  "pricing.walkaway.free.2": "Un Apple Watch o iPhone de confianza por Bluetooth",
+  "pricing.walkaway.free.2": "Un dispositivo Bluetooth de confianza — Watch, iPhone o cualquier BLE",
   "pricing.walkaway.free.3": "Retraso de ausencia y umbral RSSI que controlas",
   "pricing.walkaway.free.4": "Gratis para uso personal y comercial",
 

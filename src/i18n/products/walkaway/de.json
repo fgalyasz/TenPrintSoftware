@@ -1,14 +1,14 @@
 {
   "tagline": "Sperren, wenn Sie gehen",
   "headline": "Weggehen. Der Bildschirm sperrt. Ihre Jobs laufen weiter.",
-  "summary": "Ein dezentes Menüleisten-Werkzeug, das ein vertrauenswürdiges Apple Watch oder iPhone beobachtet. Bleiben Sie länger als die kurze Verzögerung weg, sperrt WalkAway den Bildschirm. Der Mac wird nicht in den Ruhezustand versetzt.",
+  "summary": "Ein dezentes Menüleisten-Werkzeug, das ein vertrauenswürdiges Bluetooth-Gerät beobachtet — typisch Apple Watch oder iPhone. Bleiben Sie länger als die kurze Verzögerung weg, sperrt WalkAway den Bildschirm. Der Mac wird nicht in den Ruhezustand versetzt.",
   "differentiator": "macOS kann mit der Apple Watch entsperren. Es sperrt nicht, wenn Sie gehen. WalkAway schließt diese Lücke — ohne Encodes, Downloads oder Renders zu stoppen.",
   "badges": ["macOS 13+", "Menüleiste", "Apple Watch", "Kostenlos"],
   "featuresTitle": "Scharf, lokal, ehrlich",
   "featuresSubtitle": "Ein Schalter. Ein vertrauenswürdiges Gerät. Bildschirm sperren, Maschine nicht.",
   "features": [
     {"tier": "free", "title": "Sperren, nicht schlafen", "text": "Der Sperrbildschirm erscheint. CPU und Prozesse bleiben aktiv. WalkAway ruft nie den Ruhezustand auf."},
-    {"tier": "free", "title": "Ein vertrauenswürdiges BLE-Gerät", "text": "Wählen Sie Apple Watch oder iPhone. WalkAway misst RSSI gegen Ihren Schwellenwert."},
+    {"tier": "free", "title": "Ein vertrauenswürdiges BLE-Gerät", "text": "Wählen Sie Apple Watch oder iPhone — oder jedes andere Bluetooth-Gerät in der Liste. WalkAway misst RSSI gegen Ihren Schwellenwert."},
     {"tier": "free", "title": "Weg-Verzögerung, einmal sperren", "text": "Weg muss die Verzögerung dauern (Standard 8 Sekunden). Eine Abwesenheit, eine Sperre. Zurückkommen löst die Sperre."},
     {"tier": "free", "title": "Arm und Disarm", "text": "Armed wertet Anwesenheit aus. Disarmed sperrt nie durch Weggehen. Lock Now funktioniert immer."},
     {"tier": "free", "title": "Kein Auto-Entsperren", "text": "WalkAway tippt Ihr Passwort nicht. Die Rückkehr nutzt die Systementsperrung: Watch, Touch ID oder Passwort."},
@@ -17,7 +17,7 @@
   "howTitle": "So funktioniert es",
   "howSubtitle": "Anwesenheit rein, Sperrbildschirm raus. Jobs stoppen nie.",
   "how": [
-    {"title": "Gerät wählen", "text": "Öffnen Sie Preferences und wählen Sie Ihre Apple Watch. Armed schaltet sich automatisch ein."},
+    {"title": "Gerät wählen", "text": "Öffnen Sie Preferences und wählen Sie Ihre Apple Watch — oder jedes andere Bluetooth-Gerät in der Liste. Armed schaltet sich automatisch ein."},
     {"title": "Weggehen", "text": "Bleibt das Signal schwächer als der Schwellenwert über die Verzögerung, sperrt WalkAway einmal."},
     {"title": "Zurückkommen", "text": "Entsperren mit Watch oder Touch ID — das ist macOS, nicht WalkAway. Das nächste Weggehen kann wieder sperren."}
   ],
@@ -32,7 +32,8 @@
   "faq": [
     {"question": "Versetzt WalkAway den Mac in den Ruhezustand?", "answer": "Nein. Es sperrt den Bildschirm. Builds, Downloads und Renders laufen weiter."},
     {"question": "Entsperrt es, wenn ich zurückkomme?", "answer": "Nein. Entsperren macht das System: Apple Watch, Touch ID oder Passwort. WalkAway speichert Ihr Passwort nie."},
-    {"question": "Warum Apple Watch statt iPhone?", "answer": "iPhone-BLE-Adressen können wechseln. Apple Watch ist die zuverlässige Wahl. AirPods können auch in der Liste erscheinen."},
+    {"question": "Warum Apple Watch statt iPhone?", "answer": "iPhone-BLE-Adressen können wechseln. Apple Watch ist die zuverlässige Wahl. Jedes Bluetooth-Gerät in der Preferences-Liste kann gewählt werden."},
+    {"question": "Funktioniert es mit anderen Bluetooth-Geräten?", "answer": "Ja. Kopfhörer, Anhänger, ein anderes Handy — was in der Liste steht, kann das vertrauenswürdige Gerät sein. Watch und iPhone sind die übliche Empfehlung."},
     {"question": "Warum fragt die erste Sperre nach System Events?", "answer": "WalkAway sperrt über System Events. macOS fragt einmal. WalkAway schreibt nicht in TCC.db und schaltet Privacy-Schalter nicht für Sie."},
     {"question": "Werden Daten gesammelt?", "answer": "Nein. Keine Konten, kein Tracking. Einstellungen liegen in einer lokalen JSON-Datei."},
     {"question": "Worin unterscheidet es sich von SessionGuard?", "answer": "SessionGuard hält eine Sitzung wach. WalkAway sperrt, wenn Sie gehen. Gleicher Katalog, gegenteilige Aufgabe."},

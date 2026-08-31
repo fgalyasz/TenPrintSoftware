@@ -169,7 +169,7 @@ export const en = {
   "pricing.sessionguard.free.3": "Adjustable idle threshold and jiggle interval",
   "pricing.sessionguard.free.4": "Free for personal and commercial use",
   "pricing.walkaway.free.1": "Lock the screen when you walk away — jobs keep running",
-  "pricing.walkaway.free.2": "One trusted Apple Watch or iPhone via Bluetooth",
+  "pricing.walkaway.free.2": "One trusted Bluetooth device — Watch, iPhone, or any BLE device",
   "pricing.walkaway.free.3": "Away delay and RSSI threshold you control",
   "pricing.walkaway.free.4": "Free for personal and commercial use",
 

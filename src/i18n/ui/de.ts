@@ -140,7 +140,7 @@ export const de: UiDictionary = {
   "pricing.sessionguard.free.3": "Einstellbare Leerlaufschwelle und Bewegungsintervall",
   "pricing.sessionguard.free.4": "Kostenlos für private und gewerbliche Nutzung",
   "pricing.walkaway.free.1": "Bildschirm sperren beim Weggehen — Jobs laufen weiter",
-  "pricing.walkaway.free.2": "Eine vertrauenswürdige Apple Watch oder ein iPhone per Bluetooth",
+  "pricing.walkaway.free.2": "Ein vertrauenswürdiges Bluetooth-Gerät — Watch, iPhone oder jedes BLE-Gerät",
   "pricing.walkaway.free.3": "Weg-Verzögerung und RSSI-Schwelle, die Sie steuern",
   "pricing.walkaway.free.4": "Kostenlos für private und gewerbliche Nutzung",
 

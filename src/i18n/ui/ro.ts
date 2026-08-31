@@ -140,7 +140,7 @@ export const ro: UiDictionary = {
   "pricing.sessionguard.free.3": "Prag de inactivitate și interval de mișcare reglabile",
   "pricing.sessionguard.free.4": "Gratuit pentru uz personal și comercial",
   "pricing.walkaway.free.1": "Blochează ecranul când pleci — sarcinile continuă",
-  "pricing.walkaway.free.2": "Un Apple Watch sau iPhone de încredere prin Bluetooth",
+  "pricing.walkaway.free.2": "Un dispozitiv Bluetooth de încredere — Watch, iPhone sau orice BLE",
   "pricing.walkaway.free.3": "Întârziere de absență și prag RSSI pe care le controlezi",
   "pricing.walkaway.free.4": "Gratuit pentru uz personal și comercial",
 

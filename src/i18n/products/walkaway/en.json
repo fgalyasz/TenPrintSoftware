@@ -1,7 +1,7 @@
 {
   "tagline": "Lock when you leave",
   "headline": "Walk away. The screen locks. Your jobs keep running.",
-  "summary": "A discreet menu bar utility that watches one trusted Apple Watch or iPhone. When you walk away past a short delay, WalkAway locks the screen. It does not sleep the Mac.",
+  "summary": "A discreet menu bar utility that watches one trusted Bluetooth device — typically an Apple Watch or iPhone. When you walk away past a short delay, WalkAway locks the screen. It does not sleep the Mac.",
   "differentiator": "macOS can unlock with Apple Watch. It does not lock when you leave. WalkAway fills that gap — without killing encodes, downloads, or renders.",
   "badges": [
     "macOS 13+",
@@ -20,7 +20,7 @@
     {
       "tier": "free",
       "title": "One trusted BLE device",
-      "text": "Pick your Apple Watch or iPhone. WalkAway measures RSSI against a threshold you set."
+      "text": "Pick your Apple Watch or iPhone — or any other Bluetooth device in the list. WalkAway measures RSSI against a threshold you set."
     },
     {
       "tier": "free",
@@ -48,7 +48,7 @@
   "how": [
     {
       "title": "Pick a device",
-      "text": "Open Preferences and choose your Apple Watch. Armed turns on automatically."
+      "text": "Open Preferences and choose your Apple Watch, or any other Bluetooth device in the list. Armed turns on automatically."
     },
     {
       "title": "Walk away",
@@ -90,7 +90,11 @@
     },
     {
       "question": "Why Apple Watch instead of iPhone?",
-      "answer": "iPhone BLE addresses can change. Apple Watch is the reliable pick. AirPods can appear in the list too."
+      "answer": "iPhone BLE addresses can change. Apple Watch is the reliable pick. Any Bluetooth device in the Preferences list can be trusted."
+    },
+    {
+      "question": "Does it work with other Bluetooth devices?",
+      "answer": "Yes. Headphones, tags, a spare phone — if it shows up in the list, you can pick it. Watch and iPhone are the usual recommendation."
     },
     {
       "question": "Why does the first lock ask for System Events?",

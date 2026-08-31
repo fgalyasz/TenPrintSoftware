@@ -1,14 +1,14 @@
 {
   "tagline": "Zárol, ha elmész",
   "headline": "Elsétálsz a géptől. A képernyő zárol. A feladatok mennek tovább.",
-  "summary": "Diszkrét menüsori segéd, amely egy megbízható Apple Watchot vagy iPhone-t figyel. Ha a késleltetés után is távol vagy, zárolja a képernyőt. A Macet nem altatja.",
+  "summary": "Diszkrét menüsori segéd, amely egy megbízható Bluetooth-eszközt figyel — jellemzően Apple Watchot vagy iPhone-t. Ha a késleltetés után is távol vagy, zárolja a képernyőt. A Macet nem altatja.",
   "differentiator": "A macOS Apple Watch-csal fel tud oldani. De nem tud zárolni, ha távolabb megyünk a géptől. A WalkAway ezt pótolja: zárolja a képernyőt, a Macet nem altatja, így a kódolás, a letöltés és a render megy tovább.",
   "badges": ["macOS 13+", "Menüsor", "Apple Watch", "Ingyenes"],
   "featuresTitle": "Élesítve, helyben, őszintén",
   "featuresSubtitle": "Egy kapcsoló. Egy megbízható eszköz. A képernyő zárol, a gép nem.",
   "features": [
     {"tier": "free", "title": "Zárolás, nem alvás", "text": "Feljön a lock screen. A CPU és a folyamatok mennek tovább. A WalkAway soha nem hív alvást."},
-    {"tier": "free", "title": "Egy megbízható BLE eszköz", "text": "Válaszd az Apple Watchot vagy az iPhone-t. A WalkAway az általad beállított RSSI-küszöbhöz méri a jelet."},
+    {"tier": "free", "title": "Egy megbízható BLE eszköz", "text": "Válaszd az Apple Watchot vagy az iPhone-t — vagy bármely más Bluetooth-eszközt a listából. A WalkAway az általad beállított RSSI-küszöbhöz méri a jelet."},
     {"tier": "free", "title": "Késleltetés, egyszeri zárolás", "text": "A távollétnek el kell érnie a késleltetést (alap 8 másodperc). Egy távollét, egy zárolás. Visszatéréskor a retesz oldódik."},
     {"tier": "free", "title": "Arm és Disarm", "text": "Armed: figyeli a jelenlétet. Disarmed: sétálásból nem zárol. A Lock Now mindig működik."},
     {"tier": "free", "title": "Nincs automatikus feloldás", "text": "A WalkAway nem írja be a jelszót. A visszatérés a rendszer Unlockja: Watch, Touch ID vagy jelszó."},
@@ -17,7 +17,7 @@
   "howTitle": "Így működik",
   "howSubtitle": "Jelenlét be, lock screen ki. A feladatok nem állnak le.",
   "how": [
-    {"title": "Válassz eszközt", "text": "Nyisd meg a Preferences-t, és válaszd az Apple Watchot. Az Armed magától bekapcsol."},
+    {"title": "Válassz eszközt", "text": "Nyisd meg a Preferences-t, és válaszd az Apple Watchot — vagy bármely más Bluetooth-eszközt a listából. Az Armed magától bekapcsol."},
     {"title": "Sétálj el", "text": "Ha a jel a küszöb alatt marad a késleltetésen túl, a WalkAway egyszer zárol."},
     {"title": "Gyere vissza", "text": "Oldd fel Watch-csal vagy Touch ID-val — ez a macOS, nem a WalkAway. A következő távozás újra zárolhat."}
   ],
@@ -32,7 +32,8 @@
   "faq": [
     {"question": "Altatja a WalkAway a Macet?", "answer": "Nem. A képernyőt zárolja. A buildek, letöltések és renderek mennek tovább."},
     {"question": "Felold, ha visszajövök?", "answer": "Nem. A feloldás a rendszeré: Apple Watch, Touch ID vagy jelszó. A WalkAway soha nem tárolja a jelszót."},
-    {"question": "Miért Watch, nem iPhone?", "answer": "Az iPhone BLE-címe változhat. Az Apple Watch a megbízható választás. AirPods is megjelenhet a listában."},
+    {"question": "Miért Watch, nem iPhone?", "answer": "Az iPhone BLE-címe változhat. Az Apple Watch a megbízható választás. A Preferences listájában lévő bármely Bluetooth-eszköz kiválasztható."},
+    {"question": "Működik más Bluetooth-eszközzel is?", "answer": "Igen. Fülhallgató, kulcstartó, egy másik telefon — ha megjelenik a listában, az is lehet a megbízható. A Watch és az iPhone a szokásos ajánlás."},
     {"question": "Miért kér System Events engedélyt az első zárolás?", "answer": "A WalkAway a System Events-en keresztül zárol. A macOS egyszer kérdez. A WalkAway nem ír a TCC.db-be, és nem kapcsolja be helyetted a Privacy kapcsolókat."},
     {"question": "Gyűjtötök adatot?", "answer": "Nem. Nincs fiók, nincs követés. A beállítások helyi JSON-fájlban vannak."},
     {"question": "Miben más, mint a SessionGuard?", "answer": "A SessionGuard ébren tartja a munkamenetet. A WalkAway zárol, ha elmész. Ugyanaz a katalógus, ellentétes feladat."},

@@ -140,7 +140,7 @@ export const ru: UiDictionary = {
   "pricing.sessionguard.free.3": "Настраиваемый порог простоя и интервал движения",
   "pricing.sessionguard.free.4": "Бесплатно для личного и коммерческого использования",
   "pricing.walkaway.free.1": "Блокировка экрана при уходе — задачи продолжают работать",
-  "pricing.walkaway.free.2": "Одни доверенные Apple Watch или iPhone по Bluetooth",
+  "pricing.walkaway.free.2": "Одно доверенное Bluetooth-устройство — Watch, iPhone или любой BLE",
   "pricing.walkaway.free.3": "Задержка отсутствия и порог RSSI, которые вы задаёте",
   "pricing.walkaway.free.4": "Бесплатно для личного и коммерческого использования",
 
