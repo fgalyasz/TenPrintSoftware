@@ -1,6 +1,6 @@
 {
   "tagline": "Zárol, ha elmész",
-  "headline": "Felsétálsz. A képernyő zárol. A feladatok mennek tovább.",
+  "headline": "Elsétálsz a géptől. A képernyő zárol. A feladatok mennek tovább.",
   "summary": "Diszkrét menüsori segéd, amely egy megbízható Apple Watchot vagy iPhone-t figyel. Ha a késleltetés után is távol vagy, zárolja a képernyőt. A Macet nem altatja.",
   "differentiator": "A macOS Apple Watch-csal fel tud oldani. De nem tud zárolni, ha távolabb megyünk a géptől. A WalkAway ezt pótolja: zárolja a képernyőt, a Macet nem altatja, így a kódolás, a letöltés és a render megy tovább.",
   "badges": ["macOS 13+", "Menüsor", "Apple Watch", "Ingyenes"],
