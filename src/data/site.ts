@@ -11,4 +11,4 @@ export const SITE = {
   products: PRODUCTS.map((product) => ({ name: product.name, url: product.websiteUrl })),
 } as const;
 
-export const LEGAL_UPDATED = "2026-08-30";
+export const LEGAL_UPDATED = "2026-09-05";

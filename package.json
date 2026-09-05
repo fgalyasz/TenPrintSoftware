@@ -12,7 +12,9 @@
     "check:i18n": "node scripts/check_i18n_keys.mjs",
     "sync:versions": "node scripts/sync_product_versions.mjs",
     "build:og": "node scripts/build_og_images.mjs",
-    "deploy": "wrangler pages deploy dist --project-name tenprint-software"
+    "deploy": "wrangler pages deploy dist --project-name tenprint-software",
+    "deploy:report": "wrangler deploy --config wrangler.report.toml",
+    "deploy:downloads": "wrangler deploy --config wrangler.downloads.toml"
   },
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.3.0",

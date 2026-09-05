@@ -3,9 +3,8 @@
 The company site and product catalogue for [tenprintsoftware.com](https://tenprintsoftware.com),
 built with Astro and deployed as a static site on Cloudflare Pages.
 
-Product marketing, downloads, and checkout live on this site. `snappyzones.com` and
-`sessionguard.net` redirect here; keep those hostnames only for Sparkle feeds until a
-release points `SUFeedURL` at tenprintsoftware.com.
+Product marketing, downloads, Sparkle appcasts, and checkout live on this site. `snappyzones.com` and
+`sessionguard.net` redirect here, including their update feeds.
 
 ## Requirements
 
@@ -36,6 +35,8 @@ directly to bypass detection.
 | `npm run sync:versions` | Read each product's `docs/version.txt` and update `src/data/products.ts` |
 | `npm run build:og` | Regenerate Open Graph images into `public/assets/og/` |
 | `npm run deploy` | Upload `dist/` to Cloudflare Pages |
+| `npm run deploy:report` | Deploy the Monday weekly download-report Worker |
+| `npm run deploy:downloads` | Deploy the `/downloads/*` counting proxy Worker |
 
 ## Project layout
 
@@ -94,6 +95,15 @@ is bound, and sends mail through Resend.
 Copy `.env.example` to `.dev.vars` for local runs with `wrangler pages dev`, and set the
 same variables in the Cloudflare Pages project for production. Without `RESEND_API_KEY`
 the endpoint returns 502 and the form shows its error state.
+
+## Download counts
+
+A Worker on `tenprintsoftware.com/downloads/*` increments a KV counter on `GET` of
+`/downloads/<product>/*.dmg` (first install) or `*.zip` (Sparkle update), then serves the
+file from Pages. `functions/api/polar.ts` records Polar `order.paid` events when
+`POLAR_WEBHOOK_SECRET` is set. `npm run deploy:report` emails totals to `CONTACT_TO`
+every Monday at 06:00 UTC. In Polar, point a webhook at
+`https://tenprintsoftware.com/api/polar` for `order.paid`.
 
 ## Deployment
 

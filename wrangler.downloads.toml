@@ -1,0 +1,14 @@
+name = "tenprint-download-proxy"
+main = "workers/download-proxy.ts"
+compatibility_date = "2026-09-05"
+
+[vars]
+ORIGIN = "tenprint-software.pages.dev"
+
+[[kv_namespaces]]
+binding = "DOWNLOAD_STATS"
+id = "d2d5ed77c81847329dc168a3d64da4a9"
+
+[[routes]]
+pattern = "tenprintsoftware.com/downloads/*"
+zone_name = "tenprintsoftware.com"

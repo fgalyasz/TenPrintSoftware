@@ -46,6 +46,13 @@ const t = useTranslations(language);
       <strong>Server logs.</strong> Our host, Cloudflare Pages, keeps short-lived request logs containing
       IP address, user agent, and requested URL. These are used for security and abuse prevention only.
     </li>
+    <li>
+      <strong>Download counts.</strong> We increment an anonymous counter when a browser or the in-app
+      updater requests a <code>.dmg</code> or <code>.zip</code> from this site. We store only the product,
+      whether it was a first install or an update, and the UTC day — not IP addresses, cookies, or
+      device identifiers. A weekly totals email is sent to our own inbox. We do not profile visitors
+      and we do not share these numbers with anyone else.
+    </li>
   </ul>
 
   <h2>When you contact us</h2>
@@ -69,8 +76,9 @@ const t = useTranslations(language);
   </p>
   <ul>
     <li>
-      <strong>Update checks</strong> against the product's own website, to see whether a newer version
+      <strong>Update checks</strong> against tenprintsoftware.com, to see whether a newer version
       exists. This sends nothing beyond the standard information contained in any HTTP request.
+      If an update is available, the app downloads a signed zip from the same site.
     </li>
     <li>
       <strong>Licence validation</strong>, in paid applications only, to confirm that a licence key is
@@ -99,7 +107,9 @@ const t = useTranslations(language);
 
   <h2>Changes</h2>
   <p>
-    If this policy changes in a way that affects you, the updated date at the top of this page will
-    change and the change will be described in a note here.
+  If this policy changes in a way that affects you, the updated date at the top of this page will
+  change and the change will be described in a note here. On 5 September 2026 we added anonymous
+  daily download counters (product, install vs update, UTC day) so we can email ourselves a weekly
+  totals report.
   </p>
 </LegalPage>
