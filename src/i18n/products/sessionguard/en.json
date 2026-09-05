@@ -112,5 +112,15 @@
     "Open SessionGuard",
     "Grant Accessibility when asked, then start a Session"
   ],
-  "downloadNotice": "Free to use — including for businesses."
+  "downloadNotice": "Free to use — including for businesses.",
+  "lookTitle": "One extra, two numbers",
+  "lookSubtitle": "The menu starts a session. Preferences is only idle and interval.",
+  "lookHeroCaption": "A timed session, mid-way.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Two numbers, then Start.",
+      "text": "Idle Threshold and Jiggle Interval. Guard stays Inactive until you start a session — including after login."
+    }
+  ]
 }

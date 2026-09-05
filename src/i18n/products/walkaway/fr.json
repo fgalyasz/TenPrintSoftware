@@ -3,43 +3,132 @@
   "headline": "Vous partez. L’écran se verrouille. Vos tâches continuent.",
   "summary": "Un utilitaire discret dans la barre des menus qui surveille un appareil Bluetooth de confiance — en général une Apple Watch ou un iPhone. Si vous restez absent après un court délai, WalkAway verrouille l’écran. Il n’endort pas le Mac.",
   "differentiator": "macOS peut déverrouiller avec l’Apple Watch. Il ne verrouille pas quand vous partez. WalkAway comble ce vide — sans interrompre encodages, téléchargements ou rendus.",
-  "badges": ["macOS 13+", "Barre des menus", "Apple Watch", "Gratuit"],
+  "badges": [
+    "macOS 13+",
+    "Barre des menus",
+    "Apple Watch",
+    "Gratuit"
+  ],
   "featuresTitle": "Armé, local, honnête",
   "featuresSubtitle": "Un interrupteur. Un appareil de confiance. Verrouiller l’écran, jamais la machine.",
   "features": [
-    {"tier": "free", "title": "Verrouiller, pas dormir", "text": "L’écran de verrouillage s’affiche. Le CPU et les processus restent actifs. WalkAway n’appelle jamais le sommeil."},
-    {"tier": "free", "title": "Un appareil BLE de confiance", "text": "Choisissez votre Apple Watch ou iPhone — ou tout autre appareil Bluetooth de la liste. WalkAway mesure le RSSI par rapport au seuil que vous réglez."},
-    {"tier": "free", "title": "Délai d’absence, un verrouillage", "text": "L’absence doit durer le délai (8 s par défaut). Un verrouillage par absence. Revenir libère le verrou."},
-    {"tier": "free", "title": "Arm et Disarm", "text": "Armed évalue la présence. Disarmed ne verrouille jamais en partant. Lock Now fonctionne dans les deux cas."},
-    {"tier": "free", "title": "Pas de déverrouillage auto", "text": "WalkAway ne saisit pas votre mot de passe. Le retour utilise le déverrouillage système : Watch, Touch ID ou mot de passe."},
-    {"tier": "free", "title": "Respect de la vie privée", "text": "Pas de compte, pas de suivi, mot de passe jamais stocké. Le Bluetooth ne sert qu’à mesurer l’appareil."}
+    {
+      "tier": "free",
+      "title": "Verrouiller, pas dormir",
+      "text": "L’écran de verrouillage s’affiche. Le CPU et les processus restent actifs. WalkAway n’appelle jamais le sommeil."
+    },
+    {
+      "tier": "free",
+      "title": "Un appareil BLE de confiance",
+      "text": "Choisissez votre Apple Watch ou iPhone — ou tout autre appareil Bluetooth de la liste. WalkAway mesure le RSSI par rapport au seuil que vous réglez."
+    },
+    {
+      "tier": "free",
+      "title": "Délai d’absence, un verrouillage",
+      "text": "L’absence doit durer le délai (8 s par défaut). Un verrouillage par absence. Revenir libère le verrou."
+    },
+    {
+      "tier": "free",
+      "title": "Arm et Disarm",
+      "text": "Armed évalue la présence. Disarmed ne verrouille jamais en partant. Lock Now fonctionne dans les deux cas."
+    },
+    {
+      "tier": "free",
+      "title": "Pas de déverrouillage auto",
+      "text": "WalkAway ne saisit pas votre mot de passe. Le retour utilise le déverrouillage système : Watch, Touch ID ou mot de passe."
+    },
+    {
+      "tier": "free",
+      "title": "Respect de la vie privée",
+      "text": "Pas de compte, pas de suivi, mot de passe jamais stocké. Le Bluetooth ne sert qu’à mesurer l’appareil."
+    }
   ],
   "howTitle": "Comment ça marche",
   "howSubtitle": "La présence entre, l’écran de verrouillage sort. Les tâches ne s’arrêtent jamais.",
   "how": [
-    {"title": "Choisir un appareil", "text": "Ouvrez Preferences et choisissez votre Apple Watch, ou tout autre appareil Bluetooth de la liste. Armed s’active tout seul."},
-    {"title": "Partir", "text": "Si le signal reste plus faible que le seuil au-delà du délai, WalkAway verrouille une fois."},
-    {"title": "Revenir", "text": "Déverrouillez avec Watch ou Touch ID — c’est macOS, pas WalkAway. La prochaine absence peut verrouiller à nouveau."}
+    {
+      "title": "Choisir un appareil",
+      "text": "Ouvrez Preferences et choisissez votre Apple Watch, ou tout autre appareil Bluetooth de la liste. Armed s’active tout seul."
+    },
+    {
+      "title": "Partir",
+      "text": "Si le signal reste plus faible que le seuil au-delà du délai, WalkAway verrouille une fois."
+    },
+    {
+      "title": "Revenir",
+      "text": "Déverrouillez avec Watch ou Touch ID — c’est macOS, pas WalkAway. La prochaine absence peut verrouiller à nouveau."
+    }
   ],
   "quickStartTitle": "Démarrage rapide",
   "quickStartSubtitle": "De l’installation à un verrouillage armé en quelques minutes.",
   "quickStart": [
-    {"title": "Installer", "text": "Téléchargez le DMG, glissez WalkAway dans Applications et ouvrez-le."},
-    {"title": "Autoriser le Bluetooth", "text": "macOS demandera le Bluetooth. Acceptez pour que WalkAway voie votre Watch."},
-    {"title": "Choisir la Watch", "text": "Ouvrez Preferences, sélectionnez l’appareil, réglez le délai si besoin. Armed est activé."},
-    {"title": "Partir une fois", "text": "Quittez le bureau. Après le délai, l’écran de verrouillage est là. ffmpeg tourne encore."}
+    {
+      "title": "Installer",
+      "text": "Téléchargez le DMG, glissez WalkAway dans Applications et ouvrez-le."
+    },
+    {
+      "title": "Autoriser le Bluetooth",
+      "text": "macOS demandera le Bluetooth. Acceptez pour que WalkAway voie votre Watch."
+    },
+    {
+      "title": "Choisir la Watch",
+      "text": "Ouvrez Preferences, sélectionnez l’appareil, réglez le délai si besoin. Armed est activé."
+    },
+    {
+      "title": "Partir une fois",
+      "text": "Quittez le bureau. Après le délai, l’écran de verrouillage est là. ffmpeg tourne encore."
+    }
   ],
   "faq": [
-    {"question": "WalkAway endort-il le Mac ?", "answer": "Non. Il verrouille l’écran. Compilations, téléchargements et rendus continuent."},
-    {"question": "Déverrouille-t-il à mon retour ?", "answer": "Non. Le déverrouillage est celui du système : Apple Watch, Touch ID ou mot de passe. WalkAway ne stocke jamais votre mot de passe."},
-    {"question": "Pourquoi l’Apple Watch plutôt que l’iPhone ?", "answer": "Les adresses BLE de l’iPhone peuvent changer. L’Apple Watch est le choix fiable. Tout appareil Bluetooth de la liste Preferences peut être choisi."},
-    {"question": "Ça marche avec d’autres appareils Bluetooth ?", "answer": "Oui. Écouteurs, tracker, un autre téléphone — s’il apparaît dans la liste, vous pouvez le choisir. Watch et iPhone restent la reco habituelle."},
-    {"question": "Pourquoi le premier verrouillage demande-t-il System Events ?", "answer": "WalkAway verrouille via System Events. macOS demande une fois. WalkAway n’écrit pas dans TCC.db et n’active pas les interrupteurs Confidentialité à votre place."},
-    {"question": "Des données sont-elles collectées ?", "answer": "Non. Pas de compte, pas de suivi. Les réglages vivent dans un fichier JSON local."},
-    {"question": "Quelle différence avec SessionGuard ?", "answer": "SessionGuard maintient une session éveillée. WalkAway verrouille quand vous partez. Même catalogue, travail inverse."},
-    {"question": "Comment mettre à jour ?", "answer": "Utilisez Check for Updates… dans le menu WalkAway. La première installation reste le DMG de ce site."}
+    {
+      "question": "WalkAway endort-il le Mac ?",
+      "answer": "Non. Il verrouille l’écran. Compilations, téléchargements et rendus continuent."
+    },
+    {
+      "question": "Déverrouille-t-il à mon retour ?",
+      "answer": "Non. Le déverrouillage est celui du système : Apple Watch, Touch ID ou mot de passe. WalkAway ne stocke jamais votre mot de passe."
+    },
+    {
+      "question": "Pourquoi l’Apple Watch plutôt que l’iPhone ?",
+      "answer": "Les adresses BLE de l’iPhone peuvent changer. L’Apple Watch est le choix fiable. Tout appareil Bluetooth de la liste Preferences peut être choisi."
+    },
+    {
+      "question": "Ça marche avec d’autres appareils Bluetooth ?",
+      "answer": "Oui. Écouteurs, tracker, un autre téléphone — s’il apparaît dans la liste, vous pouvez le choisir. Watch et iPhone restent la reco habituelle."
+    },
+    {
+      "question": "Pourquoi le premier verrouillage demande-t-il System Events ?",
+      "answer": "WalkAway verrouille via System Events. macOS demande une fois. WalkAway n’écrit pas dans TCC.db et n’active pas les interrupteurs Confidentialité à votre place."
+    },
+    {
+      "question": "Des données sont-elles collectées ?",
+      "answer": "Non. Pas de compte, pas de suivi. Les réglages vivent dans un fichier JSON local."
+    },
+    {
+      "question": "Quelle différence avec SessionGuard ?",
+      "answer": "SessionGuard maintient une session éveillée. WalkAway verrouille quand vous partez. Même catalogue, travail inverse."
+    },
+    {
+      "question": "Comment mettre à jour ?",
+      "answer": "Utilisez Check for Updates… dans le menu WalkAway. La première installation reste le DMG de ce site."
+    }
   ],
   "installTitle": "Installer",
-  "install": ["Télécharger le DMG", "Glisser WalkAway dans Applications", "Ouvrir WalkAway", "Autoriser le Bluetooth, choisir la Watch dans Preferences"],
-  "downloadNotice": "Gratuit — y compris pour les entreprises."
+  "install": [
+    "Télécharger le DMG",
+    "Glisser WalkAway dans Applications",
+    "Ouvrir WalkAway",
+    "Autoriser le Bluetooth, choisir la Watch dans Preferences"
+  ],
+  "downloadNotice": "Gratuit — y compris pour les entreprises.",
+  "lookTitle": "Armed ou non",
+  "lookSubtitle": "Le menu est toute l’app. Préférences, c’est l’appareil et le délai.",
+  "lookHeroCaption": "Armed. Un appareil de confiance.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Un appareil, un délai.",
+      "text": "Choisissez la Watch ou le téléphone, réglez ce qui compte comme loin, et combien attendre. WalkAway ne stocke jamais un mot de passe."
+    }
+  ]
 }

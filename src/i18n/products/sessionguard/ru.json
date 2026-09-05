@@ -112,5 +112,15 @@
     "Откройте SessionGuard",
     "Выдайте «Универсальный доступ» по запросу и начните сеанс"
   ],
-  "downloadNotice": "Бесплатно — в том числе для компаний."
+  "downloadNotice": "Бесплатно — в том числе для компаний.",
+  "lookTitle": "Один extra, два числа",
+  "lookSubtitle": "Меню запускает сеанс. Настройки — только idle и интервал.",
+  "lookHeroCaption": "Сеанс с таймером, на середине.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Два числа, затем Start.",
+      "text": "Idle Threshold и Jiggle Interval. Guard остаётся Inactive, пока вы не начнёте сеанс — в том числе после входа."
+    }
+  ]
 }

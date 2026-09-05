@@ -112,5 +112,15 @@
     "Otwórz SessionGuard",
     "Po pytaniu przyznaj Dostępność, a potem rozpocznij sesję"
   ],
-  "downloadNotice": "Do bezpłatnego użytku — także dla firm."
+  "downloadNotice": "Do bezpłatnego użytku — także dla firm.",
+  "lookTitle": "Jedno extra, dwie liczby",
+  "lookSubtitle": "Menu zaczyna sesję. Preferencje to tylko idle i interwał.",
+  "lookHeroCaption": "Sesja z czasem, w połowie.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Dwie liczby, potem Start.",
+      "text": "Idle Threshold i Jiggle Interval. Guard zostaje Inactive, aż uruchomisz sesję — także po zalogowaniu."
+    }
+  ]
 }

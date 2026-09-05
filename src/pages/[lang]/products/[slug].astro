@@ -2,6 +2,7 @@
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import MazeBackdrop from "~/components/MazeBackdrop.astro";
 import ProductVisual from "~/components/ProductVisual.astro";
+import ProductLook from "~/components/ProductLook.astro";
 import ProductCard from "~/components/ProductCard.astro";
 import FeatureGrid from "~/components/FeatureGrid.astro";
 import Steps from "~/components/Steps.astro";
@@ -102,9 +103,6 @@ const schema = {
               </Button>
             )
           }
-          <Button href={product.websiteUrl} variant="ghost" size="lg" external>
-            {t("cta.productSite")}
-          </Button>
         </div>
 
         <ul class="hero-badges">
@@ -116,6 +114,7 @@ const schema = {
         <ProductVisual
           product={product}
           alt={`${product.name} — ${copy.tagline}`}
+          caption={copy.lookHeroCaption}
           mockRows={mockRows}
           mockMuted={mockMuted}
         />
@@ -161,6 +160,8 @@ const schema = {
       />
     </div>
   </section>
+
+  <ProductLook product={product} language={language} />
 
   <section class="section" id="how">
     <div class="container">
@@ -255,7 +256,7 @@ const schema = {
 
   <section class="section section-tight">
     <div class="container">
-      <div class="support surface-card">
+      <div class="support">
         <div class="support-copy">
           <h2 class="title-md">{t("product.support.title")}</h2>
           <p class="body-muted">{t("product.support.text")}</p>
@@ -293,20 +294,8 @@ const schema = {
 <style>
   .hero {
     position: relative;
-    padding-block: clamp(48px, 6vw, 84px) var(--space-7);
+    padding-block: clamp(56px, 7vw, 96px) var(--space-7);
     overflow: hidden;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: -40% 30% 50% -15%;
-    background: radial-gradient(
-      closest-side,
-      color-mix(in srgb, var(--accent) 24%, transparent),
-      transparent
-    );
-    pointer-events: none;
   }
 
   .hero-grid {
@@ -343,8 +332,7 @@ const schema = {
   }
 
   .hero-identity img {
-    border-radius: 15px;
-    box-shadow: var(--shadow-md);
+    border-radius: 10px;
   }
 
   .hero-name {
@@ -384,16 +372,22 @@ const schema = {
 
   .hero-badge {
     font-size: 0.8125rem;
-    padding: 5px 12px;
-    border-radius: var(--radius-pill);
-    border: 1px solid var(--border);
-    background: var(--surface);
-    color: var(--text-muted);
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    background: none;
+    color: var(--text-faint);
+  }
+
+  .hero-badge + .hero-badge::before {
+    content: "·";
+    margin-right: var(--space-2);
+    color: var(--text-faint);
   }
 
   .facts {
     border-block: 1px solid var(--border);
-    background: var(--surface);
+    background: transparent;
   }
 
   .facts-grid {
@@ -425,10 +419,11 @@ const schema = {
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
     gap: var(--space-7);
-    padding: var(--space-8);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding-block: var(--space-8);
+    border-radius: 0;
+    border: 0;
+    border-block: 1px solid var(--border);
+    background: transparent;
     overflow: hidden;
   }
 
@@ -457,10 +452,11 @@ const schema = {
     display: grid;
     gap: var(--space-4);
     align-content: start;
-    padding: var(--space-5);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
-    background: var(--bg-raised);
+    padding: 0 0 0 var(--space-6);
+    border-radius: 0;
+    border: 0;
+    border-left: 1px solid var(--border);
+    background: transparent;
   }
 
   .install-list {
@@ -485,8 +481,8 @@ const schema = {
   }
 
   .perk-list li::before {
-    content: "✓";
-    color: var(--accent-2);
+    content: "–";
+    color: var(--text-faint);
     margin-right: 8px;
   }
 
@@ -496,7 +492,8 @@ const schema = {
     align-items: center;
     justify-content: space-between;
     gap: var(--space-5);
-    padding: var(--space-6);
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--border);
   }
 
   .support-copy {
@@ -513,8 +510,8 @@ const schema = {
 
   .related-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-4);
+    gap: 0;
+    border-bottom: 1px solid var(--border);
   }
 
   @media (max-width: 940px) {
@@ -525,7 +522,13 @@ const schema = {
     }
 
     .download {
-      padding: var(--space-6);
+      padding-block: var(--space-6);
+    }
+
+    .download-panel {
+      padding: var(--space-5) 0 0;
+      border-left: 0;
+      border-top: 1px solid var(--border);
     }
   }
 </style>

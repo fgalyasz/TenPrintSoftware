@@ -1,48 +1,40 @@
 ---
-import { Image } from "astro:assets";
-import SessionGuardMock from "./SessionGuardMock.astro";
-import WalkAwayMock from "./WalkAwayMock.astro";
+import StatusMenuMock from "./StatusMenuMock.astro";
+import SnappyZonesDesktopMock from "./SnappyZonesDesktopMock.astro";
 import type { Product } from "~/data/products";
 
-import heroDark from "~/assets/products/snappyzones/hero_screenshot_dark.png";
-import heroLight from "~/assets/products/snappyzones/hero_screenshot_light.png";
+type Props = {
+  product: Product;
+  alt: string;
+  caption?: string;
+  mockRows?: readonly string[];
+  mockMuted?: readonly string[];
+};
 
-type Props = { product: Product; alt: string; mockRows?: string[]; mockMuted?: string[] };
-
-const { product, alt, mockRows = [], mockMuted = [] } = Astro.props;
+const { product, alt, caption, mockRows = [], mockMuted = [] } = Astro.props;
+const menuStatus = product.slug === "walkaway" ? "Armed" : "42m";
+const menuFooter = product.slug === "walkaway" ? "Quit WalkAway" : "Start at Login";
+const menuActive = product.slug === "walkaway" ? 0 : 3;
 ---
 
 {
   product.slug === "snappyzones" ? (
-    <figure class="visual">
-      <Image
-        class="visual-shot visual-dark"
-        src={heroDark}
-        alt={alt}
-        widths={[640, 960, 1280, 1600]}
-        sizes="(max-width: 900px) 92vw, 620px"
-        loading="eager"
-        format="webp"
-        quality={72}
-      />
-      <Image
-        class="visual-shot visual-light"
-        src={heroLight}
-        alt={alt}
-        widths={[640, 960, 1280, 1600]}
-        sizes="(max-width: 900px) 92vw, 620px"
-        loading="lazy"
-        format="webp"
-        quality={72}
-      />
-    </figure>
-  ) : product.slug === "walkaway" ? (
-    <div class="visual visual-mock">
-      <WalkAwayMock rows={mockRows} muted={mockMuted} />
+    <div class="visual">
+      <span class="visually-hidden">{alt}</span>
+      <SnappyZonesDesktopMock caption={caption} />
     </div>
   ) : (
-    <div class="visual visual-mock">
-      <SessionGuardMock rows={mockRows} muted={mockMuted} />
+    <div class="visual visual-menu">
+      <span class="visually-hidden">{alt}</span>
+      <StatusMenuMock
+        icon={product.iconUrl}
+        status={menuStatus}
+        rows={mockRows}
+        activeIndex={menuActive}
+        muted={mockMuted}
+        footer={menuFooter}
+      />
+      {caption && <p class="caption mono">{caption}</p>}
     </div>
   )
 }
@@ -53,21 +45,16 @@ const { product, alt, mockRows = [], mockMuted = [] } = Astro.props;
     position: relative;
   }
 
-  .visual-shot {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-lg);
+  .visual-menu {
+    display: grid;
+    justify-items: start;
+    gap: var(--space-3);
   }
 
-  :global([data-theme="dark"]) .visual-light,
-  :global([data-theme="light"]) .visual-dark {
-    display: none;
-  }
-
-  .visual-mock {
-    display: flex;
-    justify-content: center;
+  .caption {
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--text-faint);
   }
 </style>

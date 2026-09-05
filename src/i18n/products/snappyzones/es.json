@@ -194,5 +194,30 @@
   "editionFree": "Gratis",
   "editionPro": "Pro",
   "proTitle": "SnappyZones Pro",
-  "proBlurb": "Sin cuenta SnappyZones — una clave tras el pago. Dos Macs. Prueba de 14 días en la app."
+  "proBlurb": "Sin cuenta SnappyZones — una clave tras el pago. Dos Macs. Prueba de 14 días en la app.",
+  "lookTitle": "Lo que realmente abre",
+  "lookSubtitle": "Cuatro superficies. El resto del Mac sigue siendo suyo.",
+  "lookHeroCaption": "Una disposición llamada Coding.",
+  "look": [
+    {
+      "key": "menu",
+      "title": "Vive en la barra de menús.",
+      "text": "No hay ventana principal que aparcar en el escritorio. SnappyZones es un extra en la barra de menús: Cambiar disposición, el editor de zonas, copias, licencia y Preferencias. Abra lo que necesite — luego se aparta y le deja el Mac."
+    },
+    {
+      "key": "preferences",
+      "title": "Preferencias es una ventana.",
+      "text": "Todo lo que ajusta está aquí: margen de celda, modificadores de snap y un atajo por acción. Grabe Open Preferences antes de ocultar el icono, o no tendrá vuelta. Iniciar al entrar y restaurar el tamaño viven en la misma ventana."
+    },
+    {
+      "key": "editor",
+      "title": "Dibuja sobre la pantalla.",
+      "text": "El Zone Editor es una superposición en la pantalla, no un documento que archiva. Divida, nombre, guarde. Los presets como dos columnas o un tercio izquierdo son un comienzo — sigue dibujando hasta que la cuadrícula encaje con su trabajo."
+    },
+    {
+      "key": "selector",
+      "title": "Cambie la cuadrícula sin un rodeo.",
+      "text": "Switch Layout… muestra el esquema de cada disposición con nombre en esta pantalla. Las flechas mueven el foco; Return aplica la disposición enfocada, igual que un clic. Cambia la cuadrícula sin recorrer menús ni abrir el editor."
+    }
+  ]
 }

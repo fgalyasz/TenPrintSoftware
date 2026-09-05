@@ -120,6 +120,10 @@ export const ro: UiDictionary = {
   "product.related.title": "Alte produse",
   "product.roadmap.inProgress": "În lucru",
   "product.roadmap.planned": "Planificat",
+  "product.look.default": "În aplicație",
+  "product.look.title": "Ce deschizi cu adevărat",
+  "product.look.subtitle":
+    "Câteva suprafețe, în fiecare zi. Restul Mac-ului rămâne al tău.",
 
   "category.windowing": "Gestionarea ferestrelor",
   "category.session": "Controlul sesiunii",

@@ -120,6 +120,10 @@ export const ru: UiDictionary = {
   "product.related.title": "Другие продукты",
   "product.roadmap.inProgress": "В работе",
   "product.roadmap.planned": "Запланировано",
+  "product.look.default": "Внутри приложения",
+  "product.look.title": "Что вы действительно открываете",
+  "product.look.subtitle":
+    "Несколько экранов каждый день. Остальной Mac остаётся вашим.",
 
   "category.windowing": "Управление окнами",
   "category.session": "Контроль сеанса",

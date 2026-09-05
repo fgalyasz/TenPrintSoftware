@@ -117,6 +117,10 @@ export const en = {
   "product.related.title": "Other products",
   "product.roadmap.inProgress": "In development",
   "product.roadmap.planned": "Planned",
+  "product.look.default": "Inside the app",
+  "product.look.title": "What you actually open",
+  "product.look.subtitle":
+    "A few surfaces, used every day. The rest of the Mac stays yours.",
 
   "pricing.meta.title": "Pricing — TenPrint Software",
   "pricing.meta.description":

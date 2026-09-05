@@ -11,5 +11,5 @@ dist/
 npm-debug.log*
 .vscode/
 
-public/downloads/walkaway/*.zip
-public/downloads/walkaway/*.dmg
+public/downloads/**/*.zip
+public/downloads/**/*.dmg

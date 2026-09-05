@@ -1,0 +1,87 @@
+---
+type MenuItem = { label: string; submenu?: boolean };
+
+const groups: MenuItem[][] = [
+  [{ label: "About SnappyZones" }, { label: "Check for Updates…" }, { label: "Quick Start…" }],
+  [
+    { label: "Preferences…" },
+    { label: "License…" },
+    { label: "Backup Settings…" },
+    { label: "Restore Settings…" },
+    { label: "Switch Layout…" },
+    { label: "Next Layout" },
+    { label: "Previous Layout" },
+    { label: "Move to Next Display" },
+    { label: "Zone Editor…", submenu: true },
+  ],
+  [{ label: "Reveal Log File" }, { label: "Quit" }],
+];
+---
+
+<div class="sz-menu-figure" aria-hidden="true">
+  {
+    groups.map((group, groupIndex) => (
+      <div class="sz-menu-figure__group">
+        {groupIndex > 0 && <div class="sz-menu-figure__rule"></div>}
+        {group.map((item) => (
+          <div class="sz-menu-figure__row">
+            <span>{item.label}</span>
+            {item.submenu && <span class="sz-menu-figure__chevron">›</span>}
+          </div>
+        ))}
+      </div>
+    ))
+  }
+</div>
+
+<style is:global>
+  .sz-menu-figure {
+    display: grid;
+    width: min(248px, 100%);
+    padding: 6px 0;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--bg-raised) 55%, #f0f0f0);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+    color: var(--text);
+    font-size: 0.8125rem;
+  }
+
+  [data-theme="dark"] .sz-menu-figure {
+    border-color: var(--border-strong);
+    background: color-mix(in srgb, var(--bg-raised) 50%, #2c2c2e);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    color: var(--text);
+  }
+
+  .sz-menu-figure__rule {
+    height: 1px;
+    margin: 5px 10px;
+    background: color-mix(in srgb, var(--text) 12%, transparent);
+  }
+
+  [data-theme="dark"] .sz-menu-figure__rule {
+    background: rgba(255, 255, 255, 0.14);
+  }
+
+  .sz-menu-figure__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 5px 14px 5px 16px;
+    line-height: 1.35;
+  }
+
+  .sz-menu-figure__chevron {
+    color: var(--text-faint);
+    font-size: 0.95rem;
+    line-height: 1;
+  }
+
+  [data-theme="dark"] .sz-menu-figure__chevron {
+    color: rgba(255, 255, 255, 0.4);
+  }
+</style>

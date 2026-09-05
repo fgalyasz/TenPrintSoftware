@@ -1,0 +1,290 @@
+---
+const shortcuts = [
+  { label: "Open Zone Editor", keys: "⌘⌥⌃⇧Z", set: true },
+  { label: "Open Preferences", keys: "⌘⌥⌃⇧P", set: true },
+  { label: "Open Layout Selector", keys: "⌘⌥⌃⇧L", set: true },
+  { label: "Move to Next Display", keys: "Not set", set: false },
+  { label: "Next Layout", keys: "Not set", set: false },
+  { label: "Previous Layout", keys: "Not set", set: false },
+];
+
+const modifiers = [
+  { label: "Single-zone snap", on: [true, false, false, true] },
+  { label: "Multi-zone snap", on: [true, true, false, true] },
+];
+
+const keys = ["⌘", "⇧", "⌥", "^"];
+
+const checks = [
+  { label: "Launch at login", on: true },
+  { label: "Hide menu bar icon", on: false },
+  { label: "Restore window size on unsnap", on: true },
+];
+---
+
+<div class="window" aria-hidden="true">
+  <div class="titlebar">
+    <span class="lights">
+      <span class="light light-close"></span>
+      <span class="light light-min"></span>
+      <span class="light light-zoom"></span>
+    </span>
+    <span class="title">Preferences</span>
+  </div>
+
+  <div class="body">
+    <div class="row">
+      <span class="label">Cell margin</span>
+      <div class="slider">
+        <span class="track">
+          <span class="fill"></span>
+          <span class="thumb"></span>
+        </span>
+        <span class="mono value">15 pt</span>
+      </div>
+    </div>
+
+    {
+      shortcuts.map((item) => (
+        <div class="row">
+          <span class="label">{item.label}</span>
+          <div class="shortcut">
+            <span class:list={["keys", !item.set && "keys-empty"]}>{item.keys}</span>
+            <span class="btn">Record…</span>
+            <span class="btn">Clear</span>
+          </div>
+        </div>
+      ))
+    }
+
+    {
+      modifiers.map((item) => (
+        <div class="row">
+          <span class="label">{item.label}</span>
+          <div class="mods">
+            {keys.map((key, index) => (
+              <span class:list={["mod", item.on[index] && "mod-on"]}>{key}</span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+
+    {
+      checks.map((item) => (
+        <div class="row row-check">
+          <span class:list={["box", item.on && "box-on"]}></span>
+          <span class="label">{item.label}</span>
+        </div>
+      ))
+    }
+
+    <div class="row row-license">
+      <span class="license">Pro licensed</span>
+      <span class="btn">License…</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="btn btn-close">Close</span>
+  </div>
+</div>
+
+<style>
+  .window {
+    width: min(520px, 100%);
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid var(--border-strong);
+    border-radius: 10px;
+    background: var(--bg-raised);
+    box-shadow: var(--shadow-md);
+    font-size: 0.75rem;
+    color: var(--text);
+  }
+
+  .titlebar {
+    display: grid;
+    grid-template-columns: 52px 1fr 52px;
+    align-items: center;
+    height: 28px;
+    padding: 0 10px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .lights {
+    display: flex;
+    gap: 6px;
+  }
+
+  .light {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .light-close {
+    background: #ff5f57;
+  }
+
+  .light-min {
+    background: #febc2e;
+  }
+
+  .light-zoom {
+    background: #28c840;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+
+  .body {
+    display: grid;
+    gap: 7px;
+    padding: 14px 16px 8px;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: minmax(8.5rem, 0.4fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+  }
+
+  .label {
+    color: var(--text);
+  }
+
+  .slider,
+  .shortcut,
+  .mods {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .track {
+    position: relative;
+    flex: 1;
+    height: 4px;
+    border-radius: 99px;
+    background: var(--border-strong);
+  }
+
+  .fill {
+    display: block;
+    width: 28%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent);
+  }
+
+  .thumb {
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+  }
+
+  .value {
+    flex: 0 0 2.6rem;
+    color: var(--text-muted);
+  }
+
+  .keys {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    color: var(--text);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+  }
+
+  .keys-empty {
+    color: var(--text-faint);
+  }
+
+  .btn {
+    flex: 0 0 auto;
+    padding: 2px 8px;
+    border: 1px solid var(--border-strong);
+    border-radius: 5px;
+    background: var(--surface-hover);
+    color: var(--text);
+    font-size: 0.6875rem;
+  }
+
+  .mods {
+    gap: 5px;
+  }
+
+  .mod {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: var(--surface-hover);
+    color: var(--text-muted);
+    font-size: 0.7rem;
+  }
+
+  .mod-on {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .row-check {
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+  }
+
+  .box {
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+  }
+
+  .box-on {
+    border-color: var(--accent);
+    background: var(--accent);
+    box-shadow: inset 0 0 0 2px var(--bg-raised);
+  }
+
+  .row-license {
+    margin-top: 6px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  .license {
+    color: var(--text-muted);
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 16px 12px;
+  }
+
+  .btn-close {
+    padding: 4px 16px;
+    font-size: 0.75rem;
+  }
+</style>

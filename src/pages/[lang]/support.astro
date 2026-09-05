@@ -45,7 +45,7 @@ const channels = [
         {
           channels.map((channel, index) => (
             <article class="channel">
-              <span class="channel-index mono">{String(index + 1).padStart(2, "0")}</span>
+              <span class="channel-index">{String(index + 1).padStart(2, "0")}</span>
               <h3 class="title-sm">{channel.title}</h3>
               <p class="channel-text">{channel.text}</p>
             </article>
@@ -74,7 +74,7 @@ const channels = [
     <div class="container form-layout">
       <div class="form-side">
         <h2 class="title-lg">{t("cta.getSupport")}</h2>
-        <div class="response surface-card">
+        <div class="response">
           <h3 class="title-sm">{t("support.response.title")}</h3>
           <p class="small body-muted">{t("support.response.text")}</p>
         </div>
@@ -86,40 +86,34 @@ const channels = [
 </BaseLayout>
 
 <style>
-  .page-hero {
-    position: relative;
-    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
-    overflow: hidden;
-  }
-
-  .page-hero-inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    gap: var(--space-4);
-    max-width: 720px;
-  }
-
   .channels {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
-    gap: var(--space-4);
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid var(--border);
   }
 
   .channel {
     display: grid;
     gap: var(--space-3);
     align-content: start;
-    padding: var(--space-5);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding: var(--space-6) 0;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+  }
+
+  .channel + .channel {
+    padding-left: var(--space-6);
+    border-left: 1px solid var(--border);
   }
 
   .channel-index {
-    font-size: 0.75rem;
-    color: var(--accent-2);
-    letter-spacing: 0.08em;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-faint);
+    letter-spacing: -0.03em;
   }
 
   .channel-text {
@@ -139,15 +133,14 @@ const channels = [
     display: inline-flex;
     align-items: center;
     gap: var(--space-3);
-    padding: 9px 15px 9px 9px;
-    border-radius: var(--radius-pill);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding: 8px 0;
+    margin-right: var(--space-5);
+    border-radius: 0;
+    border: 0;
+    background: none;
     font-size: 0.9375rem;
     color: var(--text-muted);
-    transition:
-      border-color 0.15s var(--ease),
-      color 0.15s var(--ease);
+    transition: color 0.15s var(--ease);
   }
 
   .quick-link:hover {
@@ -176,11 +169,19 @@ const channels = [
   .response {
     display: grid;
     gap: var(--space-2);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border);
   }
 
   @media (max-width: 940px) {
-    .form-layout {
+    .form-layout,
+    .channels {
       grid-template-columns: 1fr;
+    }
+
+    .channel + .channel {
+      padding-left: 0;
+      border-left: 0;
     }
 
     .form-side {

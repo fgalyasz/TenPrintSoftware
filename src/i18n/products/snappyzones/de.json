@@ -194,5 +194,30 @@
   "editionFree": "Kostenlos",
   "editionPro": "Pro",
   "proTitle": "SnappyZones Pro",
-  "proBlurb": "Kein SnappyZones-Konto — nach dem Kauf ein Lizenzschlüssel. Zwei Macs. 14 Tage Test in der App."
+  "proBlurb": "Kein SnappyZones-Konto — nach dem Kauf ein Lizenzschlüssel. Zwei Macs. 14 Tage Test in der App.",
+  "lookTitle": "Was Sie wirklich öffnen",
+  "lookSubtitle": "Vier Oberflächen. Der Rest des Mac bleibt Ihrer.",
+  "lookHeroCaption": "Ein Layout namens Coding.",
+  "look": [
+    {
+      "key": "menu",
+      "title": "Es lebt in der Menüleiste.",
+      "text": "Es gibt kein Hauptfenster, das auf dem Schreibtisch liegt. SnappyZones ist ein Extra in der Menüleiste: Layout wechseln, Zone Editor, Sicherung, Lizenz und Einstellungen. Öffnen Sie, was Sie brauchen — dann tritt die App zurück und lässt den Mac Ihnen."
+    },
+    {
+      "key": "preferences",
+      "title": "Einstellungen sind ein Fenster.",
+      "text": "Alles, was Sie justieren, sitzt hier: Zellenrand, Snap-Modifier und ein Kürzel pro Aktion. Nehmen Sie Open Preferences auf, bevor Sie das Menüleisten-Symbol ausblenden — sonst kommen Sie nicht zurück. Start beim Anmelden und Größe-wiederherstellen liegen im selben Fenster."
+    },
+    {
+      "key": "editor",
+      "title": "Sie zeichnen auf dem Display.",
+      "text": "Der Zone Editor ist ein Overlay auf dem Display, kein Dokument, das Sie ablegen. Teilen, benennen, speichern. Presets wie zwei Spalten oder ein linkes Drittel sind ein Anfang — Sie zeichnen weiter, bis das Raster zu Ihrer Arbeit passt."
+    },
+    {
+      "key": "selector",
+      "title": "Das Raster ohne Umweg wechseln.",
+      "text": "Switch Layout… zeigt jedes benannte Layout auf diesem Display als Schema. Pfeile bewegen den Fokus; Return wendet das fokussierte Layout an, wie ein Klick. Sie wechseln das Raster, ohne Menüs oder den Editor zu durchlaufen."
+    }
+  ]
 }

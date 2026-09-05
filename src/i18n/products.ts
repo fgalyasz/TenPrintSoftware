@@ -4,6 +4,8 @@ export type ProductFeature = { tier: "free" | "pro"; title: string; text: string
 export type ProductStep = { title: string; text: string };
 export type ProductFaq = { question: string; answer: string };
 
+export type ProductLookItem = { key: "editor" | "preferences" | "menu" | "selector"; title: string; text: string };
+
 export type ProductCopy = {
   tagline: string;
   headline: string;
@@ -23,6 +25,10 @@ export type ProductCopy = {
   installTitle: string;
   install: string[];
   downloadNotice: string;
+  lookTitle?: string;
+  lookSubtitle?: string;
+  lookHeroCaption?: string;
+  look?: ProductLookItem[];
   roadmapTitle?: string;
   roadmapSubtitle?: string;
   roadmapInProgress?: string;

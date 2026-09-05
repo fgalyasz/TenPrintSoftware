@@ -40,7 +40,7 @@ const { features, freeLabel = "Free", proLabel = "Pro", showTiers = false } = As
     gap: var(--space-2);
     align-content: start;
     padding: var(--space-5);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     border: 1px solid var(--border);
     background: var(--surface);
     transition:
@@ -49,8 +49,8 @@ const { features, freeLabel = "Free", proLabel = "Pro", showTiers = false } = As
   }
 
   .feature:hover {
-    border-color: var(--border-strong);
-    background: var(--surface-strong);
+    border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
+    background: var(--surface-hover);
   }
 
   .feature-text {

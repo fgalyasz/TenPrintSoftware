@@ -8,7 +8,7 @@ export type PricingTier = {
 };
 
 export type ProductScreenshot = {
-  key: "hero" | "editor" | "preferences" | "menu" | "selector";
+  key: "editor" | "preferences" | "menu" | "selector";
   themed?: boolean;
 };
 
@@ -44,11 +44,11 @@ export const PRODUCTS: Product[] = [
     accent: "#7c5cff",
     accentSoft: "#a48bff",
     iconUrl: "/assets/products/snappyzones.svg",
-    websiteUrl: "https://snappyzones.com",
-    supportEmail: "info@snappyzones.com",
-    version: "1.3.2",
-    downloadUrl: "https://snappyzones.com/downloads/SnappyZones-1.3.2.dmg",
-    downloadFallbackUrl: "https://snappyzones.com/#download",
+    websiteUrl: "https://tenprintsoftware.com/en/products/snappyzones",
+    supportEmail: "hello@tenprintsoftware.com",
+    version: "1.3.4",
+    downloadUrl: "https://tenprintsoftware.com/downloads/snappyzones/SnappyZones-1.3.4.dmg",
+    downloadFallbackUrl: "https://tenprintsoftware.com/en/products/snappyzones",
     packageFormat: "DMG",
     requirements: "macOS 13 Ventura+",
     categoryKey: "category.windowing",
@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
       {
         kind: "pro",
         price: "€19",
-        checkoutUrl: "https://snappyzones.com/#pro",
+        checkoutUrl: "https://buy.polar.sh/polar_cl_w6FOYtMc3UZNShZfm7Z4hHvAVo8Y0bDr3oH4L3ls7Uj",
         perks: [
           "pricing.snappyzones.pro.1",
           "pricing.snappyzones.pro.2",
@@ -78,11 +78,10 @@ export const PRODUCTS: Product[] = [
       },
     ],
     screenshots: [
-      { key: "hero", themed: true },
-      { key: "editor" },
-      { key: "preferences" },
-      { key: "selector" },
       { key: "menu" },
+      { key: "preferences" },
+      { key: "editor" },
+      { key: "selector" },
     ],
   },
   {
@@ -93,12 +92,12 @@ export const PRODUCTS: Product[] = [
     accent: "#14b8a6",
     accentSoft: "#5eead4",
     iconUrl: "/assets/products/sessionguard.svg",
-    websiteUrl: "https://sessionguard.net",
+    websiteUrl: "https://tenprintsoftware.com/en/products/sessionguard",
     repositoryUrl: "https://github.com/fgalyasz/SessionGuard",
-    supportEmail: "info@sessionguard.net",
+    supportEmail: "hello@tenprintsoftware.com",
     version: "1.1.0",
-    downloadUrl: "https://sessionguard.net/downloads/SessionGuard-1.1.0.dmg",
-    downloadFallbackUrl: "https://sessionguard.net/#download",
+    downloadUrl: "https://tenprintsoftware.com/downloads/sessionguard/SessionGuard-1.1.0.dmg",
+    downloadFallbackUrl: "https://tenprintsoftware.com/en/products/sessionguard",
     packageFormat: "DMG",
     requirements: "macOS 13 Ventura+",
     categoryKey: "category.session",
@@ -115,7 +114,7 @@ export const PRODUCTS: Product[] = [
         ],
       },
     ],
-    screenshots: [],
+    screenshots: [{ key: "preferences" }],
     mock: "sessionguard-menu",
   },
   {
@@ -128,7 +127,7 @@ export const PRODUCTS: Product[] = [
     iconUrl: "/assets/products/walkaway.svg",
     websiteUrl: "https://tenprintsoftware.com/en/products/walkaway",
     repositoryUrl: "https://github.com/fgalyasz/WalkAway",
-    supportEmail: "support@tenprintsoftware.com",
+    supportEmail: "hello@tenprintsoftware.com",
     version: "0.1.7",
     downloadUrl: "https://tenprintsoftware.com/downloads/walkaway/WalkAway-0.1.7.dmg",
     downloadFallbackUrl: "https://tenprintsoftware.com/en/products/walkaway",
@@ -148,7 +147,7 @@ export const PRODUCTS: Product[] = [
         ],
       },
     ],
-    screenshots: [],
+    screenshots: [{ key: "preferences" }],
     mock: "walkaway-menu",
   },
 ];

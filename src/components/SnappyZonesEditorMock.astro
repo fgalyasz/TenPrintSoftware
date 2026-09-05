@@ -1,0 +1,304 @@
+<div class="sz-editor-figure" aria-hidden="true">
+  <div class="sz-editor-figure__menubar">
+    <span class="sz-editor-figure__apple"></span>
+    <span class="sz-editor-figure__app">SnappyZones</span>
+    <span>File</span>
+    <span>Edit</span>
+    <span>View</span>
+    <span class="sz-editor-figure__clock">Tue 9:41</span>
+  </div>
+
+  <div class="sz-editor-figure__screen">
+    <div class="sz-editor-figure__top">
+      <span class="sz-editor-figure__field">Coding</span>
+      <span class="sz-editor-figure__popup">Coding <b>▾</b></span>
+      <span class="sz-editor-figure__popup">Preset… <b>▾</b></span>
+    </div>
+
+    <div class="sz-editor-figure__stage">
+      <div class="sz-editor-figure__cell sz-editor-figure__cell--main">
+        <div class="sz-editor-figure__pane">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <span class="sz-editor-figure__size">842×1080</span>
+      </div>
+      <div class="sz-editor-figure__cell sz-editor-figure__cell--web">
+        <div class="sz-editor-figure__pane">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="sz-editor-figure__size">478×536</span>
+      </div>
+      <div class="sz-editor-figure__cell sz-editor-figure__cell--term">
+        <div class="sz-editor-figure__pane sz-editor-figure__pane--term">
+          <span class="sz-editor-figure__prompt">10 PRINT CHR$(205.5+RND(1));</span>
+        </div>
+        <span class="sz-editor-figure__size">478×536</span>
+      </div>
+      <span class="sz-editor-figure__split"></span>
+      <span class="sz-editor-figure__knob sz-editor-figure__knob--top"></span>
+      <span class="sz-editor-figure__knob sz-editor-figure__knob--bot"></span>
+    </div>
+
+    <div class="sz-editor-figure__bottom">
+      <span class="sz-editor-figure__btn">Delete</span>
+      <span class="sz-editor-figure__btn">Save as new</span>
+      <span class="sz-editor-figure__btn">Cancel</span>
+      <span class="sz-editor-figure__btn sz-editor-figure__btn--ok">OK</span>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  .sz-editor-figure {
+    width: min(560px, 100%);
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid var(--border-strong);
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: var(--shadow-sm);
+  }
+
+  [data-theme="dark"] .sz-editor-figure {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md);
+  }
+
+  .sz-editor-figure__menubar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 24px;
+    padding: 0 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    background: linear-gradient(
+      color-mix(in srgb, var(--bg-raised) 45%, #f7f7f7),
+      color-mix(in srgb, var(--bg-raised) 60%, #ececec)
+    );
+    color: var(--text);
+    font-size: 0.625rem;
+    font-weight: 500;
+  }
+
+  [data-theme="dark"] .sz-editor-figure__menubar {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    background: linear-gradient(
+      color-mix(in srgb, var(--bg-raised) 40%, #3a3a3c),
+      var(--bg-raised)
+    );
+    color: var(--text);
+  }
+
+  .sz-editor-figure__apple {
+    font-size: 0.72rem;
+    line-height: 1;
+  }
+
+  .sz-editor-figure__app {
+    font-weight: 700;
+  }
+
+  .sz-editor-figure__clock {
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .sz-editor-figure__screen {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 300px;
+    background: color-mix(in srgb, var(--accent) 8%, color-mix(in srgb, var(--text) 44%, var(--bg)));
+  }
+
+  [data-theme="dark"] .sz-editor-figure__screen {
+    background: color-mix(in srgb, var(--accent) 7%, color-mix(in srgb, var(--bg-raised) 72%, #000));
+  }
+
+  .sz-editor-figure__top,
+  .sz-editor-figure__bottom {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .sz-editor-figure__bottom {
+    justify-content: flex-end;
+  }
+
+  .sz-editor-figure__stage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    min-height: 196px;
+  }
+
+  .sz-editor-figure__cell {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+  }
+
+  .sz-editor-figure__cell--main {
+    grid-row: 1 / span 2;
+  }
+
+  .sz-editor-figure__pane {
+    display: grid;
+    align-content: start;
+    gap: 6px;
+    height: 100%;
+    padding: 8px 10px;
+    background: var(--bg-raised);
+  }
+
+  .sz-editor-figure__pane span:not(.sz-editor-figure__prompt) {
+    display: block;
+    height: 5px;
+    border-radius: 1px;
+    background: color-mix(in srgb, var(--text) 16%, transparent);
+  }
+
+  .sz-editor-figure__pane span:not(.sz-editor-figure__prompt):nth-of-type(odd) {
+    width: 78%;
+    background: color-mix(in srgb, var(--accent) 32%, var(--bg-raised));
+  }
+
+  .sz-editor-figure__pane span:not(.sz-editor-figure__prompt):nth-of-type(even) {
+    width: 54%;
+  }
+
+  .sz-editor-figure__cell--web .sz-editor-figure__pane span:nth-of-type(1) {
+    width: 88%;
+  }
+
+  .sz-editor-figure__cell--web .sz-editor-figure__pane span:nth-of-type(2) {
+    width: 62%;
+  }
+
+  .sz-editor-figure__cell--web .sz-editor-figure__pane span:nth-of-type(3) {
+    width: 44%;
+  }
+
+  .sz-editor-figure__pane--term {
+    align-content: end;
+    background: var(--bg);
+  }
+
+  .sz-editor-figure__prompt {
+    width: auto;
+    height: auto;
+    background: none;
+    font-family: var(--font-mono);
+    font-size: 0.5rem;
+    line-height: 1.4;
+    color: var(--accent-2);
+  }
+
+  .sz-editor-figure__size {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.88);
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.02em;
+    transform: translate(-50%, -50%);
+  }
+
+  .sz-editor-figure__split {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc((100% - 8px) * 0.625 + 3px);
+    z-index: 1;
+    width: 2px;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 28%, transparent);
+  }
+
+  .sz-editor-figure__knob {
+    position: absolute;
+    left: calc((100% - 8px) * 0.625 - 1px);
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+
+  .sz-editor-figure__knob--top {
+    top: -5px;
+  }
+
+  .sz-editor-figure__knob--bot {
+    bottom: -5px;
+  }
+
+  .sz-editor-figure__field,
+  .sz-editor-figure__popup {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    height: 24px;
+    padding: 0 9px;
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    background: var(--bg-raised);
+    color: var(--text);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+  }
+
+  .sz-editor-figure__field {
+    width: 92px;
+    background: var(--bg);
+  }
+
+  .sz-editor-figure__popup {
+    gap: 6px;
+  }
+
+  .sz-editor-figure__popup b {
+    font-size: 0.55rem;
+    font-weight: 500;
+    color: var(--text-faint);
+  }
+
+  .sz-editor-figure__btn {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    padding: 0 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.34);
+    border-radius: 7px;
+    background: #333;
+    color: #fff;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.4);
+  }
+
+  .sz-editor-figure__btn--ok {
+    min-width: 54px;
+    border-color: var(--accent);
+    background: var(--accent);
+  }
+</style>

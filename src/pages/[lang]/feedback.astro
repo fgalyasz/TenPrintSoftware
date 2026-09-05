@@ -35,7 +35,7 @@ const roadmap = roadmapProduct ? productCopy(roadmapProduct.slug, language).road
   <section class="section">
     <div class="container form-layout">
       <div class="form-side">
-        <div class="promise surface-card">
+        <div class="promise">
           <h2 class="title-sm">{t("feedback.promise.title")}</h2>
           <p class="small body-muted">{t("feedback.promise.text")}</p>
         </div>
@@ -43,7 +43,7 @@ const roadmap = roadmapProduct ? productCopy(roadmapProduct.slug, language).road
         {
           roadmapProduct && roadmap && (
             <div
-              class="roadmap surface-card"
+              class="roadmap"
               style={productStyle(roadmapProduct)}
             >
               <h2 class="title-sm">
@@ -75,20 +75,6 @@ const roadmap = roadmapProduct ? productCopy(roadmapProduct.slug, language).road
 </BaseLayout>
 
 <style>
-  .page-hero {
-    position: relative;
-    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
-    overflow: hidden;
-  }
-
-  .page-hero-inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    gap: var(--space-4);
-    max-width: 720px;
-  }
-
   .form-layout {
     display: grid;
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -107,6 +93,8 @@ const roadmap = roadmapProduct ? productCopy(roadmapProduct.slug, language).road
   .roadmap {
     display: grid;
     gap: var(--space-3);
+    padding: var(--space-5) 0;
+    border-top: 1px solid var(--border);
   }
 
   .roadmap-list {
@@ -126,15 +114,16 @@ const roadmap = roadmapProduct ? productCopy(roadmapProduct.slug, language).road
 
   .roadmap-tag {
     justify-self: start;
+    font-family: var(--font-mono);
     font-size: 0.625rem;
-    font-weight: 600;
-    letter-spacing: 0.09em;
+    font-weight: 500;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: var(--radius-pill);
+    padding: 0;
+    border-radius: 0;
     color: var(--product-accent-2);
-    background: color-mix(in srgb, var(--product-accent) 14%, transparent);
-    border: 1px solid color-mix(in srgb, var(--product-accent) 32%, transparent);
+    background: none;
+    border: 0;
   }
 
   .roadmap-link {

@@ -112,5 +112,15 @@
     "Ouvrir SessionGuard",
     "Accorder l'accessibilité à la demande, puis démarrer une session"
   ],
-  "downloadNotice": "Utilisation gratuite — y compris en entreprise."
+  "downloadNotice": "Utilisation gratuite — y compris en entreprise.",
+  "lookTitle": "Un extra, deux nombres",
+  "lookSubtitle": "Le menu lance une session. Préférences n’est que idle et intervalle.",
+  "lookHeroCaption": "Une session minutée, à mi-chemin.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Deux nombres, puis Start.",
+      "text": "Idle Threshold et Jiggle Interval. Guard reste Inactive jusqu’à ce que vous lanciez une session — y compris après la connexion."
+    }
+  ]
 }

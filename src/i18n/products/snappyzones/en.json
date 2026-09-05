@@ -194,5 +194,30 @@
   "editionFree": "Free",
   "editionPro": "Pro",
   "proTitle": "SnappyZones Pro",
-  "proBlurb": "No SnappyZones account — a license key after checkout. Two Macs. 14-day trial in the app."
+  "proBlurb": "No SnappyZones account — a license key after checkout. Two Macs. 14-day trial in the app.",
+  "lookTitle": "What you actually open",
+  "lookSubtitle": "Four surfaces. The rest of the Mac stays yours.",
+  "lookHeroCaption": "A layout named Coding.",
+  "look": [
+    {
+      "key": "menu",
+      "title": "It lives in the menu bar.",
+      "text": "There is no main window to park on the desktop. SnappyZones is one extra in the menu bar: Switch Layout, the Zone Editor, backups, license, and Preferences. Open what you need, then it steps aside and leaves the Mac to you."
+    },
+    {
+      "key": "preferences",
+      "title": "Preferences is one window.",
+      "text": "Everything you tune sits here: cell margin, snap modifiers, and a shortcut per action. Record Open Preferences before you hide the menu bar icon, or you will have no way back in. Launch at login and restore-on-unsnap live in the same window."
+    },
+    {
+      "key": "editor",
+      "title": "You draw on the display itself.",
+      "text": "The Zone Editor is an overlay on the display, not a document you open and file away. Split the screen, name the layout, save. Presets such as two columns or a left third are a start — you keep drawing until the grid matches how you work."
+    },
+    {
+      "key": "selector",
+      "title": "Change the grid without a tour.",
+      "text": "Switch Layout… shows a schematic of every named layout on this display. Arrow keys move focus; Return applies the focused layout, the same as a click. You switch the grid without walking through menus or opening the editor."
+    }
+  ]
 }

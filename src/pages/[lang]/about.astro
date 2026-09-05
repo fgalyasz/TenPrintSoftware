@@ -81,7 +81,7 @@ const values = [
           values.map((value) => (
             <article class="value">
               <span class="value-mark" aria-hidden="true">
-                ✕
+                /
               </span>
               <h3 class="title-sm">{value.title}</h3>
               <p class="value-text">{value.text}</p>
@@ -92,7 +92,7 @@ const values = [
     </div>
   </section>
 
-  <section class="section section-tight">
+  <section class="contact-band">
     <div class="container">
       <div class="contact">
         <MazeBackdrop variant="band" cell={28} />
@@ -112,20 +112,6 @@ const values = [
 </BaseLayout>
 
 <style>
-  .page-hero {
-    position: relative;
-    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
-    overflow: hidden;
-  }
-
-  .page-hero-inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    gap: var(--space-4);
-    max-width: 720px;
-  }
-
   .story-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.7fr);
@@ -147,21 +133,24 @@ const values = [
   }
 
   .facts {
-    padding: var(--space-5);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding: var(--space-2) 0;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    background: transparent;
   }
 
   .fact-list {
     margin: 0;
     display: grid;
-    gap: var(--space-4);
+    gap: 0;
   }
 
   .fact {
     display: grid;
-    gap: 2px;
+    gap: 4px;
+    padding-block: var(--space-4);
+    border-bottom: 1px solid var(--border);
   }
 
   .fact dt {
@@ -185,37 +174,51 @@ const values = [
 
   .values {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
-    gap: var(--space-4);
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--border);
   }
 
   .value {
     display: grid;
     gap: var(--space-3);
     align-content: start;
-    padding: var(--space-5);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding: var(--space-6) 0;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+  }
+
+  .value:nth-child(odd) {
+    padding-right: var(--space-7);
+    border-right: 1px solid var(--border);
+  }
+
+  .value:nth-child(even) {
+    padding-left: var(--space-7);
   }
 
   .value-mark {
     justify-self: start;
-    width: 26px;
-    height: 26px;
-    display: grid;
-    place-items: center;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    color: var(--accent-2);
-    background: color-mix(in srgb, var(--accent) 14%, transparent);
-    border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--text-faint);
+    background: none;
+    border: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
   }
 
   .value-text {
     color: var(--text-muted);
     font-size: 0.9375rem;
     line-height: 1.7;
+  }
+
+  .contact-band {
+    border-block: 1px solid var(--border);
   }
 
   .contact {
@@ -225,10 +228,7 @@ const values = [
     align-items: center;
     justify-content: space-between;
     gap: var(--space-6);
-    padding: var(--space-8);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding-block: var(--space-9);
     overflow: hidden;
   }
 
@@ -249,9 +249,16 @@ const values = [
   }
 
   @media (max-width: 900px) {
-    .story-grid {
+    .story-grid,
+    .values {
       grid-template-columns: 1fr;
       gap: var(--space-6);
+    }
+
+    .value:nth-child(odd),
+    .value:nth-child(even) {
+      padding-inline: 0;
+      border-right: 0;
     }
   }
 </style>

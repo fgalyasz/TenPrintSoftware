@@ -194,5 +194,30 @@
   "editionFree": "Gratuit",
   "editionPro": "Pro",
   "proTitle": "SnappyZones Pro",
-  "proBlurb": "Pas de compte SnappyZones — une clé après l’achat. Deux Macs. Essai 14 jours dans l’app."
+  "proBlurb": "Pas de compte SnappyZones — une clé après l’achat. Deux Macs. Essai 14 jours dans l’app.",
+  "lookTitle": "Ce que vous ouvrez vraiment",
+  "lookSubtitle": "Quatre surfaces. Le reste du Mac vous reste.",
+  "lookHeroCaption": "Une disposition nommée Coding.",
+  "look": [
+    {
+      "key": "menu",
+      "title": "Elle vit dans la barre de menus.",
+      "text": "Pas de fenêtre principale à poser sur le bureau. SnappyZones est un extra dans la barre de menus : Changer de disposition, l’éditeur de zones, sauvegardes, licence et Préférences. Ouvrez ce qu’il faut — puis l’app s’écarte et vous laisse le Mac."
+    },
+    {
+      "key": "preferences",
+      "title": "Préférences, c’est une fenêtre.",
+      "text": "Tout ce que vous réglez est ici : marge des cellules, modificateur de snap, un raccourci par action. Enregistrez Ouvrir Préférences avant de masquer l’icône, sinon vous n’aurez plus d’entrée. Lancement à la connexion et restauration de taille sont dans la même fenêtre."
+    },
+    {
+      "key": "editor",
+      "title": "Vous dessinez sur l’écran.",
+      "text": "L’éditeur de zones est une superposition sur l’écran, pas un document à classer. Coupez, nommez, enregistrez. Les presets comme deux colonnes ou un tiers gauche sont un départ — vous continuez jusqu’à ce que la grille suive votre travail."
+    },
+    {
+      "key": "selector",
+      "title": "Changer la grille sans le tour.",
+      "text": "Switch Layout… montre le schéma de chaque disposition nommée sur cet écran. Les flèches déplacent le focus ; Retour applique la disposition focalisée, comme un clic. Vous changez la grille sans passer par les menus ni l’éditeur."
+    }
+  ]
 }

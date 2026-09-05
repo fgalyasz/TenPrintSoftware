@@ -120,5 +120,15 @@
     "Open WalkAway",
     "Allow Bluetooth, pick your Watch in Preferences"
   ],
-  "downloadNotice": "Free to use — including for businesses."
+  "downloadNotice": "Free to use — including for businesses.",
+  "lookTitle": "Armed or not",
+  "lookSubtitle": "The menu is the whole app. Preferences is the device and the delay.",
+  "lookHeroCaption": "Armed. One trusted device.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "One device, one delay.",
+      "text": "Pick the Watch or phone, set how far is away, and how long to wait. WalkAway never stores a password."
+    }
+  ]
 }

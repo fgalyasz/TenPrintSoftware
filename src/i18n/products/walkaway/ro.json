@@ -3,43 +3,132 @@
   "headline": "Pleci. Ecranul se blochează. Sarcinile continuă.",
   "summary": "Un utilitar discret în bara de meniu care urmărește un dispozitiv Bluetooth de încredere — de obicei un Apple Watch sau iPhone. Dacă rămâi plecat după o scurtă întârziere, WalkAway blochează ecranul. Nu adoarme Mac-ul.",
   "differentiator": "macOS poate debloca cu Apple Watch. Nu blochează când pleci. WalkAway umple acest gol — fără a opri encodări, descărcări sau randări.",
-  "badges": ["macOS 13+", "Bară de meniu", "Apple Watch", "Gratuit"],
+  "badges": [
+    "macOS 13+",
+    "Bară de meniu",
+    "Apple Watch",
+    "Gratuit"
+  ],
   "featuresTitle": "Armat, local, onest",
   "featuresSubtitle": "Un comutator. Un dispozitiv de încredere. Blochează ecranul, nu mașina.",
   "features": [
-    {"tier": "free", "title": "Blochează, nu adormi", "text": "Apare ecranul de blocare. CPU-ul și procesele rămân active. WalkAway nu apelează niciodată somnul."},
-    {"tier": "free", "title": "Un dispozitiv BLE de încredere", "text": "Alege Apple Watch sau iPhone — sau orice alt dispozitiv Bluetooth din listă. WalkAway măsoară RSSI față de pragul pe care îl setezi."},
-    {"tier": "free", "title": "Întârziere de absență, o blocare", "text": "Absența trebuie să dureze întârzierea (implicit 8 s). O blocare per absență. Revenirea eliberează zăvorul."},
-    {"tier": "free", "title": "Arm și Disarm", "text": "Armed evaluează prezența. Disarmed nu blochează niciodată la plecare. Lock Now funcționează oricum."},
-    {"tier": "free", "title": "Fără deblocare automată", "text": "WalkAway nu tastează parola. Întoarcerea folosește deblocarea de sistem: Watch, Touch ID sau parolă."},
-    {"tier": "free", "title": "Respectă confidențialitatea", "text": "Fără conturi, fără urmărire, parola nu e stocată. Bluetooth-ul servește doar la măsurarea dispozitivului."}
+    {
+      "tier": "free",
+      "title": "Blochează, nu adormi",
+      "text": "Apare ecranul de blocare. CPU-ul și procesele rămân active. WalkAway nu apelează niciodată somnul."
+    },
+    {
+      "tier": "free",
+      "title": "Un dispozitiv BLE de încredere",
+      "text": "Alege Apple Watch sau iPhone — sau orice alt dispozitiv Bluetooth din listă. WalkAway măsoară RSSI față de pragul pe care îl setezi."
+    },
+    {
+      "tier": "free",
+      "title": "Întârziere de absență, o blocare",
+      "text": "Absența trebuie să dureze întârzierea (implicit 8 s). O blocare per absență. Revenirea eliberează zăvorul."
+    },
+    {
+      "tier": "free",
+      "title": "Arm și Disarm",
+      "text": "Armed evaluează prezența. Disarmed nu blochează niciodată la plecare. Lock Now funcționează oricum."
+    },
+    {
+      "tier": "free",
+      "title": "Fără deblocare automată",
+      "text": "WalkAway nu tastează parola. Întoarcerea folosește deblocarea de sistem: Watch, Touch ID sau parolă."
+    },
+    {
+      "tier": "free",
+      "title": "Respectă confidențialitatea",
+      "text": "Fără conturi, fără urmărire, parola nu e stocată. Bluetooth-ul servește doar la măsurarea dispozitivului."
+    }
   ],
   "howTitle": "Cum funcționează",
   "howSubtitle": "Prezența intră, ecranul de blocare iese. Sarcinile nu se opresc.",
   "how": [
-    {"title": "Alege un dispozitiv", "text": "Deschide Preferences și alege Apple Watch — sau orice alt dispozitiv Bluetooth din listă. Armed se activează singur."},
-    {"title": "Pleacă", "text": "Dacă semnalul rămâne mai slab decât pragul după întârziere, WalkAway blochează o dată."},
-    {"title": "Revino", "text": "Deblochează cu Watch sau Touch ID — e macOS, nu WalkAway. Următoarea plecare poate bloca din nou."}
+    {
+      "title": "Alege un dispozitiv",
+      "text": "Deschide Preferences și alege Apple Watch — sau orice alt dispozitiv Bluetooth din listă. Armed se activează singur."
+    },
+    {
+      "title": "Pleacă",
+      "text": "Dacă semnalul rămâne mai slab decât pragul după întârziere, WalkAway blochează o dată."
+    },
+    {
+      "title": "Revino",
+      "text": "Deblochează cu Watch sau Touch ID — e macOS, nu WalkAway. Următoarea plecare poate bloca din nou."
+    }
   ],
   "quickStartTitle": "Start rapid",
   "quickStartSubtitle": "De la instalare la o blocare armată în câteva minute.",
   "quickStart": [
-    {"title": "Instalare", "text": "Descarcă DMG-ul, trage WalkAway în Applications și deschide-l."},
-    {"title": "Permite Bluetooth", "text": "macOS va cere Bluetooth. Permite, ca WalkAway să vadă Watch-ul."},
-    {"title": "Alege Watch-ul", "text": "Deschide Preferences, selectează dispozitivul, setează întârzierea dacă vrei. Armed e pornit."},
-    {"title": "Pleacă o dată", "text": "Lasă biroul. După întârziere ecranul de blocare e sus. ffmpeg încă rulează."}
+    {
+      "title": "Instalare",
+      "text": "Descarcă DMG-ul, trage WalkAway în Applications și deschide-l."
+    },
+    {
+      "title": "Permite Bluetooth",
+      "text": "macOS va cere Bluetooth. Permite, ca WalkAway să vadă Watch-ul."
+    },
+    {
+      "title": "Alege Watch-ul",
+      "text": "Deschide Preferences, selectează dispozitivul, setează întârzierea dacă vrei. Armed e pornit."
+    },
+    {
+      "title": "Pleacă o dată",
+      "text": "Lasă biroul. După întârziere ecranul de blocare e sus. ffmpeg încă rulează."
+    }
   ],
   "faq": [
-    {"question": "WalkAway adoarme Mac-ul?", "answer": "Nu. Blochează ecranul. Build-urile, descărcările și randările continuă."},
-    {"question": "Deblochează când mă întorc?", "answer": "Nu. Deblocarea e a sistemului: Apple Watch, Touch ID sau parolă. WalkAway nu stochează niciodată parola."},
-    {"question": "De ce Apple Watch, nu iPhone?", "answer": "Adresele BLE ale iPhone-ului se pot schimba. Apple Watch e alegerea de încredere. Orice dispozitiv Bluetooth din lista Preferences poate fi ales."},
-    {"question": "Funcționează și cu alte dispozitive Bluetooth?", "answer": "Da. Căști, breloc, alt telefon — dacă apare în listă, îl poți alege. Watch și iPhone sunt recomandarea obișnuită."},
-    {"question": "De ce prima blocare cere System Events?", "answer": "WalkAway blochează prin System Events. macOS întreabă o dată. WalkAway nu scrie în TCC.db și nu comută pentru tine comutatoarele Confidențialitate."},
-    {"question": "Se colectează date?", "answer": "Nu. Fără conturi, fără urmărire. Setările stau într-un JSON local."},
-    {"question": "Cu ce e diferit de SessionGuard?", "answer": "SessionGuard ține o sesiune trează. WalkAway blochează când pleci. Același catalog, treabă opusă."},
-    {"question": "Cum actualizez?", "answer": "Folosește Check for Updates… din meniul WalkAway. Prima instalare rămâne DMG-ul de pe acest site."}
+    {
+      "question": "WalkAway adoarme Mac-ul?",
+      "answer": "Nu. Blochează ecranul. Build-urile, descărcările și randările continuă."
+    },
+    {
+      "question": "Deblochează când mă întorc?",
+      "answer": "Nu. Deblocarea e a sistemului: Apple Watch, Touch ID sau parolă. WalkAway nu stochează niciodată parola."
+    },
+    {
+      "question": "De ce Apple Watch, nu iPhone?",
+      "answer": "Adresele BLE ale iPhone-ului se pot schimba. Apple Watch e alegerea de încredere. Orice dispozitiv Bluetooth din lista Preferences poate fi ales."
+    },
+    {
+      "question": "Funcționează și cu alte dispozitive Bluetooth?",
+      "answer": "Da. Căști, breloc, alt telefon — dacă apare în listă, îl poți alege. Watch și iPhone sunt recomandarea obișnuită."
+    },
+    {
+      "question": "De ce prima blocare cere System Events?",
+      "answer": "WalkAway blochează prin System Events. macOS întreabă o dată. WalkAway nu scrie în TCC.db și nu comută pentru tine comutatoarele Confidențialitate."
+    },
+    {
+      "question": "Se colectează date?",
+      "answer": "Nu. Fără conturi, fără urmărire. Setările stau într-un JSON local."
+    },
+    {
+      "question": "Cu ce e diferit de SessionGuard?",
+      "answer": "SessionGuard ține o sesiune trează. WalkAway blochează când pleci. Același catalog, treabă opusă."
+    },
+    {
+      "question": "Cum actualizez?",
+      "answer": "Folosește Check for Updates… din meniul WalkAway. Prima instalare rămâne DMG-ul de pe acest site."
+    }
   ],
   "installTitle": "Instalare",
-  "install": ["Descarcă DMG-ul", "Trage WalkAway în Applications", "Deschide WalkAway", "Permite Bluetooth, alege Watch-ul în Preferences"],
-  "downloadNotice": "Gratuit — inclusiv pentru firme."
+  "install": [
+    "Descarcă DMG-ul",
+    "Trage WalkAway în Applications",
+    "Deschide WalkAway",
+    "Permite Bluetooth, alege Watch-ul în Preferences"
+  ],
+  "downloadNotice": "Gratuit — inclusiv pentru firme.",
+  "lookTitle": "Armed sau nu",
+  "lookSubtitle": "Meniul e toată aplicația. Preferințele sunt dispozitivul și întârzierea.",
+  "lookHeroCaption": "Armed. Un dispozitiv de încredere.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Un dispozitiv, o întârziere.",
+      "text": "Alege Watch-ul sau telefonul, setează ce înseamnă departe și cât să aștepte. WalkAway nu stochează niciodată o parolă."
+    }
+  ]
 }

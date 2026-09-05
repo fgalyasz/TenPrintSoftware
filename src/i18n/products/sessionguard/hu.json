@@ -112,5 +112,15 @@
     "SessionGuard megnyitása",
     "Accessibility engedély kérésre, majd Session indítása"
   ],
-  "downloadNotice": "Ingyenes — vállalkozásoknak is."
+  "downloadNotice": "Ingyenes — vállalkozásoknak is.",
+  "lookTitle": "Egy extra, két szám",
+  "lookSubtitle": "A menü indít munkamenetet. A Beállítások csak az idle és az interval.",
+  "lookHeroCaption": "Időzített munkamenet, félúton.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Két szám, aztán Start.",
+      "text": "Idle Threshold és Jiggle Interval. A Guard Inactive marad, amíg el nem indít egy munkamenetet — belépés után is."
+    }
+  ]
 }

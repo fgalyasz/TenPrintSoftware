@@ -112,5 +112,15 @@
     "Otevřete SessionGuard",
     "Po vyzvání povolte Zpřístupnění a spusťte sezení"
   ],
-  "downloadNotice": "K bezplatnému užívání — i ve firmě."
+  "downloadNotice": "K bezplatnému užívání — i ve firmě.",
+  "lookTitle": "Jedno extra, dvě čísla",
+  "lookSubtitle": "Nabídka spustí relaci. Předvolby jsou jen idle a interval.",
+  "lookHeroCaption": "Časovaná relace, v polovině.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Dvě čísla, pak Start.",
+      "text": "Idle Threshold a Jiggle Interval. Guard zůstane Inactive, dokud nespustíte relaci — i po přihlášení."
+    }
+  ]
 }

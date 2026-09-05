@@ -71,8 +71,8 @@ const steps = [
                   <Button href={product.downloadUrl} external download>
                     {t("cta.download")}
                   </Button>
-                  <a class="download-alt small" href={product.websiteUrl} target="_blank" rel="noopener noreferrer">
-                    {t("cta.productSite")}
+                  <a class="download-alt small" href={localePath(language, `products/${product.slug}`)}>
+                    {t("cta.viewProduct")}
                   </a>
                 </div>
               </article>
@@ -85,7 +85,7 @@ const steps = [
 
   <section class="section section-tight">
     <div class="container">
-      <div class="install surface-card">
+      <div class="install">
         <div class="install-copy">
           <h2 class="title-md">{t("downloads.notice.title")}</h2>
           <ol class="install-steps">
@@ -99,7 +99,7 @@ const steps = [
 
   <section class="section section-tight">
     <div class="container">
-      <div class="help surface-card">
+      <div class="help">
         <div class="help-copy">
           <h2 class="title-md">{t("product.support.title")}</h2>
           <p class="body-muted">{t("product.support.text")}</p>
@@ -113,23 +113,10 @@ const steps = [
 </BaseLayout>
 
 <style>
-  .page-hero {
-    position: relative;
-    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
-    overflow: hidden;
-  }
-
-  .page-hero-inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    gap: var(--space-4);
-    max-width: 720px;
-  }
-
   .download-list {
     display: grid;
-    gap: var(--space-3);
+    gap: 0;
+    border-bottom: 1px solid var(--border);
   }
 
   .download-row {
@@ -137,10 +124,11 @@ const steps = [
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: var(--space-5);
-    padding: var(--space-5);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding: var(--space-5) 0;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    background: transparent;
     transition: border-color 0.2s var(--ease);
   }
 
@@ -149,8 +137,7 @@ const steps = [
   }
 
   .download-icon {
-    border-radius: 13px;
-    box-shadow: var(--shadow-sm);
+    border-radius: 9px;
   }
 
   .download-body {
@@ -196,9 +183,10 @@ const steps = [
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-6);
-    padding: var(--space-6);
+    padding: var(--space-6) 0;
     align-items: center;
     justify-content: space-between;
+    border-top: 1px solid var(--border);
   }
 
   .install-copy {
@@ -220,9 +208,11 @@ const steps = [
     flex: 1 1 300px;
     max-width: 46ch;
     margin: 0;
-    padding: var(--space-4);
-    border-radius: var(--radius-sm);
-    border: 1px dashed var(--border-strong);
+    padding: 0;
+    border-radius: 0;
+    border: 0;
+    border-left: 1px solid var(--border);
+    padding-left: var(--space-5);
   }
 
   .help-copy {

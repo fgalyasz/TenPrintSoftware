@@ -194,5 +194,30 @@
   "editionFree": "Zadarmo",
   "editionPro": "Pro",
   "proTitle": "SnappyZones Pro",
-  "proBlurb": "Bez účtu SnappyZones — po nákupe licenčný kľúč. Dva Macy. 14-dňová skúška v apke."
+  "proBlurb": "Bez účtu SnappyZones — po nákupe licenčný kľúč. Dva Macy. 14-dňová skúška v apke.",
+  "lookTitle": "Čo naozaj otvárate",
+  "lookSubtitle": "Štyri plochy. Zvyšok Macu zostáva váš.",
+  "lookHeroCaption": "Rozloženie pomenované Coding.",
+  "look": [
+    {
+      "key": "menu",
+      "title": "Žije v lište ponúk.",
+      "text": "Žiadne hlavné okno, ktoré by ležalo na ploche. SnappyZones je jedno extra v lište: Prepnutie rozloženia, Zone Editor, zálohy, licencia a Predvoľby. Otvoríte, čo treba — potom ustúpi a Mac ostane váš."
+    },
+    {
+      "key": "preferences",
+      "title": "Predvoľby sú jedno okno.",
+      "text": "Všetko, čo ladíte, je tu: okraj buniek, modifikátory snapu a skratka na akciu. Kým schováte ikonu, nahrajte Open Preferences — inak sa nevrátite. Spustenie po prihlásení aj obnovenie veľkosti sú v tom istom okne."
+    },
+    {
+      "key": "editor",
+      "title": "Kreslíte na displej.",
+      "text": "Zone Editor je prekrytie na displeji, nie dokument na založenie. Rozdeľte, pomenujte, uložte. Presety ako dva stĺpce alebo ľavá tretina sú začiatok — kreslíte, kým mriežka nesedí vašej práci."
+    },
+    {
+      "key": "selector",
+      "title": "Mriežku zmeníte bez objazdu.",
+      "text": "Switch Layout… ukáže schému každého pomenovaného rozloženia na tomto displeji. Šípky posúvajú fokus; Return použije zaostrené rozloženie rovnako ako klik. Mriežku zmeníte bez objazdu ponúk a editora."
+    }
+  ]
 }

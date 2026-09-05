@@ -120,6 +120,10 @@ export const cs: UiDictionary = {
   "product.related.title": "Další produkty",
   "product.roadmap.inProgress": "Ve vývoji",
   "product.roadmap.planned": "Plánováno",
+  "product.look.default": "Uvnitř aplikace",
+  "product.look.title": "Co opravdu otevíráte",
+  "product.look.subtitle":
+    "Pár ploch, každý den. Zbytek Macu zůstává váš.",
 
   "category.windowing": "Správa oken",
   "category.session": "Správa sezení",

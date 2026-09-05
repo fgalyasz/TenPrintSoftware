@@ -194,5 +194,30 @@
   "editionFree": "Ingyenes",
   "editionPro": "Pro",
   "proTitle": "SnappyZones Pro",
-  "proBlurb": "Nincs SnappyZones-fiók — vásárlás után licenckulcs. Két Mac. 14 napos próba az appban."
+  "proBlurb": "Nincs SnappyZones-fiók — vásárlás után licenckulcs. Két Mac. 14 napos próba az appban.",
+  "lookTitle": "Amit tényleg kinyit",
+  "lookSubtitle": "Négy felület. A Mac többi része a tiéd marad.",
+  "lookHeroCaption": "Egy Coding nevű elrendezés.",
+  "look": [
+    {
+      "key": "menu",
+      "title": "A menüsorban él.",
+      "text": "Nincs főablak, amit a desktopra tennél. A SnappyZones egy extra a menüsorban: Switch Layout, Zone Editor, mentés, licenc és Beállítások. Kinyitod, amit kell — aztán félreáll, és a Mac a tiéd marad."
+    },
+    {
+      "key": "preferences",
+      "title": "A Beállítások egy ablak.",
+      "text": "Minden, amit hangolsz, itt van: cellamargó, snap-módosítók, műveletenként egy gyorsbillentyű. Az ikont csak akkor rejtsd el, ha már felvetted az Open Preferences gyorsbillentyűt — különben nem jutsz vissza. A belépéskori indítás és a méret-visszaállítás is ebben az ablakban van."
+    },
+    {
+      "key": "editor",
+      "title": "A kijelzőre rajzol.",
+      "text": "A Zone Editor fedvény a kijelzőn, nem dokumentum, amit elteszel. Vágod a rácsot, nevezed a layoutot, mentesz. A kétoszlopos vagy bal-harmados preset kiindulás — addig rajzolsz, amíg a rács a munkádhoz illeszkedik."
+    },
+    {
+      "key": "selector",
+      "title": "Rácsot váltani egérút nélkül.",
+      "text": "A Switch Layout… minden elnevezett elrendezés vázlatát mutatja ezen a kijelzőn. A nyilak viszik a fókuszt; a Return ugyanaz, mint a kattintás. A rácsot menük és szerkesztő nélkül váltod."
+    }
+  ]
 }

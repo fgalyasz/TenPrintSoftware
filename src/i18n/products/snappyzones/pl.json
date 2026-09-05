@@ -194,5 +194,30 @@
   "editionFree": "Darmowe",
   "editionPro": "Pro",
   "proTitle": "SnappyZones Pro",
-  "proBlurb": "Bez konta SnappyZones — klucz po zakupie. Dwa Maki. 14-dniowy trial w aplikacji."
+  "proBlurb": "Bez konta SnappyZones — klucz po zakupie. Dwa Maki. 14-dniowy trial w aplikacji.",
+  "lookTitle": "To, co naprawdę otwierasz",
+  "lookSubtitle": "Cztery powierzchnie. Reszta Maca zostaje twoja.",
+  "lookHeroCaption": "Układ o nazwie Coding.",
+  "look": [
+    {
+      "key": "menu",
+      "title": "Żyje na pasku menu.",
+      "text": "Nie ma głównego okna do trzymania na pulpicie. SnappyZones to jedno extra na pasku menu: zmiana układu, Zone Editor, kopie, licencja i Preferencje. Otwierasz, czego potrzebujesz — potem ustępuje i zostawia Maca tobie."
+    },
+    {
+      "key": "preferences",
+      "title": "Preferencje to jedno okno.",
+      "text": "Wszystko, co stroisz, jest tutaj: margines komórki, modyfikatory snapa i skrót na akcję. Zanim ukryjesz ikonę, nagraj Open Preferences — inaczej nie wrócisz. Uruchamianie przy logowaniu i przywracanie rozmiaru są w tym samym oknie."
+    },
+    {
+      "key": "editor",
+      "title": "Rysujesz na wyświetlaczu.",
+      "text": "Zone Editor to nakładka na wyświetlaczu, nie dokument do odłożenia. Podziel, nazwij, zapisz. Presety jak dwie kolumny albo lewa trzecia to start — rysujesz, aż siatka pasuje do twojej pracy."
+    },
+    {
+      "key": "selector",
+      "title": "Zmień siatkę bez objazdu.",
+      "text": "Switch Layout… pokazuje schemat każdego nazwanego układu na tym wyświetlaczu. Strzałki ruszają fokus; Return stosuje skupiony układ tak samo jak klik. Siatkę zmieniasz bez obchodzenia menu i edytora."
+    }
+  ]
 }

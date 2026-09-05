@@ -3,43 +3,132 @@
   "headline": "Odchodzisz. Ekran się blokuje. Zadania działają dalej.",
   "summary": "Dyskretne narzędzie w pasku menu, które pilnuje jednego zaufanego urządzenia Bluetooth — zwykle Apple Watch lub iPhone’a. Gdy zostaniesz dłużej niż krótkie opóźnienie, WalkAway blokuje ekran. Nie uśpia Maca.",
   "differentiator": "macOS potrafi odblokować Apple Watch. Nie blokuje, gdy odchodzisz. WalkAway wypełnia tę lukę — bez przerywania kodowania, pobierań ani renderów.",
-  "badges": ["macOS 13+", "Pasek menu", "Apple Watch", "Bezpłatnie"],
+  "badges": [
+    "macOS 13+",
+    "Pasek menu",
+    "Apple Watch",
+    "Bezpłatnie"
+  ],
   "featuresTitle": "Uzbrojony, lokalny, uczciwy",
   "featuresSubtitle": "Jeden przełącznik. Jedno zaufane urządzenie. Blokuj ekran, nie maszynę.",
   "features": [
-    {"tier": "free", "title": "Blokada, nie sen", "text": "Pojawia się ekran blokady. CPU i procesy działają. WalkAway nigdy nie wywołuje uśpienia."},
-    {"tier": "free", "title": "Jedno zaufane urządzenie BLE", "text": "Wybierz Apple Watch lub iPhone’a — albo dowolne inne urządzenie Bluetooth z listy. WalkAway mierzy RSSI względem progu, który ustawisz."},
-    {"tier": "free", "title": "Opóźnienie nieobecności, jedna blokada", "text": "Nieobecność musi trwać opóźnienie (domyślnie 8 s). Jedna blokada na nieobecność. Powrót zwalnia rygiel."},
-    {"tier": "free", "title": "Arm i Disarm", "text": "Armed ocenia obecność. Disarmed nigdy nie blokuje przez odejście. Lock Now działa zawsze."},
-    {"tier": "free", "title": "Bez auto-odblokowania", "text": "WalkAway nie wpisuje hasła. Powrót korzysta z odblokowania systemowego: Watch, Touch ID lub hasło."},
-    {"tier": "free", "title": "Przyjazny prywatności", "text": "Bez kont, bez śledzenia, hasło nigdy nie jest przechowywane. Bluetooth służy tylko do pomiaru urządzenia."}
+    {
+      "tier": "free",
+      "title": "Blokada, nie sen",
+      "text": "Pojawia się ekran blokady. CPU i procesy działają. WalkAway nigdy nie wywołuje uśpienia."
+    },
+    {
+      "tier": "free",
+      "title": "Jedno zaufane urządzenie BLE",
+      "text": "Wybierz Apple Watch lub iPhone’a — albo dowolne inne urządzenie Bluetooth z listy. WalkAway mierzy RSSI względem progu, który ustawisz."
+    },
+    {
+      "tier": "free",
+      "title": "Opóźnienie nieobecności, jedna blokada",
+      "text": "Nieobecność musi trwać opóźnienie (domyślnie 8 s). Jedna blokada na nieobecność. Powrót zwalnia rygiel."
+    },
+    {
+      "tier": "free",
+      "title": "Arm i Disarm",
+      "text": "Armed ocenia obecność. Disarmed nigdy nie blokuje przez odejście. Lock Now działa zawsze."
+    },
+    {
+      "tier": "free",
+      "title": "Bez auto-odblokowania",
+      "text": "WalkAway nie wpisuje hasła. Powrót korzysta z odblokowania systemowego: Watch, Touch ID lub hasło."
+    },
+    {
+      "tier": "free",
+      "title": "Przyjazny prywatności",
+      "text": "Bez kont, bez śledzenia, hasło nigdy nie jest przechowywane. Bluetooth służy tylko do pomiaru urządzenia."
+    }
   ],
   "howTitle": "Jak to działa",
   "howSubtitle": "Obecność w środku, ekran blokady na zewnątrz. Zadania się nie zatrzymują.",
   "how": [
-    {"title": "Wybierz urządzenie", "text": "Otwórz Preferences i wybierz Apple Watch — albo dowolne inne urządzenie Bluetooth z listy. Armed włącza się samo."},
-    {"title": "Odejdź", "text": "Gdy sygnał pozostaje słabszy niż próg po opóźnieniu, WalkAway blokuje raz."},
-    {"title": "Wróć", "text": "Odblokuj Watch lub Touch ID — to macOS, nie WalkAway. Kolejne odejście może znów zablokować."}
+    {
+      "title": "Wybierz urządzenie",
+      "text": "Otwórz Preferences i wybierz Apple Watch — albo dowolne inne urządzenie Bluetooth z listy. Armed włącza się samo."
+    },
+    {
+      "title": "Odejdź",
+      "text": "Gdy sygnał pozostaje słabszy niż próg po opóźnieniu, WalkAway blokuje raz."
+    },
+    {
+      "title": "Wróć",
+      "text": "Odblokuj Watch lub Touch ID — to macOS, nie WalkAway. Kolejne odejście może znów zablokować."
+    }
   ],
   "quickStartTitle": "Szybki start",
   "quickStartSubtitle": "Od instalacji do uzbrojonej blokady w kilka minut.",
   "quickStart": [
-    {"title": "Instalacja", "text": "Pobierz DMG, przeciągnij WalkAway do Applications i otwórz."},
-    {"title": "Zezwól na Bluetooth", "text": "macOS poprosi o Bluetooth. Zezwól, aby WalkAway widział Watch."},
-    {"title": "Wybierz Watch", "text": "Otwórz Preferences, wybierz urządzenie, w razie potrzeby ustaw opóźnienie. Armed jest włączone."},
-    {"title": "Odejdź raz", "text": "Opuść biurko. Po opóźnieniu ekran blokady jest na miejscu. ffmpeg nadal działa."}
+    {
+      "title": "Instalacja",
+      "text": "Pobierz DMG, przeciągnij WalkAway do Applications i otwórz."
+    },
+    {
+      "title": "Zezwól na Bluetooth",
+      "text": "macOS poprosi o Bluetooth. Zezwól, aby WalkAway widział Watch."
+    },
+    {
+      "title": "Wybierz Watch",
+      "text": "Otwórz Preferences, wybierz urządzenie, w razie potrzeby ustaw opóźnienie. Armed jest włączone."
+    },
+    {
+      "title": "Odejdź raz",
+      "text": "Opuść biurko. Po opóźnieniu ekran blokady jest na miejscu. ffmpeg nadal działa."
+    }
   ],
   "faq": [
-    {"question": "Czy WalkAway uśpia Maca?", "answer": "Nie. Blokuje ekran. Buildy, pobierania i rendery działają dalej."},
-    {"question": "Czy odblokuje, gdy wrócę?", "answer": "Nie. Odblokowanie należy do systemu: Apple Watch, Touch ID lub hasło. WalkAway nigdy nie przechowuje hasła."},
-    {"question": "Dlaczego Apple Watch zamiast iPhone’a?", "answer": "Adresy BLE iPhone’a mogą się zmieniać. Apple Watch to pewny wybór. Dowolne urządzenie Bluetooth z listy Preferences można wybrać."},
-    {"question": "Czy działa z innymi urządzeniami Bluetooth?", "answer": "Tak. Słuchawki, brelok, inny telefon — jeśli widać je na liście, możesz je wybrać. Watch i iPhone to zwykła rekomendacja."},
-    {"question": "Dlaczego pierwsza blokada prosi o System Events?", "answer": "WalkAway blokuje przez System Events. macOS pyta raz. WalkAway nie zapisuje TCC.db i nie przełącza za Ciebie przełączników Prywatności."},
-    {"question": "Czy zbieracie dane?", "answer": "Nie. Bez kont, bez śledzenia. Ustawienia są w lokalnym pliku JSON."},
-    {"question": "Czym różni się od SessionGuard?", "answer": "SessionGuard utrzymuje sesję przy życiu. WalkAway blokuje, gdy odchodzisz. Ten sam katalog, przeciwna praca."},
-    {"question": "Jak zaktualizować?", "answer": "Użyj Check for Updates… w menu WalkAway. Pierwsza instalacja to nadal DMG z tej strony."}
+    {
+      "question": "Czy WalkAway uśpia Maca?",
+      "answer": "Nie. Blokuje ekran. Buildy, pobierania i rendery działają dalej."
+    },
+    {
+      "question": "Czy odblokuje, gdy wrócę?",
+      "answer": "Nie. Odblokowanie należy do systemu: Apple Watch, Touch ID lub hasło. WalkAway nigdy nie przechowuje hasła."
+    },
+    {
+      "question": "Dlaczego Apple Watch zamiast iPhone’a?",
+      "answer": "Adresy BLE iPhone’a mogą się zmieniać. Apple Watch to pewny wybór. Dowolne urządzenie Bluetooth z listy Preferences można wybrać."
+    },
+    {
+      "question": "Czy działa z innymi urządzeniami Bluetooth?",
+      "answer": "Tak. Słuchawki, brelok, inny telefon — jeśli widać je na liście, możesz je wybrać. Watch i iPhone to zwykła rekomendacja."
+    },
+    {
+      "question": "Dlaczego pierwsza blokada prosi o System Events?",
+      "answer": "WalkAway blokuje przez System Events. macOS pyta raz. WalkAway nie zapisuje TCC.db i nie przełącza za Ciebie przełączników Prywatności."
+    },
+    {
+      "question": "Czy zbieracie dane?",
+      "answer": "Nie. Bez kont, bez śledzenia. Ustawienia są w lokalnym pliku JSON."
+    },
+    {
+      "question": "Czym różni się od SessionGuard?",
+      "answer": "SessionGuard utrzymuje sesję przy życiu. WalkAway blokuje, gdy odchodzisz. Ten sam katalog, przeciwna praca."
+    },
+    {
+      "question": "Jak zaktualizować?",
+      "answer": "Użyj Check for Updates… w menu WalkAway. Pierwsza instalacja to nadal DMG z tej strony."
+    }
   ],
   "installTitle": "Instalacja",
-  "install": ["Pobierz DMG", "Przeciągnij WalkAway do Applications", "Otwórz WalkAway", "Zezwól na Bluetooth, wybierz Watch w Preferences"],
-  "downloadNotice": "Bezpłatnie — także dla firm."
+  "install": [
+    "Pobierz DMG",
+    "Przeciągnij WalkAway do Applications",
+    "Otwórz WalkAway",
+    "Zezwól na Bluetooth, wybierz Watch w Preferences"
+  ],
+  "downloadNotice": "Bezpłatnie — także dla firm.",
+  "lookTitle": "Armed albo nie",
+  "lookSubtitle": "Menu to cała aplikacja. Preferencje to urządzenie i opóźnienie.",
+  "lookHeroCaption": "Armed. Jedno zaufane urządzenie.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Jedno urządzenie, jedno opóźnienie.",
+      "text": "Wybierz Watch albo telefon, ustaw, co znaczy daleko, i jak długo czekać. WalkAway nigdy nie zapisuje hasła."
+    }
+  ]
 }

@@ -1,0 +1,158 @@
+---
+type Props = { caption?: string };
+
+const { caption } = Astro.props;
+const panes = [
+  { id: "main", title: "Editor", lines: [92, 54, 78, 36, 64, 48, 70, 28] },
+  { id: "web", title: "Browser", lines: [88, 44, 62] },
+  { id: "term", title: "Terminal", lines: [] },
+];
+---
+
+<figure class="figure">
+  <div class="desk" aria-hidden="true">
+    <div class="desk-bar">
+      <span class="desk-layout">Coding</span>
+      <span class="desk-hint mono">⌘ drag</span>
+    </div>
+    <div class="desk-grid">
+      {
+        panes.map((pane) => (
+          <div class:list={["pane", `pane-${pane.id}`]}>
+            <div class="pane-head">
+              <span class="pane-title">{pane.title}</span>
+            </div>
+            {pane.id === "term" ? (
+              <p class="pane-prompt mono">10 PRINT CHR$(205.5+RND(1)); : GOTO 10</p>
+            ) : (
+              <div class="pane-lines">
+                {pane.lines.map((width) => (
+                  <span class="pane-line" style={`width:${width}%`}></span>
+                ))}
+              </div>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  {caption && <figcaption class="caption mono">{caption}</figcaption>}
+</figure>
+
+<style>
+  .figure {
+    margin: 0;
+    display: grid;
+    gap: var(--space-3);
+    width: min(560px, 100%);
+  }
+
+  .desk {
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--bg-raised);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .desk-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .desk-layout {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .desk-hint {
+    margin-left: auto;
+    font-size: 0.6875rem;
+    color: var(--text-faint);
+    letter-spacing: 0.04em;
+  }
+
+  .desk-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: 1.15fr 0.85fr;
+    gap: 8px;
+    padding: 10px;
+    min-height: 280px;
+    background: var(--surface);
+  }
+
+  .pane {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 8px;
+    min-width: 0;
+    padding: 10px 12px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg-raised);
+  }
+
+  .pane-main {
+    grid-row: 1 / span 2;
+  }
+
+  .pane-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .pane-title {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 450;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+
+  .pane-lines {
+    display: grid;
+    align-content: start;
+    gap: 7px;
+    padding-top: 4px;
+  }
+
+  .pane-line {
+    display: block;
+    height: 5px;
+    border-radius: 1px;
+    background: color-mix(in srgb, var(--text) 18%, transparent);
+  }
+
+  .pane-main .pane-line:nth-child(odd) {
+    background: color-mix(in srgb, var(--accent) 32%, transparent);
+  }
+
+  .pane-prompt {
+    margin: 0;
+    align-self: end;
+    font-size: 0.62rem;
+    line-height: 1.45;
+    color: var(--accent-2);
+    word-break: break-word;
+  }
+
+  .caption {
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--text-faint);
+  }
+
+  @media (max-width: 560px) {
+    .desk-grid {
+      min-height: 220px;
+    }
+  }
+</style>

@@ -194,5 +194,30 @@
   "editionFree": "Zdarma",
   "editionPro": "Pro",
   "proTitle": "SnappyZones Pro",
-  "proBlurb": "Bez účtu SnappyZones — po nákupu licenční klíč. Dva Macy. 14denní zkušební doba v aplikaci."
+  "proBlurb": "Bez účtu SnappyZones — po nákupu licenční klíč. Dva Macy. 14denní zkušební doba v aplikaci.",
+  "lookTitle": "Co opravdu otevíráte",
+  "lookSubtitle": "Čtyři plochy. Zbytek Macu zůstává váš.",
+  "lookHeroCaption": "Rozložení pojmenované Coding.",
+  "look": [
+    {
+      "key": "menu",
+      "title": "Žije v liště nabídek.",
+      "text": "Žádné hlavní okno, které by leželo na ploše. SnappyZones je jedno extra v liště: Přepnutí rozložení, Zone Editor, zálohy, licence a Předvolby. Otevřete, co potřebujete — pak ustoupí a Mac zůstane váš."
+    },
+    {
+      "key": "preferences",
+      "title": "Předvolby jsou jedno okno.",
+      "text": "Vše, co ladíte, je tady: okraj buněk, modifikátory snapu a zkratka na akci. Než schováte ikonu, nahrajte Open Preferences — jinak se nevrátíte. Spuštění po přihlášení i obnovení velikosti jsou v tom samém okně."
+    },
+    {
+      "key": "editor",
+      "title": "Kreslíte na displej.",
+      "text": "Zone Editor je překryv na displeji, ne dokument k založení. Rozdělte, pojmenujte, uložte. Presety jako dva sloupce nebo levá třetina jsou začátek — kreslíte, dokud mřížka nesedí vaší práci."
+    },
+    {
+      "key": "selector",
+      "title": "Mřížku změníte bez objížďky.",
+      "text": "Switch Layout… ukáže schéma každého pojmenovaného rozložení na tomto displeji. Šipky posouvají fokus; Return použije zaostřené rozložení stejně jako klik. Mřížku změníte bez objíždění nabídek a editoru."
+    }
+  ]
 }

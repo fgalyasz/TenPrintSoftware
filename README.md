@@ -3,8 +3,9 @@
 The company site and product catalogue for [tenprintsoftware.com](https://tenprintsoftware.com),
 built with Astro and deployed as a static site on Cloudflare Pages.
 
-The individual product sites (`snappyzones.com`, `sessionguard.net`) stay live and
-independent. This site links to them for downloads and keeps its own marketing copy.
+Product marketing, downloads, and checkout live on this site. `snappyzones.com` and
+`sessionguard.net` redirect here; keep those hostnames only for Sparkle feeds until a
+release points `SUFeedURL` at tenprintsoftware.com.
 
 ## Requirements
 
@@ -64,8 +65,8 @@ public/           Static assets, _headers, _redirects, robots.txt
 2. Create `src/i18n/products/<slug>/en.json` using an existing product as the template,
    then add one file per language.
 3. Add any new pricing perk keys to `src/i18n/ui/en.ts` and every other locale.
-4. Drop the icon into `public/assets/products/` and screenshots into
-   `src/assets/products/<slug>/`.
+4. Drop the icon into `public/assets/products/` and add a CSS product mock
+   (see `ProductVisual.astro` and `ProductLook.astro`) instead of photographic screenshots.
 5. Run `npm run check:i18n` and `npm run build`.
 
 The products page, pricing page, downloads page, navigation dropdown, and sitemap all

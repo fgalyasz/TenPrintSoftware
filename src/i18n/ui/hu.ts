@@ -120,6 +120,10 @@ export const hu: UiDictionary = {
   "product.related.title": "További termékek",
   "product.roadmap.inProgress": "Fejlesztés alatt",
   "product.roadmap.planned": "Tervezett",
+  "product.look.default": "Az alkalmazás",
+  "product.look.title": "Amit tényleg kinyit",
+  "product.look.subtitle":
+    "Néhány felület, naponta. A Mac többi része a tiéd marad.",
 
   "category.windowing": "Ablakkezelés",
   "category.session": "Munkamenet-felügyelet",

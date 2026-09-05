@@ -1,0 +1,111 @@
+---
+const layouts = [
+  { name: "Coding", kind: "coding", current: true },
+  { name: "Writing", kind: "writing", current: false },
+  { name: "Review", kind: "review", current: false },
+];
+---
+
+<div class="plate" aria-hidden="true">
+  <div class="bar">Switch Layout…</div>
+  <div class="cards">
+    {
+      layouts.map((layout) => (
+        <div class:list={["card", layout.current && "card-current"]}>
+          <div class:list={["thumb", `thumb-${layout.kind}`]}>
+            <span></span>
+            <span></span>
+            {layout.kind !== "writing" && <span></span>}
+            {layout.kind === "review" && <span></span>}
+          </div>
+          <span class="name">{layout.name}</span>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .plate {
+    width: min(420px, 100%);
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    background: var(--bg-raised);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .bar {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .card {
+    display: grid;
+    gap: 8px;
+  }
+
+  .thumb {
+    display: grid;
+    gap: 3px;
+    height: 72px;
+    padding: 5px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+  }
+
+  .card-current .thumb {
+    border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+    background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  }
+
+  .thumb span {
+    display: block;
+    min-height: 0;
+    border-radius: 2px;
+    background: color-mix(in srgb, var(--accent) 22%, var(--bg-raised));
+  }
+
+  .card-current .thumb span {
+    background: color-mix(in srgb, var(--accent) 32%, var(--bg-raised));
+  }
+
+  .thumb-coding {
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .thumb-coding span:first-child {
+    grid-row: 1 / span 2;
+  }
+
+  .thumb-writing {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .thumb-review {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .name {
+    font-size: 0.75rem;
+    color: var(--text-faint);
+    text-align: center;
+  }
+
+  .card-current .name {
+    color: var(--text);
+  }
+</style>

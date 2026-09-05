@@ -27,5 +27,23 @@
 /downloads/walkaway/*.dmg
   Cache-Control: public, max-age=86400
 
+/downloads/snappyzones/appcast.xml
+  Cache-Control: public, max-age=300
+
+/downloads/snappyzones/*.zip
+  Cache-Control: public, max-age=86400
+
+/downloads/snappyzones/*.dmg
+  Cache-Control: public, max-age=86400
+
+/downloads/sessionguard/appcast.xml
+  Cache-Control: public, max-age=300
+
+/downloads/sessionguard/*.zip
+  Cache-Control: public, max-age=86400
+
+/downloads/sessionguard/*.dmg
+  Cache-Control: public, max-age=86400
+
 /api/*
   Cache-Control: no-store

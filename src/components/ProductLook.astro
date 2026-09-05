@@ -1,0 +1,122 @@
+---
+import SnappyZonesMenuFigure from "./SnappyZonesMenuFigure.astro";
+import SnappyZonesPreferencesMock from "./SnappyZonesPreferencesMock.astro";
+import SnappyZonesEditorMock from "./SnappyZonesEditorMock.astro";
+import SnappyZonesSelectorMock from "./SnappyZonesSelectorMock.astro";
+import SessionGuardPreferencesMock from "./SessionGuardPreferencesMock.astro";
+import WalkAwayPreferencesMock from "./WalkAwayPreferencesMock.astro";
+import { useTranslations } from "~/i18n";
+import type { Language } from "~/i18n/config";
+import { productCopy } from "~/i18n/products";
+import type { Product } from "~/data/products";
+
+type Props = { product: Product; language: Language };
+
+const { product, language } = Astro.props;
+const t = useTranslations(language);
+const copy = productCopy(product.slug, language);
+const items = copy.look ?? [];
+---
+
+{
+  items.length > 0 && (
+    <section class="section" id="look">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">{t("product.look.default")}</p>
+          <h2 class="title-lg">{copy.lookTitle ?? t("product.look.title")}</h2>
+          <p class="lead">{copy.lookSubtitle ?? t("product.look.subtitle")}</p>
+        </div>
+        <div class="look-list">
+          {items.map((item, index) => (
+            <article class="look-row">
+              <div class="look-copy">
+                <p class="look-index mono">{String(index + 1).padStart(2, "0")}</p>
+                <h3 class="title-sm">{item.title}</h3>
+                <p class="look-text">{item.text}</p>
+              </div>
+              <div class:list={["look-figure", (item.key === "menu" || item.key === "editor") && "look-figure-end"]}>
+                {item.key === "menu" && <SnappyZonesMenuFigure />}
+                {item.key === "editor" && <SnappyZonesEditorMock />}
+                {item.key === "selector" && <SnappyZonesSelectorMock />}
+                {item.key === "preferences" && product.slug === "snappyzones" && <SnappyZonesPreferencesMock />}
+                {item.key === "preferences" && product.slug === "sessionguard" && <SessionGuardPreferencesMock />}
+                {item.key === "preferences" && product.slug === "walkaway" && <WalkAwayPreferencesMock />}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .look-list {
+    border-top: 1px solid var(--border);
+  }
+
+  .look-row {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--space-8);
+    align-items: start;
+    padding: var(--space-7) 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .look-row:nth-child(even) {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  .look-row:nth-child(even) .look-copy {
+    order: 2;
+  }
+
+  .look-copy {
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+    width: 100%;
+  }
+
+  .look-index {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+  }
+
+  .look-text {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9875rem;
+    line-height: 1.65;
+  }
+
+  .look-figure {
+    min-width: 0;
+    min-height: 120px;
+  }
+
+  .look-figure-end {
+    display: grid;
+    justify-items: end;
+  }
+
+  @media (max-width: 800px) {
+    .look-row,
+    .look-row:nth-child(even) .look-copy {
+      grid-template-columns: 1fr;
+      order: 0;
+    }
+
+    .look-row {
+      gap: var(--space-5);
+      padding: var(--space-6) 0;
+    }
+
+    .look-figure-end {
+      justify-items: start;
+    }
+  }
+</style>

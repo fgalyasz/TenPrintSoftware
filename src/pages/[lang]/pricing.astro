@@ -130,7 +130,7 @@ const faq = [1, 2, 3, 4, 5, 6].map((index) => ({
 
   <section class="section section-tight">
     <div class="container">
-      <div class="contact surface-card">
+      <div class="contact">
         <div class="contact-copy">
           <h2 class="title-md">{t("about.contact.title")}</h2>
           <p class="body-muted">{t("about.contact.text")}</p>
@@ -144,20 +144,6 @@ const faq = [1, 2, 3, 4, 5, 6].map((index) => ({
 </BaseLayout>
 
 <style>
-  .page-hero {
-    position: relative;
-    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
-    overflow: hidden;
-  }
-
-  .page-hero-inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    gap: var(--space-4);
-    max-width: 720px;
-  }
-
   .plan-head {
     display: flex;
     align-items: center;
@@ -166,7 +152,7 @@ const faq = [1, 2, 3, 4, 5, 6].map((index) => ({
   }
 
   .plan-head img {
-    border-radius: 11px;
+    border-radius: 9px;
     flex: none;
   }
 
@@ -191,19 +177,16 @@ const faq = [1, 2, 3, 4, 5, 6].map((index) => ({
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: var(--space-5);
-    padding: var(--space-6);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding: var(--space-6) 0;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    background: transparent;
   }
 
   .plan-pro {
-    border-color: color-mix(in srgb, var(--product-accent) 42%, transparent);
-    background: linear-gradient(
-      160deg,
-      color-mix(in srgb, var(--product-accent) 10%, var(--surface)),
-      var(--surface)
-    );
+    border-top-color: color-mix(in srgb, var(--product-accent) 55%, var(--border));
+    background: transparent;
   }
 
   .plan-top {
@@ -220,10 +203,12 @@ const faq = [1, 2, 3, 4, 5, 6].map((index) => ({
   }
 
   .plan-price {
-    font-size: 2.5rem;
-    font-weight: 650;
+    font-family: var(--font-display);
+    font-size: 2.75rem;
+    font-weight: 430;
+    font-optical-sizing: auto;
     letter-spacing: -0.035em;
-    line-height: 1.1;
+    line-height: 1.05;
     display: flex;
     align-items: baseline;
     gap: var(--space-2);
@@ -255,9 +240,9 @@ const faq = [1, 2, 3, 4, 5, 6].map((index) => ({
   }
 
   .plan-perks li::before {
-    content: "✓";
-    color: var(--product-accent-2);
-    font-size: 0.875rem;
+    content: "–";
+    color: var(--text-faint);
+    font-size: 1rem;
   }
 
   .plan-foot {
@@ -273,9 +258,10 @@ const faq = [1, 2, 3, 4, 5, 6].map((index) => ({
   .notices {
     display: grid;
     gap: var(--space-2);
-    padding: var(--space-5);
-    border-radius: var(--radius-md);
-    border: 1px dashed var(--border-strong);
+    padding: var(--space-5) 0;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px dashed var(--border-strong);
   }
 
   .notices p {
@@ -288,7 +274,8 @@ const faq = [1, 2, 3, 4, 5, 6].map((index) => ({
     align-items: center;
     justify-content: space-between;
     gap: var(--space-5);
-    padding: var(--space-6);
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--border);
   }
 
   .contact-copy {

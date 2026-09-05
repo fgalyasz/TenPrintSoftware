@@ -129,10 +129,11 @@ const topics = [
   .contact-form {
     display: grid;
     gap: var(--space-4);
-    padding: var(--space-6);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding: var(--space-6) 0;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    background: transparent;
   }
 
   .hp {
@@ -173,12 +174,13 @@ const topics = [
 
   .input {
     width: 100%;
-    padding: 11px 13px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
-    background: var(--bg-raised);
+    padding: 11px 12px;
+    border-radius: var(--radius-xs);
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
     color: var(--text);
-    font-size: 0.9375rem;
+    font-size: 0.9875rem;
     transition:
       border-color 0.15s var(--ease),
       background 0.15s var(--ease);
@@ -194,8 +196,8 @@ const topics = [
 
   .input:focus {
     outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent);
+    border-color: var(--text);
+    box-shadow: none;
   }
 
   .textarea {

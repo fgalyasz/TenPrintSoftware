@@ -3,43 +3,132 @@
   "headline": "Odídete. Obrazovka sa zamkne. Úlohy bežia ďalej.",
   "summary": "Nenápadná utilita v riadku ponúk, ktorá stráži jedno dôveryhodné Bluetooth zariadenie — zvyčajne Apple Watch alebo iPhone. Keď ostanete preč dlhšie ako krátke oneskorenie, WalkAway zamkne obrazovku. Mac neuspá.",
   "differentiator": "macOS vie odomknúť Apple Watch. Nezamkne, keď odídete. WalkAway túto medzeru vyplní — bez zastavenia encodov, sťahovaní či renderov.",
-  "badges": ["macOS 13+", "Riadok ponúk", "Apple Watch", "Zadarmo"],
+  "badges": [
+    "macOS 13+",
+    "Riadok ponúk",
+    "Apple Watch",
+    "Zadarmo"
+  ],
   "featuresTitle": "Ostro, lokálne, poctivo",
   "featuresSubtitle": "Jeden prepínač. Jedno dôveryhodné zariadenie. Zamknúť obrazovku, nie stroj.",
   "features": [
-    {"tier": "free", "title": "Zámok, nie spánok", "text": "Objaví sa zámok obrazovky. CPU a procesy bežia. WalkAway nikdy nevolá spánok."},
-    {"tier": "free", "title": "Jedno dôveryhodné BLE zariadenie", "text": "Vyberte Apple Watch alebo iPhone — alebo akékoľvek iné Bluetooth zariadenie zo zoznamu. WalkAway meria RSSI voči prahu, ktorý nastavíte."},
-    {"tier": "free", "title": "Oneskorenie preč, jeden zámok", "text": "Neprítomnosť musí trvať oneskorenie (predvolene 8 s). Jeden zámok na absenciu. Návrat uvoľní západku."},
-    {"tier": "free", "title": "Arm a Disarm", "text": "Armed vyhodnocuje prítomnosť. Disarmed nikdy nezamkne odídením. Lock Now funguje vždy."},
-    {"tier": "free", "title": "Žiadne auto-odomknutie", "text": "WalkAway heslo nepíše. Návrat používa systémové odomknutie: Watch, Touch ID alebo heslo."},
-    {"tier": "free", "title": "Šetrné k súkromiu", "text": "Žiadne účty, žiadne sledovanie, heslo sa neukladá. Bluetooth slúži len na meranie zariadenia."}
+    {
+      "tier": "free",
+      "title": "Zámok, nie spánok",
+      "text": "Objaví sa zámok obrazovky. CPU a procesy bežia. WalkAway nikdy nevolá spánok."
+    },
+    {
+      "tier": "free",
+      "title": "Jedno dôveryhodné BLE zariadenie",
+      "text": "Vyberte Apple Watch alebo iPhone — alebo akékoľvek iné Bluetooth zariadenie zo zoznamu. WalkAway meria RSSI voči prahu, ktorý nastavíte."
+    },
+    {
+      "tier": "free",
+      "title": "Oneskorenie preč, jeden zámok",
+      "text": "Neprítomnosť musí trvať oneskorenie (predvolene 8 s). Jeden zámok na absenciu. Návrat uvoľní západku."
+    },
+    {
+      "tier": "free",
+      "title": "Arm a Disarm",
+      "text": "Armed vyhodnocuje prítomnosť. Disarmed nikdy nezamkne odídením. Lock Now funguje vždy."
+    },
+    {
+      "tier": "free",
+      "title": "Žiadne auto-odomknutie",
+      "text": "WalkAway heslo nepíše. Návrat používa systémové odomknutie: Watch, Touch ID alebo heslo."
+    },
+    {
+      "tier": "free",
+      "title": "Šetrné k súkromiu",
+      "text": "Žiadne účty, žiadne sledovanie, heslo sa neukladá. Bluetooth slúži len na meranie zariadenia."
+    }
   ],
   "howTitle": "Ako to funguje",
   "howSubtitle": "Prítomnosť dnu, zámok von. Úlohy sa nezastavia.",
   "how": [
-    {"title": "Vyberte zariadenie", "text": "Otvorte Preferences a zvoľte Apple Watch — alebo akékoľvek iné Bluetooth zariadenie zo zoznamu. Armed sa zapne samo."},
-    {"title": "Odídite", "text": "Keď signál ostane slabší ako prah po oneskorenie, WalkAway raz zamkne."},
-    {"title": "Vráťte sa", "text": "Odomknite Watch alebo Touch ID — to je macOS, nie WalkAway. Ďalší odchod môže znova zamknúť."}
+    {
+      "title": "Vyberte zariadenie",
+      "text": "Otvorte Preferences a zvoľte Apple Watch — alebo akékoľvek iné Bluetooth zariadenie zo zoznamu. Armed sa zapne samo."
+    },
+    {
+      "title": "Odídite",
+      "text": "Keď signál ostane slabší ako prah po oneskorenie, WalkAway raz zamkne."
+    },
+    {
+      "title": "Vráťte sa",
+      "text": "Odomknite Watch alebo Touch ID — to je macOS, nie WalkAway. Ďalší odchod môže znova zamknúť."
+    }
   ],
   "quickStartTitle": "Rýchly štart",
   "quickStartSubtitle": "Od inštalácie k ostrému zámku za pár minút.",
   "quickStart": [
-    {"title": "Inštalácia", "text": "Stiahnite DMG, pretiahnite WalkAway do Applications a otvorte ho."},
-    {"title": "Povoliť Bluetooth", "text": "macOS požiada o Bluetooth. Povoľte ho, aby WalkAway videl Watch."},
-    {"title": "Vyberte Watch", "text": "Otvorte Preferences, vyberte zariadenie, podľa potreby nastavte oneskorenie. Armed je zapnuté."},
-    {"title": "Raz odídite", "text": "Opustite stôl. Po oneskorení je zámok hore. ffmpeg stále beží."}
+    {
+      "title": "Inštalácia",
+      "text": "Stiahnite DMG, pretiahnite WalkAway do Applications a otvorte ho."
+    },
+    {
+      "title": "Povoliť Bluetooth",
+      "text": "macOS požiada o Bluetooth. Povoľte ho, aby WalkAway videl Watch."
+    },
+    {
+      "title": "Vyberte Watch",
+      "text": "Otvorte Preferences, vyberte zariadenie, podľa potreby nastavte oneskorenie. Armed je zapnuté."
+    },
+    {
+      "title": "Raz odídite",
+      "text": "Opustite stôl. Po oneskorení je zámok hore. ffmpeg stále beží."
+    }
   ],
   "faq": [
-    {"question": "Usíľa WalkAway Mac?", "answer": "Nie. Zamkne obrazovku. Buildy, sťahovania a rendery bežia ďalej."},
-    {"question": "Odomkne, keď sa vrátim?", "answer": "Nie. Odomknutie je systémové: Apple Watch, Touch ID alebo heslo. WalkAway heslo nikdy neukladá."},
-    {"question": "Prečo Apple Watch namiesto iPhonu?", "answer": "BLE adresy iPhonu sa môžu meniť. Apple Watch je spoľahlivá voľba. Akékoľvek Bluetooth zariadenie v zozname Preferences možno vybrať."},
-    {"question": "Funguje to aj s iným Bluetooth zariadením?", "answer": "Áno. Slúchadlá, prívesok, iný telefón — čo sa v zozname objaví, to môžete zvoliť. Watch a iPhone sú obvyklé odporúčanie."},
-    {"question": "Prečo prvý zámok žiada System Events?", "answer": "WalkAway zamyká cez System Events. macOS sa spýta raz. WalkAway nezapisuje do TCC.db a neprepína za vás prepínače Súkromie."},
-    {"question": "Zbierate údaje?", "answer": "Nie. Žiadne účty, žiadne sledovanie. Nastavenia sú v miestnom JSON súbore."},
-    {"question": "Čím sa líši od SessionGuard?", "answer": "SessionGuard drží reláciu hore. WalkAway zamkne, keď odídete. Rovnaký katalóg, opačná práca."},
-    {"question": "Ako aktualizujem?", "answer": "Použite Check for Updates… v ponuke WalkAway. Prvá inštalácia ostáva DMG z tejto stránky."}
+    {
+      "question": "Usíľa WalkAway Mac?",
+      "answer": "Nie. Zamkne obrazovku. Buildy, sťahovania a rendery bežia ďalej."
+    },
+    {
+      "question": "Odomkne, keď sa vrátim?",
+      "answer": "Nie. Odomknutie je systémové: Apple Watch, Touch ID alebo heslo. WalkAway heslo nikdy neukladá."
+    },
+    {
+      "question": "Prečo Apple Watch namiesto iPhonu?",
+      "answer": "BLE adresy iPhonu sa môžu meniť. Apple Watch je spoľahlivá voľba. Akékoľvek Bluetooth zariadenie v zozname Preferences možno vybrať."
+    },
+    {
+      "question": "Funguje to aj s iným Bluetooth zariadením?",
+      "answer": "Áno. Slúchadlá, prívesok, iný telefón — čo sa v zozname objaví, to môžete zvoliť. Watch a iPhone sú obvyklé odporúčanie."
+    },
+    {
+      "question": "Prečo prvý zámok žiada System Events?",
+      "answer": "WalkAway zamyká cez System Events. macOS sa spýta raz. WalkAway nezapisuje do TCC.db a neprepína za vás prepínače Súkromie."
+    },
+    {
+      "question": "Zbierate údaje?",
+      "answer": "Nie. Žiadne účty, žiadne sledovanie. Nastavenia sú v miestnom JSON súbore."
+    },
+    {
+      "question": "Čím sa líši od SessionGuard?",
+      "answer": "SessionGuard drží reláciu hore. WalkAway zamkne, keď odídete. Rovnaký katalóg, opačná práca."
+    },
+    {
+      "question": "Ako aktualizujem?",
+      "answer": "Použite Check for Updates… v ponuke WalkAway. Prvá inštalácia ostáva DMG z tejto stránky."
+    }
   ],
   "installTitle": "Inštalácia",
-  "install": ["Stiahnuť DMG", "Pretiahnuť WalkAway do Applications", "Otvoriť WalkAway", "Povoliť Bluetooth, vybrať Watch v Preferences"],
-  "downloadNotice": "Zadarmo — aj pre firmy."
+  "install": [
+    "Stiahnuť DMG",
+    "Pretiahnuť WalkAway do Applications",
+    "Otvoriť WalkAway",
+    "Povoliť Bluetooth, vybrať Watch v Preferences"
+  ],
+  "downloadNotice": "Zadarmo — aj pre firmy.",
+  "lookTitle": "Armed, alebo nie",
+  "lookSubtitle": "Ponuka je celá aplikácia. Predvoľby sú zariadenie a oneskorenie.",
+  "lookHeroCaption": "Armed. Jedno dôveryhodné zariadenie.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Jedno zariadenie, jedno oneskorenie.",
+      "text": "Vyberte Watch alebo telefón, nastavte, čo je ďaleko, a ako dlho čakať. WalkAway heslo nikdy neukladá."
+    }
+  ]
 }

@@ -112,5 +112,15 @@
     "SessionGuard öffnen",
     "Bedienungshilfen auf Nachfrage erlauben, dann eine Sitzung starten"
   ],
-  "downloadNotice": "Kostenlos nutzbar — auch für Unternehmen."
+  "downloadNotice": "Kostenlos nutzbar — auch für Unternehmen.",
+  "lookTitle": "Ein Extra, zwei Zahlen",
+  "lookSubtitle": "Das Menü startet eine Sitzung. Einstellungen sind nur Idle und Interval.",
+  "lookHeroCaption": "Eine zeitlich begrenzte Sitzung, auf halbem Weg.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Zwei Zahlen, dann Start.",
+      "text": "Idle Threshold und Jiggle Interval. Guard bleibt Inactive, bis Sie eine Sitzung starten — auch nach dem Login."
+    }
+  ]
 }

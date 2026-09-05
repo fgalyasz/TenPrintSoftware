@@ -41,7 +41,7 @@ const products = sortedProducts();
 
   <section class="section section-tight">
     <div class="container">
-      <div class="more surface-card">
+      <div class="more">
         <div class="more-copy">
           <h2 class="title-md">{t("products.more.title")}</h2>
           <p class="body-muted">{t("products.more.text")}</p>
@@ -55,24 +55,10 @@ const products = sortedProducts();
 </BaseLayout>
 
 <style>
-  .page-hero {
-    position: relative;
-    padding-block: clamp(56px, 7vw, 92px) var(--space-6);
-    overflow: hidden;
-  }
-
-  .page-hero-inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    gap: var(--space-4);
-    max-width: 720px;
-  }
-
   .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--space-5);
+    gap: 0;
+    border-bottom: 1px solid var(--border);
   }
 
   .more {
@@ -81,7 +67,8 @@ const products = sortedProducts();
     align-items: center;
     justify-content: space-between;
     gap: var(--space-5);
-    padding: var(--space-6);
+    padding: var(--space-6) 0;
+    border-top: 1px solid var(--border);
   }
 
   .more-copy {

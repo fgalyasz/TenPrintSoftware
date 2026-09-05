@@ -36,7 +36,7 @@ const principles = [
   description={t("home.meta.description")}
 >
   <section class="hero">
-    <MazeBackdrop variant="hero" cell={34} />
+    <MazeBackdrop variant="hero" cell={36} />
     <div class="container hero-inner">
       <p class="eyebrow">{t("home.hero.eyebrow")}</p>
       <h1 class="title-xl hero-title">{t("home.hero.title")}</h1>
@@ -44,15 +44,12 @@ const principles = [
 
       <div class="hero-actions">
         <Button href={localePath(language, "products")} size="lg">{t("cta.explore")}</Button>
-        <Button href={localePath(language, "downloads")} variant="secondary" size="lg">
-          {t("cta.download")}
+        <Button href={localePath(language, "pricing")} variant="secondary" size="lg">
+          {t("nav.pricing")}
         </Button>
       </div>
 
-      <ul class="hero-badges">
-        {badges.map((badge) => <li class="hero-badge">{badge}</li>)}
-      </ul>
-
+      <p class="hero-meta">{badges.join("  ·  ")}</p>
       <p class="small hero-note">{t("home.hero.note")}</p>
     </div>
   </section>
@@ -83,9 +80,11 @@ const principles = [
         {
           principles.map((principle, index) => (
             <article class="principle">
-              <span class="principle-index mono">{String(index + 1).padStart(2, "0")}</span>
-              <h3 class="title-sm">{principle.title}</h3>
-              <p class="principle-text">{principle.text}</p>
+              <span class="principle-index">{String(index + 1).padStart(2, "0")}</span>
+              <div class="principle-body">
+                <h3 class="title-sm">{principle.title}</h3>
+                <p class="principle-text">{principle.text}</p>
+              </div>
             </article>
           ))
         }
@@ -97,22 +96,22 @@ const principles = [
     <div class="container origin-grid">
       <div class="origin-copy">
         <p class="eyebrow">{t("home.origin.eyebrow")}</p>
-        <h2 class="title-lg origin-title mono">{t("home.origin.title")}</h2>
+        <h2 class="title-lg origin-title">{t("home.origin.title")}</h2>
         <p class="lead">{t("home.origin.text")}</p>
         <p class="small body-muted">{t("home.origin.caption")}</p>
       </div>
 
       <div class="origin-panel">
-        <MazeBackdrop variant="band" cell={26} />
+        <MazeBackdrop variant="band" cell={28} />
         <pre class="origin-code mono"><code>10 PRINT CHR$(205.5+RND(1));
 20 GOTO 10</code></pre>
       </div>
     </div>
   </section>
 
-  <section class="section cta">
+  <section class="cta">
+    <MazeBackdrop variant="band" cell={32} />
     <div class="container cta-inner">
-      <MazeBackdrop variant="band" cell={30} class="cta-maze" />
       <div class="cta-copy">
         <h2 class="title-lg">{t("home.cta.title")}</h2>
         <p class="lead">{t("home.cta.subtitle")}</p>
@@ -130,38 +129,25 @@ const principles = [
 <style>
   .hero {
     position: relative;
-    padding-block: clamp(72px, 9vw, 132px) clamp(56px, 7vw, 96px);
+    padding-block: clamp(88px, 11vw, 148px) clamp(72px, 8vw, 112px);
     overflow: hidden;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: -30% -10% 40% 20%;
-    background: radial-gradient(
-      closest-side,
-      color-mix(in srgb, var(--brand) 20%, transparent),
-      transparent
-    );
-    pointer-events: none;
-    z-index: 0;
   }
 
   .hero-inner {
     position: relative;
     z-index: 1;
-    max-width: 860px;
+    max-width: 42rem;
     display: grid;
     gap: var(--space-5);
     justify-items: start;
   }
 
   .hero-title {
-    max-width: 16ch;
+    max-width: 14ch;
   }
 
   .hero-lead {
-    max-width: 58ch;
+    max-width: 54ch;
   }
 
   .hero-actions {
@@ -171,66 +157,72 @@ const principles = [
     margin-top: var(--space-2);
   }
 
-  .hero-badges {
-    list-style: none;
-    margin: var(--space-3) 0 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-  }
-
-  .hero-badge {
+  .hero-meta {
+    margin: var(--space-2) 0 0;
     font-size: 0.8125rem;
-    padding: 6px 13px;
-    border-radius: var(--radius-pill);
-    border: 1px solid var(--border);
-    background: var(--surface);
-    color: var(--text-muted);
+    letter-spacing: 0.02em;
+    color: var(--text-faint);
   }
 
   .hero-note {
     color: var(--text-faint);
-    max-width: 62ch;
+    max-width: 58ch;
   }
 
   .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--space-5);
+    gap: 0;
+    border-bottom: 1px solid var(--border);
   }
 
   .principles {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
-    gap: var(--space-4);
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--border);
   }
 
   .principle {
     display: grid;
-    gap: var(--space-3);
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--space-5);
     align-content: start;
-    padding: var(--space-5);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    padding: var(--space-6) 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .principle:nth-child(odd) {
+    padding-right: var(--space-7);
+    border-right: 1px solid var(--border);
+  }
+
+  .principle:nth-child(even) {
+    padding-left: var(--space-7);
   }
 
   .principle-index {
-    font-size: 0.75rem;
-    color: var(--brand-2);
-    letter-spacing: 0.08em;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    letter-spacing: -0.04em;
+    color: var(--text-faint);
+    line-height: 1;
+  }
+
+  .principle-body {
+    display: grid;
+    gap: var(--space-3);
   }
 
   .principle-text {
     color: var(--text-muted);
-    font-size: 0.9375rem;
+    font-size: 0.9875rem;
     line-height: 1.7;
   }
 
   .origin-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
     gap: var(--space-8);
     align-items: center;
   }
@@ -241,13 +233,15 @@ const principles = [
   }
 
   .origin-title {
-    letter-spacing: 0.02em;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    letter-spacing: 0.04em;
   }
 
   .origin-panel {
     position: relative;
-    min-height: 300px;
-    border-radius: var(--radius-lg);
+    min-height: 320px;
+    border-radius: 0;
     border: 1px solid var(--border);
     background: var(--bg-raised);
     overflow: hidden;
@@ -260,52 +254,56 @@ const principles = [
     position: relative;
     z-index: 1;
     margin: 0;
-    padding: var(--space-4) var(--space-5);
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border-strong);
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(6px);
+    padding: var(--space-4) 0;
+    border: 0;
+    border-block: 1px solid var(--border-strong);
+    background: transparent;
     font-size: 0.8125rem;
-    line-height: 1.8;
-    color: var(--brand-2);
+    line-height: 1.85;
+    color: var(--text);
     white-space: pre;
     overflow-x: auto;
   }
 
+  .cta {
+    position: relative;
+    overflow: hidden;
+    border-block: 1px solid var(--border);
+    padding-block: var(--space-9);
+  }
+
   .cta-inner {
     position: relative;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: var(--space-6);
-    padding: var(--space-8);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--surface);
-    overflow: hidden;
   }
 
   .cta-copy {
-    position: relative;
-    z-index: 1;
     display: grid;
     gap: var(--space-3);
-    max-width: 46ch;
+    max-width: 42ch;
   }
 
   .cta-actions {
-    position: relative;
-    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-3);
   }
 
   @media (max-width: 880px) {
-    .origin-grid {
+    .origin-grid,
+    .principles {
       grid-template-columns: 1fr;
-      gap: var(--space-6);
+    }
+
+    .principle:nth-child(odd),
+    .principle:nth-child(even) {
+      padding-inline: 0;
+      border-right: 0;
     }
   }
 </style>

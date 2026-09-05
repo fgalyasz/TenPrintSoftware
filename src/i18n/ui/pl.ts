@@ -120,6 +120,10 @@ export const pl: UiDictionary = {
   "product.related.title": "Inne produkty",
   "product.roadmap.inProgress": "W trakcie prac",
   "product.roadmap.planned": "Zaplanowane",
+  "product.look.default": "W aplikacji",
+  "product.look.title": "To, co naprawdę otwierasz",
+  "product.look.subtitle":
+    "Kilka powierzchni, codziennie. Reszta Maca zostaje twoja.",
 
   "category.windowing": "Zarządzanie oknami",
   "category.session": "Kontrola sesji",

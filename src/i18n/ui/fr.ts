@@ -120,6 +120,10 @@ export const fr: UiDictionary = {
   "product.related.title": "Autres produits",
   "product.roadmap.inProgress": "En développement",
   "product.roadmap.planned": "Prévu",
+  "product.look.default": "Dans l'app",
+  "product.look.title": "Ce que vous ouvrez vraiment",
+  "product.look.subtitle":
+    "Quelques surfaces, tous les jours. Le reste du Mac vous reste.",
 
   "category.windowing": "Gestion des fenêtres",
   "category.session": "Contrôle de session",

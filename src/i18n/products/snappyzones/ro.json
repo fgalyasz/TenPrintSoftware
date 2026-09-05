@@ -194,5 +194,30 @@
   "editionFree": "Gratuit",
   "editionPro": "Pro",
   "proTitle": "SnappyZones Pro",
-  "proBlurb": "Fără cont SnappyZones — o cheie după plată. Două Mac-uri. Probă 14 zile în aplicație."
+  "proBlurb": "Fără cont SnappyZones — o cheie după plată. Două Mac-uri. Probă 14 zile în aplicație.",
+  "lookTitle": "Ce deschizi cu adevărat",
+  "lookSubtitle": "Patru suprafețe. Restul Mac-ului rămâne al tău.",
+  "lookHeroCaption": "Un aranjament numit Coding.",
+  "look": [
+    {
+      "key": "menu",
+      "title": "Trăiește în bara de meniu.",
+      "text": "Nu există fereastră principală de parcat pe desktop. SnappyZones e un extra în bara de meniu: Schimbă aranjamentul, Zone Editor, backup-uri, licență și Preferințe. Deschizi ce trebuie — apoi se dă la o parte și lasă Mac-ul ție."
+    },
+    {
+      "key": "preferences",
+      "title": "Preferințele sunt o fereastră.",
+      "text": "Tot ce reglezi stă aici: marginea celulei, modificatori de snap și o scurtătură pe acțiune. Înregistrează Open Preferences înainte să ascunzi iconița, altfel nu te mai întorci. Lansarea la autentificare și restaurarea dimensiunii sunt în aceeași fereastră."
+    },
+    {
+      "key": "editor",
+      "title": "Desenezi pe ecran.",
+      "text": "Zone Editor e o suprapunere pe ecran, nu un document de pus la dosar. Tai, numești, salvezi. Presetări ca două coloane sau treimea stângă sunt un start — desenezi până grila se potrivește muncii tale."
+    },
+    {
+      "key": "selector",
+      "title": "Schimbi grila fără ocol.",
+      "text": "Switch Layout… arată schema fiecărui aranjament numit de pe acest ecran. Săgețile mută focusul; Return aplică aranjamentul focalizat, ca un clic. Schimbi grila fără să treci prin meniuri sau editor."
+    }
+  ]
 }

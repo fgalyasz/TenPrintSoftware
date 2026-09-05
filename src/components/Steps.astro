@@ -28,49 +28,67 @@ const { steps, variant = "numbered", labels = [] } = Astro.props;
     margin: 0;
     padding: 0;
     display: grid;
-    gap: var(--space-4);
+    gap: 0;
+    border-top: 1px solid var(--border);
   }
 
-  .steps-numbered {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-
+  .steps-numbered,
   .steps-roadmap {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .step {
     display: grid;
-    gap: var(--space-3);
-    align-content: start;
-    padding: var(--space-5);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border);
-    background: var(--surface);
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    gap: var(--space-5);
+    align-items: start;
+    padding: var(--space-6) 0;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+  }
+
+  .steps-roadmap .step {
+    grid-template-columns: minmax(12.5rem, 0.34fr) minmax(0, 1fr);
+    gap: var(--space-6);
   }
 
   .step-marker {
+    min-width: 0;
+    max-width: 100%;
     justify-self: start;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    padding: 4px 10px;
-    border-radius: var(--radius-pill);
-    color: var(--accent-2);
-    background: color-mix(in srgb, var(--accent) 14%, transparent);
-    border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent);
-    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 430;
+    font-optical-sizing: auto;
+    letter-spacing: -0.03em;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    color: var(--text-faint);
+    background: none;
+    text-transform: none;
+    line-height: 1.15;
+    overflow-wrap: break-word;
   }
 
   .step-body {
     display: grid;
     gap: var(--space-2);
+    min-width: 0;
   }
 
   .step-text {
     color: var(--text-muted);
     font-size: 0.9375rem;
     line-height: 1.65;
+  }
+
+  @media (max-width: 640px) {
+    .steps-roadmap .step {
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+    }
   }
 </style>

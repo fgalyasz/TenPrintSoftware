@@ -10,6 +10,7 @@ const { product, language, compact = false } = Astro.props;
 const t = useTranslations(language);
 const copy = productCopy(product.slug, language);
 const modelKey = product.model === "free" ? "product.badge.free" : "product.badge.freemium";
+const proTier = product.tiers.find((tier) => tier.kind === "pro");
 ---
 
 <a
@@ -17,22 +18,25 @@ const modelKey = product.model === "free" ? "product.badge.free" : "product.badg
   href={localePath(language, `products/${product.slug}`)}
   style={productStyle(product)}
 >
-  <span class="product-glow" aria-hidden="true"></span>
-
   <span class="product-head">
-    <img class="product-icon" src={product.iconUrl} alt="" width="52" height="52" loading="lazy" />
+    <img class="product-icon" src={product.iconUrl} alt="" width="48" height="48" loading="lazy" />
     <span class="product-titles">
       <span class="product-name">{product.name}</span>
       <span class="product-tagline">{copy.tagline}</span>
+    </span>
+    <span class="product-price mono">
+      {proTier ? proTier.price : t("product.pricing.free.price")}
     </span>
   </span>
 
   {!compact && <span class="product-summary">{copy.summary}</span>}
 
   <span class="product-meta">
-    <span class="product-chip product-chip-accent">{t(modelKey)}</span>
-    <span class="product-chip">{t(product.categoryKey)}</span>
-    <span class="product-chip mono">v{product.version}</span>
+    <span>{t(modelKey)}</span>
+    <span aria-hidden="true">·</span>
+    <span>{t(product.categoryKey)}</span>
+    <span aria-hidden="true">·</span>
+    <span class="mono">v{product.version}</span>
   </span>
 
   <span class="product-action">
@@ -42,9 +46,9 @@ const modelKey = product.model === "free" ? "product.badge.free" : "product.badg
         d="M3 7h8M7.5 3.5L11 7l-3.5 3.5"
         fill="none"
         stroke="currentColor"
-        stroke-width="1.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"></path>
+        stroke-width="1.4"
+        stroke-linecap="square"
+        stroke-linejoin="miter"></path>
     </svg>
   </span>
 </a>
@@ -55,51 +59,29 @@ const modelKey = product.model === "free" ? "product.badge.free" : "product.badg
     display: grid;
     gap: var(--space-4);
     align-content: start;
-    padding: var(--space-6);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border);
-    background: var(--surface);
-    overflow: hidden;
+    padding: var(--space-6) 0;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+    background: transparent;
     isolation: isolate;
-    transition:
-      border-color 0.2s var(--ease),
-      transform 0.2s var(--ease),
-      background 0.2s var(--ease);
+    transition: border-color 0.2s var(--ease);
   }
 
   .product-card:hover {
-    border-color: color-mix(in srgb, var(--product-accent) 45%, var(--border));
-    background: var(--surface-strong);
-    transform: translateY(-3px);
-  }
-
-  .product-glow {
-    position: absolute;
-    inset: -40% 40% 60% -20%;
-    background: radial-gradient(
-      closest-side,
-      color-mix(in srgb, var(--product-accent) 30%, transparent),
-      transparent
-    );
-    opacity: 0.55;
-    z-index: -1;
-    transition: opacity 0.25s var(--ease);
-  }
-
-  .product-card:hover .product-glow {
-    opacity: 0.9;
+    border-top-color: color-mix(in srgb, var(--product-accent) 55%, var(--border));
   }
 
   .product-head {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: var(--space-4);
   }
 
   .product-icon {
-    border-radius: 13px;
+    border-radius: 9px;
     flex: none;
-    box-shadow: var(--shadow-sm);
   }
 
   .product-titles {
@@ -109,9 +91,12 @@ const modelKey = product.model === "free" ? "product.badge.free" : "product.badg
   }
 
   .product-name {
-    font-size: 1.1875rem;
-    font-weight: 620;
-    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 450;
+    font-optical-sizing: auto;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
   }
 
   .product-tagline {
@@ -119,31 +104,25 @@ const modelKey = product.model === "free" ? "product.badge.free" : "product.badg
     color: var(--text-faint);
   }
 
+  .product-price {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+
   .product-summary {
     color: var(--text-muted);
-    font-size: 0.9375rem;
+    font-size: 0.9875rem;
     line-height: 1.65;
+    max-width: 62ch;
   }
 
   .product-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-2);
-  }
-
-  .product-chip {
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border-radius: var(--radius-pill);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    background: var(--bg-raised);
-  }
-
-  .product-chip-accent {
-    border-color: color-mix(in srgb, var(--product-accent) 40%, transparent);
-    color: var(--product-accent-2);
-    background: color-mix(in srgb, var(--product-accent) 12%, transparent);
+    gap: 0.45em;
+    font-size: 0.8125rem;
+    color: var(--text-faint);
   }
 
   .product-action {
@@ -151,8 +130,8 @@ const modelKey = product.model === "free" ? "product.badge.free" : "product.badg
     align-items: center;
     gap: 6px;
     font-size: 0.9375rem;
-    font-weight: 560;
-    color: var(--product-accent-2);
+    font-weight: 600;
+    color: var(--text);
   }
 
   .product-action svg {
@@ -164,7 +143,17 @@ const modelKey = product.model === "free" ? "product.badge.free" : "product.badg
   }
 
   .product-card-compact {
-    padding: var(--space-5);
+    padding: var(--space-5) 0;
     gap: var(--space-3);
+  }
+
+  @media (max-width: 560px) {
+    .product-head {
+      grid-template-columns: auto 1fr;
+    }
+
+    .product-price {
+      grid-column: 2;
+    }
   }
 </style>

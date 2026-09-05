@@ -42,19 +42,18 @@ const schema = {
 <style>
   .faq {
     display: grid;
-    gap: var(--space-2);
+    border-top: 1px solid var(--border);
   }
 
   .faq-item {
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    background: var(--surface);
-    transition: border-color 0.2s var(--ease);
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    background: transparent;
   }
 
   .faq-item[open] {
-    border-color: var(--border-strong);
-    background: var(--surface-strong);
+    background: transparent;
   }
 
   .faq-question {
@@ -62,10 +61,11 @@ const schema = {
     align-items: center;
     justify-content: space-between;
     gap: var(--space-4);
-    padding: var(--space-4) var(--space-5);
+    padding: var(--space-5) 0;
     cursor: pointer;
-    font-weight: 560;
-    font-size: 0.9875rem;
+    font-weight: 580;
+    font-size: 1.0625rem;
+    letter-spacing: -0.015em;
     list-style: none;
   }
 
@@ -85,9 +85,9 @@ const schema = {
   }
 
   .faq-answer {
-    padding: 0 var(--space-5) var(--space-5);
+    padding: 0 0 var(--space-5);
     color: var(--text-muted);
-    font-size: 0.9375rem;
+    font-size: 0.9875rem;
     line-height: 1.7;
     max-width: 76ch;
   }

@@ -112,5 +112,15 @@
     "Deschide SessionGuard",
     "Acordă Accesibilitatea când ți se cere, apoi pornește o sesiune"
   ],
-  "downloadNotice": "Se poate folosi gratuit — inclusiv în companii."
+  "downloadNotice": "Se poate folosi gratuit — inclusiv în companii.",
+  "lookTitle": "Un extra, două numere",
+  "lookSubtitle": "Meniul pornește o sesiune. Preferințele sunt doar idle și interval.",
+  "lookHeroCaption": "O sesiune cronometrată, la jumătate.",
+  "look": [
+    {
+      "key": "preferences",
+      "title": "Două numere, apoi Start.",
+      "text": "Idle Threshold și Jiggle Interval. Guard rămâne Inactive până pornești o sesiune — inclusiv după login."
+    }
+  ]
 }
