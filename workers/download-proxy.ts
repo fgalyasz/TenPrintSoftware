@@ -18,12 +18,24 @@ async function recordIfDownload(env: Env, pathname: string): Promise<void> {
   await incrementDownload(env.DOWNLOAD_STATS, hit, utcDay());
 }
 
+function originHeaders(request: Request): Headers {
+  const headers = new Headers();
+  const range = request.headers.get("Range");
+  if (range !== null) headers.set("Range", range);
+  return headers;
+}
+
+function originInit(request: Request): RequestInit {
+  return { method: request.method, headers: originHeaders(request) };
+}
+
 export default {
   async fetch(request: Request, env: Env, _context: ExecutionContext): Promise<Response> {
     const pathname = new URL(request.url).pathname;
     if (request.method === "GET") {
       await recordIfDownload(env, pathname);
     }
-    return fetch(originUrl(request, env.ORIGIN ?? "tenprint-software.pages.dev"), request);
+    const origin = originUrl(request, env.ORIGIN ?? "tenprint-software.pages.dev");
+    return fetch(origin, originInit(request));
   },
 };

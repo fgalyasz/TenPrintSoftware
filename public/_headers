@@ -19,6 +19,7 @@
   Cache-Control: public, max-age=3600
 
 /downloads/walkaway/appcast.xml
+  Content-Type: application/rss+xml
   Cache-Control: public, max-age=300
 
 /downloads/walkaway/*.zip
@@ -28,6 +29,7 @@
   Cache-Control: public, max-age=86400
 
 /downloads/snappyzones/appcast.xml
+  Content-Type: application/rss+xml
   Cache-Control: public, max-age=300
 
 /downloads/snappyzones/*.zip
@@ -37,6 +39,7 @@
   Cache-Control: public, max-age=86400
 
 /downloads/sessionguard/appcast.xml
+  Content-Type: application/rss+xml
   Cache-Control: public, max-age=300
 
 /downloads/sessionguard/*.zip
