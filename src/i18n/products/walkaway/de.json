@@ -68,7 +68,7 @@
     },
     {
       "title": "Berechtigungen erlauben",
-      "text": "Beim ersten Start fragt macOS nach Bluetooth und System Events. Erlauben Sie beides, damit WalkAway Ihre Watch sieht und später ohne weiteren Dialog sperrt."
+      "text": "Beim ersten Start fragt macOS nach Bluetooth. Erlauben Sie es, damit WalkAway Ihre Watch sieht."
     },
     {
       "title": "Watch wählen",
@@ -97,8 +97,8 @@
       "answer": "Ja. Kopfhörer, Anhänger, ein anderes Handy — was in der Liste steht, kann das vertrauenswürdige Gerät sein. Watch und iPhone sind die übliche Empfehlung."
     },
     {
-      "question": "Warum fragt WalkAway beim Start nach System Events?",
-      "answer": "WalkAway sperrt über System Events. macOS fragt beim ersten Start, damit die erste echte Sperre kein Berechtigungsdialog ist. WalkAway schreibt nicht in TCC.db und schaltet Privacy-Schalter nicht für Sie."
+      "question": "Welche Berechtigungen braucht WalkAway?",
+      "answer": "Bluetooth, damit es Ihre Watch oder Ihr iPhone sieht. Lock Now und das Weggehen sperren den Bildschirm direkt. WalkAway schreibt nicht in TCC.db und schaltet Privacy-Schalter nicht für Sie."
     },
     {
       "question": "Werden Daten gesammelt?",
@@ -118,7 +118,7 @@
     "DMG herunterladen",
     "WalkAway nach Applications ziehen",
     "WalkAway öffnen",
-    "Bluetooth und System Events erlauben, Watch in Preferences wählen"
+    "Bluetooth erlauben, Watch in Preferences wählen"
   ],
   "downloadNotice": "Kostenlos — auch für Unternehmen.",
   "lookTitle": "Armed oder nicht",

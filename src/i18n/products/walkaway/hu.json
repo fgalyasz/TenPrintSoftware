@@ -68,7 +68,7 @@
     },
     {
       "title": "Engedélyek",
-      "text": "Az első indításkor a macOS Bluetoothot és System Events-t kér. Engedélyezd mindkettőt, hogy a WalkAway lássa a Watchot, és a zároláskor ne jöjjön újabb ablak."
+      "text": "Az első indításkor a macOS Bluetoothot kér. Engedélyezd, hogy a WalkAway lássa a Watchot."
     },
     {
       "title": "Válaszd a Watchot",
@@ -97,8 +97,8 @@
       "answer": "Igen. Fülhallgató, kulcstartó, egy másik telefon — ha megjelenik a listában, az is lehet a megbízható. A Watch és az iPhone a szokásos ajánlás."
     },
     {
-      "question": "Miért kér System Events engedélyt indításkor?",
-      "answer": "A WalkAway a System Events-en keresztül zárol. A macOS az első indításkor kérdez, hogy az első valódi zárolás ne egy engedélyablak legyen. A WalkAway nem ír a TCC.db-be, és nem kapcsolja be helyetted a Privacy kapcsolókat."
+      "question": "Milyen engedélyeket kér a WalkAway?",
+      "answer": "Bluetoothot, hogy lássa a Watchot vagy iPhone-t. A Lock Now és az eltávozás közvetlenül zárolja a képernyőt. A WalkAway nem ír a TCC.db-be, és nem kapcsolja be helyetted a Privacy kapcsolókat."
     },
     {
       "question": "Gyűjtötök adatot?",
@@ -118,7 +118,7 @@
     "Töltsd le a DMG-t",
     "Húzd a WalkAway-t az Applicationsbe",
     "Nyisd meg a WalkAway-t",
-    "Engedélyezd a Bluetoothot és a System Events-t, válaszd a Watchot a Preferencesben"
+    "Engedélyezd a Bluetoothot, válaszd a Watchot a Preferencesben"
   ],
   "downloadNotice": "Ingyenes — üzleti használatra is.",
   "lookTitle": "Armed vagy nem",

@@ -68,7 +68,7 @@
     },
     {
       "title": "Разрешите доступ",
-      "text": "При первом запуске macOS запросит Bluetooth и System Events. Разрешите оба, чтобы WalkAway видел Watch и потом блокировал без нового диалога."
+      "text": "При первом запуске macOS запросит Bluetooth. Разрешите, чтобы WalkAway видел Watch."
     },
     {
       "title": "Выберите Watch",
@@ -97,8 +97,8 @@
       "answer": "Да. Наушники, метка, другой телефон — если устройство есть в списке, его можно выбрать. Watch и iPhone — обычная рекомендация."
     },
     {
-      "question": "Почему WalkAway спрашивает System Events при запуске?",
-      "answer": "WalkAway блокирует через System Events. macOS спрашивает при первом запуске, чтобы первая настоящая блокировка не была диалогом разрешения. WalkAway не пишет в TCC.db и не включает за вас переключатели Конфиденциальности."
+      "question": "Какие разрешения нужны WalkAway?",
+      "answer": "Bluetooth, чтобы видеть Watch или iPhone. Lock Now и уход блокируют экран напрямую. WalkAway не пишет в TCC.db и не включает за вас переключатели Конфиденциальности."
     },
     {
       "question": "Собираются ли данные?",
@@ -118,7 +118,7 @@
     "Скачать DMG",
     "Перетащить WalkAway в Applications",
     "Открыть WalkAway",
-    "Разрешить Bluetooth и System Events, выбрать Watch в Preferences"
+    "Разрешить Bluetooth, выбрать Watch в Preferences"
   ],
   "downloadNotice": "Бесплатно — в том числе для компаний.",
   "lookTitle": "Armed или нет",
