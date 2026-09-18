@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Mises à jour automatiques",
-      "text": "Rechercher des mises à jour… installe une version publiée plus récente dans l’app. La première installation reste un téléchargement depuis ce site."
+      "text": "Rechercher des mises à jour… installe une version publiée plus récente. Le bouton Télécharger et Sparkle utilisent la dernière GitHub Release."
     }
   ],
   "howTitle": "Comment ça marche",
@@ -130,7 +130,7 @@
     },
     {
       "question": "Comment mettre à jour vers une nouvelle version ?",
-      "answer": "Utilisez Rechercher des mises à jour… dans le menu SnappyZones. La première installation reste le DMG de ce site."
+      "answer": "Utilisez Rechercher des mises à jour… dans le menu SnappyZones. Le bouton Télécharger et Sparkle utilisent la dernière GitHub Release."
     },
     {
       "question": "Par où commencer ?",

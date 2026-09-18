@@ -102,7 +102,7 @@
     },
     {
       "question": "Comment mettre à jour ?",
-      "answer": "Téléchargez la dernière image disque depuis ce site et remplacez SessionGuard dans Applications."
+      "answer": "Utilisez Check for Updates… dans le menu SessionGuard. Le bouton Télécharger et Sparkle utilisent la dernière GitHub Release."
     }
   ],
   "installTitle": "Installation",

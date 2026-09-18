@@ -4,8 +4,18 @@ const PRODUCTS_FILE = new URL("../src/data/products.ts", import.meta.url).pathna
 const SIBLING_ROOT = new URL("../../", import.meta.url).pathname;
 
 const SOURCES = [
-  { slug: "snappyzones", repo: "SnappyZones", dmg: "SnappyZones" },
-  { slug: "sessionguard", repo: "SessionGuard", dmg: "SessionGuard" },
+  {
+    slug: "snappyzones",
+    repo: "SnappyZones",
+    dmg: "SnappyZones",
+    githubLatestDmg: "https://github.com/fgalyasz/SnappyZones/releases/latest/download/SnappyZones.dmg",
+  },
+  {
+    slug: "sessionguard",
+    repo: "SessionGuard",
+    dmg: "SessionGuard",
+    githubLatestDmg: "https://github.com/fgalyasz/SessionGuard/releases/latest/download/SessionGuard.dmg",
+  },
   {
     slug: "walkaway",
     repo: "WalkAway",

@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Automatické aktualizácie",
-      "text": "Skontrolovať aktualizácie… nainštaluje novšie vydanie v aplikácii. Prvá inštalácia ostáva stiahnutím z tohto webu."
+      "text": "Skontrolovať aktualizácie… nainštaluje novšie vydanie. Tlačidlo Download aj Sparkle používajú najnovší GitHub Release."
     }
   ],
   "howTitle": "Ako to funguje",
@@ -130,7 +130,7 @@
     },
     {
       "question": "Ako aktualizujem na novú verziu?",
-      "answer": "Použite Skontrolovať aktualizácie… v ponuke SnappyZones. Prvá inštalácia ostáva DMG z tohto webu."
+      "answer": "Použite Skontrolovať aktualizácie… v ponuke SnappyZones. Tlačidlo Download aj Sparkle používajú najnovší GitHub Release."
     },
     {
       "question": "Ako začať?",

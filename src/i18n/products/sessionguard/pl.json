@@ -102,7 +102,7 @@
     },
     {
       "question": "Jak wykonać aktualizację?",
-      "answer": "Pobierz z tej strony najnowszy obraz dysku i zastąp SessionGuard w folderze Aplikacje."
+      "answer": "Użyj Check for Updates… w menu SessionGuard. Przycisk pobierania i Sparkle korzystają z najnowszego GitHub Release."
     }
   ],
   "installTitle": "Instalacja",

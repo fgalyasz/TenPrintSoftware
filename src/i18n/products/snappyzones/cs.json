@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Automatické aktualizace",
-      "text": "Zkontrolovat aktualizace… nainstaluje novější vydanou verzi v aplikaci. První instalace zůstává stažením z tohoto webu."
+      "text": "Zkontrolovat aktualizace… nainstaluje novější vydanou verzi. Tlačítko Download i Sparkle používají nejnovější GitHub Release."
     }
   ],
   "howTitle": "Jak to funguje",
@@ -130,7 +130,7 @@
     },
     {
       "question": "Jak aktualizuji na novou verzi?",
-      "answer": "Použijte Zkontrolovat aktualizace… v nabídce SnappyZones. První instalace zůstává DMG z tohoto webu."
+      "answer": "Použijte Zkontrolovat aktualizace… v nabídce SnappyZones. Tlačítko Download i Sparkle používají nejnovější GitHub Release."
     },
     {
       "question": "Jak začít?",

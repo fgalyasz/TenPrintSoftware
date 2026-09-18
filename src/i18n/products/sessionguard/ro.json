@@ -102,7 +102,7 @@
     },
     {
       "question": "Cum fac actualizarea?",
-      "answer": "Descarcă de pe acest site cea mai nouă imagine de disc și înlocuiește SessionGuard în folderul Aplicații."
+      "answer": "Folosește Check for Updates… din meniul SessionGuard. Butonul de descărcare și Sparkle folosesc cel mai recent GitHub Release."
     }
   ],
   "installTitle": "Instalare",

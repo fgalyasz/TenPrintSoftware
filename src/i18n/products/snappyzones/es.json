@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Actualizaciones automáticas",
-      "text": "Buscar actualizaciones… instala una versión publicada más reciente en la app. La primera instalación sigue siendo una descarga de este sitio."
+      "text": "Buscar actualizaciones… instala una versión publicada más reciente. El botón de descarga y Sparkle usan el último GitHub Release."
     }
   ],
   "howTitle": "Cómo funciona",
@@ -130,7 +130,7 @@
     },
     {
       "question": "¿Cómo actualizo a una nueva versión?",
-      "answer": "Usa Buscar actualizaciones… en el menú de SnappyZones. La primera instalación sigue siendo el DMG de este sitio."
+      "answer": "Usa Buscar actualizaciones… en el menú de SnappyZones. El botón de descarga y Sparkle usan el último GitHub Release."
     },
     {
       "question": "¿Cómo empiezo?",

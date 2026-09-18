@@ -102,7 +102,7 @@
     },
     {
       "question": "Ako vykonám aktualizáciu?",
-      "answer": "Stiahnite z tohto webu najnovší obraz disku a nahraďte SessionGuard v zložke Aplikácie."
+      "answer": "Použite Check for Updates… v ponuke SessionGuard. Tlačidlo Download aj Sparkle používajú najnovší GitHub Release."
     }
   ],
   "installTitle": "Inštalácia",

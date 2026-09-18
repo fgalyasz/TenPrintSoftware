@@ -102,7 +102,7 @@
     },
     {
       "question": "Как обновиться?",
-      "answer": "Скачайте с этого сайта последний образ диска и замените SessionGuard в папке «Программы»."
+      "answer": "Используйте Check for Updates… в меню SessionGuard. Кнопка загрузки и Sparkle берут последний GitHub Release."
     }
   ],
   "installTitle": "Установка",

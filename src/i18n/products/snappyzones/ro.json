@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Actualizări automate",
-      "text": "Caută actualizări… instalează o versiune publicată mai nouă în aplicație. Prima instalare rămâne un descărcare de pe acest site."
+      "text": "Caută actualizări… instalează o versiune publicată mai nouă. Butonul de descărcare și Sparkle folosesc cel mai recent GitHub Release."
     }
   ],
   "howTitle": "Cum funcționează",
@@ -130,7 +130,7 @@
     },
     {
       "question": "Cum fac update la o versiune nouă?",
-      "answer": "Folosiți Caută actualizări… din meniul SnappyZones. Prima instalare rămâne DMG-ul de pe acest site."
+      "answer": "Folosește Caută actualizări… din meniul SnappyZones. Butonul de descărcare și Sparkle folosesc cel mai recent GitHub Release."
     },
     {
       "question": "Cum încep?",

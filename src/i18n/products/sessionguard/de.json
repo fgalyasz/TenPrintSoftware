@@ -102,7 +102,7 @@
     },
     {
       "question": "Wie aktualisiere ich?",
-      "answer": "Laden Sie das neueste DMG von dieser Website herunter und ersetzen Sie SessionGuard im Programme-Ordner."
+      "answer": "Nutzen Sie Check for Updates… im SessionGuard-Menü. Download-Button und Sparkle nutzen das neueste GitHub Release."
     }
   ],
   "installTitle": "Installation",
