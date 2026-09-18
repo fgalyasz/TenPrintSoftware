@@ -110,7 +110,7 @@
     },
     {
       "question": "Jak aktualizuji?",
-      "answer": "Použijte Check for Updates… v nabídce WalkAway. První instalace zůstává DMG z tohoto webu."
+      "answer": "Použijte Check for Updates… v nabídce WalkAway. Tlačítko Download i Sparkle používají nejnovější GitHub Release."
     }
   ],
   "installTitle": "Instalace",

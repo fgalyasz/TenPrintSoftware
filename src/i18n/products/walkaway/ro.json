@@ -110,7 +110,7 @@
     },
     {
       "question": "Cum actualizez?",
-      "answer": "Folosește Check for Updates… din meniul WalkAway. Prima instalare rămâne DMG-ul de pe acest site."
+      "answer": "Folosește Check for Updates… din meniul WalkAway. Butonul de descărcare și Sparkle folosesc ambele cel mai recent GitHub Release."
     }
   ],
   "installTitle": "Instalare",

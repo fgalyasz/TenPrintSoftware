@@ -6,7 +6,12 @@ const SIBLING_ROOT = new URL("../../", import.meta.url).pathname;
 const SOURCES = [
   { slug: "snappyzones", repo: "SnappyZones", dmg: "SnappyZones" },
   { slug: "sessionguard", repo: "SessionGuard", dmg: "SessionGuard" },
-  { slug: "walkaway", repo: "WalkAway", dmg: "WalkAway" },
+  {
+    slug: "walkaway",
+    repo: "WalkAway",
+    dmg: "WalkAway",
+    githubLatestDmg: "https://github.com/fgalyasz/WalkAway/releases/latest/download/WalkAway.dmg",
+  },
 ];
 
 function readLocalVersion(repo) {
@@ -27,14 +32,23 @@ function currentVersion(block) {
   return block.match(/version: "([^"]+)"/)?.[1] ?? null;
 }
 
-function rewriteBlock(block, version, dmg, slug) {
+function rewriteBlock(block, version, dmg, slug, githubLatestDmg) {
+  const next = block.replace(/version: "[^"]+"/, `version: "${version}"`);
+  if (githubLatestDmg) return applyGithubDownload(next, githubLatestDmg);
+  return applySiteDownload(next, version, dmg, slug);
+}
+
+function applyGithubDownload(block, url) {
+  return block.replace(/downloadUrl: "[^"]+"/, `downloadUrl: "${url}"`);
+}
+
+function applySiteDownload(block, version, dmg, slug) {
   const nested = new RegExp(`downloads/${slug}/${dmg}-[^"]+\\.dmg`);
-  const flat = new RegExp(`downloads/${dmg}-[^"]+\\.dmg`);
-  let next = block.replace(/version: "[^"]+"/, `version: "${version}"`);
-  if (nested.test(next)) {
-    return next.replace(nested, `downloads/${slug}/${dmg}-${version}.dmg`);
+  if (nested.test(block)) {
+    return block.replace(nested, `downloads/${slug}/${dmg}-${version}.dmg`);
   }
-  return next.replace(flat, `downloads/${dmg}-${version}.dmg`);
+  const flat = new RegExp(`downloads/${dmg}-[^"]+\\.dmg`);
+  return block.replace(flat, `downloads/${dmg}-${version}.dmg`);
 }
 
 function syncProduct(source, entry) {
@@ -51,7 +65,7 @@ function syncProduct(source, entry) {
     return source;
   }
   console.log(`${entry.slug.padEnd(14)} ${previous} -> ${version}`);
-  return source.slice(0, start) + rewriteBlock(block, version, entry.dmg, entry.slug) + source.slice(end);
+  return source.slice(0, start) + rewriteBlock(block, version, entry.dmg, entry.slug, entry.githubLatestDmg) + source.slice(end);
 }
 
 const original = readFileSync(PRODUCTS_FILE, "utf8");

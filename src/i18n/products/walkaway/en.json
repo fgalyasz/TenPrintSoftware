@@ -110,7 +110,7 @@
     },
     {
       "question": "How do I update?",
-      "answer": "Use Check for Updates… in the WalkAway menu. The first install is still this site’s DMG."
+      "answer": "Use Check for Updates… in the WalkAway menu. The Download button and Sparkle both use the latest GitHub Release."
     }
   ],
   "installTitle": "Install",
