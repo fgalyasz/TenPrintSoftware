@@ -67,8 +67,8 @@
       "text": "Pobierz DMG, przeciągnij WalkAway do Applications i otwórz."
     },
     {
-      "title": "Zezwól na Bluetooth",
-      "text": "macOS poprosi o Bluetooth. Zezwól, aby WalkAway widział Watch."
+      "title": "Zezwól na uprawnienia",
+      "text": "Przy pierwszym uruchomieniu macOS prosi o Bluetooth i System Events. Zezwól na oba, aby WalkAway widział Watch i później blokował bez kolejnego okna."
     },
     {
       "title": "Wybierz Watch",
@@ -97,8 +97,8 @@
       "answer": "Tak. Słuchawki, brelok, inny telefon — jeśli widać je na liście, możesz je wybrać. Watch i iPhone to zwykła rekomendacja."
     },
     {
-      "question": "Dlaczego pierwsza blokada prosi o System Events?",
-      "answer": "WalkAway blokuje przez System Events. macOS pyta raz. WalkAway nie zapisuje TCC.db i nie przełącza za Ciebie przełączników Prywatności."
+      "question": "Dlaczego WalkAway prosi o System Events przy uruchomieniu?",
+      "answer": "WalkAway blokuje przez System Events. macOS pyta przy pierwszym uruchomieniu, żeby pierwsza prawdziwa blokada nie była oknem uprawnień. WalkAway nie zapisuje TCC.db i nie przełącza za Ciebie przełączników Prywatności."
     },
     {
       "question": "Czy zbieracie dane?",
@@ -118,7 +118,7 @@
     "Pobierz DMG",
     "Przeciągnij WalkAway do Applications",
     "Otwórz WalkAway",
-    "Zezwól na Bluetooth, wybierz Watch w Preferences"
+    "Zezwól na Bluetooth i System Events, wybierz Watch w Preferences"
   ],
   "downloadNotice": "Bezpłatnie — także dla firm.",
   "lookTitle": "Armed albo nie",

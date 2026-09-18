@@ -67,8 +67,8 @@
       "text": "Download the DMG, drag WalkAway to Applications, and open it."
     },
     {
-      "title": "Allow Bluetooth",
-      "text": "macOS will ask to use Bluetooth. Allow it so WalkAway can see your Watch."
+      "title": "Allow permissions",
+      "text": "On first launch macOS asks for Bluetooth and System Events. Allow both so WalkAway can see your Watch and lock later without another dialog."
     },
     {
       "title": "Pick your Watch",
@@ -97,8 +97,8 @@
       "answer": "Yes. Headphones, tags, a spare phone — if it shows up in the list, you can pick it. Watch and iPhone are the usual recommendation."
     },
     {
-      "question": "Why does the first lock ask for System Events?",
-      "answer": "WalkAway locks through System Events. macOS asks once. WalkAway does not write TCC.db or flip Privacy switches for you."
+      "question": "Why does WalkAway ask for System Events at launch?",
+      "answer": "WalkAway locks through System Events. macOS asks on first launch so the first real lock is not a permission dialog. WalkAway does not write TCC.db or flip Privacy switches for you."
     },
     {
       "question": "Is my data collected?",
@@ -118,7 +118,7 @@
     "Download the DMG",
     "Drag WalkAway to Applications",
     "Open WalkAway",
-    "Allow Bluetooth, pick your Watch in Preferences"
+    "Allow Bluetooth and System Events, pick your Watch in Preferences"
   ],
   "downloadNotice": "Free to use — including for businesses.",
   "lookTitle": "Armed or not",

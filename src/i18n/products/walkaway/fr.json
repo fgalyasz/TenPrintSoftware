@@ -67,8 +67,8 @@
       "text": "Téléchargez le DMG, glissez WalkAway dans Applications et ouvrez-le."
     },
     {
-      "title": "Autoriser le Bluetooth",
-      "text": "macOS demandera le Bluetooth. Acceptez pour que WalkAway voie votre Watch."
+      "title": "Autoriser les permissions",
+      "text": "Au premier lancement, macOS demande Bluetooth et System Events. Acceptez les deux pour que WalkAway voie votre Watch et verrouille plus tard sans autre dialogue."
     },
     {
       "title": "Choisir la Watch",
@@ -97,8 +97,8 @@
       "answer": "Oui. Écouteurs, tracker, un autre téléphone — s’il apparaît dans la liste, vous pouvez le choisir. Watch et iPhone restent la reco habituelle."
     },
     {
-      "question": "Pourquoi le premier verrouillage demande-t-il System Events ?",
-      "answer": "WalkAway verrouille via System Events. macOS demande une fois. WalkAway n’écrit pas dans TCC.db et n’active pas les interrupteurs Confidentialité à votre place."
+      "question": "Pourquoi WalkAway demande-t-il System Events au lancement ?",
+      "answer": "WalkAway verrouille via System Events. macOS demande au premier lancement pour que le premier verrouillage réel ne soit pas une boîte de permission. WalkAway n’écrit pas dans TCC.db et n’active pas les interrupteurs Confidentialité à votre place."
     },
     {
       "question": "Des données sont-elles collectées ?",
@@ -118,7 +118,7 @@
     "Télécharger le DMG",
     "Glisser WalkAway dans Applications",
     "Ouvrir WalkAway",
-    "Autoriser le Bluetooth, choisir la Watch dans Preferences"
+    "Autoriser Bluetooth et System Events, choisir la Watch dans Preferences"
   ],
   "downloadNotice": "Gratuit — y compris pour les entreprises.",
   "lookTitle": "Armed ou non",

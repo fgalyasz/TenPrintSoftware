@@ -67,8 +67,8 @@
       "text": "Stiahnite DMG, pretiahnite WalkAway do Applications a otvorte ho."
     },
     {
-      "title": "Povoliť Bluetooth",
-      "text": "macOS požiada o Bluetooth. Povoľte ho, aby WalkAway videl Watch."
+      "title": "Povoliť oprávnenia",
+      "text": "Pri prvom spustení macOS požiada o Bluetooth a System Events. Povoľte oboje, aby WalkAway videl Watch a neskôr zamkol bez ďalšieho dialógu."
     },
     {
       "title": "Vyberte Watch",
@@ -97,8 +97,8 @@
       "answer": "Áno. Slúchadlá, prívesok, iný telefón — čo sa v zozname objaví, to môžete zvoliť. Watch a iPhone sú obvyklé odporúčanie."
     },
     {
-      "question": "Prečo prvý zámok žiada System Events?",
-      "answer": "WalkAway zamyká cez System Events. macOS sa spýta raz. WalkAway nezapisuje do TCC.db a neprepína za vás prepínače Súkromie."
+      "question": "Prečo WalkAway žiada System Events pri spustení?",
+      "answer": "WalkAway zamyká cez System Events. macOS sa spýta pri prvom spustení, aby prvý skutočný zámok nebol dialóg oprávnení. WalkAway nezapisuje do TCC.db a neprepína za vás prepínače Súkromie."
     },
     {
       "question": "Zbierate údaje?",
@@ -118,7 +118,7 @@
     "Stiahnuť DMG",
     "Pretiahnuť WalkAway do Applications",
     "Otvoriť WalkAway",
-    "Povoliť Bluetooth, vybrať Watch v Preferences"
+    "Povoliť Bluetooth a System Events, vybrať Watch v Preferences"
   ],
   "downloadNotice": "Zadarmo — aj pre firmy.",
   "lookTitle": "Armed, alebo nie",

@@ -67,8 +67,8 @@
       "text": "Descarcă DMG-ul, trage WalkAway în Applications și deschide-l."
     },
     {
-      "title": "Permite Bluetooth",
-      "text": "macOS va cere Bluetooth. Permite, ca WalkAway să vadă Watch-ul."
+      "title": "Permite permisiunile",
+      "text": "La prima lansare macOS cere Bluetooth și System Events. Permite ambele, ca WalkAway să vadă Watch-ul și să blocheze mai târziu fără alt dialog."
     },
     {
       "title": "Alege Watch-ul",
@@ -97,8 +97,8 @@
       "answer": "Da. Căști, breloc, alt telefon — dacă apare în listă, îl poți alege. Watch și iPhone sunt recomandarea obișnuită."
     },
     {
-      "question": "De ce prima blocare cere System Events?",
-      "answer": "WalkAway blochează prin System Events. macOS întreabă o dată. WalkAway nu scrie în TCC.db și nu comută pentru tine comutatoarele Confidențialitate."
+      "question": "De ce WalkAway cere System Events la lansare?",
+      "answer": "WalkAway blochează prin System Events. macOS întreabă la prima lansare, ca prima blocare reală să nu fie un dialog de permisiune. WalkAway nu scrie în TCC.db și nu comută pentru tine comutatoarele Confidențialitate."
     },
     {
       "question": "Se colectează date?",
@@ -118,7 +118,7 @@
     "Descarcă DMG-ul",
     "Trage WalkAway în Applications",
     "Deschide WalkAway",
-    "Permite Bluetooth, alege Watch-ul în Preferences"
+    "Permite Bluetooth și System Events, alege Watch-ul în Preferences"
   ],
   "downloadNotice": "Gratuit — inclusiv pentru firme.",
   "lookTitle": "Armed sau nu",
