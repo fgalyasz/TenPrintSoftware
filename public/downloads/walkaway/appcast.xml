@@ -3,10 +3,10 @@
   <channel>
     <title>WalkAway</title>
     <item>
-      <title>Version 0.1.11</title>
-      <pubDate>Fri, 18 Sep 2026 08:25:41 +0000</pubDate>
-      <description><![CDATA[WalkAway 0.1.11]]></description>
-      <enclosure url="https://tenprintsoftware.com/downloads/walkaway/WalkAway-0.1.11.zip" sparkle:version="15" sparkle:shortVersionString="0.1.11" length="1760141" type="application/octet-stream" sparkle:edSignature="DH8D1eyhAL4eScu3hfwgcgwEBI7zThBbUOsf2VLmmI7oesdHMD4bzTg8XPMYZqdtx+LxF5+AvGJF5+ZxKaiQDg==" />
+      <title>Version 0.1.12</title>
+      <pubDate>Fri, 18 Sep 2026 08:33:34 +0000</pubDate>
+      <description><![CDATA[WalkAway 0.1.12]]></description>
+      <enclosure url="https://tenprintsoftware.com/downloads/walkaway/WalkAway-0.1.12.zip" sparkle:version="16" sparkle:shortVersionString="0.1.12" length="1760142" type="application/octet-stream" sparkle:edSignature="d6CjSqdcAwUqf5+Z0cOuU0cS29YtdZXVZ5JJUML+h4GcFCLJzZiNQ36fIzxno8dV9SJxNpslXF835lWQIEHHCQ==" />
     </item>
   </channel>
 </rss>
