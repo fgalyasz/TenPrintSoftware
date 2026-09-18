@@ -110,7 +110,7 @@
     },
     {
       "question": "Hogyan frissítsek?",
-      "answer": "A WalkAway menü Check for Updates… pontja. A letöltőgomb és a Sparkle is a legfrissebb GitHub Release-t használja."
+      "answer": "A WalkAway menü Check for Updates… pontja. A letöltőgomb és a Sparkle is a legfrissebb közzétett letöltést használja."
     }
   ],
   "installTitle": "Telepítés",

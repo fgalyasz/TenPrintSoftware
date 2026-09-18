@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Automatic updates",
-      "text": "Check for Updates… installs a newer published build. The Download button and Sparkle both use the latest GitHub Release."
+      "text": "Check for Updates… installs a newer published build. The Download button and Sparkle both use the latest published download."
     }
   ],
   "howTitle": "How it works",
@@ -130,7 +130,7 @@
     },
     {
       "question": "How do I update to a new version?",
-      "answer": "Use Check for Updates… in the SnappyZones menu. The Download button and Sparkle both use the latest GitHub Release."
+      "answer": "Use Check for Updates… in the SnappyZones menu. The Download button and Sparkle both use the latest published download."
     },
     {
       "question": "How do I get started?",

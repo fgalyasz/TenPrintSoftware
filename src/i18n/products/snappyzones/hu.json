@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Automatikus frissítés",
-      "text": "A Frissítések keresése… az alkalmazáson belül telepíti az újabb kiadást. A letöltőgomb és a Sparkle is a legfrissebb GitHub Release-t használja."
+      "text": "A Frissítések keresése… az alkalmazáson belül telepíti az újabb kiadást. A letöltőgomb és a Sparkle is a legfrissebb közzétett letöltést használja."
     }
   ],
   "howTitle": "Hogyan működik",
@@ -130,7 +130,7 @@
     },
     {
       "question": "Hogyan frissítsek új verzióra?",
-      "answer": "A SnappyZones menü Frissítések keresése… pontja. A letöltőgomb és a Sparkle is a legfrissebb GitHub Release-t használja."
+      "answer": "A SnappyZones menü Frissítések keresése… pontja. A letöltőgomb és a Sparkle is a legfrissebb közzétett letöltést használja."
     },
     {
       "question": "Hogyan kezdjek neki?",

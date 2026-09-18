@@ -102,7 +102,7 @@
     },
     {
       "question": "Hogyan frissítek?",
-      "answer": "A SessionGuard menü Frissítések keresése… pontja. A letöltőgomb és a Sparkle is a legfrissebb GitHub Release-t használja."
+      "answer": "A SessionGuard menü Frissítések keresése… pontja. A letöltőgomb és a Sparkle is a legfrissebb közzétett letöltést használja."
     }
   ],
   "installTitle": "Telepítés",

@@ -110,7 +110,7 @@
     },
     {
       "question": "Как обновить?",
-      "answer": "Используйте Check for Updates… в меню WalkAway. Кнопка загрузки и Sparkle берут последний GitHub Release."
+      "answer": "Используйте Check for Updates… в меню WalkAway. Кнопка загрузки и Sparkle берут последнюю опубликованную загрузку."
     }
   ],
   "installTitle": "Установка",

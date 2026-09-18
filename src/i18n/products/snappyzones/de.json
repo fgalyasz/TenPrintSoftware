@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Automatische Updates",
-      "text": "Nach Updates suchen… installiert eine neuere veröffentlichte Version in der App. Download-Button und Sparkle nutzen das neueste GitHub Release."
+      "text": "Nach Updates suchen… installiert eine neuere veröffentlichte Version in der App. Download-Button und Sparkle nutzen den neuesten veröffentlichten Download."
     }
   ],
   "howTitle": "So funktioniert es",
@@ -130,7 +130,7 @@
     },
     {
       "question": "Wie aktualisiere ich auf eine neue Version?",
-      "answer": "Nutze „Nach Updates suchen…“ im SnappyZones-Menü. Download-Button und Sparkle nutzen das neueste GitHub Release."
+      "answer": "Nutze „Nach Updates suchen…“ im SnappyZones-Menü. Download-Button und Sparkle nutzen den neuesten veröffentlichten Download."
     },
     {
       "question": "Wie starte ich?",

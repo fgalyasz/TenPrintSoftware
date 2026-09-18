@@ -102,7 +102,7 @@
     },
     {
       "question": "Jak wykonać aktualizację?",
-      "answer": "Użyj Check for Updates… w menu SessionGuard. Przycisk pobierania i Sparkle korzystają z najnowszego GitHub Release."
+      "answer": "Użyj Check for Updates… w menu SessionGuard. Przycisk pobierania i Sparkle korzystają z najnowszego opublikowanego downloadu."
     }
   ],
   "installTitle": "Instalacja",

@@ -102,7 +102,7 @@
     },
     {
       "question": "Ako vykonám aktualizáciu?",
-      "answer": "Použite Check for Updates… v ponuke SessionGuard. Tlačidlo Download aj Sparkle používajú najnovší GitHub Release."
+      "answer": "Použite Check for Updates… v ponuke SessionGuard. Tlačidlo Download aj Sparkle používajú najnovší zverejnený download."
     }
   ],
   "installTitle": "Inštalácia",

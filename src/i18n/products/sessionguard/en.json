@@ -102,7 +102,7 @@
     },
     {
       "question": "How do I update?",
-      "answer": "Use Check for Updates… in the SessionGuard menu. The Download button and Sparkle both use the latest GitHub Release."
+      "answer": "Use Check for Updates… in the SessionGuard menu. The Download button and Sparkle both use the latest published download."
     }
   ],
   "installTitle": "Install",

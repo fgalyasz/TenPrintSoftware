@@ -8,19 +8,19 @@ const SOURCES = [
     slug: "snappyzones",
     repo: "SnappyZones",
     dmg: "SnappyZones",
-    githubLatestDmg: "https://github.com/fgalyasz/SnappyZones/releases/latest/download/SnappyZones.dmg",
+    pagesLatestDmg: "https://snappy-zones.pages.dev/SnappyZones.dmg",
   },
   {
     slug: "sessionguard",
     repo: "SessionGuard",
     dmg: "SessionGuard",
-    githubLatestDmg: "https://github.com/fgalyasz/SessionGuard/releases/latest/download/SessionGuard.dmg",
+    pagesLatestDmg: "https://session-guard.pages.dev/SessionGuard.dmg",
   },
   {
     slug: "walkaway",
     repo: "WalkAway",
     dmg: "WalkAway",
-    githubLatestDmg: "https://github.com/fgalyasz/WalkAway/releases/latest/download/WalkAway.dmg",
+    pagesLatestDmg: "https://walk-away.pages.dev/WalkAway.dmg",
   },
 ];
 
@@ -42,13 +42,13 @@ function currentVersion(block) {
   return block.match(/version: "([^"]+)"/)?.[1] ?? null;
 }
 
-function rewriteBlock(block, version, dmg, slug, githubLatestDmg) {
+function rewriteBlock(block, version, dmg, slug, pagesLatestDmg) {
   const next = block.replace(/version: "[^"]+"/, `version: "${version}"`);
-  if (githubLatestDmg) return applyGithubDownload(next, githubLatestDmg);
+  if (pagesLatestDmg) return applyPagesDownload(next, pagesLatestDmg);
   return applySiteDownload(next, version, dmg, slug);
 }
 
-function applyGithubDownload(block, url) {
+function applyPagesDownload(block, url) {
   return block.replace(/downloadUrl: "[^"]+"/, `downloadUrl: "${url}"`);
 }
 
@@ -75,7 +75,7 @@ function syncProduct(source, entry) {
     return source;
   }
   console.log(`${entry.slug.padEnd(14)} ${previous} -> ${version}`);
-  return source.slice(0, start) + rewriteBlock(block, version, entry.dmg, entry.slug, entry.githubLatestDmg) + source.slice(end);
+  return source.slice(0, start) + rewriteBlock(block, version, entry.dmg, entry.slug, entry.pagesLatestDmg) + source.slice(end);
 }
 
 const original = readFileSync(PRODUCTS_FILE, "utf8");

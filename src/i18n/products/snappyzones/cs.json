@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Automatické aktualizace",
-      "text": "Zkontrolovat aktualizace… nainstaluje novější vydanou verzi. Tlačítko Download i Sparkle používají nejnovější GitHub Release."
+      "text": "Zkontrolovat aktualizace… nainstaluje novější vydanou verzi. Tlačítko Download i Sparkle používají nejnovější zveřejněný download."
     }
   ],
   "howTitle": "Jak to funguje",
@@ -130,7 +130,7 @@
     },
     {
       "question": "Jak aktualizuji na novou verzi?",
-      "answer": "Použijte Zkontrolovat aktualizace… v nabídce SnappyZones. Tlačítko Download i Sparkle používají nejnovější GitHub Release."
+      "answer": "Použijte Zkontrolovat aktualizace… v nabídce SnappyZones. Tlačítko Download i Sparkle používají nejnovější zveřejněný download."
     },
     {
       "question": "Jak začít?",

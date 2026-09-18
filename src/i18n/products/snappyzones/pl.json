@@ -80,7 +80,7 @@
     {
       "tier": "free",
       "title": "Automatyczne aktualizacje",
-      "text": "Sprawdź aktualizacje… instaluje nowsze wydanie. Przycisk pobierania i Sparkle korzystają z najnowszego GitHub Release."
+      "text": "Sprawdź aktualizacje… instaluje nowsze wydanie. Przycisk pobierania i Sparkle korzystają z najnowszego opublikowanego downloadu."
     }
   ],
   "howTitle": "Jak to działa",
@@ -130,7 +130,7 @@
     },
     {
       "question": "Jak zaktualizować do nowej wersji?",
-      "answer": "Użyj Sprawdź aktualizacje… w menu SnappyZones. Przycisk pobierania i Sparkle korzystają z najnowszego GitHub Release."
+      "answer": "Użyj Sprawdź aktualizacje… w menu SnappyZones. Przycisk pobierania i Sparkle korzystają z najnowszego opublikowanego downloadu."
     },
     {
       "question": "Jak zacząć?",

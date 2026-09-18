@@ -102,7 +102,7 @@
     },
     {
       "question": "Cum fac actualizarea?",
-      "answer": "Folosește Check for Updates… din meniul SessionGuard. Butonul de descărcare și Sparkle folosesc cel mai recent GitHub Release."
+      "answer": "Folosește Check for Updates… din meniul SessionGuard. Butonul de descărcare și Sparkle folosesc cel mai recent download publicat."
     }
   ],
   "installTitle": "Instalare",

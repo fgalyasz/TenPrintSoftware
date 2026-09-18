@@ -110,7 +110,7 @@
     },
     {
       "question": "¿Cómo actualizo?",
-      "answer": "Usa Check for Updates… en el menú de WalkAway. El botón de descarga y Sparkle usan ambos el último GitHub Release."
+      "answer": "Usa Check for Updates… en el menú de WalkAway. El botón de descarga y Sparkle usan ambos la última descarga publicada."
     }
   ],
   "installTitle": "Instalar",

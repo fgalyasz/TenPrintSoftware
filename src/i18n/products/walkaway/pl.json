@@ -110,7 +110,7 @@
     },
     {
       "question": "Jak zaktualizować?",
-      "answer": "Użyj Check for Updates… w menu WalkAway. Przycisk pobierania i Sparkle korzystają z najnowszego GitHub Release."
+      "answer": "Użyj Check for Updates… w menu WalkAway. Przycisk pobierania i Sparkle korzystają z najnowszego opublikowanego downloadu."
     }
   ],
   "installTitle": "Instalacja",

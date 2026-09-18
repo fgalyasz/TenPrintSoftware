@@ -110,7 +110,7 @@
     },
     {
       "question": "Ako aktualizujem?",
-      "answer": "Použite Check for Updates… v ponuke WalkAway. Tlačidlo Download aj Sparkle používajú najnovší GitHub Release."
+      "answer": "Použite Check for Updates… v ponuke WalkAway. Tlačidlo Download aj Sparkle používajú najnovší zverejnený download."
     }
   ],
   "installTitle": "Inštalácia",
