@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
     iconUrl: "/assets/products/sessionguard.svg",
     websiteUrl: "https://tenprintsoftware.com/en/products/sessionguard",
     supportEmail: "hello@tenprintsoftware.com",
-    version: "1.1.4",
+    version: "1.1.5",
     downloadUrl: "https://session-guard.pages.dev/SessionGuard.dmg",
     downloadFallbackUrl: "https://session-guard.pages.dev/SessionGuard.dmg",
     packageFormat: "DMG",
